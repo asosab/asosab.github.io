@@ -1,0 +1,19 @@
+# Site settings
+title: El código nuestro de cada día
+email: asosab@gmail.com
+description: "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información"
+baseurl: ""
+url: "https://asosab.github.io/"
+twitter_username: asosab
+github_username:  asosab
+timezone: America/Caracas
+encoding: utf-8
+
+# Build settings
+theme: jekyll-theme-midnight
+markdown: kramdown
+permalink: pretty
+
+webrick:
+  headers:
+    X-Clacks-Overhead: GNU Terry Pratchett

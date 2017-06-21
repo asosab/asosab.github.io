@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>El código nuestro de cada día</title>
+    <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
+    <link>https://asosab.github.io//</link>
+    <atom:link href="https://asosab.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 21 Jun 2017 14:06:20 -0400</pubDate>
+    <lastBuildDate>Wed, 21 Jun 2017 14:06:20 -0400</lastBuildDate>
+    <generator>Jekyll v2.2.0</generator>
+    
+      <item>
+        <title>PHP Web scraping</title>
+        <description>&lt;p&gt;Si quisiera saber todas las formas de conjugar un verbo podría ir a la web &lt;a href=&quot;http://www.spanishdict.com/conjugate/esperar&quot;&gt;spanishdict&lt;/a&gt; y averiguarlo allí, pero si necesito obtener esa información programáticamente, o descargarme todas las conjugaciones de todos los verbos de forma automatizada debo empezar por crearme una función para hacer &lt;a href=&quot;https://es.wikipedia.org/wiki/Web_scraping&quot;&gt;Web scraping&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;function scrapDato($frase, $pista, $elem=&amp;quot;td&amp;quot;, $cuenta=1, $cierre = null){ &lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $pos = strpos($frase, $pista);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if($pos == false) return false;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $vi = $pos;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if($cierre == null){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $abre = &amp;quot;&amp;lt;$elem&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $cierra = &amp;quot;&amp;lt;/$elem&amp;gt;&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }else{&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $abre = $elem;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $cierra = $cierre;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;    for ($x = 1; $x &amp;lt;= $cuenta; $x++) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $npos = strpos($frase, $abre, $vi+1);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      if($npos == false) $x=$cuenta; else $vi = $npos;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    } &lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;    if($cierre == null) $vi = strpos($frase, &amp;quot;&amp;gt;&amp;quot;, $vi) + 1; else $vi = $vi +1;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $vf = strpos($frase, $cierra,$vi);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $v = trim(substr($frase, $vi, $vf - $vi ));&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    $strip = strip_tags($v);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    return $strip;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;  }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La idea es que mediante pistas y un estudio previo de la web a “escrapear” podamos decirle a nuestra función cómo obtener esa información que desconocemos pero sabemos encontrar. Supongamos que obtenemos toda la página mediante file_get_contents, veamos dos ejemplos de cómo usar la función scrapDato()&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;$verbo = &amp;quot;atravezar&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$data =[]; //aquí iré guardando los datos&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$cuerpo = file_get_contents(&amp;quot;http://www.spanishdict.com/conjugate/{$verbo}&amp;quot;); // un gran string que contiene el cuerpo de la web&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$data[&amp;#39;data&amp;#39;][&amp;#39;verbo&amp;#39;] = scrapDato($cuerpo, &amp;quot;source-text&amp;quot;,&amp;quot;h1&amp;quot;); // obtengo el verbo, para confirmar&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;$personas = [&amp;#39;yo&amp;#39;,&amp;#39;tú&amp;#39;,&amp;#39;él/ella/Ud.&amp;#39;,&amp;#39;nosotros&amp;#39;,&amp;#39;vosotros&amp;#39;,&amp;#39;ellos/ellas/Uds.&amp;#39;];&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$tiempos = [&amp;#39;presente&amp;#39;,&amp;#39;preterito&amp;#39;,&amp;#39;imperfecto&amp;#39;, &amp;#39;condicional&amp;#39;,&amp;#39;futuro&amp;#39;];&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$pos = 1;&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;//En este primer bucle nos paseamos por los tiempos verbales del indicativo y en cada uno hacemos un recorrido por las personas, asi obtenemos la grilla del indicativo:&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;foreach ($tiempos as $tiempo) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	foreach ($personas as $persona) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;		$data[&amp;#39;data&amp;#39;][&amp;#39;indicativo&amp;#39;][$tiempo][$persona] = scrapDato($cuerpo, &amp;quot;&amp;gt;$persona&amp;lt;&amp;quot;,&amp;quot;td&amp;quot;,$pos);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	}&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	$pos++;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;//ahora nos vamos a aprovechar ya no de as etiquetas de cada tiempo verbal, sino de que conocemos la posición de cada expresión, así obtendremos la grilla del subjuntivo&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$tiempos = [&amp;#39;presente&amp;#39;,&amp;#39;imperfecto&amp;#39;, &amp;#39;imperfecto2&amp;#39;,&amp;#39;futuro&amp;#39;];&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$base = 42;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;$pos = $base;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;foreach ($personas as $persona){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	foreach ($tiempos as $tiempo) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;		$data[&amp;#39;data&amp;#39;][&amp;#39;subjuntivo&amp;#39;][$tiempo][$persona] = scrapDato($cuerpo, &amp;quot;&amp;gt;yo&amp;lt;&amp;quot;,&amp;quot;td&amp;quot;,$pos);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;		$pos++;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	}&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;	$pos++;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;var_dump($data);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Existen códigos fabulosos para hacer Web scraping, uno bastante serio es &lt;a href=&quot;https://github.com/FriendsOfPHP/Goutte&quot;&gt;Goutte&lt;/a&gt;, para hacer mucho más que tomar datos de una Web.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 17 Jun 2017 17:34:00 -0400</pubDate>
+        <link>https://asosab.github.io//php/web/scraping/2017/06/17/PHP-scraping/</link>
+        <guid isPermaLink="true">https://asosab.github.io//php/web/scraping/2017/06/17/PHP-scraping/</guid>
+        
+        
+        <category>php</category>
+        
+        <category>web</category>
+        
+        <category>scraping</category>
+        
+      </item>
+    
+  </channel>
+</rss>
