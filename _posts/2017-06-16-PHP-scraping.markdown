@@ -3,6 +3,7 @@ layout: post
 title:  "PHP Web scraping"
 date:   2017-06-17 17:34
 categories: php web-scraping
+comments: true
 ---
 
 Si quisiera saber todas las formas de conjugar un verbo podría ir a la web [spanishdict][spanishdict] y averiguarlo allí, pero si necesito obtener esa información programáticamente, o descargarme todas las conjugaciones de todos los verbos de forma automatizada debo empezar por crearme una función para hacer [Web scraping][Web scraping] 
