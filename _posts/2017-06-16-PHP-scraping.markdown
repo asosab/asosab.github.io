@@ -72,6 +72,9 @@ var_dump($data);
 
 Existen códigos fabulosos para hacer Web scraping, uno bastante serio es [Goutte][Goutte], para hacer mucho más que tomar datos de una Web.
 
+Mientras tanto, si necesitan una base de datos de verbos y sus conjugaciones en español, o colaborar con el crecimiento de la misma entra en [esp_verbos][esp_verbos], lleva unos 4 mil verbos y contando
+
+[esp_verbos]: https://github.com/asosab/esp_verbos
 [spanishdict]: http://www.spanishdict.com/conjugate/esperar
 [Web scraping]:    https://es.wikipedia.org/wiki/Web_scraping
 [Goutte]: https://github.com/FriendsOfPHP/Goutte
