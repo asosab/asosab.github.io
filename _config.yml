@@ -10,13 +10,10 @@ timezone: America/Caracas
 encoding: utf-8
 
 # Build settings
-# theme: jekyll-theme-midnight
+theme: jekyll-theme-midnight
 markdown: kramdown
 permalink: pretty
 
 webrick:
   headers:
     X-Clacks-Overhead: GNU Terry Pratchett
-
-sass:
-    style: :compressed
