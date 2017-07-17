@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <div class="post">
 
@@ -11,5 +12,15 @@ layout: default
   <article class="post-content">
   {{ content }}
   </article>
+
+
+	{% if page.comments %}
+		<div id="disqus_thread"></div>
+		<script>
+		var disqus_config = function(){this.page.url = "https://asosab.github.io/{{ page.url }}";this.page.identifier ="{{ page.id }}";};
+		(function(){var d = document, s = d.createElement('script');s.src = 'https://codigo-nuestro.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();
+		</script>
+		<noscript>Necesitas tener activo el javascript para poder ver los <a href="https://disqus.com/?ref_noscript">comentarios generados por Disqus.</a></noscript>
+	{% endif %}
 
 </div>
