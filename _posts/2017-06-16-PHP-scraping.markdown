@@ -8,32 +8,7 @@ comments: true
 
 Si quisiera saber todas las formas de conjugar un verbo podría ir a la web [spanishdict][spanishdict] y averiguarlo allí, pero si necesito obtener esa información programáticamente, o descargarme todas las conjugaciones de todos los verbos de forma automatizada debo empezar por crearme una función para hacer [Web scraping][Web scraping] 
 
-{% highlight php %}
-
-  function scrapDato($frase, $pista, $elem="td", $cuenta=1, $cierre = null){ 
-    $pos = strpos($frase, $pista);
-    if($pos == false) return false;
-    $vi = $pos;
-    if($cierre == null){
-      $abre = "<$elem";
-      $cierra = "</$elem>";
-    }else{
-      $abre = $elem;
-      $cierra = $cierre;
-    }
-
-    for ($x = 1; $x <= $cuenta; $x++) {
-      $npos = strpos($frase, $abre, $vi+1);
-      if($npos == false) $x=$cuenta; else $vi = $npos;
-    } 
-
-    if($cierre == null) $vi = strpos($frase, ">", $vi) + 1; else $vi = $vi +1;
-    $vf = strpos($frase, $cierra,$vi);
-    $v = trim(substr($frase, $vi, $vf - $vi ));
-    $strip = strip_tags($v);
-    return $strip;
-  }
-{% endhighlight %}
+{% gist c9c49502042b4d9e3f88ad1153ca5e20 %}
 
 La idea es que mediante pistas y un estudio previo de la web a "escrapear" podamos decirle a nuestra función cómo obtener esa información que desconocemos pero sabemos encontrar. Supongamos que obtenemos toda la página mediante file_get_contents, veamos dos ejemplos de cómo usar la función scrapDato()
 
