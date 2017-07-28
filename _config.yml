@@ -1,22 +1,47 @@
-# Site settings
-title: El código nuestro de cada día
-email: asosab@gmail.com
+# setup
+title: "El código nuestro de cada día"
 description: "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información"
+tagline: ""
 baseurl: ""
-url: "https://asosab.github.io/"
-twitter_username: asosab
-github_username:  asosab
+url: asosab.github.io
+
+# About/contact
+author:
+  name:             Alejandro Sosa Briceño
+  url:              asosab.github.io
+  github:           asosab
+  google_analytics: UA-84695-6
+  disqus:           codigo-nuestro
+  linkedin:         asosab
+  twitter:          asosab
+  email:            asosab@gmail.com
+
 timezone: America/Caracas
 encoding: utf-8
-
+email: asosab@gmail.com
 # Build settings
 # theme: jekyll-theme-midnight
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    format_style: 'div'
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
 
-gems:
-  - jekyll-gist
+permalink: pretty
 
 webrick:
   headers:
     X-Clacks-Overhead: GNU Terry Pratchett
+    Strict-Transport-Security: max-age=2592000
+
+# gems
+plugins:
+  - jekyll-gist
+  - rouge
