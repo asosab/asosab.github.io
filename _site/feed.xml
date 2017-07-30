@@ -5,8 +5,8 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 28 Jul 2017 19:26:49 -0400</pubDate>
-    <lastBuildDate>Fri, 28 Jul 2017 19:26:49 -0400</lastBuildDate>
+    <pubDate>Sat, 29 Jul 2017 23:26:13 -0400</pubDate>
+    <lastBuildDate>Sat, 29 Jul 2017 23:26:13 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -29,13 +29,17 @@
 
 </description>
         <pubDate>Sat, 17 Jun 2017 17:34:00 -0400</pubDate>
-        <link>http://localhost:4000/php/web-scraping/2017/06/17/PHP-scraping/</link>
-        <guid isPermaLink="true">http://localhost:4000/php/web-scraping/2017/06/17/PHP-scraping/</guid>
+        <link>http://localhost:4000/PHP-scraping/</link>
+        <guid isPermaLink="true">http://localhost:4000/PHP-scraping/</guid>
+        
+        <category>PHP</category>
+        
+        <category>open data</category>
+        
+        <category>idioma</category>
         
         
         <category>php</category>
-        
-        <category>web-scraping</category>
         
       </item>
     

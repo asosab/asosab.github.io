@@ -1,0 +1,27 @@
+---
+layout: page
+title: Etiquetas
+---
+
+{% comment %}
+Due credit to: https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/
+{% endcomment %}
+
+{% include tag-list.html %}
+
+{% comment %}
+=======================
+The purpose of this snippet is to list all your posts posted with a certain tag.
+=======================
+{% endcomment %}
+
+{% for tag in tags %}
+	<h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.tags contains tag %}
+		 <li><strong>{{ post.date | date: "%-Y/%m/%d" }}</strong> &raquo; {% include post-url-pretty.html %}</li>
+		 {% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %}

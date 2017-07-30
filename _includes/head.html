@@ -1,38 +1,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{'/imagen/asosab.jpg'| prepend: site.url}}" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="{{ site.author.name }}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
+    {% include geotags.html %}
+    {% include favicon.html %}
+    {% include ogp.html %}
+    {% include meta_twitter.html %}
+    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if page.keywords %}{{ site.keywords }}, {{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <link rel="shortlink" href="{% if page.shortlink %}{{ page.shortlink }}{% else %}{{ site.shortlink }}{% endif %}">
+    <link rel="search" type="application/opensearchdescription+xml" href="{{'/opensearch.xml'| prepend: site.url}}" title="Busca dentro de {{ page.title }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@asosab" />
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="twitter:description" content="{{ site.description }}" />
-    <meta name="twitter:image" content="{{'/imagen/asosab.jpg'| prepend: site.url}}" />
-    <meta name="twitter:image:alt" content="{{ site.author.name }}" />
-
+    <link rel="alternate" type="application/json+oembed" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" href="{{ "/info.json" | relative_url }}">
+    <link rel="alternate" type="text/xml+oembed" href="{{ "/info.json" | relative_url }}" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+{% if post.title %}
+    <meta property="article:publisher" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="article:section" content="{{post.categories}}" />
+    <meta property="article:published_time" content="{{post.date | date_to_xmlschema}}" />
+{% endif %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
-    <!--link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}"-->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    
-	
 </head>
-
-
-
-
-
-

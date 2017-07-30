@@ -1,0 +1,17 @@
+--- layout: null ---
+<?xml version="1.0" encoding="utf-8"?>
+<oembed>
+    <type>website</type>
+    <provider_url>{{site.url | xml_escape}}</provider_url>
+    <author_name>{{site.author.name | xml_escape}}</author_name>
+    <thumbnail_url>{{'/imagen/asosab.jpg'| prepend: site.url | xml_escape}}</thumbnail_url>
+    <title>{% if page.title %}{{ page.title | xml_escape}}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
+    <width>600</width>
+    <version>1.0</version>
+    <thumbnail_height>600</thumbnail_height>
+    <html>&lt;iframe width="600" height="600" src="{{site.url | xml_escape}}" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</html>
+    <thumbnail_width>600</thumbnail_width>
+    <height>600</height>
+    <author_url>{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | xml_escape}}</author_url>
+    <provider_name>{{site.title}}</provider_name>
+</oembed>

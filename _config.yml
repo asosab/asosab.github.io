@@ -1,9 +1,12 @@
 # setup
-title: "El código nuestro de cada día"
-description: "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información"
-tagline: ""
-baseurl: ""
-url: asosab.github.io
+title:        "El código nuestro de cada día"
+description:  "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información"
+tagline:      ""
+baseurl:      ""
+url:          asosab.github.io
+keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
+shortlink:    "http://j.mp/dia-cod"
+theme-color:  "#ffffff"
 
 # About/contact
 author:
@@ -12,13 +15,20 @@ author:
   github:           asosab
   google_analytics: UA-84695-6
   disqus:           codigo-nuestro
-  linkedin:         asosab
+  linkedin:         alejandrososa
   twitter:          asosab
+  facebook:         asosab
   email:            asosab@gmail.com
+  region:           VE-S
+  placename:        Patiecitos
+  ICBM:             "7.831472;-72.2297509"
 
-timezone: America/Caracas
-encoding: utf-8
-email: asosab@gmail.com
+timezone:       America/Caracas
+locale:         es_ES
+encoding:       utf-8
+email:          asosab@gmail.com
+
+
 # Build settings
 # theme: jekyll-theme-midnight
 markdown: kramdown
@@ -34,11 +44,10 @@ kramdown:
     block:
       line_numbers: true
 
-permalink: pretty
+permalink: /:title/
 
 webrick:
   headers:
-    X-Clacks-Overhead: GNU Terry Pratchett
     Strict-Transport-Security: max-age=2592000
 
 # gems

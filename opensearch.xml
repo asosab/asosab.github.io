@@ -1,0 +1,12 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Búsqueda en {{ site.title }}</ShortName>
+  <Description>Búsqueda de artículos en {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</Description>
+  <Tags>{{ site.keywords }}</Tags>
+  <Image height="16" width="16" type="image/vnd.microsoft.icon">{{'/imagen/favicon/favicon-16x16.png'| prepend: site.url}}</Image>
+  <Url type="text/html" template="https://duckduckgo.com/?q=site%3A{{ site.url }}+{searchTerms}utm_source=opensearch" />
+  <Query role="example" searchTerms="open data" />
+</OpenSearchDescription>

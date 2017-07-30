@@ -1,0 +1,7 @@
+<a class="link-full" href="{{ post.url | remove: '.html' | prepend: site.baseurl }}" title="{{ post.title }}">
+	{% if post.brief_title %}
+		{{ post.brief_title }}
+	{% else %}
+		{{ post.title }}
+	{% endif %}
+</a>
