@@ -3,7 +3,7 @@ title:        "El código nuestro de cada día"
 description:  "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información"
 tagline:      ""
 baseurl:      ""
-url:          asosab.github.io
+url:          https://asosab.github.io
 keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
 shortlink:    "http://j.mp/dia-cod"
 theme-color:  "#ffffff"
