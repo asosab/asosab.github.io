@@ -15,6 +15,7 @@ layout: default
     {% endfor %}
   </ul>
 
+{% if site.posts.size > 20 %}
   {% include tag-list.html %}
-
+{% endif %}
 </div>
