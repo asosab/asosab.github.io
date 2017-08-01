@@ -7,7 +7,7 @@ url:          https://asosab.github.io
 keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
 shortlink:    "http://j.mp/dia-cod"
 theme-color:  "#ffffff"
-
+desarrollo: true
 # About/contact
 author:
   name:             Alejandro Sosa Briceño
@@ -22,6 +22,8 @@ author:
   region:           VE-S
   placename:        Patiecitos
   ICBM:             "7.831472;-72.2297509"
+  flickr:           alejandrososa
+  instagram:        alejandrososab
 
 timezone:       America/Caracas
 locale:         es_ES

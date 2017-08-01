@@ -13,7 +13,13 @@ comments: true
   {{ content }}
   </article>
 
-
+	{% include social-compartir.html %}
+{% if site.desarrollo %}
+{{'en desarrollo, sin disqus ni analytics'}}
+{% else %}
 	{% include disqus.html %}
 	{% include analytics.html %}
+{% endif %}
 </div>
+
+

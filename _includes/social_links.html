@@ -1,0 +1,29 @@
+{% if site.author.github %}
+	<a href="https://github.com/{{site.author.github}}"><i class="fa fa-github" aria-hidden="true"></i></a>
+{% endif %}
+{% if site.author.twitter %}
+	&nbsp;<a href="https://twitter.com/{{site.author.twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+{% endif %}
+{% if site.author.facebook %}
+	&nbsp;<a href="https://facebook.com/{{site.author.facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+{% endif %}
+{% if site.author.linkedin %}
+	&nbsp;<a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+{% endif %}
+{% if site.author.instagram %}
+	&nbsp;<a href="https://www.instagram.com/{{site.author.instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+{% endif %}
+{% if site.author.flickr %}
+	&nbsp;<a href="https://www.flickr.com/photos/{{site.author.flickr}}"><i class="fa fa-flickr" aria-hidden="true"></i></a> 
+{% endif %}
+{% if site.author.email %}
+	&nbsp;<a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+{% endif %}
+
+
+	&nbsp;<a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss" aria-hidden="true"></i></a>
+
+
+ 
+ 
+

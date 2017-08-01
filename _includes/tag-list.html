@@ -37,11 +37,14 @@ The purpose of this snippet is to list all the tags you have in your site.
 =======================
 {% endcomment %}
 
+{% comment %}
 <h2 class="page-title">
 {% unless page.url contains "blog" %}
     <a class="link-full" href="/tags/">Etiquetas</a>
 {% endunless %}
 </h2>
+{% endcomment %}
+
 
 {% for tag in tags %}
     {% if page.url contains "blog" %}

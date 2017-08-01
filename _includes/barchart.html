@@ -1,0 +1,77 @@
+
+<svg id="{{include.chart}}" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+
+<script>
+
+var baseWidth = $(document).width()||600;
+if(baseWidth>600) {baseWidth=600;}
+var baseHeight = Math.round(baseWidth*0.61803398874988);
+
+var tituloY = "";
+
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = baseWidth - margin.left - margin.right,
+    height = baseHeight - margin.top - margin.bottom;
+
+var formatPercent = d3.format("0%");
+
+var x = d3.scale.ordinal().rangeRoundBands([0, width], .4);
+
+var y = d3.scale.linear().range([height, 1]);
+
+var xAxis = d3.svg.axis().scale(x).orient("bottom");
+
+var yAxis = d3.svg.axis().scale(y).orient("left") //.tickFormat(formatPercent);
+
+var tip{{include.chart}} = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>"+d[Object.keys(d)[0]]+":</strong> <span style='color:red'>" + d[Object.keys(d)[1]] + "</span>";
+  })
+
+var svg{{include.chart}} = d3.select("#{{include.chart}}")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg{{include.chart}}.call(tip{{include.chart}});
+
+d3.tsv("{{include.data}}", type, function(error, data) {
+  x.domain(data.map(function(d) { return d[Object.keys(d)[0]]; }));
+  y.domain([0, d3.max(data, function(d) {tituloY=Object.keys(d)[1]; return d[Object.keys(d)[1]]; })]);
+  svg{{include.chart}}.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg{{include.chart}}.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text(tituloY);
+
+  svg{{include.chart}}.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d[Object.keys(d)[0]]); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d[Object.keys(d)[1]]); })
+      .attr("height", function(d) { return height - y(d[Object.keys(d)[1]]); })
+      .on('mouseover', tip{{include.chart}}.show)
+      .on('mouseout', tip{{include.chart}}.hide)
+
+});
+
+function type(d) {
+  d[Object.keys(d)[1]] = +d[Object.keys(d)[1]];
+  return d;
+}
+
+</script>

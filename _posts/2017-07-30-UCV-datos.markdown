@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Computación UCV 1971 - 2010"
+date:   2017-07-30 17:34
+categories: datos
+comments: true
+description: "Gráficas de los datos publicados por la UCV sobre egresados de esa casa de estudios desde 1971 hasta el año 2010"
+tags: [open data, charts, estadísticas, UCV, Venezuela, Computación]
+havecharts: true
+published: false
+---
+
+{% include showdata.html 
+		titulo="Total egresos por año" 
+		tipo="barras" 
+		chart="egresosano" 
+		data="/data/UCV-computacion-total-por-ano-egresados.tsv"
+		fuente="http://www.ucv.ve/"
+%}

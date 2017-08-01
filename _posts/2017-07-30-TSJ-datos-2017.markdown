@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "TSJ en números 2017"
+date:   2017-07-30 17:34
+categories: datos
+comments: true
+description: "Gráficas de los datos publicados por el Tribunal Supremo de Justicia de Venezuela"
+tags: [open data, charts, estadísticas, tsj, Venezuela]
+havecharts: true
+published: false
+---
+
+{% include showdata.html 
+		titulo="Total procesos por deserciones en el TSJ durante el 2017" 
+		tipo="barras" 
+		chart="desercion" 
+		data="/data/tsj-desercion-2017-meses.tsv"
+		fuente="/data/tsj-desercion-2017-meses.fuente"
+%}
