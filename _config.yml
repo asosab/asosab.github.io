@@ -7,7 +7,7 @@ url:          https://asosab.github.io
 keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
 shortlink:    "http://j.mp/dia-cod"
 theme-color:  "#ffffff"
-desarrollo: true
+desarrollo: false
 # About/contact
 author:
   name:             Alejandro Sosa Briceño
