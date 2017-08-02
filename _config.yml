@@ -7,7 +7,7 @@ url:          https://asosab.github.io
 keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
 shortlink:    "http://j.mp/dia-cod"
 theme-color:  "#ffffff"
-desarrollo: false
+desarrollo:   false
 # About/contact
 author:
   name:             Alejandro Sosa Briceño
@@ -24,7 +24,7 @@ author:
   ICBM:             "7.831472;-72.2297509"
   flickr:           alejandrososa
   instagram:        alejandrososab
-  youtube:           asosab
+  youtube:          asosab
   googleplus:       AlejandroSosaBriceño
   pinterest:        asosab
 
@@ -32,10 +32,10 @@ timezone:       America/Caracas
 locale:         es_ES
 encoding:       utf-8
 email:          asosab@gmail.com
+imageFolder:    "/imagen/"
 
 
 # Build settings
-# theme: jekyll-theme-midnight
 markdown: kramdown
 highlighter: rouge
 kramdown:

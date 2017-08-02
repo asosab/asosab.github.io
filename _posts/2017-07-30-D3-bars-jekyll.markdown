@@ -8,6 +8,7 @@ description: "Un ejemplo sensillo sobre cómo implementar una gráfica de barras
 tags: [open data, charts, estadísticas, jekill, D3]
 havecharts: true
 published: true
+image: D3-bars-jekyll.png
 ---
 
 {% include showdata.html 

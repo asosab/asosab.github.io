@@ -5,8 +5,8 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 Aug 2017 21:06:56 -0400</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2017 21:06:56 -0400</lastBuildDate>
+    <pubDate>Wed, 02 Aug 2017 01:48:19 -0400</pubDate>
+    <lastBuildDate>Wed, 02 Aug 2017 01:48:19 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -127,10 +127,8 @@ function type(d) {
 
 &lt;p&gt;Recuerden que mi blog es código abierto, así que si quieren ver esta publicación por dentro son &lt;a href=&quot;https://github.com/asosab&quot;&gt;bienvenidos&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.
+true&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Un cambio importante es la orientación del texto del eje X. Para inclinarlo un poco  primero le di más espacio en la variable margin&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -258,9 +256,7 @@ function type(d) {
 
 &lt;p&gt;La idea es que mediante pistas y un estudio previo de la web a “escrapear” podamos decirle a nuestra función cómo obtener esa información que desconocemos pero sabemos encontrar. Supongamos que obtenemos toda la página mediante file_get_contents, veamos dos ejemplos de cómo usar la función scrapDato()&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/667c1a7a3c4af907d9d83e357e11232e.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/667c1a7a3c4af907d9d83e357e11232e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Existen códigos fabulosos para hacer Web scraping, uno bastante serio es &lt;a href=&quot;https://github.com/FriendsOfPHP/Goutte&quot;&gt;Goutte&lt;/a&gt;, para hacer mucho más que tomar datos de una Web.&lt;/p&gt;
 
