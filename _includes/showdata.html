@@ -1,5 +1,9 @@
-#### {{include.titulo}} [<i class="fa fa-table" aria-hidden="true"></i>]({{include.data}} "Descarga los datos de la gráfica") {% if include.fuente %}[<i class="fa fa-file-text-o" aria-hidden="true"></i>]({{include.fuente}} "Funente de los datos"){% endif %}
+<h4 class="chart-title" id="titulo{{include.chart}}">Datos a mostrar 
+<a href="{{include.data}}" title="Descarga los datos de la gráfica"><i class="fa fa-table" aria-hidden="true"></i></a>&nbsp;
+{% if include.fuente %}
+<a href="{{include.fuente}}" title="Funente de los datos"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+{% endif %}
+</h4>
 {% if include.tipo == 'barras' %}
 {% include barchart.html data=include.data chart=include.chart %}
 {% endif %}
-

@@ -5,9 +5,248 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 Aug 2017 13:25:56 -0400</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2017 13:25:56 -0400</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2017 21:06:56 -0400</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2017 21:06:56 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>Automatizando el uso de D3.js en Jekyll</title>
+        <description>&lt;h4 class=&quot;chart-title&quot; id=&quot;tituloCh1&quot;&gt;Datos a mostrar 
+&lt;a href=&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot; title=&quot;Descarga los datos de la gráfica&quot;&gt;&lt;i class=&quot;fa fa-table&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&amp;nbsp;
+
+&lt;a href=&quot;http://www.ucv.ve/&quot; title=&quot;Funente de los datos&quot;&gt;&lt;i class=&quot;fa fa-file-text-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+&lt;/h4&gt;
+
+&lt;svg id=&quot;Ch1&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; text-anchor=&quot;middle&quot;&gt;&lt;/svg&gt;
+
+&lt;script&gt;
+
+var baseWidth = $(document).width()||600;
+if(baseWidth&gt;600) {baseWidth=600;}
+var baseHeight = Math.round(baseWidth*0.61803398874988);
+
+var tituloY = &quot;&quot;;
+
+var margin = {top: 40, right: 20, bottom: 50, left: 40},
+    width = baseWidth - margin.left - margin.right,
+    height = baseHeight - margin.top - margin.bottom;
+
+var formatPercent = d3.format(&quot;0%&quot;);
+
+var x = d3.scale.ordinal().rangeRoundBands([0, width], .4);
+
+var y = d3.scale.linear().range([height, 1]);
+
+var xAxis = d3.svg.axis().scale(x).orient(&quot;bottom&quot;);
+
+var yAxis = d3.svg.axis().scale(y).orient(&quot;left&quot;) //.tickFormat(formatPercent);
+
+var tipCh1 = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return &quot;&lt;strong&gt;&quot;+d[Object.keys(d)[0]]+&quot;:&lt;/strong&gt; &lt;span style='color:red'&gt;&quot; + d[Object.keys(d)[1]] + &quot;&lt;/span&gt;&quot;;
+  })
+
+var svgCh1 = d3.select(&quot;#Ch1&quot;)
+    .attr(&quot;width&quot;, width + margin.left + margin.right)
+    .attr(&quot;height&quot;, height + margin.top + margin.bottom)
+  .append(&quot;g&quot;)
+    .attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+
+svgCh1.call(tipCh1);
+
+d3.tsv(&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;, type, function(error, data) {
+  x.domain(data.map(function(d) { 
+    $('#tituloCh1').contents().filter(function() {return this.nodeType == 3}).each(function(){this.textContent = this.textContent.replace('Datos a mostrar',Object.keys(d)[0]);});
+    return d[Object.keys(d)[0]]; }));
+  y.domain([0, d3.max(data, function(d) {tituloY=Object.keys(d)[1]; return d[Object.keys(d)[1]]; })]);
+  svgCh1.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;x axis&quot;)
+      .attr(&quot;transform&quot;, &quot;translate(0,&quot; + height + &quot;)&quot;)
+      .call(xAxis)
+      .selectAll(&quot;text&quot;)  
+      .style(&quot;text-anchor&quot;, &quot;end&quot;)
+      .attr(&quot;dx&quot;, &quot;-.8em&quot;)
+      .attr(&quot;dy&quot;, &quot;.15em&quot;)
+      .attr(&quot;transform&quot;, &quot;rotate(-65)&quot; );
+
+  $('#tituloCh1').html(function(d) { return x(Object.keys(d)[0]); });
+
+  svgCh1.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;y axis&quot;)
+      .call(yAxis)
+      .append(&quot;text&quot;)
+      .attr(&quot;transform&quot;, &quot;rotate(-90)&quot;)
+      .attr(&quot;y&quot;, 6)
+      .attr(&quot;dy&quot;, &quot;.71em&quot;)
+      .style(&quot;text-anchor&quot;, &quot;end&quot;)
+      .text(tituloY);
+
+  svgCh1.selectAll(&quot;.bar&quot;)
+      .data(data)
+      .enter().append(&quot;rect&quot;)
+      .attr(&quot;class&quot;, &quot;bar&quot;)
+      .attr(&quot;x&quot;, function(d) { return x(d[Object.keys(d)[0]]); })
+      .attr(&quot;width&quot;, x.rangeBand())
+      .attr(&quot;y&quot;, function(d) { return y(d[Object.keys(d)[1]]); })
+      .attr(&quot;height&quot;, function(d) { return height - y(d[Object.keys(d)[1]]); })
+      .on('mouseover', tipCh1.show)
+      .on('mouseout', tipCh1.hide)
+
+});
+
+function type(d) {
+  d[Object.keys(d)[1]] = +d[Object.keys(d)[1]];
+  return d;
+}
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; y &lt;a href=&quot;https://github.com/asosab&quot;&gt;github&lt;/a&gt; te permiten implementar sin mucho esfuerzo un sitio Web con archivos estáticos, pero eso no significa que no se pueda aprovechar la potencia de javascript para animar del lado del cliente los datos que les deseamos mostrar. Yo estoy buscando librerías .js que desplieguen de forma agradable y comprensible una serie de datos y mi primer experimento será con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, pero deseo además no tener que escribir todo el código que despliega una gráfica una y otra vez, así que crearé un par de archivos para que jekyll los invoque con los valores que correspondan cada vez que quiera mostrar un tipo gráfica determinada. Comenzaremos con la cĺásica y aburrida gráfica de barras, mostrada sobre estas líneas.&lt;/p&gt;
+
+&lt;p&gt;Como primer paso debes tener un archivo con datos para mostrar, puedes usar json como forma de notación o simplemente datos tabulados, que son fáciles de leer a ojo y uno de los formatos más ligeros para transmitirlos por Internet. Puedes usar el archivo de datos tabulados que uso en &lt;a href=&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;&gt;este ejemplo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora prepara tu sitio Web para poder usar la librería de &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;. En el lugar donde cargas los elementos de la cabeza (por defecto /_includes/head.html) agrega unas líneas:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/efaf7dc8d3e3b897821c1f722e56f738.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Agrego permanentemente jquery porque deseo usarla en otros sitios pero el código que les muestro la usará un par de veces, d3.tip es una extención de D3js que le agrega cajitas de texto sobre la barra que señales. Fíjense que uso un condicional con la variable ‘page.havecharts’, la idea es que sólo cargaré las librerías cuando las necesite, entonces bastará con agregar ‘havecharts=true’ en el encabezado de mi documento con gráficos para que se carguen las librerías.&lt;/p&gt;
+
+&lt;p&gt;Crearemos el archivo que se va a encargar de revisar el tipo de gráfica, ponerle un título y un par de links a las fuentes de datos. Yo le llamo showdata.html y lo guardo en _includes/&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6b8733ed5e9d6500b95317974520cf6d.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Antes de ir al corazón del asunto les voy a mostrar cómo se vé el código incertado en una publicación, esta misma como ejemplo:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9f94abd1ba7e83e366a1e78646a07321.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Recuerden que mi blog es código abierto, así que si quieren ver esta publicación por dentro son &lt;a href=&quot;https://github.com/asosab&quot;&gt;bienvenidos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Un cambio importante es la orientación del texto del eje X. Para inclinarlo un poco  primero le di más espacio en la variable margin&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;y luego agegué por código unos cambios a los atributos de la etiqueta&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text-anchor&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;end&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dx&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;-.8em&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.15em&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transform&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rotate(-65)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Ya casi listos para ver resultados, el render necesita un poco de css, que agregué a mi archivo main.css&lt;/p&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;shape-rendering&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crispEdges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.bar&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orangered&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.x.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.d3-tip&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* Creates a small triangle extender for the tooltip */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.d3-tip&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;\25BC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* Style northward tooltips differently */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.d3-tip.n&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.chart-title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;padding-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 30 Jul 2017 17:34:00 -0400</pubDate>
+        <link>http://localhost:4000/D3-bars-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/D3-bars-jekyll/</guid>
+        
+        <category>open data</category>
+        
+        <category>charts</category>
+        
+        <category>estadísticas</category>
+        
+        <category>jekill</category>
+        
+        <category>D3</category>
+        
+        
+        <category>datos</category>
+        
+      </item>
     
       <item>
         <title>PHP Web scraping</title>
