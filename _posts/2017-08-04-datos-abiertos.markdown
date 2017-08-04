@@ -4,7 +4,7 @@ title:  "Datos abiertos venezolanos"
 date:   2017-08-04 
 categories: datos
 comments: true
-description: "Proyecto de accesibilidad a datos abiertos venezolanos, descárgalos de aquí o pide el formato que más te interese"
+description: "Proyecto de accesibilidad a datos abiertos venezolanos, descárgalos aquí y/o pide el formato que más te interese"
 tags: [open data, gobierno, ANC]
 havecharts: false
 published: true
