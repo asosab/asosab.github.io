@@ -45,7 +45,7 @@ Comparto el trabajo de recopilación bajo una licencia [CC by-sa 4.0](https://cr
 Crédito de la imagen: [Open Government Data Venn Diagram by justgrimes][notbrucelee] / [CC BY-SA][bysa2]
 
 
-La palabra "datos" se repite 27 veces en el documento crudo. Parece que me emociono cuando habo de datos...
+La palabra "datos" se repite 27 veces en este documento. Parece que me emociono cuando hablo de datos...
 
 [imagen]: {{ page.image | prepend: site.imageFolder | prepend: site.url }}
 [1]: http://github.com/asosab/open_data/pulls
