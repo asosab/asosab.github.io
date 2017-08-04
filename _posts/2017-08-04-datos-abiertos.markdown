@@ -18,7 +18,7 @@ Inicié un pequeño proyecto de datos abiertos con la intención de ayudar a las
 
 Datos | Formatos a descargar | Fuente 
 ------------ | ------------- | -------------
-Candidatos a la Asamblea Nacional Constituyente, Venezuela 2017 | [back postgresql][ancBack], [sql postgresql][ancsql], [json][ancJson], [original][oriJson] | [CNE][ancFuente]
+Candidatos a la Asamblea Nacional Constituyente, Venezuela 2017 | [.back postgresql][ancBack], [.sql postgresql][ancsql], [.json][ancJson], [.scv][ancSCV] [original][oriJson] | [CNE][ancFuente]
 
 
 ¿Cómo obtengo los datos?
@@ -47,6 +47,7 @@ Crédito de la imagen: [Open Government Data Venn Diagram by justgrimes][notbruc
 [imagen]: {{ page.image | prepend: site.imageFolder | prepend: site.url }}
 [1]: http://github.com/asosab/open_data/pulls
 [ancJson]: https://github.com/asosab/open_data/raw/master/anc17/anc.json
+[ancSCV]: https://github.com/asosab/open_data/raw/master/anc17/anc.scv
 [ancsql]: https://github.com/asosab/open_data/raw/master/anc17/anc.sql
 [ancBack]: https://github.com/asosab/open_data/raw/master/anc17/anc.backup
 [oriJson]: https://github.com/asosab/open_data/raw/master/anc17/original.json
