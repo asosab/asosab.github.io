@@ -21,7 +21,7 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.imageFolder | prepend: site.url }}{% else %}{{'asosab.jpg' | prepend: site.imageFolder | prepend: site.url}}{% endif %}" />
-    <meta property="og:image:type" content="image/png" />
+    <!--meta property="og:image:type" content="image/png" /-->
     <meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:site_name" content="{{ site.title }}" />
     {% if site.author.facebook %}<meta property="article:author" content="https://www.facebook.com/{{site.author.facebook}}"/>{% endif %}

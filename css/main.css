@@ -460,3 +460,11 @@ a:visited { color: grey; }
   left: 0;
 }
 .chart-title { display: inline; padding-left: 40px;}
+
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 99%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 25%; }
+}

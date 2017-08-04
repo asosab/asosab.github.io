@@ -5,9 +5,70 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 02 Aug 2017 01:48:19 -0400</pubDate>
-    <lastBuildDate>Wed, 02 Aug 2017 01:48:19 -0400</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 13:33:28 -0400</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 13:33:28 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>Datos abiertos venezolanos</title>
+        <description>&lt;p&gt;&lt;img style=&quot;float: left; &quot; class=&quot;ri&quot; alt=&quot;Diagrama Venn de datos abiertos gubernamentales, por justgrimes&quot; src=&quot;http://localhost:4000/imagen/open-data-gov.jpg&quot; /&gt; La ley de infogobierno venezolana dice entre otras cosas que todo lo que produzca y publique la administración pública es autmáticamente de dominio público. Esto significa que toda información que un organismo público coloque en una página web es información que puede copiarse, reproducirse, comentarse y usarse para los fines que se requiera siempre que se de crédito al creador de dichos datos y se mencione la fuente para que quien lo desee pueda tomar los datos directamente de ella. Pero la información que publica el gobierno no siempre es fácil de leer o analizar, a veces publican datos incertados en documentos pdf o en tablas dinámicas web, que si bien permiten moverse por grandes masas de datos no son lo suficientemente flexibles como para cruzar todos esos datos o explorarlos desde otras perspectivas.Otra cosa que los datos presentados piden a gritos es un poco de limpieza, agregar acentos, homologar datos duplicados, etc.&lt;/p&gt;
+
+&lt;p&gt;Inicié un pequeño proyecto de datos abiertos con la intención de ayudar a las instituciones públicas a compartir sus datos publicados en formatos que puedan ser mejor estudiados o simplemente descargados cuando las páginas oficiales se encuentran caídas o no provean medios cómodos para tomar dicha información, en la siguiente tabla iré agregando los datos que vaya procesando.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Datos&lt;/th&gt;
+      &lt;th&gt;Formatos a descargar&lt;/th&gt;
+      &lt;th&gt;Fuente&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Candidatos a la Asamblea Nacional Constituyente, Venezuela 2017&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.backup&quot;&gt;back postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.sql&quot;&gt;sql postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.json&quot;&gt;json&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/original.json&quot;&gt;original&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://constituyente2017.cne.gob.ve/resultados_2017Final/&quot;&gt;CNE&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;cómo-obtengo-los-datos&quot;&gt;¿Cómo obtengo los datos?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Web_scraping&quot;&gt;Web Scraping&lt;/a&gt; es una técnica que permite recabar datos de páginas web&lt;/li&gt;
+  &lt;li&gt;Existe software que permite recabar datos desde archivos pdf&lt;/li&gt;
+  &lt;li&gt;Los &lt;a href=&quot;https://github.com/asosab/open_data&quot;&gt;datos de candidatos a la constituyente del 2017&lt;/a&gt; se descargan directamente como un documento json desde el &lt;a href=&quot;http://constituyente2017.cne.gob.ve/assets/&quot;&gt;sitio web publicado&lt;/a&gt; por el &lt;a href=&quot;http://www.cne.gob.ve/web/index.php&quot;&gt;Consejo Nacional Electoral&lt;/a&gt;. La página muestra una tabla dinámica que se carga con los datos pero no permite cómodamente el descargarse el archivo json generado, es necesario leerlo desde la caché del browser o tomarlo con ayuda de plugins como &lt;a href=&quot;https://getfirebug.com/&quot;&gt;firebug&lt;/a&gt;. A los datos le agregué una columna llamada ‘adjudicados’ que se muestra como ‘t’ (de true) para los participantes que el CNE a afirmado como adjudicados a puestos en la ANC en ruedas de prensa o &lt;a href=&quot;http://www.cne.gob.ve/web/sala_prensa/noticia_detallada.php?id=3553&quot;&gt;boletines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;licencia&quot;&gt;LICENCIA&lt;/h2&gt;
+&lt;p&gt;Comparto el trabajo de recopilación bajo una licencia &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;CC by-sa 4.0&lt;/a&gt;. Los propios datos son públicos, pertenecen a sus creadores y pueden encontrarse en sus sitios de publicación, mencionados donde corresponda.&lt;/p&gt;
+
+&lt;h2 id=&quot;quieres-ayudar-agregando-o-limpiando-datos&quot;&gt;¿Quieres ayudar agregando o limpiando datos?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Has un &lt;a href=&quot;https://github.com/asosab/open_data&quot;&gt;fork&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Crea una rama propia (&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b mi_rama&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Has un Commit con tus cambios (&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &quot;Descripción de los cambios&quot;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Sube los cambios a tu rama (&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin mi_rama&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Crea un &lt;a href=&quot;http://github.com/asosab/open_data/pulls&quot;&gt;Pull Request&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;¿Hay algún formato en que desees obtener los datos? ¡Déjame un comentario más abajo!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Crédito de la imagen: &lt;a href=&quot;https://www.flickr.com/photos/notbrucelee/5241176871/&quot;&gt;Open Government Data Venn Diagram by justgrimes&lt;/a&gt; / &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC BY-SA&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Aug 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/datos-abiertos/</link>
+        <guid isPermaLink="true">http://localhost:4000/datos-abiertos/</guid>
+        
+        <category>open data</category>
+        
+        <category>gobierno</category>
+        
+        <category>ANC</category>
+        
+        
+        <category>datos</category>
+        
+      </item>
     
       <item>
         <title>Automatizando el uso de D3.js en Jekyll</title>
@@ -127,8 +188,10 @@ function type(d) {
 
 &lt;p&gt;Recuerden que mi blog es código abierto, así que si quieren ver esta publicación por dentro son &lt;a href=&quot;https://github.com/asosab&quot;&gt;bienvenidos&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.
-true&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Un cambio importante es la orientación del texto del eje X. Para inclinarlo un poco  primero le di más espacio en la variable margin&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -256,7 +319,9 @@ true&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f13
 
 &lt;p&gt;La idea es que mediante pistas y un estudio previo de la web a “escrapear” podamos decirle a nuestra función cómo obtener esa información que desconocemos pero sabemos encontrar. Supongamos que obtenemos toda la página mediante file_get_contents, veamos dos ejemplos de cómo usar la función scrapDato()&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/667c1a7a3c4af907d9d83e357e11232e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/667c1a7a3c4af907d9d83e357e11232e.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Existen códigos fabulosos para hacer Web scraping, uno bastante serio es &lt;a href=&quot;https://github.com/FriendsOfPHP/Goutte&quot;&gt;Goutte&lt;/a&gt;, para hacer mucho más que tomar datos de una Web.&lt;/p&gt;
 
@@ -272,6 +337,8 @@ true&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f13
         <category>open data</category>
         
         <category>idioma</category>
+        
+        <category>verbos</category>
         
         
         <category>php</category>
