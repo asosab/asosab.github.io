@@ -5,7 +5,7 @@
     <link rel="shortlink" href="{% if page.shortlink %}{{ page.shortlink }}{% else %}{{ site.shortlink }}{% endif %}">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link rel="search" type="application/opensearchdescription+xml" href="{{'/opensearch.xml'| prepend: site.url}}" title="Busca dentro de {{ page.title }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" itemprop="url">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     <link rel="alternate" type="application/json+oembed" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" href="{{ "/info.json" | relative_url }}">
     <link rel="alternate" type="text/xml+oembed" href="{{ "/info.xml" | relative_url }}" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -44,3 +44,4 @@
 		{% for tag in page.tags %}
 		<meta property="article:tag" content="{{ tag }}">{% endfor %}
     
+    <link rel="alternate" hreflang="es" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

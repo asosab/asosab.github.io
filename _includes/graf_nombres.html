@@ -1,0 +1,147 @@
+<div class="btn-group" role="group" aria-label="...">
+  <!--button id="limpiar" type="button" class="btn btn-default">limpiar</button-->
+
+<select id="listaNombres" data-placeholder="Selecciona uno o varios nombres..." class="chosen-select" multiple tabindex="4"></select>
+<br/>
+<br/>
+<div id="chart"></div>
+<div class="subchart">Puedes hacer click sobre la gráfica para intercambiar la vista entre total nacimientos por año y porcentaje de la población total de ese año.</div>
+
+<script src="{{"/assets/js/vendor/chosen.jquery.min.js" | prepend: site.url}}"></script>
+<link rel="stylesheet" href="{{ "/assets/css/chosen.min.css" | prepend: site.url }}">
+<script>
+var totales = [18563,18056,19997,17822,36789,29855,30142,27696,31696,34697,34428,39254,40078,37681,56312,47760,56765,47859,56526,54547,56872,59575,66982,62981,79532,62278,74358,74290,80469,81625,98251,89333,96606,99454,113114,98712,106183,108415,107088,117346,119286,122013,130878,126803,139600,129691,143045,142401,151877,161953,170807,181279,196470,212126,230995,232430,248894,260742,271211,275597,277909,287960,296260,316861,333932,331000,339396,345397,350215,359435,359598,373478,385099,390307,393305,406557,409446,406845,420084,428204,444082,454710,464561,491811,489065,484771,491262,502335,504268,507075,515845,508461,515894,545926,543961,542863,548482,540975,540598,478220,377869];
+var Utils = {};
+Utils.randomInt = function(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+};
+var anos = ['x']; for(i = 1896; i <= 1996; i++) anos.push(i);
+var nombres = [];
+var porcent = [];
+var tipoNum = 1;
+var datos = [];
+var urlNombres = [] // se le van agregando los nombres seleccionados
+var azar = [];
+/*
+function updateURL(){
+	var url = '{{page.url}}/?nombres='+ urlNombres.explode('|');
+}
+// onload page hacer click a la lista de nombres que aparecen en el url
+
+*/
+function addBoton(nombre, total, sexo){
+  var size = total>10000? 'btn-lg':(total>6000? '':(total>3500? 'btn-sm':'btn-xs'));
+  var color = sexo=='f'? 'btn-success':'btn-primary';
+  var selecto = "";
+  if($.url('?n')!=undefined && $.url('?n')!=''){
+    $.url('?n').split('|').forEach(function(element){if(element ==nombre) selecto = 'selected';});
+  }
+
+  var boton = $('<option id="'+nombre+'" value="'+nombre+'" '+selecto+ '>'+nombre +' ('+total+')</option>');
+//  var boton = $('<li><a id="'+nombre+'" >'+nombre+' ('+total+')</a></li>');
+//  var boton = $('<button id="'+nombre+'" type="button" class="btn ' + color + ' '+size+'">'+nombre+' <span class="badge">'+total+'</span></button>&nbsp;');
+  $("#listaNombres").append(boton);
+}
+
+function switchG(){
+  tipoNum = tipoNum==1?0:1;
+//  chart.unload();
+  if($.url('?n')!=undefined && $.url('?n')!=''){
+    $.url('?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+  }
+}
+function tipoN(nombre,tipo){if(tipo==1) return porcent[nombre];else return nombres[nombre];}
+function addName(nombre){chart.load({columns:[tipoN(nombre,tipoNum)], type: 'spline'});}
+function delName(nombre){chart.unload({ids: nombre});}
+
+function nombresAlAzar(cuantos,frecuencia,rango){
+	var lista = [];
+	var indic = 0;
+	$.each( datos, function( key, val ) {
+		if(val.total >=frecuencia && val.total <=frecuencia+rango){
+			lista.push = val.nombre;
+		}
+	});
+
+	if(lista.length >= cuantos){azar = lista;}
+	else{
+		for (var i = cuantos - 1; i >= 0; i--) {
+			indic = Utils.randomInt(0,lista.length);
+			azar.push = lista[indic];
+//			lista.remove(indic);
+		}
+	}
+	return azar;
+}
+var urlNames = "?n="
+if($.url('?n')!=undefined && $.url('?n')!=''){urlNames = urlNames + $.url( '?n');}
+
+$(function() {
+//  urlNames = urlNames + $.url( '?n');
+
+  $('#listaNombres').on('change', function(evt, params) {
+    if(params.selected){
+      addName(params.selected);
+      urlNames = urlNames + params.selected +"|";
+      window.history.pushState("", "", urlNames );
+    } 
+    if(params.deselected) {
+      delName(params.deselected);
+      urlNames = urlNames.replace(params.deselected+'|','');
+      window.history.pushState("", "", urlNames);
+    }
+  });
+
+  $.getJSON( "/data/nombres-venezuela-anual.json", function( data ) {
+    datos = data;
+
+    $.each( data, function( key, val ) { 
+      //TODO ordenar alfa, total y sexo
+      nombres[val.nombre] = $.merge([val.nombre], val.serie);
+      addBoton(val.nombre, val.total, val.sexo);
+      var pserie = [];
+      $.each( val.serie, function( llave, valor ) {pserie.push(valor*100/totales[llave]);});
+      porcent[val.nombre] = $.merge([val.nombre], pserie);
+    });
+
+
+    var columnas = [anos];
+    if($.url('?n')!=undefined && $.url('?n')!=''){
+      $.url( '?n').split('|').forEach(function(element) {
+        if(nombres[element]) columnas.push(tipoN(element,tipoNum));
+      });
+    }else{columnas.push(tipoN('Brigido',tipoNum));}
+
+    chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        x: 'x', 
+        columns: columnas,
+        type: 'spline'
+      },
+      point: {
+          show: false
+      }
+    });
+    delName('Brigido');
+
+    if($.url('?n')!=undefined && $.url('?n')!=''){
+      $.url( '?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+    }
+
+    $("#limpiar").click(function(){chart.unload();});
+    $("#chart").click(function(){switchG();});
+//    $("#limpiar").click();
+    $(".chosen-select").chosen({
+      width: "100%",
+      no_results_text: "No se encuentra el nombre ",
+
+    });
+
+   
+  //  $.each(nombresAlAzar(4,(Utils.randomInt(2519,1294571)),500), function( key, val ) {addName(azar[val]);});
+
+  });
+
+});
+</script>

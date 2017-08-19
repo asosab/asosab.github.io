@@ -1,0 +1,90 @@
+{
+  "basics": {
+    "name": "Alejandro Sosa Briceño",
+    "label": "",
+    "picture": "asosab.github.io/imagen/asosab.jpg",
+    "email": "asosab@gmail.com",
+    "phone": "+584261214789",
+    "website": "http://asosab.github.io",
+    "summary": "Panadero, Jardinero, Casado con Siria y padre de Julieta y Maximiliano. Desarrollo microservicios e imagino nuevas bases de datos",
+    "location": {
+      "address": "",
+      "postalCode": "1",
+      "city": "",
+      "countryCode": "VE",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "asosab",
+        "url": "https://twitter.com/asosab"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "alejandrososa",
+        "url": "https://linkedin.com/in/alejandrososa"
+      },
+      {
+        "network": "YouTube",
+        "username": "asosab",
+        "url": "http://www.youtube.com/asosab"
+      },
+      {
+        "network": "Pinterest",
+        "username": "asosab",
+        "url": "https://www.pinterest.com/asosab/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "CNTI",
+      "position": "",
+      "website": "http://github.com/asosab",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "",
+        "",
+        ""
+      ]
+    },
+  
+  ],
+  "volunteer": [
+  ],
+  "education": [
+  ],
+  "awards": [
+  ],
+  "publications": [
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "Jekyll",
+        "Javascript",
+        "Google Analytics",
+        "PHP"
+      ]
+    },
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    }
+  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": [ "" ]
+    }
+  ],
+  "references": [
+  ]
+}

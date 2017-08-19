@@ -460,6 +460,12 @@ a:visited { color: grey; }
   left: 0;
 }
 .chart-title { display: inline; padding-left: 40px;}
+.subchart{ 
+  display: inline; 
+  padding-left: 40px; 
+  font-size: 10px; 
+  color: rgba(0, 0, 0, 0.8);
+}
 
 @media screen and (orientation: portrait) {
   img.ri { max-width: 99%; }

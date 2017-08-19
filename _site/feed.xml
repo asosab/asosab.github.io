@@ -5,13 +5,209 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Aug 2017 14:29:25 -0400</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 14:29:25 -0400</lastBuildDate>
+    <pubDate>Sat, 19 Aug 2017 17:03:29 -0400</pubDate>
+    <lastBuildDate>Sat, 19 Aug 2017 17:03:29 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
+        <title>100 años de nombres en Venezuela</title>
+        <description>&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;...&quot;&gt;
+  &lt;!--button id=&quot;limpiar&quot; type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;limpiar&lt;/button--&gt;
+
+&lt;select id=&quot;listaNombres&quot; data-placeholder=&quot;Selecciona uno o varios nombres...&quot; class=&quot;chosen-select&quot; multiple=&quot;&quot; tabindex=&quot;4&quot;&gt;&lt;/select&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;div id=&quot;chart&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;subchart&quot;&gt;Puedes hacer click sobre la gráfica para intercambiar la vista entre total nacimientos por año y porcentaje de la población total de ese año.&lt;/div&gt;
+
+&lt;script src=&quot;http://localhost:4000/assets/js/vendor/chosen.jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:4000/assets/css/chosen.min.css&quot; /&gt;
+&lt;script&gt;
+var totales = [18563,18056,19997,17822,36789,29855,30142,27696,31696,34697,34428,39254,40078,37681,56312,47760,56765,47859,56526,54547,56872,59575,66982,62981,79532,62278,74358,74290,80469,81625,98251,89333,96606,99454,113114,98712,106183,108415,107088,117346,119286,122013,130878,126803,139600,129691,143045,142401,151877,161953,170807,181279,196470,212126,230995,232430,248894,260742,271211,275597,277909,287960,296260,316861,333932,331000,339396,345397,350215,359435,359598,373478,385099,390307,393305,406557,409446,406845,420084,428204,444082,454710,464561,491811,489065,484771,491262,502335,504268,507075,515845,508461,515894,545926,543961,542863,548482,540975,540598,478220,377869];
+var Utils = {};
+Utils.randomInt = function(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+};
+var anos = ['x']; for(i = 1896; i &lt;= 1996; i++) anos.push(i);
+var nombres = [];
+var porcent = [];
+var tipoNum = 1;
+var datos = [];
+var urlNombres = [] // se le van agregando los nombres seleccionados
+var azar = [];
+/*
+function updateURL(){
+	var url = '/nombres-venezolanos//?nombres='+ urlNombres.explode('|');
+}
+// onload page hacer click a la lista de nombres que aparecen en el url
+
+*/
+function addBoton(nombre, total, sexo){
+  var size = total&gt;10000? 'btn-lg':(total&gt;6000? '':(total&gt;3500? 'btn-sm':'btn-xs'));
+  var color = sexo=='f'? 'btn-success':'btn-primary';
+  var selecto = &quot;&quot;;
+  if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
+    $.url('?n').split('|').forEach(function(element){if(element ==nombre) selecto = 'selected';});
+  }
+
+  var boton = $('&lt;option id=&quot;'+nombre+'&quot; value=&quot;'+nombre+'&quot; '+selecto+ '&gt;'+nombre +' ('+total+')&lt;/option&gt;');
+//  var boton = $('&lt;li&gt;&lt;a id=&quot;'+nombre+'&quot; &gt;'+nombre+' ('+total+')&lt;/a&gt;&lt;/li&gt;');
+//  var boton = $('&lt;button id=&quot;'+nombre+'&quot; type=&quot;button&quot; class=&quot;btn ' + color + ' '+size+'&quot;&gt;'+nombre+' &lt;span class=&quot;badge&quot;&gt;'+total+'&lt;/span&gt;&lt;/button&gt;&amp;nbsp;');
+  $(&quot;#listaNombres&quot;).append(boton);
+}
+
+function switchG(){
+  tipoNum = tipoNum==1?0:1;
+//  chart.unload();
+  if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
+    $.url('?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+  }
+}
+function tipoN(nombre,tipo){if(tipo==1) return porcent[nombre];else return nombres[nombre];}
+function addName(nombre){chart.load({columns:[tipoN(nombre,tipoNum)], type: 'spline'});}
+function delName(nombre){chart.unload({ids: nombre});}
+
+function nombresAlAzar(cuantos,frecuencia,rango){
+	var lista = [];
+	var indic = 0;
+	$.each( datos, function( key, val ) {
+		if(val.total &gt;=frecuencia &amp;&amp; val.total &lt;=frecuencia+rango){
+			lista.push = val.nombre;
+		}
+	});
+
+	if(lista.length &gt;= cuantos){azar = lista;}
+	else{
+		for (var i = cuantos - 1; i &gt;= 0; i--) {
+			indic = Utils.randomInt(0,lista.length);
+			azar.push = lista[indic];
+//			lista.remove(indic);
+		}
+	}
+	return azar;
+}
+var urlNames = &quot;?n=&quot;
+if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){urlNames = urlNames + $.url( '?n');}
+
+$(function() {
+//  urlNames = urlNames + $.url( '?n');
+
+  $('#listaNombres').on('change', function(evt, params) {
+    if(params.selected){
+      addName(params.selected);
+      urlNames = urlNames + params.selected +&quot;|&quot;;
+      window.history.pushState(&quot;&quot;, &quot;&quot;, urlNames );
+    } 
+    if(params.deselected) {
+      delName(params.deselected);
+      urlNames = urlNames.replace(params.deselected+'|','');
+      window.history.pushState(&quot;&quot;, &quot;&quot;, urlNames);
+    }
+  });
+
+  $.getJSON( &quot;/data/nombres-venezuela-anual.json&quot;, function( data ) {
+    datos = data;
+
+    $.each( data, function( key, val ) { 
+      //TODO ordenar alfa, total y sexo
+      nombres[val.nombre] = $.merge([val.nombre], val.serie);
+      addBoton(val.nombre, val.total, val.sexo);
+      var pserie = [];
+      $.each( val.serie, function( llave, valor ) {pserie.push(valor*100/totales[llave]);});
+      porcent[val.nombre] = $.merge([val.nombre], pserie);
+    });
+
+
+    var columnas = [anos];
+    if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
+      $.url( '?n').split('|').forEach(function(element) {
+        if(nombres[element]) columnas.push(tipoN(element,tipoNum));
+      });
+    }else{columnas.push(tipoN('Brigido',tipoNum));}
+
+    chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        x: 'x', 
+        columns: columnas,
+        type: 'spline'
+      },
+      point: {
+          show: false
+      }
+    });
+    delName('Brigido');
+
+    if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
+      $.url( '?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+    }
+
+    $(&quot;#limpiar&quot;).click(function(){chart.unload();});
+    $(&quot;#chart&quot;).click(function(){switchG();});
+//    $(&quot;#limpiar&quot;).click();
+    $(&quot;.chosen-select&quot;).chosen({
+      width: &quot;100%&quot;,
+      no_results_text: &quot;No se encuentra el nombre &quot;,
+
+    });
+
+   
+  //  $.each(nombresAlAzar(4,(Utils.randomInt(2519,1294571)),500), function( key, val ) {addName(azar[val]);});
+
+  });
+
+});
+&lt;/script&gt;
+
+&lt;h4&gt;La gráfica&lt;/h4&gt;
+Muestra la cantidad de personas ceduladas con un nombre determinado y por año de nacimiento, desde 1896 hasta 1996. La escala cambia según los nombres que esté entregando, basándose en el que tenga mayor número de incidencias. Me parece interesante comprobar hasta qué punto los nombres, lejos de ser inspiraciones divinas que las madres materializan, se comportan como modas que vienen y van, hablándonos en su recorrido de los intereses y fervores de cáda época. &lt;b&gt;Jean Carlo Simancas&lt;/b&gt; era el gran galán de la televisión venezolana de los setenta y ochena, lo que explicaría por qué de los 46 mil venezolanos llamados &lt;b&gt;Jean&lt;/b&gt;, sólo entre los años 75 y 95 una buena tropa de madres noveleras le pusieron ese nombre a unos 42 mil muchachitos. Se puede ver cómo suavemente van desapareciendo los nombres de nuestros abuelos y surgen como espuma de perros rabiosos otros nuevos que rápidamente se ponen en voga. Ver mi propio nombre me da una idea del tiempo que tiene que pasar para que a la gente le parezca curioso que alguien se haya llamado jamás &lt;b&gt;Alejandro&lt;/b&gt;, como puede pasar hoy con el nombre &lt;b&gt;Visitación&lt;/b&gt;, extinto desde finales de los ochenta.
+
+&lt;h4&gt;Sobre los datos
+&lt;a href=&quot;/data/nombres-venezuela-anual.json&quot; title=&quot;Descarga los datos de la gráfica&quot;&gt;&lt;i class=&quot;fa fa-table&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&amp;nbsp;
+&lt;a href=&quot;https://www.dateas.com&quot; title=&quot;Funente de los datos&quot;&gt;&lt;i class=&quot;fa fa-file-text-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;
+La presente muestra contiene los primeros 3160 nombres más frecuentes en cédulas venezolanas desde 1896 hasta 1996. Puedes &lt;a href=&quot;/data/nombres-venezuela-anual.json&quot;&gt;descargar los datos en formato json&lt;/a&gt; o ir directo a la fuente (&lt;a href=&quot;https://www.dateas.com/&quot;&gt;https://www.dateas.com/&lt;/a&gt;) de donde tomé la materia prima vía
+&lt;a href=&quot;/PHP-scraping/&quot;&gt;Web scraping&lt;/a&gt;. No son todos los nombres venezolanos, los que se repiten menos de 500 veces quedan excluidos por falta de tiempo de procesador (suman más de 160 mil nombres distintos los que se repiten al menos una vez, a dos minutos el nombre lo dejo para otro año), mi amiga Lenka no se va a encontrar aquí ya que sólo han existido cinco personas con su nombre en la historia de la cedulación venezolana, menos aún su hermana y querida amiga Lianka, cuyo nombre es único en nuestro pais. La verdad es que no puedo saber si esto que escribo es cierto, la fuente de los datos no solo no es oficial sino que está incompleta, motivo por el cual la grafica muere en 1996. Sería genial si el INE y SAIME se pusieran de acuerdo para publicar datos estadísticos oficiales basados en nombres y fechas de nacimiento, yo quisiera contarles sobre la incidencia de las cesareas analizada desde el estudio de los días en que nacen los venezolanos (principalmente martes, miércoles y jueves, supongo que por comodidad del equipo de cirugía que programa la intervención quirúrgica), pero la falta de material oficial en qué basarme me deja hablando mejor de otra cosa. Para ver datos abiertos venezolanos de fuentes oficiales les invito a que se den una vuelta por mi &lt;a href=&quot;/datos-abiertos/&quot;&gt;proyecto de open data&lt;/a&gt;, que espero ver crecer tan rápido como las nuevas modas en cuestiones de nombres raros.
+&lt;br /&gt;
+&lt;h4&gt;Base de datos&lt;/h4&gt;
+Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto el siguiente query:
+
+&lt;pre&gt;
+  SELECT extract(year from fechanac) ano, count(1) total from dateas where 
+  unaccent(nombre1) % unaccent('$nombre') AND similarity(unaccent(nombre1), unaccent('$nombre')) &amp;gt; 0.7
+  and extract(year from fechanac) is not null 
+  and extract(year from fechanac) &amp;gt;1895
+  and extract(year from fechanac) &amp;lt;1997
+  group by ano
+  order by ano asc
+&lt;/pre&gt;
+
+que básicamente compara el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtra por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
+Por ejemplo, en el caso de 'María', el sistema contabiliza todas las personas registradas como &quot;Maria&quot;, &quot;MARIA   V&quot;, &quot;María&quot;, &quot;|MARIA&quot;, &quot;MARIA D&quot;, &quot;D' MARÍA&quot;, &quot;MARIA|&quot;, &quot;MARIÁ&quot;, &quot;MARIA  A&quot;, &quot;Marìa&quot;, &quot;MARIA T&quot;, &quot;MARIA L&quot;, &quot;MARIA  Y&quot;, &quot;MARIA         I&quot;, &quot;MARIA         D&quot;, &quot;MARIA J&quot;, &quot;MARY MARIA&quot;, &quot;MARIA  J&quot;, &quot;MARIA         G&quot;, &quot;MARIA V&quot;, &quot;S MARIA&quot;, &quot;MARU MARIA&quot;, &quot;MARIA   A&quot;, &quot;MARIA  S&quot;, &quot;MARIA  I&quot;, &quot;MARIA&quot;, &quot;MARIA R&quot;, &quot;MARIA         E&quot;, &quot;MARIA S&quot;, &quot;MARÍA&quot;, &quot;A MARIA&quot;, &quot;MARIA         N&quot;, &quot;MARIA C&quot;, &quot;MARIA I&quot;, &quot;MARÌA&quot;, &quot;MARIA N.&quot;, &quot;MARIA G&quot;, &quot;MARIA         L&quot;, &quot;MARIA   E&quot;, &quot;MARIA E&quot;, &quot;MARIA A&quot;, &quot;MARIAMARIA&quot;, &quot;MARIA Y&quot;, &quot;MARIA M&quot;, &quot;MARIA N&quot; y &quot;MARIA F&quot;. Hay un margen de error pequeño, fíjense que se me pasó una 'Maru'. Así de sucios están los datos. Finalmente obtengo el numero de registros anuales de cada grupo de nombres similares.
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 19 Aug 2017 08:43:00 -0400</pubDate>
+        <link>http://localhost:4000/nombres-venezolanos/</link>
+        <guid isPermaLink="true">http://localhost:4000/nombres-venezolanos/</guid>
+        
+        <category>open data</category>
+        
+        <category>charts</category>
+        
+        <category>estadísticas</category>
+        
+        <category>nombres</category>
+        
+        <category>Venezuela</category>
+        
+        
+        <category>datos</category>
+        
+      </item>
+    
+      <item>
         <title>Datos abiertos venezolanos</title>
-        <description>&lt;p&gt;&lt;img class=&quot;ri&quot; alt=&quot;Diagrama Venn de datos abiertos gubernamentales, por justgrimes&quot; src=&quot;http://localhost:4000/imagen/open-data-gov.jpg&quot; /&gt; La ley de infogobierno venezolana dice entre otras cosas que todo lo que produzca y publique la administración pública es autmáticamente de dominio público. Esto significa que toda información que un organismo público coloque en una página web es información que puede copiarse, reproducirse, comentarse y usarse para los fines que se requiera siempre que se de crédito al creador de dichos datos y se mencione la fuente para que quien lo desee pueda tomar los datos directamente de ella. Pero la información que publica el gobierno no siempre es fácil de leer o analizar, a veces publican datos incertados en documentos pdf o en tablas dinámicas web, que si bien permiten moverse por grandes masas de datos no son lo suficientemente flexibles como para cruzar todos esos datos o explorarlos desde otras perspectivas.Otra cosa que los datos presentados piden a gritos es un poco de limpieza, agregar acentos, homologar datos duplicados, etc.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img class=&quot;ri&quot; alt=&quot;Diagrama Venn de datos abiertos gubernamentales, por justgrimes&quot; src=&quot;http://localhost:4000/imagen/open-data-gov.jpg&quot; /&gt; 
+La ley de infogobierno venezolana dice entre otras cosas que todo lo que produzca y publique la administración pública es automáticamente de dominio público. Esto significa que toda información que un organismo público coloque en una página web es información que puede copiarse, reproducirse, comentarse y usarse para los fines que se requiera siempre que se de crédito al creador de dichos datos y se mencione la fuente para que quien lo desee pueda tomar los datos directamente de ella. Pero la información que publica las instituciones del Estado no siempre es fácil de leer o articular para su procesamiento como información básica, a veces se publican datos insertados en documentos pdf o en tablas dinámicas web, que si bien permiten moverse por grandes masas de información no son lo suficientemente flexibles como para cruzar todos esos datos o explorarlos desde otras perspectivas. Otra cosa es que los informes presentados suelen pedir a gritos un poco de limpieza, agregar acentos, eliminar duplicados, etc.&lt;/p&gt;
 
 &lt;p&gt;Inicié un pequeño proyecto de datos abiertos con la intención de ayudar a las instituciones públicas a compartir sus datos publicados en formatos que puedan ser mejor estudiados o simplemente descargados cuando las páginas oficiales se encuentran caídas o no provean medios cómodos para tomar dicha información, en la siguiente tabla iré agregando los datos que vaya procesando.&lt;/p&gt;
 
@@ -26,7 +222,7 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Candidatos a la Asamblea Nacional Constituyente, Venezuela 2017&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.backup&quot;&gt;back postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.sql&quot;&gt;sql postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.json&quot;&gt;json&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/original.json&quot;&gt;original&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.backup&quot;&gt;.back postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.sql&quot;&gt;.sql postgresql&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.json&quot;&gt;.json&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/anc.csv&quot;&gt;.csv&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/anc17/original.json&quot;&gt;original&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;http://constituyente2017.cne.gob.ve/resultados_2017Final/&quot;&gt;CNE&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -53,6 +249,8 @@
 &lt;/ol&gt;
 
 &lt;p&gt;Crédito de la imagen: &lt;a href=&quot;https://www.flickr.com/photos/notbrucelee/5241176871/&quot;&gt;Open Government Data Venn Diagram by justgrimes&lt;/a&gt; / &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC BY-SA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La palabra “datos” se repite 27 veces en este documento. Parece que me emociono cuando hablo de datos…&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 04 Aug 2017 00:00:00 -0400</pubDate>
@@ -312,7 +510,6 @@ function type(d) {
       <item>
         <title>PHP Web scraping</title>
         <description>&lt;p&gt;Si quisiera saber todas las formas de conjugar un verbo podría ir a la web &lt;a href=&quot;http://www.spanishdict.com/conjugate/esperar&quot;&gt;spanishdict&lt;/a&gt; y averiguarlo allí, pero si necesito obtener esa información programáticamente, o descargarme todas las conjugaciones de todos los verbos de forma automatizada debo empezar por crearme una función para hacer &lt;a href=&quot;https://es.wikipedia.org/wiki/Web_scraping&quot;&gt;Web scraping&lt;/a&gt;&lt;/p&gt;
-
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
 &lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/c9c49502042b4d9e3f88ad1153ca5e20.js&quot;&gt; &lt;/script&gt;

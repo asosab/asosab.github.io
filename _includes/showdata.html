@@ -7,3 +7,7 @@
 {% if include.tipo == 'barras' %}
 {% include barchart.html data=include.data chart=include.chart %}
 {% endif %}
+
+{% if include.tipo == 'lineas' %}
+{% include linechart.html data=include.data chart=include.chart %}
+{% endif %}
