@@ -4,7 +4,7 @@ title:  "100 años de nombres en Venezuela"
 date:   2017-08-19 08:43
 categories: datos
 comments: true
-description: "La moda de los nombres en Venezuela. Mira que tan común fue tu nombre entre los años 1896 y 1996"
+description: "Gráfica dinámica con mas de tres mil nombres y su uso en Venezuela. Mira que tan común fue tu nombre entre los años 1896 y 1996"
 tags: [open data, charts, estadísticas, nombres, Venezuela]
 havecharts: true
 published: true
