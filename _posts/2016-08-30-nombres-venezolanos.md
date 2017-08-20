@@ -26,14 +26,15 @@ La presente muestra contiene los primeros 3160 nombres más frecuentes en cédul
 Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto el siguiente query:
 
 <pre>
-  SELECT extract(year from fechanac) ano, count(1) total from dateas where 
-  unaccent(nombre1) % unaccent('$nombre') 
-  AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
-  and extract(year from fechanac) is not null 
-  and extract(year from fechanac) >1895
-  and extract(year from fechanac) <1997
-  group by ano
-  order by ano asc
+  SELECT extract(year from fechanac) ano, count(1) total 
+  FROM dateas 
+  WHERE unaccent(nombre1) % unaccent('$nombre') 
+    AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
+    AND extract(year from fechanac) is not null 
+    AND extract(year from fechanac) >1895
+    AND extract(year from fechanac) <1997
+  GROUP BY ano
+  ORDER BY ano asc
 </pre>
 
 que básicamente compara el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtra por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
