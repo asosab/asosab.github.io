@@ -29,10 +29,10 @@ Los datos crudos los almacené en una base de datos postgreSQL, creé una lista 
   SELECT extract(year from fechanac) ano, count(1) total 
   FROM dateas 
   WHERE unaccent(nombre1) % unaccent('$nombre') 
-    AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
-    AND extract(year from fechanac) is not null 
-    AND extract(year from fechanac) >1895
-    AND extract(year from fechanac) <1997
+  AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
+  AND extract(year from fechanac) is not null 
+  AND extract(year from fechanac) >1895
+  AND extract(year from fechanac) <1997
   GROUP BY ano
   ORDER BY ano asc
 </pre>

@@ -474,3 +474,7 @@ a:visited { color: grey; }
 @media screen and (orientation: landscape) {
   img.ri { max-height: 99%; }
 }
+
+pre {
+  font-size: 10px;
+}
