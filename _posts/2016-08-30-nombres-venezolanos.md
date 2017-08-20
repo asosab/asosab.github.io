@@ -27,7 +27,8 @@ Los datos crudos los almacené en una base de datos postgreSQL, creé una lista 
 
 <pre>
   SELECT extract(year from fechanac) ano, count(1) total from dateas where 
-  unaccent(nombre1) % unaccent('$nombre') AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
+  unaccent(nombre1) % unaccent('$nombre') 
+  AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
   and extract(year from fechanac) is not null 
   and extract(year from fechanac) >1895
   and extract(year from fechanac) <1997
