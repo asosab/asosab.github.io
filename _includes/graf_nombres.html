@@ -7,7 +7,22 @@
 <div id="chart"></div>
 <div class="subchart">Puedes hacer click sobre la gráfica para intercambiar la vista entre total nacimientos por año y porcentaje de la población total de ese año.</div>
 
-<script src="{{"/assets/js/vendor/chosen.jquery.min.js" | prepend: site.url}}"></script>
+<script src="{{"/assets/js/vendor/chosen.jquery.min.js" | prepend: site.url}}">
+ AbstractChosen.browser_is_supported = function() {
+  if (window.navigator.appName === "Microsoft Internet Explorer") {
+    return document.documentMode >= 8;
+  }
+  if (/iP(od|hone)/i.test(window.navigator.userAgent)) {
+    return false;
+  }
+  if (/Android/i.test(window.navigator.userAgent)) {
+    if (/Mobile/i.test(window.navigator.userAgent)) {
+      return false;
+    }
+  }
+  return true;
+};  
+</script>
 <link rel="stylesheet" href="{{ "/assets/css/chosen.min.css" | prepend: site.url }}">
 <script>
 var totales = [18563,18056,19997,17822,36789,29855,30142,27696,31696,34697,34428,39254,40078,37681,56312,47760,56765,47859,56526,54547,56872,59575,66982,62981,79532,62278,74358,74290,80469,81625,98251,89333,96606,99454,113114,98712,106183,108415,107088,117346,119286,122013,130878,126803,139600,129691,143045,142401,151877,161953,170807,181279,196470,212126,230995,232430,248894,260742,271211,275597,277909,287960,296260,316861,333932,331000,339396,345397,350215,359435,359598,373478,385099,390307,393305,406557,409446,406845,420084,428204,444082,454710,464561,491811,489065,484771,491262,502335,504268,507075,515845,508461,515894,545926,543961,542863,548482,540975,540598,478220,377869];
