@@ -23,19 +23,5 @@ La presente muestra contiene los primeros 3160 nombres más frecuentes en cédul
 <a href="{% post_url 2017-06-16-PHP-scraping %}">Web scraping</a>. No son todos los nombres venezolanos, los que se repiten menos de 500 veces quedan excluidos por falta de tiempo de procesador (suman más de 160 mil nombres distintos los que se repiten al menos una vez, a dos minutos el nombre lo dejo para otro año), mi amiga Lenka no se va a encontrar aquí ya que sólo han existido cinco personas con su nombre en la historia de la cedulación venezolana, menos aún su hermana y querida amiga Lianka, cuyo nombre es único en nuestro pais. La verdad es que no puedo saber si esto que escribo es cierto, la fuente de los datos no solo no es oficial sino que está incompleta, motivo por el cual la grafica muere en 1996. Sería genial si el INE y SAIME se pusieran de acuerdo para publicar datos estadísticos oficiales basados en nombres y fechas de nacimiento, yo quisiera contarles sobre la incidencia de las cesareas analizada desde el estudio de los días en que nacen los venezolanos (principalmente martes, miércoles y jueves, supongo que por comodidad del equipo de cirugía que programa la intervención quirúrgica), pero la falta de material oficial en qué basarme me deja hablando mejor de otra cosa. Para ver datos abiertos venezolanos de fuentes oficiales les invito a que se den una vuelta por mi <a href="{% post_url 2017-08-04-datos-abiertos %}">proyecto de open data</a>, que espero ver crecer tan rápido como las nuevas modas en cuestiones de nombres raros.
 <br/>
 <h4>Base de datos</h4>
-Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto el siguiente query:
-
-<pre>
-  SELECT extract(year from fechanac) ano, count(1) total 
-  FROM dateas 
-  WHERE unaccent(nombre1) % unaccent('$nombre') 
-  AND similarity(unaccent(nombre1), unaccent('$nombre')) > 0.7
-  AND extract(year from fechanac) is not null 
-  AND extract(year from fechanac) >1895
-  AND extract(year from fechanac) <1997
-  GROUP BY ano
-  ORDER BY ano asc
-</pre>
-
-que básicamente compara el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtra por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
+Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto un query que totalice por año repeticiones del nombre ("... WHERE unaccent(nombre1) % unaccent('maria') AND similarity(unaccent(nombre1), unaccent('maria')) > 0.7) donde básicamente comparo el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtro por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
 Por ejemplo, en el caso de 'María', el sistema contabiliza todas las personas registradas como "Maria", "MARIA   V", "María", "|MARIA", "MARIA D", "D' MARÍA", "MARIA|", "MARIÁ", "MARIA  A", "Marìa", "MARIA T", "MARIA L", "MARIA  Y", "MARIA         I", "MARIA         D", "MARIA J", "MARY MARIA", "MARIA  J", "MARIA         G", "MARIA V", "S MARIA", "MARU MARIA", "MARIA   A", "MARIA  S", "MARIA  I", "MARIA", "MARIA R", "MARIA         E", "MARIA S", "MARÍA", "A MARIA", "MARIA         N", "MARIA C", "MARIA I", "MARÌA", "MARIA N.", "MARIA G", "MARIA         L", "MARIA   E", "MARIA E", "MARIA A", "MARIAMARIA", "MARIA Y", "MARIA M", "MARIA N" y "MARIA F". Hay un margen de error pequeño, fíjense que se me pasó una 'Maru'. Así de sucios están los datos. Finalmente obtengo el numero de registros anuales de cada grupo de nombres similares.
