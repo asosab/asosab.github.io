@@ -5,8 +5,8 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Aug 2017 17:03:29 -0400</pubDate>
-    <lastBuildDate>Sat, 19 Aug 2017 17:03:29 -0400</lastBuildDate>
+    <pubDate>Tue, 22 Aug 2017 17:01:31 -0400</pubDate>
+    <lastBuildDate>Tue, 22 Aug 2017 17:01:31 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -20,7 +20,22 @@
 &lt;div id=&quot;chart&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;subchart&quot;&gt;Puedes hacer click sobre la gráfica para intercambiar la vista entre total nacimientos por año y porcentaje de la población total de ese año.&lt;/div&gt;
 
-&lt;script src=&quot;http://localhost:4000/assets/js/vendor/chosen.jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://localhost:4000/assets/js/vendor/chosen.jquery.min.js&quot;&gt;
+ AbstractChosen.browser_is_supported = function() {
+  if (window.navigator.appName === &quot;Microsoft Internet Explorer&quot;) {
+    return document.documentMode &gt;= 8;
+  }
+  if (/iP(od|hone)/i.test(window.navigator.userAgent)) {
+    return false;
+  }
+  if (/Android/i.test(window.navigator.userAgent)) {
+    if (/Mobile/i.test(window.navigator.userAgent)) {
+      return false;
+    }
+  }
+  return true;
+};  
+&lt;/script&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:4000/assets/css/chosen.min.css&quot; /&gt;
 &lt;script&gt;
 var totales = [18563,18056,19997,17822,36789,29855,30142,27696,31696,34697,34428,39254,40078,37681,56312,47760,56765,47859,56526,54547,56872,59575,66982,62981,79532,62278,74358,74290,80469,81625,98251,89333,96606,99454,113114,98712,106183,108415,107088,117346,119286,122013,130878,126803,139600,129691,143045,142401,151877,161953,170807,181279,196470,212126,230995,232430,248894,260742,271211,275597,277909,287960,296260,316861,333932,331000,339396,345397,350215,359435,359598,373478,385099,390307,393305,406557,409446,406845,420084,428204,444082,454710,464561,491811,489065,484771,491262,502335,504268,507075,515845,508461,515894,545926,543961,542863,548482,540975,540598,478220,377869];
@@ -146,7 +161,7 @@ $(function() {
     $(&quot;#chart&quot;).click(function(){switchG();});
 //    $(&quot;#limpiar&quot;).click();
     $(&quot;.chosen-select&quot;).chosen({
-      width: &quot;100%&quot;,
+      width: &quot;99%&quot;,
       no_results_text: &quot;No se encuentra el nombre &quot;,
 
     });
@@ -160,7 +175,7 @@ $(function() {
 &lt;/script&gt;
 
 &lt;h4&gt;La gráfica&lt;/h4&gt;
-Muestra la cantidad de personas ceduladas con un nombre determinado y por año de nacimiento, desde 1896 hasta 1996. La escala cambia según los nombres que esté entregando, basándose en el que tenga mayor número de incidencias. Me parece interesante comprobar hasta qué punto los nombres, lejos de ser inspiraciones divinas que las madres materializan, se comportan como modas que vienen y van, hablándonos en su recorrido de los intereses y fervores de cáda época. &lt;b&gt;Jean Carlo Simancas&lt;/b&gt; era el gran galán de la televisión venezolana de los setenta y ochena, lo que explicaría por qué de los 46 mil venezolanos llamados &lt;b&gt;Jean&lt;/b&gt;, sólo entre los años 75 y 95 una buena tropa de madres noveleras le pusieron ese nombre a unos 42 mil muchachitos. Se puede ver cómo suavemente van desapareciendo los nombres de nuestros abuelos y surgen como espuma de perros rabiosos otros nuevos que rápidamente se ponen en voga. Ver mi propio nombre me da una idea del tiempo que tiene que pasar para que a la gente le parezca curioso que alguien se haya llamado jamás &lt;b&gt;Alejandro&lt;/b&gt;, como puede pasar hoy con el nombre &lt;b&gt;Visitación&lt;/b&gt;, extinto desde finales de los ochenta.
+Muestra la cantidad de personas ceduladas con un nombre determinado y por año de nacimiento, desde 1896 hasta 1996. La escala cambia según los nombres que esté entregando, basándose en el que tenga mayor número de incidencias. Me parece interesante comprobar hasta qué punto los nombres, lejos de ser inspiraciones divinas que las madres materializan, se comportan como modas que vienen y van, hablándonos en su recorrido de los intereses y fervores de cáda época. &lt;b&gt;Jean Carlo Simancas&lt;/b&gt; era el gran galán de la televisión venezolana de los setenta y ochena, lo que explicaría por qué de los 46 mil venezolanos llamados &lt;b&gt;Jean&lt;/b&gt;, sólo entre los años 75 y 95 una buena tropa de madres noveleras le pusieron ese nombre a unos 42 mil muchachitos. Se puede ver cómo suavemente van desapareciendo los nombres de nuestros abuelos y surgen como espuma de perros rabiosos otros nuevos que rápidamente se ponen en boga. Ver mi propio nombre me da una idea del tiempo que tiene que pasar para que a la gente le parezca curioso que alguien se haya llamado jamás &lt;b&gt;Alejandro&lt;/b&gt;, como puede pasar hoy con el nombre &lt;b&gt;Visitación&lt;/b&gt;, extinto desde finales de los ochenta.
 
 &lt;h4&gt;Sobre los datos
 &lt;a href=&quot;/data/nombres-venezuela-anual.json&quot; title=&quot;Descarga los datos de la gráfica&quot;&gt;&lt;i class=&quot;fa fa-table&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&amp;nbsp;
@@ -169,19 +184,7 @@ La presente muestra contiene los primeros 3160 nombres más frecuentes en cédul
 &lt;a href=&quot;/PHP-scraping/&quot;&gt;Web scraping&lt;/a&gt;. No son todos los nombres venezolanos, los que se repiten menos de 500 veces quedan excluidos por falta de tiempo de procesador (suman más de 160 mil nombres distintos los que se repiten al menos una vez, a dos minutos el nombre lo dejo para otro año), mi amiga Lenka no se va a encontrar aquí ya que sólo han existido cinco personas con su nombre en la historia de la cedulación venezolana, menos aún su hermana y querida amiga Lianka, cuyo nombre es único en nuestro pais. La verdad es que no puedo saber si esto que escribo es cierto, la fuente de los datos no solo no es oficial sino que está incompleta, motivo por el cual la grafica muere en 1996. Sería genial si el INE y SAIME se pusieran de acuerdo para publicar datos estadísticos oficiales basados en nombres y fechas de nacimiento, yo quisiera contarles sobre la incidencia de las cesareas analizada desde el estudio de los días en que nacen los venezolanos (principalmente martes, miércoles y jueves, supongo que por comodidad del equipo de cirugía que programa la intervención quirúrgica), pero la falta de material oficial en qué basarme me deja hablando mejor de otra cosa. Para ver datos abiertos venezolanos de fuentes oficiales les invito a que se den una vuelta por mi &lt;a href=&quot;/datos-abiertos/&quot;&gt;proyecto de open data&lt;/a&gt;, que espero ver crecer tan rápido como las nuevas modas en cuestiones de nombres raros.
 &lt;br /&gt;
 &lt;h4&gt;Base de datos&lt;/h4&gt;
-Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto el siguiente query:
-
-&lt;pre&gt;
-  SELECT extract(year from fechanac) ano, count(1) total from dateas where 
-  unaccent(nombre1) % unaccent('$nombre') AND similarity(unaccent(nombre1), unaccent('$nombre')) &amp;gt; 0.7
-  and extract(year from fechanac) is not null 
-  and extract(year from fechanac) &amp;gt;1895
-  and extract(year from fechanac) &amp;lt;1997
-  group by ano
-  order by ano asc
-&lt;/pre&gt;
-
-que básicamente compara el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtra por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
+Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto un query que totalice por año repeticiones del nombre (&quot;... WHERE unaccent(nombre1) % unaccent('maria') AND similarity(unaccent(nombre1), unaccent('maria')) &amp;gt; 0.7) donde básicamente comparo el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtro por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
 Por ejemplo, en el caso de 'María', el sistema contabiliza todas las personas registradas como &quot;Maria&quot;, &quot;MARIA   V&quot;, &quot;María&quot;, &quot;|MARIA&quot;, &quot;MARIA D&quot;, &quot;D' MARÍA&quot;, &quot;MARIA|&quot;, &quot;MARIÁ&quot;, &quot;MARIA  A&quot;, &quot;Marìa&quot;, &quot;MARIA T&quot;, &quot;MARIA L&quot;, &quot;MARIA  Y&quot;, &quot;MARIA         I&quot;, &quot;MARIA         D&quot;, &quot;MARIA J&quot;, &quot;MARY MARIA&quot;, &quot;MARIA  J&quot;, &quot;MARIA         G&quot;, &quot;MARIA V&quot;, &quot;S MARIA&quot;, &quot;MARU MARIA&quot;, &quot;MARIA   A&quot;, &quot;MARIA  S&quot;, &quot;MARIA  I&quot;, &quot;MARIA&quot;, &quot;MARIA R&quot;, &quot;MARIA         E&quot;, &quot;MARIA S&quot;, &quot;MARÍA&quot;, &quot;A MARIA&quot;, &quot;MARIA         N&quot;, &quot;MARIA C&quot;, &quot;MARIA I&quot;, &quot;MARÌA&quot;, &quot;MARIA N.&quot;, &quot;MARIA G&quot;, &quot;MARIA         L&quot;, &quot;MARIA   E&quot;, &quot;MARIA E&quot;, &quot;MARIA A&quot;, &quot;MARIAMARIA&quot;, &quot;MARIA Y&quot;, &quot;MARIA M&quot;, &quot;MARIA N&quot; y &quot;MARIA F&quot;. Hay un margen de error pequeño, fíjense que se me pasó una 'Maru'. Así de sucios están los datos. Finalmente obtengo el numero de registros anuales de cada grupo de nombres similares.
 &lt;/div&gt;
 </description>
