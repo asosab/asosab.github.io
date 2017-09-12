@@ -19,7 +19,7 @@ Inicié un pequeño proyecto de datos abiertos con la intención de ayudar a las
 | Datos | Formatos a descargar | Fuente |
 | ------------ | ------------- | ------------- |
 Candidatos a la Asamblea Nacional Constituyente, Venezuela 2017 | [.back postgresql][ancBack], [.sql postgresql][ancsql], [.json][ancJson], [.csv][ancCSV], [original][oriJson] | [CNE][ancFuente]
-Ubigeo basado en el ubigeo INE | [.tsv][ubigeoTsv], [.json][ubigeoJson] | [INE][ubigeoINE]
+Ubigeo INE | [.tsv][ubigeoTsv], [.json][ubigeoJson] | [INE][ubigeoINE]
 
 
 ¿Cómo obtengo los datos?
