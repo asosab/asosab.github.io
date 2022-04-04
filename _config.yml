@@ -4,7 +4,7 @@ description:  "Pedazos de código de uso cotidiano, apuntes sobre lenguajes de p
 tagline:      ""
 baseurl:      ""
 url:          https://asosab.github.io
-keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data"
+keywords:     "PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data, robot, whatsapp, asistente"
 shortlink:    "http://j.mp/dia-cod"
 theme-color:  "#ffffff"
 desarrollo:   false
@@ -19,16 +19,16 @@ author:
   twitter:          asosab
   facebook:         asosab
   email:            asosab@gmail.com
-  region:           VE-S
-  placename:        Patiecitos
-  ICBM:             "7.831472;-72.2297509"
+  region:           BO-S
+  placename:        Santa Cruz de la Sierra
+  ICBM:             "-17.7833152;-63.1821236"
   flickr:           alejandrososa
   instagram:        alejandrososab
   youtube:          asosab
   googleplus:       AlejandroSosaBriceño
   pinterest:        asosab
 
-timezone:       America/Caracas
+timezone:       America/La_Paz
 locale:         es_ES
 encoding:       utf-8
 email:          asosab@gmail.com

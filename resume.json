@@ -4,14 +4,14 @@
     "label": "",
     "picture": "asosab.github.io/imagen/asosab.jpg",
     "email": "asosab@gmail.com",
-    "phone": "+584261214789",
+    "phone": "+59174189700",
     "website": "http://asosab.github.io",
-    "summary": "Panadero, Jardinero, Casado con Siria y padre de Julieta y Maximiliano. Desarrollo microservicios e imagino nuevas bases de datos",
+    "summary": "Panadero, Jardinero y fermentista, casado con Siria y padre de Julieta y Maximiliano. Desarrollo microservicios y veo estructuras de datos en todos lados",
     "location": {
       "address": "",
-      "postalCode": "1",
-      "city": "",
-      "countryCode": "VE",
+      "postalCode": "10260",
+      "city": "Santa Cruz de laSierra",
+      "countryCode": "BO",
       "region": ""
     },
     "profiles": [
@@ -39,9 +39,9 @@
   },
   "work": [
     {
-      "company": "CNTI",
+      "company": "Alejandro Sosa",
       "position": "",
-      "website": "http://github.com/asosab",
+      "website": "https://asosab.github.io",
       "startDate": "",
       "endDate": "",
       "summary": "",
