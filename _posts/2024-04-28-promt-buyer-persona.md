@@ -5,7 +5,7 @@ date:   2024-04-28 16:43
 categories: IA
 comments: true
 description: "Prompt para la construcción de un buyer persona y su respectivo mapa de empatía"
-tags: [prompt, ChatGPT, negocios, marketing, IA]
+tags: [prompt, ChatGPT, negocios, marketing, IA, mapa de empatía]
 havecharts: false
 published: true
 image: ia-machine-learning-1024x537.jpg
