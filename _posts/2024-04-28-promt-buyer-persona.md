@@ -27,7 +27,7 @@ Segundo Prompt:
 Tercer prompt:
 {% gist e179ba4cc968b2bbec1060a8ba8dd1fd %}
 
-Pueden experimentar estos prompts por ustedes mismos en IA's como [chatGPT][chatgpt] o [Gemini][gemini] o ver el resultado que yo obtuve en [este link][promptresultado]
+Pueden experimentar estos prompts por ustedes mismos en IA's como [chatGPT][chatgpt], [Gemini][gemini] o [you.com][youcom] en caso de que estés en Venezuela. También puedes ver el proceso y resultado que obtuve en [este link][promptresultado]
 
 
 [siria.remax]: https://www.instagram.com/siria.remax/
@@ -36,3 +36,4 @@ Pueden experimentar estos prompts por ustedes mismos en IA's como [chatGPT][chat
 [promptresultado]: https://chat.openai.com/share/10637ca3-f869-4588-ba55-7f9a353e7d83
 [chatgpt]: https://chat.openai.com/
 [gemini]: https://gemini.google.com/app
+[youcom]: https://you.com
