@@ -37,7 +37,7 @@ Pueden experimentar estos prompts por ustedes mismos en IA's como [chatGPT][chat
 [siria.remax]: https://www.instagram.com/siria.remax/
 [sebastianpendino]: https://sebastianpendino.com/buyer-persona-con-inteligencia-artificial/
 [incubadoraconvalores]: https://incubadoraconvalores.org
-[promptresultado]: https://chat.openai.com/share/10637ca3-f869-4588-ba55-7f9a353e7d83
+[promptresultado]: https://chat.openai.com/share/20aadea6-66e1-43ff-ae19-948ba8ed8020
 [chatgpt]: https://chat.openai.com/
 [gemini]: https://gemini.google.com/app
 [youcom]: https://you.com
