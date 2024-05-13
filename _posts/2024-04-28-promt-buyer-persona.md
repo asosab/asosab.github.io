@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Buyer persona con inteligencia artificial"
+title:  "Identificando a tus clientes con inteligencia artificial"
 date:   2024-04-28 16:43
 categories: IA
 comments: true
-description: "Prompt para la construcción de un buyer persona y su respectivo mapa de empatía"
+description: "Prompts para la construcción de un buyer persona y su respectivo mapa de empatía"
 tags: [prompt, ChatGPT, negocios, marketing, IA, mapa de empatía]
 havecharts: false
 published: true
@@ -18,14 +18,18 @@ Participando en la [Incubadora Con Valores][incubadoraconvalores] una de las tar
 ## Prompts y ChatGPT
 La forma en que uno se comunica y hace preguntas a una IA como chatGPT se le llama Prompt, encontré un ejemplo de prompt para crear un buyer persona en la página de [Sebastian Pendino][sebastianpendino] y le hice un par de modificaciones, como definir las variables fuera de la instrucción y un tercer prompt específico sobre el mapa de empatía
 
-Primer prompt:
+1) Describe tu negocio, tu propuesta de valor y ubicación de tu mercado, luego observa las empresas que ofertan de forma similar, posible competencia:
 {% gist 1c99718438796c2a8717d36b36a38687 %}
 
-Segundo Prompt:
+2) Crea posibles buyer-persona y perfila tu público objetivo:
 {% gist fd1c51b7162b77235150d85af20cddda %}
 
-Tercer prompt:
+3) Realiza un mapa de empatía:
 {% gist e179ba4cc968b2bbec1060a8ba8dd1fd %}
+
+4) Conclusiones y mejoras a la oferta de valor
+{% gist f8f6085534c17aba9026ba27f1e72904 %}
+
 
 Pueden experimentar estos prompts por ustedes mismos en IA's como [chatGPT][chatgpt], [Gemini][gemini] o [you.com][youcom] en caso de que estés en Venezuela. También puedes ver el proceso y resultado que obtuve en [este link][promptresultado]
 
