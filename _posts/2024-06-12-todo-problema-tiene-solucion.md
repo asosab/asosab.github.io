@@ -46,14 +46,20 @@ La intención del juego es ser una herramienta para inculcar valores fundamental
 4. **Final del Juego**:
    - El juego termina cuando todos los personajes hayan resuelto sus problemas con las soluciones correctas. ¡Todos ganan y pasan un buen rato!
 
+
 ### Beneficios Educativos
 
-Aparte de hacerte pasar un buen rato, este juego es una buena herramienta para:
+1. **Desarrollo de Habilidades Socioemocionales**: Los niños practican la empatía y la colaboración mientras resuelven problemas juntos, mejorando su capacidad para entender y gestionar sus emociones y las de los demás.
+2. **Fomento de la Motricidad Gruesa y Fina**: La actividad de recortar y pegar las cartas ayuda a los niños a mejorar sus habilidades motoras, tanto gruesas como finas.
+3. **Estimulación de la Imaginación**: Ilustrar cada situación fomenta la creatividad y el pensamiento innovador, permitiendo a los niños explorar y expresar sus ideas de manera visual.
+4. **Personalización del Aprendizaje**: Las cartas en blanco permiten a los jugadores definir sus propios personajes, creando historias y situaciones relevantes para su entorno, lo que facilita un aprendizaje más significativo y personalizado.
+5. **Reflexión sobre la Realidad Local**: Los jugadores pueden desarrollar personajes locales, vislumbrar sus problemas y pensar en soluciones, haciendo el juego más íntimo y relevante para sus vidas diarias.
+6. **Promoción del Buen Trato**: Actuar las situaciones ayuda a los niños a entender y valorar el respeto y la empatía en la vida diaria, promoviendo interacciones positivas y respetuosas.
+7. **Generación de Discusiones y Reflexiones**: Las situaciones cómicas y desafiantes del juego generan discusiones y reflexiones, ayudando a los niños a analizar y comprender diferentes perspectivas y soluciones.
+8. **Participación Activa**: Al ilustrar y personalizar las cartas, los niños se involucran activamente en el proceso de aprendizaje, aumentando su compromiso y motivación.
+9. **Adaptabilidad**: El juego se puede adaptar a diferentes contextos y realidades, lo que lo hace útil en diversas comunidades y situaciones educativas.
 
-- Desarrollar habilidades socioemocionales en los niños.
-- Practicar la empatía.
-- Aprender la importancia del buen trato y la colaboración.
-- Generar discusiones y reflexiones a través de situaciones cómicas y desafiantes.
+
 
 ### Descarga el Juego
 
@@ -63,7 +69,7 @@ Preparamos una versión digital en formato pdf, listo para imprimir, recortar, p
 
 [Descargar versión libre][versionLibre]
 
-Gracias a [Azur][azur] y a [Mayra][mayra] por su apoyo con el diseño para la versión digital. Parece una cosa simple hasta que te sientas e intentas resolverlo tu mismo
+Gracias infinitas a [Azur][azur] y a [Mayra][mayra] por su apoyo con el diseño para la versión digital. Parece una cosa simple hasta que te sientas e intentas resolverlo tu mismo
 
 [versionTextos]: https://drive.google.com/file/d/15is0F3gI3tE3A0xufzyj6DZpeMDn1msP/view?usp=sharing
 [versionLibre]: https://drive.google.com/file/d/1tggcFgx5Oqp10Cy3PjSYsD0Gcbe8LNF2/view?usp=sharing
