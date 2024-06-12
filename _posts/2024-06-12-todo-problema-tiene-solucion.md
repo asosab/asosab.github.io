@@ -63,11 +63,6 @@ Preparamos una versión digital en formato pdf, listo para imprimir, recortar, p
 
 [Descargar versión libre][versionLibre]
 
-### Conclusión
-
-El juego **Todo problema tiene solución** es una forma efectiva y divertida de abordar el maltrato y la violencia en las escuelas primarias. Al enseñar habilidades socioemocionales y fomentar un ambiente escolar positivo, este juego ayuda a construir un futuro más amable y respetuoso para todos. ¡Descárgalo ahora y comienza a marcar la diferencia hoy mismo!
-
-
 
 
 [versionTextos]: https://drive.google.com/file/d/15is0F3gI3tE3A0xufzyj6DZpeMDn1msP/view?usp=sharing
