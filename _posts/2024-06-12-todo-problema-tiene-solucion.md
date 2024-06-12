@@ -14,7 +14,8 @@ image: tpts01.jpg
 
 Le han pedido a Maximiliano que desarrolle un juego sobre el buen trato y todos en casa nos hemos puesto manos a la obra. Debo subrayar que la idea, personajes y estructura base del juego son invención de Max
 
-![Maximiliano entrando al colegio, con su prototipo en mano](../imagen/tpts01.jpg)
+<img src="/imagen/tpts01.jpg" alt="Maximiliano entrando al colegio, con su prototipo en mano" width="605">
+
 
 La intención del juego es ser una herramienta para inculcar valores fundamentales como la empatía, la cooperación y el respeto. Los jugadores deben actuar los personajes y las situaciones, promoviendo una comprensión más profunda de las experiencias ajenas reforzando además la importancia del buen trato. Las cartas para descargar vienen sin dibujos, invitando a los jugadores a ilustrarlas ellos mismos para personalizar la experiencia. Este enfoque reflexivo y participativo ayuda a los niños a internalizar los valores de una manera práctica y memorable, construyendo un ambiente escolar más positivo y respetuoso.
 
