@@ -63,7 +63,9 @@ Preparamos una versión digital en formato pdf, listo para imprimir, recortar, p
 
 [Descargar versión libre][versionLibre]
 
-
+Gracias a [Azur][azur] y a [Mayra][mayra] por su apoyo con el diseño para la versión digital. Parece una cosa simple hasta que te sientas e intentas resolverlo tu mismo
 
 [versionTextos]: https://drive.google.com/file/d/15is0F3gI3tE3A0xufzyj6DZpeMDn1msP/view?usp=sharing
 [versionLibre]: https://drive.google.com/file/d/1tggcFgx5Oqp10Cy3PjSYsD0Gcbe8LNF2/view?usp=sharing
+[mayra]: https://www.instagram.com/mayra.desinger/
+[azur]: https://www.instagram.com/atomo2.0/
