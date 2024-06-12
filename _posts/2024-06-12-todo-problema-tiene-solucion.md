@@ -56,7 +56,7 @@ Aparte de hacerte pasar un buen rato, este juego es una buena herramienta para:
 
 ### Descarga el Juego
 
-Preparamos una versión digital en un pdf, listo para imprimir, recortar, pegar y dibujar
+Preparamos una versión digital en formato pdf, listo para imprimir, recortar, pegar y dibujar
 
 [Descargar versión con textos][versionTextos]
 [Descargar versión libre][versionLibre]
