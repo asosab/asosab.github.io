@@ -9,7 +9,7 @@ comments: true
   </header>
 
   <article class="post-content">
-  {{ content }}
+  {{ content | external_link_filter }}
   </article>
 	{% include analytics.html %}
 </div>

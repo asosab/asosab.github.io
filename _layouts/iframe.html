@@ -2,7 +2,7 @@
 <html>
   {% include head.html %}
     <body>
-      {{ content }}
+      {{ content | external_link_filter }}
     {% include analytics.html %}
     </body>
 </html>
