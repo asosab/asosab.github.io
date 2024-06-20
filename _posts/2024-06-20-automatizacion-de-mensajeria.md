@@ -89,7 +89,7 @@ No pierdas más oportunidades de venta. Inscríbete en nuestro taller "Automatiz
 - **Teléfono:** +59178447518 ([¡Envíame un mensaje por WhatsApp!](https://api.whatsapp.com/send?phone=59178447518&text=Me%20interesa%20mucho%20el%20taller%20de%20Automatización%20de%20Mensajes%20para%20Agentes%20Inmobiliarios))
 - **Email:** statetty@gmail.com
 - **Facilitador:** [Alejandro Sosa](https://www.linkedin.com/in/alejandrososa/)
-- **Website:** [www.tallerinmobiliario.com](https://www.tallerinmobiliario.com)
+- **Website:** [asosab.github.io](https://asosab.github.io/automatizacion-de-mensajeria/)
 
 _Tu éxito es nuestro objetivo._
 
