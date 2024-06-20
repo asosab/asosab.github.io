@@ -72,7 +72,7 @@ Nuestro taller está diseñado específicamente para agentes inmobiliarios como 
 
 ### Beneficios del Taller
 
-- **Disponibilidad 24/7:** Responde a tus clientes en cualquier momento, incluso fuera del horario laboral.
+- **Disponibilidad 24/7:** Responde a tus clientes en cualquier momento de forma automatizada, incluso fuera del horario laboral sin que tengas que estar presente.
 - **Eficiencia:** Automatiza respuestas para reducir el tiempo dedicado a tareas repetitivas.
 - **Gestión de Prospectos:** Mantén un registro organizado de tus prospectos con información crucial.
 - **Tecnología Avanzada:** Utiliza inteligencia artificial para mejorar la calidad de tus respuestas.
