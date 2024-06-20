@@ -53,7 +53,7 @@ Nuestro taller está diseñado específicamente para agentes inmobiliarios como 
 ### Detalles del Taller
 
 - **Duración:** 3 horas (con una pausa de 15 minutos)
-- **Valor:** 250 bolivianos por oficina
+- **Valor:** 50 bolivianos por persona, para grupos de 5 hasta 10 agentes
 - **Lugar:** En las oficinas de tu inmobiliaria (para grupos de hasta 10 agentes)
 
 ### Agenda del Taller
@@ -82,9 +82,9 @@ Nuestro taller está diseñado específicamente para agentes inmobiliarios como 
 
 **¿Listo para transformar tu manera de trabajar?**
 
-No pierdas más oportunidades de venta. Inscríbete en nuestro taller "Automatización de Mensajes con WhatsAuto" y lleva tu eficiencia al siguiente nivel.
+No pierdas más oportunidades de venta. Inscríbete en nuestro taller "Taller de Automatización de Mensajes para Agentes Inmobiliarios" y lleva tu eficiencia al siguiente nivel.
 
-**Contáctanos para más información e inscripciones:**
+**Contáctame para más información e inscripciones:**
 
 - **Teléfono:** +59178447518 ([¡Envíame un mensaje por WhatsApp!](https://api.whatsapp.com/send?phone=59178447518&text=Me%20interesa%20mucho%20el%20taller%20de%20Automatización%20de%20Mensajes%20para%20Agentes%20Inmobiliarios))
 - **Email:** statetty@gmail.com
