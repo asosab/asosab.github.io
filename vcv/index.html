@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voz Ciudadana Venezuela — Propuesta</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #7B1C2C;
+    --gold: #C9922A;
+    --gold-light: #E8B84B;
+    --navy: #0D2140;
+    --navy-mid: #1A3560;
+    --cream: #F7F2EA;
+    --warm-white: #FDFAF5;
+    --text-dark: #1A1208;
+    --text-mid: #3D2E1A;
+    --text-light: #7A6A54;
+    --rule: #C9922A44;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--warm-white);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 50%, rgba(123,28,44,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 80% 30%, rgba(201,146,42,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 80% at 50% 100%, rgba(13,33,64,0.8) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-star {
+    font-size: 48px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  .hero-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.05;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 span {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    color: rgba(247,242,234,0.7);
+    font-weight: 300;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-meta-item {
+    text-align: center;
+  }
+
+  .hero-meta-item .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .hero-meta-item .label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(247,242,234,0.5);
+  }
+
+  /* NAV */
+  .nav {
+    background: var(--navy-mid);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(201,146,42,0.3);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .nav a {
+    color: rgba(247,242,234,0.65);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav a:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+  }
+
+  /* SECTIONS */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .section h2 em {
+    font-style: italic;
+    color: var(--burgundy);
+  }
+
+  .lead {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    border-left: 3px solid var(--gold);
+    padding-left: 24px;
+  }
+
+  p {
+    color: var(--text-mid);
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  /* CONTEXT CARDS */
+  .crisis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 40px 0;
+  }
+
+  .crisis-card {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .crisis-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .crisis-card .icon { font-size: 28px; margin-bottom: 12px; }
+  .crisis-card .stat {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .crisis-card .desc {
+    font-size: 12px;
+    color: rgba(247,242,234,0.6);
+    margin: 0;
+    font-weight: 300;
+  }
+
+  /* DIFFERENCE TABLE */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 14px;
+  }
+
+  .compare-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .compare-table th:first-child { color: var(--text-light); background: #f0ebe2; }
+  .compare-table th:nth-child(2) { color: var(--cream); background: var(--burgundy); }
+  .compare-table th:last-child { color: var(--cream); background: var(--navy); }
+
+  .compare-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .compare-table tr:nth-child(even) td { background: rgba(201,146,42,0.04); }
+
+  /* PHASES */
+  .phases {
+    margin: 40px 0;
+  }
+
+  .phase {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .phase::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 56px;
+    bottom: -32px;
+    width: 1px;
+    background: var(--rule);
+  }
+
+  .phase:last-child::before { display: none; }
+
+  .phase-num {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  .phase-0 .phase-num { background: var(--navy); color: var(--gold-light); }
+  .phase-1 .phase-num { background: var(--burgundy); color: var(--cream); }
+  .phase-2 .phase-num { background: var(--gold); color: var(--navy); }
+  .phase-3 .phase-num { background: var(--navy-mid); color: var(--gold-light); }
+
+  .phase-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+
+  .phase-body p { margin-bottom: 8px; font-size: 14px; }
+
+  .phase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-blue { background: rgba(13,33,64,0.1); color: var(--navy); }
+  .tag-red { background: rgba(123,28,44,0.1); color: var(--burgundy); }
+  .tag-gold { background: rgba(201,146,42,0.15); color: #7A5010; }
+
+  /* TRIAGE */
+  .triage-grid {
+    display: grid;
+    gap: 12px;
+    margin: 32px 0;
+  }
+
+  .triage-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 20px;
+    border-radius: 4px;
+    border: 1px solid;
+  }
+
+  .triage-item.p1 { border-color: #B91C1C; background: rgba(185,28,28,0.04); }
+  .triage-item.p2 { border-color: #D97706; background: rgba(217,119,6,0.04); }
+  .triage-item.p3 { border-color: #2563EB; background: rgba(37,99,235,0.04); }
+  .triage-item.p4 { border-color: #16A34A; background: rgba(22,163,74,0.04); }
+
+  .priority-badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .p1 .priority-badge { background: #B91C1C; color: white; }
+  .p2 .priority-badge { background: #D97706; color: white; }
+  .p3 .priority-badge { background: #2563EB; color: white; }
+  .p4 .priority-badge { background: #16A34A; color: white; }
+
+  .triage-desc { font-size: 13px; color: var(--text-mid); font-weight: 300; }
+  .triage-desc strong { font-weight: 500; color: var(--text-dark); display: block; margin-bottom: 2px; }
+  .triage-time { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+
+  /* TEAM */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .team-card {
+    padding: 24px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--cream);
+  }
+
+  .team-card .role-icon { font-size: 28px; margin-bottom: 12px; }
+
+  .team-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .team-card p { font-size: 12px; color: var(--text-light); margin: 0; }
+
+  /* REACH CALCULATOR */
+  .reach-section {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 80px 40px;
+    margin: 0;
+  }
+
+  .reach-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .reach-section .section-label { color: var(--gold-light); }
+
+  .reach-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .reach-section .lead {
+    color: rgba(247,242,234,0.75);
+    border-left-color: var(--gold);
+  }
+
+  .slider-group {
+    margin-bottom: 32px;
+  }
+
+  .slider-group label {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .slider-group label span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: white;
+  }
+
+  input[type=range] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 3px;
+    background: rgba(201,146,42,0.3);
+    border-radius: 2px;
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .reach-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .reach-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,146,42,0.2);
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .reach-card .r-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+
+  .reach-card .r-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(247,242,234,0.5);
+    margin-top: 8px;
+    display: block;
+  }
+
+  .growth-chart {
+    margin-top: 32px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,146,42,0.15);
+    border-radius: 4px;
+    padding: 24px;
+  }
+
+  .growth-chart h4 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 120px;
+  }
+
+  .bar-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .bar {
+    width: 100%;
+    background: linear-gradient(to top, var(--gold), var(--gold-light));
+    border-radius: 2px 2px 0 0;
+    transition: height 0.6s ease;
+    min-height: 4px;
+  }
+
+  .bar-label {
+    font-size: 10px;
+    color: rgba(247,242,234,0.4);
+    margin-top: 6px;
+    white-space: nowrap;
+  }
+
+  .bar-val {
+    font-size: 10px;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  /* BUDGET */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 14px;
+  }
+
+  .budget-table th {
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--navy);
+  }
+
+  .budget-table th:last-child { text-align: right; }
+
+  .budget-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--text-mid);
+    font-weight: 300;
+    vertical-align: top;
+  }
+
+  .budget-table td:last-child {
+    text-align: right;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .budget-total td {
+    border-top: 2px solid var(--gold);
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 15px;
+  }
+
+  /* ALIGNMENT */
+  .align-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .align-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .align-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+
+  .align-card .fund-req {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .align-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .align-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0;
+  }
+
+  /* PROOF */
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 32px 0;
+  }
+
+  .proof-stat {
+    padding: 20px;
+    background: var(--cream);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .proof-stat .ps-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--burgundy);
+    display: block;
+    line-height: 1;
+  }
+
+  .proof-stat .ps-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin: 6px 0 0;
+  }
+
+  /* CLOSING */
+  .closing {
+    background: var(--burgundy);
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .closing-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .closing p {
+    color: rgba(247,242,234,0.75);
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .closing-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(247,242,234,0.3);
+    border-radius: 4px;
+    padding: 16px 28px;
+    color: var(--cream);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: rgba(201,146,42,0.05);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--navy);
+    font-weight: 400;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .checklist li {
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-mid);
+    font-weight: 300;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .checklist li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 11px;
+  }
+
+  @media (max-width: 600px) {
+    .triage-item { grid-template-columns: 1fr; }
+    .triage-time { display: none; }
+    .hero-meta { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-star">⭐</div>
+  <div class="hero-label">Propuesta para el Venezuela Rising Fund · Rising Tide Foundation · 2026</div>
+  <h1>Voz <span>Ciudadana</span><br>Venezuela</h1>
+  <div class="hero-sub">Un sistema de acompañamiento ciudadano para la recuperación de Venezuela</div>
+  <div class="hero-divider"></div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="value">26+</span>
+      <span class="label">años sin intermediarios</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="value">30M</span>
+      <span class="label">personas afectadas</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="value">7M+</span>
+      <span class="label">venezolanos en diáspora</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="value">0</span>
+      <span class="label">canales libres activos</span>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#contexto">Contexto</a>
+    <a href="#modelo">El Modelo</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#alcance">Alcance</a>
+    <a href="#presupuesto">Presupuesto</a>
+    <a href="#alineacion">Alineación</a>
+  </div>
+</nav>
+
+<!-- CONTEXTO -->
+<section class="section" id="contexto">
+  <div class="section-label">01 — Contexto</div>
+  <h2>Venezuela silenciada durante<br><em>más de dos décadas</em></h2>
+
+  <p class="lead">Durante más de 26 años de régimen chavista-madurista, Venezuela vivió la destrucción sistemática de toda institución que pudiera actuar como puente entre el ciudadano y el Estado. Lo que quedó fue silencio, miedo y una ciudadanía que aprendió a no pedir ayuda en voz alta.</p>
+
+  <p>No existió nunca una Defensoría del Pueblo efectiva. Las gobernaciones y alcaldías fueron cooptadas o vaciadas. La prensa independiente fue extinguida. La sociedad civil organizada fue perseguida. El resultado: millones de ciudadanos con necesidades urgentes y sin ningún canal seguro para expresarlas ni ningún mecanismo que las conecte con una solución.</p>
+
+  <p>Hoy, el momento político de Venezuela abre una ventana que no ha existido en generaciones. Esta propuesta no espera al gobierno para actuar: activa a la sociedad civil como el primer tejido de recuperación.</p>
+
+  <div class="crisis-grid">
+    <div class="crisis-card">
+      <div class="icon">💊</div>
+      <div class="stat">78%</div>
+      <p class="desc">de hospitales sin insumos básicos (CEVIPAS, 2025)</p>
+    </div>
+    <div class="crisis-card">
+      <div class="icon">💡</div>
+      <div class="stat">14h</div>
+      <p class="desc">promedio de corte eléctrico diario en ciudades del interior</p>
+    </div>
+    <div class="crisis-card">
+      <div class="icon">💧</div>
+      <div class="stat">60%</div>
+      <p class="desc">de hogares sin agua corriente confiable</p>
+    </div>
+    <div class="crisis-card">
+      <div class="icon">🏚️</div>
+      <div class="stat">9M</div>
+      <p class="desc">personas en pobreza extrema dentro del país</p>
+    </div>
+    <div class="crisis-card">
+      <div class="icon">📵</div>
+      <div class="stat">0</div>
+      <p class="desc">canales institucionales de escucha ciudadana funcionales</p>
+    </div>
+    <div class="crisis-card">
+      <div class="icon">✈️</div>
+      <div class="stat">7M+</div>
+      <p class="desc">venezolanos en diáspora con recursos y voluntad de construir</p>
+    </div>
+  </div>
+
+  <blockquote>"No se puede reconstruir un país si sus ciudadanos no tienen donde hablar. La primera institución a recuperar es el canal entre la persona y la solución."</blockquote>
+
+</section>
+
+<!-- MODELO -->
+<section class="section" id="modelo">
+  <div class="section-label">02 — El Modelo</div>
+  <h2>Un sistema de <em>escucha activa</em><br>y acompañamiento hasta solución</h2>
+
+  <p class="lead">Voz Ciudadana Venezuela (VCV) es un sistema de intermediación civil — no gubernamental, no partidario — diseñado para recibir, trigar, acompañar y resolver los problemas de los venezolanos, priorizando los más urgentes primero y construyendo el tejido institucional desde abajo.</p>
+
+  <p>El modelo está basado en la experiencia probada de la Línea Abierta Vecinal (LAV) del Municipio de Santa Cruz de la Sierra, Bolivia, un sistema que entre 2019 y 2021 gestionó más de 52.500 casos ciudadanos, escalaó de 7 a 100 operadores durante la pandemia COVID-19, y demostró que es posible articular soluciones desde la escucha. VCV adapta ese modelo al contexto específico de Venezuela: sin gobierno como respaldo, con alta desconfianza institucional, con diáspora activa y con WhatsApp como infraestructura primaria.</p>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:32px 0 20px;color:var(--navy)">¿En qué es diferente VCV al modelo LAV?</h3>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Dimensión</th>
+        <th>LAV Santa Cruz (origen)</th>
+        <th>VCV Venezuela (adaptación)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Respaldo institucional</td>
+        <td>Alcaldía Municipal</td>
+        <td>Sociedad civil / ONGs / diáspora</td>
+      </tr>
+      <tr>
+        <td>Canal principal</td>
+        <td>Línea gratuita 800</td>
+        <td>WhatsApp, Telegram, Signal</td>
+      </tr>
+      <tr>
+        <td>Perfil del operador</td>
+        <td>Empleados municipales</td>
+        <td>Voluntarios locales + diáspora remota</td>
+      </tr>
+      <tr>
+        <td>Contexto de libertad</td>
+        <td>Democrático, abierto</td>
+        <td>Alto riesgo → anonimato por diseño</td>
+      </tr>
+      <tr>
+        <td>Solución disponible</td>
+        <td>Secretarías municipales</td>
+        <td>Red civil: médicos, abogados, ONG, iglesias</td>
+      </tr>
+      <tr>
+        <td>Memoria institucional</td>
+        <td>Base de datos municipal</td>
+        <td>Base civil abierta = presión por evidencia</td>
+      </tr>
+      <tr>
+        <td>Objetivo final</td>
+        <td>Resolución caso a caso</td>
+        <td>Resolución + reconstrucción institucional</td>
+      </tr>
+      <tr>
+        <td>Hablar libremente</td>
+        <td>Sin restricción</td>
+        <td>Canal seguro como valor fundacional</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<!-- METODOLOGÍA -->
+<section class="section" id="metodologia">
+  <div class="section-label">03 — Metodología</div>
+  <h2>Cuatro fases de <em>acompañamiento</em><br>hasta la solución</h2>
+
+  <p class="lead">VCV no es un buzón de quejas. Es un protocolo de acompañamiento activo: desde el primer contacto hasta la verificación de la resolución. Cada caso recorre cuatro fases obligatorias.</p>
+
+  <div class="phases">
+
+    <div class="phase phase-0">
+      <div class="phase-num">0</div>
+      <div class="phase-body">
+        <h3>Escuchar sin condiciones</h3>
+        <p>El ciudadano contacta por el canal que tenga disponible (WhatsApp, Telegram, Signal, voz). No se piden datos de identidad en la primera interacción. El operador escucha, transcribe y genera confianza. Puede hablar libremente.</p>
+        <div class="phase-tags">
+          <span class="tag tag-blue">Anonimato opcional</span>
+          <span class="tag tag-blue">Sin identificación inicial</span>
+          <span class="tag tag-gold">Primeras 24h</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase phase-1">
+      <div class="phase-num">1</div>
+      <div class="phase-body">
+        <h3>Triaje por urgencia</h3>
+        <p>Todo caso es clasificado en una de cuatro prioridades. Los casos P1 activan respuesta inmediata. Los P4 entran a la cola de acompañamiento a mediano plazo. La escasez de recursos obliga a la honestidad: los más urgentes primero, siempre.</p>
+        <div class="phase-tags">
+          <span class="tag tag-red">Vida en riesgo → P1</span>
+          <span class="tag tag-red">Urgente → P2</span>
+          <span class="tag tag-blue">Importante → P3</span>
+          <span class="tag tag-gold">Seguimiento → P4</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase phase-2">
+      <div class="phase-num">2</div>
+      <div class="phase-body">
+        <h3>Articulación de solución</h3>
+        <p>El caso se conecta con el actor con mayor capacidad de resolverlo: médicos voluntarios, abogados de derechos humanos, redes eclesiales, ONG locales, diáspora organizada, vecinos con recursos. Se documenta cada gestión. El operador acompaña activamente hasta tener respuesta.</p>
+        <div class="phase-tags">
+          <span class="tag tag-blue">Red de aliados mapeada</span>
+          <span class="tag tag-gold">Conexión directa</span>
+          <span class="tag tag-gold">Sin intermediarios políticos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase phase-3">
+      <div class="phase-num">3</div>
+      <div class="phase-body">
+        <h3>Verificación y memoria</h3>
+        <p>Una vez resuelto (o cerrado por imposibilidad), el caso se registra con resultado. Los datos anonimizados se publican mensualmente como informe de situación nacional: cuántos casos, de qué tipo, qué tan solucionados. Esta base de evidencia es el primer insumo real para la reconstrucción institucional de Venezuela.</p>
+        <div class="phase-tags">
+          <span class="tag tag-blue">Datos abiertos</span>
+          <span class="tag tag-red">Informe mensual público</span>
+          <span class="tag tag-gold">Presión por evidencia</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TRIAGE DETAIL -->
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:40px 0 20px;color:var(--navy)">Sistema de triaje detallado</h3>
+
+  <div class="triage-grid">
+    <div class="triage-item p1">
+      <span class="priority-badge">P1 — Crítico</span>
+      <div class="triage-desc">
+        <strong>Emergencia médica · Detención arbitraria · Violencia inmediata</strong>
+        Riesgo de vida presente o inminente. Activa red médica o jurídica de emergencia.
+      </div>
+      <div class="triage-time">≤ 2 horas</div>
+    </div>
+    <div class="triage-item p2">
+      <span class="priority-badge">P2 — Urgente</span>
+      <div class="triage-desc">
+        <strong>Sin medicamentos · Corte agua/luz prolongado · Inseguridad alimentaria aguda</strong>
+        Urgente pero no inmediatamente fatal. Conectar con red en 24h.
+      </div>
+      <div class="triage-time">≤ 24 horas</div>
+    </div>
+    <div class="triage-item p3">
+      <span class="priority-badge">P3 — Importante</span>
+      <div class="triage-desc">
+        <strong>Trámites bloqueados · Educación interrumpida · Vivienda precaria</strong>
+        Afecta calidad de vida. Acompañamiento en la semana.
+      </div>
+      <div class="triage-time">≤ 7 días</div>
+    </div>
+    <div class="triage-item p4">
+      <span class="priority-badge">P4 — Seguimiento</span>
+      <div class="triage-desc">
+        <strong>Información · Orientación legal preventiva · Emprendimiento en riesgo</strong>
+        Sin urgencia inmediata. Cola de acompañamiento progresivo.
+      </div>
+      <div class="triage-time">≤ 30 días</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- EQUIPO -->
+<section class="section" id="equipo">
+  <div class="section-label">04 — Estructura Operativa</div>
+  <h2>Un equipo <em>distribuido</em><br>en Venezuela y la diáspora</h2>
+
+  <p class="lead">La mayor innovación de VCV respecto al modelo LAV: los operadores no tienen que estar en Venezuela. La diáspora de 7 millones de venezolanos en el exterior es el mayor activo humano del país. VCV los activa como voluntarios remotos.</p>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="role-icon">📡</div>
+      <h4>Operadores locales</h4>
+      <p>Voluntarios en Venezuela. Turnos de 4 horas. Reciben casos, hacen triaje inicial, transfieren a coordinadores.</p>
+    </div>
+    <div class="team-card">
+      <div class="role-icon">🌎</div>
+      <h4>Operadores diáspora</h4>
+      <p>Venezolanos en el exterior que atienden casos por mensajería. Cubre zonas horarias adicionales. Sin costo de nómina.</p>
+    </div>
+    <div class="team-card">
+      <div class="role-icon">🏥</div>
+      <h4>Red de especialistas</h4>
+      <p>Médicos, abogados DDHH, trabajadores sociales. Referenciados por caso, no en nómina permanente.</p>
+    </div>
+    <div class="team-card">
+      <div class="role-icon">📊</div>
+      <h4>Analistas de datos</h4>
+      <p>Procesan registros, identifican patrones, generan informes públicos. Pueden estar en el exterior.</p>
+    </div>
+    <div class="team-card">
+      <div class="role-icon">🔐</div>
+      <h4>Equipo de seguridad</h4>
+      <p>Protocolo de anonimato, revisión de riesgos para operadores y ciudadanos. Fundamental en contexto autoritario.</p>
+    </div>
+    <div class="team-card">
+      <div class="role-icon">🏛️</div>
+      <h4>Coordinación general</h4>
+      <p>Director operativo, coordinadores de turno. Definen estrategia, gestionan alianzas, escalan situaciones.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:32px 0 16px;color:var(--navy)">Tecnología adaptada a Venezuela</h3>
+
+  <ul class="checklist">
+    <li><strong>WhatsApp Business API</strong> como canal primario: penetración real en Venezuela, sin costo de infraestructura telefónica</li>
+    <li><strong>Telegram y Signal</strong> para casos con mayor riesgo de vigilancia estatal</li>
+    <li><strong>Formularios offline-first</strong>: el sistema funciona con conectividad intermitente</li>
+    <li><strong>Base de datos cifrada</strong> alojada fuera de Venezuela (protección de datos de ciudadanos)</li>
+    <li><strong>Tablero de gestión</strong> tipo Notion/Airtable con niveles de acceso por rol</li>
+    <li><strong>Informes automáticos</strong> mensuales en PDF público y open data</li>
+  </ul>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:32px 0 16px;color:var(--navy)">Prueba de concepto: LAV Santa Cruz, Bolivia</h3>
+
+  <div class="proof-grid">
+    <div class="proof-stat">
+      <span class="ps-val">52.500</span>
+      <p class="ps-desc">casos registrados en 18 meses</p>
+    </div>
+    <div class="proof-stat">
+      <span class="ps-val">7→100</span>
+      <p class="ps-desc">operadores escalados durante pandemia</p>
+    </div>
+    <div class="proof-stat">
+      <span class="ps-val">300</span>
+      <p class="ps-desc">servidores entrenados en metodología</p>
+    </div>
+    <div class="proof-stat">
+      <span class="ps-val">24/7</span>
+      <p class="ps-desc">operación continua desde semana 3</p>
+    </div>
+    <div class="proof-stat">
+      <span class="ps-val">98,2%</span>
+      <p class="ps-desc">resolución en casos COVID-19</p>
+    </div>
+    <div class="proof-stat">
+      <span class="ps-val">1.500</span>
+      <p class="ps-desc">llamadas/día en pico de demanda</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ALCANCE INTERACTIVO -->
+<section class="reach-section" id="alcance">
+  <div class="reach-inner">
+    <div class="section-label">05 — Proyección de alcance</div>
+    <h2>Alcance realista:<br>de piloto a escala nacional</h2>
+
+    <p class="lead">Ajusta los parámetros para ver la proyección de casos y ciudadanos impactados según la ciudad de inicio y la capacidad operativa.</p>
+
+    <div style="margin-top: 40px;">
+
+      <div class="slider-group">
+        <label>Ciudad de inicio (población)
+          <span id="pop-label">Caracas — 3.000.000</span>
+        </label>
+        <input type="range" id="pop-slider" min="0" max="3" step="1" value="0" oninput="updateReach()">
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:rgba(247,242,234,0.3);margin-top:4px;">
+          <span>Caracas</span><span>Maracaibo</span><span>Valencia</span><span>Barquisimeto</span>
+        </div>
+      </div>
+
+      <div class="slider-group">
+        <label>Operadores activos en mes 1
+          <span id="ops-label">20 operadores</span>
+        </label>
+        <input type="range" id="ops-slider" min="10" max="80" step="5" value="20" oninput="updateReach()">
+      </div>
+
+      <div class="slider-group">
+        <label>Penetración WhatsApp en zona (% adultos)
+          <span id="pen-label">55%</span>
+        </label>
+        <input type="range" id="pen-slider" min="30" max="75" step="5" value="55" oninput="updateReach()">
+      </div>
+
+    </div>
+
+    <div class="reach-results">
+      <div class="reach-card">
+        <span class="r-value" id="r-daily">240</span>
+        <span class="r-label">Casos/día · Mes 1</span>
+      </div>
+      <div class="reach-card">
+        <span class="r-value" id="r-monthly">7.200</span>
+        <span class="r-label">Casos · Mes 1</span>
+      </div>
+      <div class="reach-card">
+        <span class="r-value" id="r-annual">138K</span>
+        <span class="r-label">Casos · Año 1</span>
+      </div>
+      <div class="reach-card">
+        <span class="r-value" id="r-impact">55K</span>
+        <span class="r-label">Personas impactadas</span>
+      </div>
+    </div>
+
+    <div class="growth-chart">
+      <h4>Crecimiento proyectado de casos por mes (año 1)</h4>
+      <div class="bar-chart" id="bar-chart"></div>
+    </div>
+
+    <p style="margin-top:24px;font-size:12px;color:rgba(247,242,234,0.4);">
+      * Proyecciones conservadoras basadas en el modelo LAV (Santa Cruz, Bolivia, 2019-2021). Se asume una tasa de adopción del 2-4% de la población objetivo en los primeros 3 meses, escalando al 8-12% al finalizar el año 1. Cada operador gestiona en promedio 12 casos/día.
+    </p>
+  </div>
+</section>
+
+<!-- PRESUPUESTO -->
+<section class="section" id="presupuesto">
+  <div class="section-label">06 — Presupuesto</div>
+  <h2>Inversión para <em>18 meses</em><br>de operación piloto</h2>
+
+  <p class="lead">El presupuesto contempla el arranque operativo en 2 ciudades, la formación del equipo base, la infraestructura tecnológica y la producción de informes públicos. Se solicita financiamiento al Venezuela Rising Fund para la fase piloto.</p>
+
+  <table class="budget-table">
+    <thead>
+      <tr>
+        <th>Componente</th>
+        <th>Descripción</th>
+        <th>USD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Equipo coordinador</td>
+        <td>Director + 2 coordinadores de turno, 18 meses</td>
+        <td>$54.000</td>
+      </tr>
+      <tr>
+        <td>Formación de operadores</td>
+        <td>Entrenamiento inicial (100 voluntarios locales + diáspora), materiales, metodología</td>
+        <td>$18.000</td>
+      </tr>
+      <tr>
+        <td>Tecnología e infraestructura</td>
+        <td>WhatsApp API, servidores, base de datos cifrada, tablero de gestión, seguridad digital</td>
+        <td>$22.000</td>
+      </tr>
+      <tr>
+        <td>Red de especialistas</td>
+        <td>Honorarios por caso (médicos, abogados DDHH, trabajadores sociales)</td>
+        <td>$28.000</td>
+      </tr>
+      <tr>
+        <td>Análisis y datos</td>
+        <td>Analista de datos, 18 informes públicos mensuales, open data</td>
+        <td>$14.000</td>
+      </tr>
+      <tr>
+        <td>Comunicación y adopción</td>
+        <td>Campaña de difusión, materiales, WhatsApp broadcast</td>
+        <td>$12.000</td>
+      </tr>
+      <tr>
+        <td>Protocolo de seguridad</td>
+        <td>Consultoría de seguridad digital, protocolos para operadores en riesgo</td>
+        <td>$8.000</td>
+      </tr>
+      <tr>
+        <td>Contingencias</td>
+        <td>10% del total para imprevistos operativos</td>
+        <td>$15.600</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="budget-total">
+        <td colspan="2"><strong>Total solicitado al Venezuela Rising Fund (18 meses · 2 ciudades piloto)</strong></td>
+        <td><strong>$171.600</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <p style="font-size:13px;color:var(--text-light);">Este presupuesto representa el 11,4% del fondo total disponible ($1,5M) y financia una operación capaz de generar más de 100.000 casos documentados en el primer año — la base de evidencia más robusta sobre la situación ciudadana en Venezuela que haya existido en décadas.</p>
+
+</section>
+
+<!-- ALINEACIÓN -->
+<section class="section" id="alineacion">
+  <div class="section-label">07 — Alineación con el Venezuela Rising Fund</div>
+  <h2>Por qué VCV encaja con<br><em>cada uno</em> de los pilares</h2>
+
+  <div class="align-cards">
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Empoderar a la sociedad civil</h4>
+      <p>VCV nace desde la sociedad civil, opera sin gobierno y forma cientos de ciudadanos como agentes activos de su propia recuperación.</p>
+    </div>
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Construir instituciones de libertad</h4>
+      <p>El registro abierto de casos crea por primera vez en décadas un mecanismo de rendición de cuentas ciudadana independiente del Estado.</p>
+    </div>
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Traer a la diáspora de vuelta</h4>
+      <p>VCV integra estructuralmente a venezolanos en el exterior como operadores remotos: mantiene el vínculo con el país y aprovecha sus capacidades.</p>
+    </div>
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Periodismo y datos libres</h4>
+      <p>Los informes mensuales públicos de VCV son el primer dataset ciudadano independiente de Venezuela: periodismo de datos desde la base.</p>
+    </div>
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Cultura de iniciativa privada</h4>
+      <p>VCV demuestra que los problemas pueden resolverse sin depender del Estado. Cada caso resuelto es evidencia tangible de que la iniciativa civil funciona.</p>
+    </div>
+    <div class="align-card">
+      <div class="fund-req">Pilar del fondo</div>
+      <h4>Listo para desplegar hoy</h4>
+      <p>El modelo está probado (LAV Bolivia, 52.500 casos) y puede desplegarse en 60 días. No es una idea: es un sistema con metodología documentada.</p>
+    </div>
+  </div>
+
+  <blockquote>"VCV no espera al próximo gobierno para empezar. Es el tejido que hace posible que el próximo gobierno tenga algo sobre lo cual construir."</blockquote>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:32px 0 16px;color:var(--navy)">Criterios de elegibilidad: cumplimiento total</h3>
+
+  <ul class="checklist">
+    <li>Organización de sociedad civil registrada (no individuo): <strong>sí — se constituye con alianza ONG local + entidad exterior</strong></li>
+    <li>Sin misión política ni religiosa: <strong>sí — apolítico, apartidista, aconfesional</strong></li>
+    <li>No es ayuda humanitaria directa: <strong>sí — es sistema de intermediación e institución civil</strong></li>
+    <li>Avanza la libertad individual (expresión, acceso a información, agencia): <strong>sí — estructuralmente</strong></li>
+    <li>Iniciativa privada como solución a problema público: <strong>sí — núcleo del modelo</strong></li>
+    <li>Scalable y replicable: <strong>sí — metodología documentada, modelo open source</strong></li>
+  </ul>
+
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Venezuela lleva 26 años esperando que alguien la escuche.<br>VCV empieza mañana.</h2>
+    <p>La ventana es ahora. El modelo está probado. La diáspora está lista. La ciudadanía tiene voz: solo necesita un canal seguro para usarla.</p>
+    <div class="closing-contact">
+      📩 &nbsp; Contacto: venezuela@risingtide.ch &nbsp;|&nbsp; Alejandro Sosa Briceño &nbsp;|&nbsp; asosab@gmail.com
+    </div>
+  </div>
+</section>
+
+<script>
+const cities = [
+  { name: 'Caracas', pop: 3000000 },
+  { name: 'Maracaibo', pop: 2000000 },
+  { name: 'Valencia', pop: 1400000 },
+  { name: 'Barquisimeto', pop: 1200000 }
+];
+
+const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+function fmtNum(n) {
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return Math.round(n/1000) + 'K';
+  return Math.round(n).toLocaleString();
+}
+
+function updateReach() {
+  const cityIdx = parseInt(document.getElementById('pop-slider').value);
+  const ops = parseInt(document.getElementById('ops-slider').value);
+  const pen = parseInt(document.getElementById('pen-slider').value);
+
+  const city = cities[cityIdx];
+  document.getElementById('pop-label').textContent = city.name + ' — ' + city.pop.toLocaleString();
+  document.getElementById('ops-label').textContent = ops + ' operadores';
+  document.getElementById('pen-label').textContent = pen + '%';
+
+  // Cases/day in month 1: each operator handles ~12 cases/day, but capped by demand
+  const targetPop = city.pop * 0.6 * (pen/100); // adults with WhatsApp
+  const adoptionM1 = 0.03; // 3% adoption rate month 1
+  const demandM1 = targetPop * adoptionM1 / 30;
+  const capacityM1 = ops * 12;
+  const dailyM1 = Math.min(demandM1, capacityM1);
+
+  document.getElementById('r-daily').textContent = fmtNum(dailyM1);
+  document.getElementById('r-monthly').textContent = fmtNum(dailyM1 * 30);
+
+  // Year projection
+  let totalAnnual = 0;
+  const monthlyData = [];
+  for (let m = 0; m < 12; m++) {
+    const adoption = Math.min(0.03 + m * 0.008, 0.13);
+    const demand = targetPop * adoption / 30;
+    const opsM = ops + m * 3; // slow growth
+    const capacity = opsM * 12;
+    const daily = Math.min(demand, capacity);
+    const monthly = daily * 30;
+    totalAnnual += monthly;
+    monthlyData.push(monthly);
+  }
+
+  document.getElementById('r-annual').textContent = fmtNum(totalAnnual);
+  document.getElementById('r-impact').textContent = fmtNum(totalAnnual * 1.4); // avg 1.4 people per case
+
+  // Bar chart
+  const maxVal = Math.max(...monthlyData);
+  const chart = document.getElementById('bar-chart');
+  chart.innerHTML = monthlyData.map((v, i) => {
+    const pct = (v / maxVal * 100);
+    return `<div class="bar-wrap">
+      <div class="bar-val">${fmtNum(v)}</div>
+      <div class="bar" style="height:${pct}%"></div>
+      <div class="bar-label">${months[i]}</div>
+    </div>`;
+  }).join('');
+}
+
+updateReach();
+</script>
+
+</body>
+</html>
