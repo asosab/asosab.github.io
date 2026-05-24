@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larga Noche de Museos — Podcast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0e0b0a;
+  --paper: #f5efe6;
+  --gold: #c8912a;
+  --gold-dim: #8a6018;
+  --amber: #e8a030;
+  --rust: #8b3a1a;
+  --night: #06050a;
+  --night2: #110e18;
+  --night3: #1c1727;
+  --mist: #2e2840;
+  --pale: #d4c8b8;
+  --warm-white: #f0e8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--night);
+  color: var(--warm-white);
+  font-family: 'Libre Baskerville', Georgia, serif;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 70%, rgba(200,145,42,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 20%, rgba(139,58,26,0.08) 0%, transparent 60%),
+    linear-gradient(180deg, var(--night) 0%, var(--night2) 60%, var(--night3) 100%);
+}
+
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.3s forwards;
+}
+
+.hero-cover {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s forwards;
+}
+
+.hero-cover img {
+  width: min(340px, 80vw);
+  height: min(340px, 80vw);
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 1px rgba(200,145,42,0.2),
+    0 0 60px rgba(200,145,42,0.08),
+    0 40px 80px rgba(0,0,0,0.6);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  animation: fadeUp 1s 0.7s forwards;
+  max-width: 800px;
+}
+
+.hero-title em {
+  display: block;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-subtitle {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--pale);
+  text-align: center;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 1s 0.9s forwards;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.hero-rule {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 2.5rem auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s 1.1s forwards;
+}
+
+.hero-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 1s 1.2s forwards;
+  line-height: 2;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s 2s forwards;
+  color: var(--gold-dim);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scroll-hint::after {
+  content: '';
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--gold-dim), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* ── PLAYER SECTION ── */
+#player-section {
+  background: var(--night2);
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(200,145,42,0.15);
+  border-bottom: 1px solid rgba(200,145,42,0.15);
+}
+
+.section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.player-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(200,145,42,0.2);
+  border-radius: 6px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.player-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--warm-white);
+}
+
+.player-desc {
+  font-size: 0.85rem;
+  color: var(--pale);
+  margin-bottom: 1.8rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+audio {
+  width: 100%;
+  height: 40px;
+  accent-color: var(--gold);
+  border-radius: 4px;
+}
+
+audio::-webkit-media-controls-panel {
+  background: var(--night3);
+}
+
+.spotify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  background: rgba(30,215,96,0.1);
+  border: 1px solid rgba(30,215,96,0.3);
+  border-radius: 30px;
+  color: #1ed760;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.spotify-link:hover {
+  background: rgba(30,215,96,0.18);
+  border-color: rgba(30,215,96,0.6);
+}
+
+.spotify-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── MARCO SECTION ── */
+#marco {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+#marco::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
+}
+
+.marco-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 3rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .marco-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.marco-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+.marco-headline em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.marco-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--pale);
+}
+
+.marco-text p + p { margin-top: 1rem; }
+
+.marco-aside {
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+}
+
+.marco-aside-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.marco-aside dl dt {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.marco-aside dl dd {
+  font-size: 0.88rem;
+  color: var(--warm-white);
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
+.guion-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  color: var(--gold);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(200,145,42,0.4);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.guion-link:hover { color: var(--amber); border-color: var(--amber); }
+
+.guion-link svg { width: 14px; height: 14px; }
+
+/* ── ENTREVISTAS ── */
+#entrevistas {
+  background: var(--night2);
+  padding: 6rem 2rem;
+  border-top: 1px solid rgba(200,145,42,0.1);
+}
+
+.entrevistas-header {
+  max-width: 860px;
+  margin: 0 auto 3rem;
+}
+
+.entrevistas-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  margin-top: 0.5rem;
+}
+
+/* Tabs */
+.tabs-nav {
+  max-width: 860px;
+  margin: 0 auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(200,145,42,0.2);
+  padding-bottom: 0;
+  position: relative;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--gold-dim);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem 0.7rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  margin-bottom: -1px;
+}
+
+.tab-btn:hover { color: var(--gold); }
+.tab-btn.active {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+.tabs-panels {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tab-panel {
+  display: none;
+  padding: 3rem 0;
+}
+
+.tab-panel.active { display: block; }
+
+.interview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.interview-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.interview-name em {
+  display: block;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.3rem;
+}
+
+.interview-audio-wrap {
+  flex-shrink: 0;
+}
+
+.interview-audio-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.interview-audio-wrap audio {
+  width: min(280px, 100%);
+}
+
+.transcript-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.transcript-download:hover { color: var(--gold); }
+.transcript-download svg { width: 12px; height: 12px; }
+
+.interview-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200,145,42,0.4), transparent);
+  margin-bottom: 2rem;
+}
+
+/* Dialogue rendering */
+.dialogue {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--pale);
+}
+
+.dialogue-line {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .dialogue-line { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+.dialogue-speaker {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.18em;
+  line-height: 1.6;
+}
+
+.dialogue-speaker.host { color: var(--gold); }
+.dialogue-speaker.guest { color: var(--pale); opacity: 0.7; }
+
+.dialogue-text {
+  font-style: normal;
+}
+
+/* ── EQUIPO / PERFILES ── */
+#equipo {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+#equipo::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
+}
+
+.equipo-header {
+  max-width: 860px;
+  margin: 0 auto 3.5rem;
+}
+
+.equipo-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  margin-top: 0.5rem;
+}
+
+.perfiles-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.perfil-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(200,145,42,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.perfil-card:hover {
+  border-color: rgba(200,145,42,0.35);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.perfil-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) sepia(10%);
+  transition: filter 0.4s;
+}
+
+.perfil-card:hover .perfil-photo {
+  filter: grayscale(0%) sepia(0%);
+}
+
+.perfil-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--night3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mist);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.perfil-body {
+  padding: 1.5rem;
+}
+
+.perfil-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.perfil-role {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.perfil-bio {
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--pale);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--night);
+  border-top: 1px solid rgba(200,145,42,0.1);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.footer-aecid {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: var(--mist);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .marco-aside { grid-column: 1; }
+  .tabs-nav { gap: 0.2rem; }
+  .tab-btn { font-size: 0.58rem; padding: 0.5rem 0.7rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<section id="hero">
+  <p class="hero-eyebrow">Santa Cruz de la Sierra · 2026</p>
+  <div class="hero-cover">
+    <img src="imagen/portada.png" alt="Larga Noche de Museos — portada">
+  </div>
+  <h1 class="hero-title">Larga Noche<br><em>de Museos</em></h1>
+  <p class="hero-subtitle">Un recorrido sonoro por las calles, patios, terrazas y museos del centro de Santa Cruz de la Sierra — la noche que una ciudad volvió a encontrarse consigo misma.</p>
+  <div class="hero-rule"></div>
+  <p class="hero-meta">
+    Podcast documental · 9 entrevistas · ~9 minutos<br>
+    Producido en el marco del taller <em>Sonar Distinto</em> · AECID Bolivia
+  </p>
+  <div class="scroll-hint">escuchar</div>
+</section>
+
+<!-- ════════ PLAYER ════════ -->
+<section id="player-section">
+  <div class="section-inner">
+    <p class="section-label">Escuchar</p>
+    <div class="player-wrap">
+      <h2 class="player-title">Larga Noche de Museos</h2>
+      <p class="player-desc">La ciudad que muchos dicen que se apagó hace años, esta noche vuelve a respirar. Narración + entrevistas + diseño sonoro documental.</p>
+      <audio controls preload="metadata">
+        <source src="audio/Larganochedemuseos.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+      </audio>
+      <br>
+      <a href="https://open.spotify.com/episode/5zG3zw2TuvYEjQYdrZli9F" target="_blank" class="spotify-link">
+        <svg class="spotify-icon" viewBox="0 0 24 24" fill="#1ed760" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 01-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 01.207.857zm1.223-2.723a.78.78 0 01-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 01-.973-.519.781.781 0 01.52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 01.257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 11-.543-1.794c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 01-.955 1.612z"/>
+        </svg>
+        Escuchar en Spotify
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://creators.spotify.com/pod/show/largaNochedeMuseos" target="_blank" class="spotify-link" style="margin-top:0.6rem">
+        <svg class="spotify-icon" viewBox="0 0 24 24" fill="#1ed760" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 01-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 01.207.857zm1.223-2.723a.78.78 0 01-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 01-.973-.519.781.781 0 01.52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 01.257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 11-.543-1.794c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 01-.955 1.612z"/>
+        </svg>
+        Canal en Spotify
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ MARCO ════════ -->
+<section id="marco">
+  <div class="marco-grid">
+    <h2 class="marco-headline">El proyecto <em>&amp; su origen</em></h2>
+
+    <div class="marco-text">
+      <p>El 16 de mayo de 2026, durante la edición anual de la <strong>Larga Noche de Museos</strong> en Santa Cruz de la Sierra, un pequeño equipo de cinco personas salió a la calle con micrófonos y grabadoras. La misión: escuchar lo que la ciudad tenía para decir sobre sí misma.</p>
+      <p>El resultado es este podcast documental: un recorrido por Zarao, Kiosco, la Casa de Gladys Moreno, el Altillo Beni, Casa Patiño, Manzana 1 y varios espacios entre medias; nueve voces distintas que juntas trazan el retrato de una ciudad que, por una sola noche, recuerda que puede encontrarse consigo misma.</p>
+      <p>El podcast fue concebido, producido y editado en el marco del taller <em>Sonar Distinto</em>, que exploró la escucha como práctica cultural y la creación sonora como forma de documentar la experiencia urbana.</p>
+    </div>
+
+    <div class="marco-aside">
+      <p class="marco-aside-title">Marco institucional</p>
+      <dl>
+        <dt>Taller</dt>
+        <dd>Sonar Distinto: crear desde la escucha como práctica cultural</dd>
+
+        <dt>Organizado por</dt>
+        <dd>Centro de Formación de la Cooperación Española en Santa Cruz — AECID<br>(Programa ACERCA)</dd>
+
+        <dt>Facilitadores</dt>
+        <dd>Marta García Moreno<br>Alejandro García Amat</dd>
+
+        <dt>Lugar</dt>
+        <dd>Santa Cruz de la Sierra, Bolivia</dd>
+
+        <dt>Fechas</dt>
+        <dd>14 – 20 de mayo de 2026 · 25 horas</dd>
+
+        <dt>Equipo del podcast</dt>
+        <dd>Alejandro Sosa · Luciana Flores · Cielo Nicole Naranjo · Juan Harriague · José Gabriel Vargas</dd>
+      </dl>
+
+      <a href="transcripciones/Guión_V3.pdf" target="_blank" class="guion-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+        </svg>
+        Leer el guión completo (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ENTREVISTAS ════════ -->
+<section id="entrevistas">
+  <div class="entrevistas-header">
+    <p class="section-label">Voces de la noche</p>
+    <h2>Las entrevistas</h2>
+  </div>
+
+  <div class="tabs-nav">
+    <button class="tab-btn active" onclick="showTab('jacob')">Jacob Zapata</button>
+    <button class="tab-btn" onclick="showTab('florencia')">Florencia</button>
+    <button class="tab-btn" onclick="showTab('lucia')">Lucía Aliaga</button>
+    <button class="tab-btn" onclick="showTab('fabricio')">Fabricio</button>
+    <button class="tab-btn" onclick="showTab('dayana')">Dayana Méndez</button>
+    <button class="tab-btn" onclick="showTab('diana')">Diana Caballero</button>
+    <button class="tab-btn" onclick="showTab('edgar')">Edgar</button>
+    <button class="tab-btn" onclick="showTab('siria')">Siria Useche</button>
+    <button class="tab-btn" onclick="showTab('mariajose')">María José</button>
+    <button class="tab-btn" onclick="showTab('luciana')">Luciana</button>
+    <button class="tab-btn" onclick="showTab('carlos')">Carlos</button>
+    <button class="tab-btn" onclick="showTab('mari')">Mari</button>
+    <button class="tab-btn" onclick="showTab('luis')">Luis</button>
+    <button class="tab-btn" onclick="showTab('cielo')">Cielo</button>
+    <button class="tab-btn" onclick="showTab('leonardo')">Leonardo</button>
+    <button class="tab-btn" onclick="showTab('mariarene')">María René</button>
+  </div>
+
+  <div class="tabs-panels">
+
+    <!-- JACOB ZAPATA -->
+    <div class="tab-panel active" id="tab-jacob">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Jacob Zapata<em>Fundador de Zarao — Identidad y Tradición</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_JacobZapata.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/26_asb_JacobZapata01enhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Vamos a empezar, cuéntame cómo te llamas.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Jacob Zapata.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Jacob, ¿qué edad tienes? ¿Tú vives en Santa Cruz, en qué zona?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Yo tengo 42. Acá cerca, somos creadores del Aljibe, en realidad. El Aljibe lo abrimos hace 17 años. Lo mismo, es una casona restaurada, y lo que nosotros hicimos fue recuperar platos perdidos. Nos comprometimos con mostrar lo que era Santa Cruz.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuéntame, ¿dónde estamos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Ahorita estamos en Zarao, Identidad y Tradición. El nombre es muy bonito. Te llama a la danza, pero no solo es danza —como dice el nombre— Identidad y Tradición. Vas a vivir aquí viendo la danza de todo el oriente boliviano, y no solo lo vas a vivir sino también degustar. De repente estamos en el este de Santa Cruz, en la Chiquitanía, y vas a poder no solo verlo sino también degustar un pastel de gallina. Volvemos a Santa Cruz y podemos degustar un majo. Pero vivís viendo la danza, la vestimenta y la comida. Esa es la idea, que la vivás entera.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Hace cuánto están armando este lugar?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Hace un año prácticamente que iniciamos. Creímos que iba a ser tres meses y ya vamos por el año. Sin embargo estamos en la larga noche de los museos y estamos abiertos. Cuesta remodelar una casona, mantenerla, ponerla de pie. Hay vigas que ya están muy chuecas y tenés que recuperarlas. No es fácil conservar.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué hay acá a tu alrededor?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Todo lo que tenemos acá son elementos del tumbado original: este tipo de madera más elegante, estos cuchillos que todavía los vas a ver en la entrada, y estas palmas que eran iguales. Ambas cosas eran el tipo de tumbado de las construcciones antiguas. Según documentos de la familia, pasaban por más de 140 años.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Desde tu percepción de la noche de los museos, ¿me puedes contar de qué se trata? ¿Qué piensas que buscan y qué se logra o no se logra?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Jacob</span><span class="dialogue-text">Principalmente a los jóvenes, en diferentes ámbitos y ramas. Los jóvenes, por ejemplo, no saben de estas tejas, no saben de esa cerámica, no saben que antes las tejas las fabricaban con las piernas. Entonces dicen: esa teja tan ancha era de alguien que tenía las piernas más gruesas. Y es bonito enseñarle a jóvenes cosas que en algún momento tampoco yo sabía. Es parte de nuestros antepasados y tenemos que seguir mostrándolo. El centro se opacó, se apagó hace mucho tiempo. La idea es que brille más el centro.</span></div>
+      </div>
+    </div>
+
+    <!-- FLORENCIA -->
+    <div class="tab-panel" id="tab-florencia">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Florencia<em>Artista visual, docente y coordinadora de Kiosco Galería</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_florenciaKiosko.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_florenciaKiosko.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Primero, ¿cómo te llamas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Florencia.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué edad tienes?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">35.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿A qué te dedicas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Soy artista visual y docente y gestora cultural y mamá.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Y trabajas aquí? ¿Dónde estamos? Cuéntanos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Estamos en Kiosco Galería. Yo soy parte del equipo de coordinación de Kiosco Galería y soy artista también del espacio. Ahora tengo una obra en una de nuestras exposiciones grupales aquí dentro.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Desde tu experiencia, ¿qué es la larga noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Puedo decir con la verdad: ocurre que es el único día que mucha gente sale a conocer y a recorrer los espacios culturales de la ciudad. Es como el día del año que ellos creen que todo está abierto y el resto del año todo lo demás está cerrado. Es un evento bien masivo porque la gente sale como en familia, con amigos, a recorrer. Pero me parece que es un evento muy aislado también.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Crees que deberían haber más eventos como ese?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Creo que debería haber más eventos como ese. Se ha intentado hacer muchos recorridos culturales con mayor duración o más repetitivos en el año y no sé por qué no se logra. Lo hemos intentado bastante. Es un poco falta de presupuesto y de apoyo de las autoridades. Me gustaría que sea algo que se repita a lo largo del año, una vez al mes, no solamente una vez al año.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has participado en varias noches de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">He participado como coordinadora desde muy adentro, desde la alcaldía. Hace unos cuantos años fui parte del departamento de cultura del gobierno autónomo municipal y organicé una de las largas noches de los museos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Como espectadora, ¿cómo lo has percibido?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Florencia</span><span class="dialogue-text">Como una persona más a pie no me gusta porque no podés ver las cosas. Si vos querés ir a una galería a ver qué se está exponiendo, ese día no es el día para hacerlo, porque lo que menos va a pasar es que vas a poder apreciar las obras. Es un evento masivo. Está bueno porque hay mucha gente que no conocía qué espacios había, pero sí me gustaría que sea algo que se repita.</span></div>
+      </div>
+    </div>
+
+    <!-- LUCÍA ALIAGA -->
+    <div class="tab-panel" id="tab-lucia">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Lucía Aliaga<em>Comunicadora e ilustradora · Espacio Infinito / Casa Gladys Moreno</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_luciaLiagaenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_luciaLiagaenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo estás? Cuéntame, ¿cómo te llamas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Lucía</span><span class="dialogue-text">Hola, me llamo Lucía Aliaga. Tengo 32 años. Soy comunicadora y también soy ilustradora.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Dónde estamos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Lucía</span><span class="dialogue-text">Estamos ahorita en el Espacio Infinito, en la casa de Gladys Moreno.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué me puedes decir en tu experiencia de qué se trata la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Lucía</span><span class="dialogue-text">Para mí es una noche súper linda. Yo vengo de La Paz. Se trata de que todos los museos o las casas culturales pueden sacar sus exposiciones a la calle, tomar la calle para que todos la vean, y que también se abren las puertas para que entren masivamente las personas a conocer nuestros espacios.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Hace cuánto tienes experiencias con la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Lucía</span><span class="dialogue-text">Hace unos cinco años, más o menos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo lo percibes como visitante?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Lucía</span><span class="dialogue-text">Para mí es súper emocionante cuando puedo ir a visitar los lugares y ser participante. Me emociona mucho ver la cantidad de artistas, la cantidad de propuestas que hay. Es un día bien emocionante para mí.</span></div>
+      </div>
+    </div>
+
+    <!-- FABRICIO -->
+    <div class="tab-panel" id="tab-fabricio">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Fabricio<em>16 años · Bailarín de ballet folclórico · Ballet Almanlegüera</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_fabricioenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_fabricioenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo te llamas? ¿Qué edad tienes?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Fabricio</span><span class="dialogue-text">Tengo 16 años. Sigo en el colegio y bailo nomás, básicamente. Hoy estoy acá para bailar, hacer una presentación folclórica por el ballet de Almanlegüera.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Ya conocías la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Fabricio</span><span class="dialogue-text">Sí, he venido en años anteriores solo a ver. En sí es ver la historia y la cultura y tradición que tiene Santa Cruz, de esta región. Siempre he tenido una muy buena experiencia.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Tú frecuentas el centro normalmente?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Fabricio</span><span class="dialogue-text">Normalmente vengo así una vez al mes, cada dos meses, depende. Si hay presentaciones como hoy, vengo seguido.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿En tu familia acostumbran ir a museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Fabricio</span><span class="dialogue-text">Sí, más que nada en otros lugares. Cuando vamos de vacaciones, a visitar otros lados, sí vamos a museos.</span></div>
+      </div>
+    </div>
+
+    <!-- DAYANA MÉNDEZ -->
+    <div class="tab-panel" id="tab-dayana">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Dayana Méndez<em>20 años · Estudiante de Turismo · Voluntaria en el Altillo Beni</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_dayanaMendezenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_dayanaMendezenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo te llamas? ¿Qué edad tienes? ¿A qué te dedicas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Dayana</span><span class="dialogue-text">Dayana Méndez, 20. Soy estudiante de la carrera de turismo de la Universidad Gabriel René Moreno. Aquí estamos en el museo del Altillo Beni.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Conoces lo que es la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Dayana</span><span class="dialogue-text">Sí, el año pasado vine sola como visitante pero ahora estoy siendo voluntaria.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Háblame de qué se trata.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Dayana</span><span class="dialogue-text">Hay pinturas muy interesantes. Por ejemplo, aquí el Altillo Beni muestra que este museo ha sido muy antiguo —antes eran las casas antiguas de Santa Cruz— y es muy interesante. Me gusta ver a la gente que viene a visitar los museos, cómo lo disfrutan, cómo se interesan por las pinturas.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Sobre la percepción de la gente, del movimiento de masas, cómo lo ves?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Dayana</span><span class="dialogue-text">Me parece muy interesante que venga mucha gente. A muchos extranjeros les interesa mucho esta noche de los museos. El año pasado igual vi que harta gente, por ejemplo este museo se llena demasiado por el hecho de que es muy antiguo, hay pinturas muy interesantes, y se vienen también a sacar fotos los turistas.</span></div>
+      </div>
+    </div>
+
+    <!-- DIANA CABALLERO -->
+    <div class="tab-panel" id="tab-diana">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Diana Caballero<em>25 años · Abogada · Zona Roca y Coronado</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_dianaCaballeroenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_dianaCaballeroenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué sabes tú de la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Diana</span><span class="dialogue-text">Claro, por eso estoy acá. Es una noche donde todos los museos de Santa Cruz están abiertos tarde de la noche para que la gente pueda ir y apreciar el arte.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has venido antes?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Diana</span><span class="dialogue-text">Sí, es el tercer año que vengo.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo lo has percibido? Dame una experiencia personal.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Diana</span><span class="dialogue-text">Es muy bonito ver cómo toda la gente se interesa por el arte. Es un tiempo familiar, entre amigos, que uno disfruta.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Sobre la noche cruceña, ¿habría algún otro motivo para poder estar en el centro pasadas las 10 de la noche?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Diana</span><span class="dialogue-text">Claro, hay muchos lugares para cenar, compartir y también para salir de fiesta. Hay bastantes lugares para visitar.</span></div>
+      </div>
+    </div>
+
+    <!-- EDGAR -->
+    <div class="tab-panel" id="tab-edgar">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Edgar<em>Profesor universitario · Cuarto Anillo, Santa Cruz</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_edgarenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_edgarenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuéntame, ¿cómo te llamas? ¿Tú qué haces?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Edgar</span><span class="dialogue-text">Edgar. Soy profesor en la universidad.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Tú conoces la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Edgar</span><span class="dialogue-text">Sí, es una noche al año donde todos los museos están abiertos de forma gratuita y disponibles para todo el mundo. Presentan un montón de obras, performance, etcétera.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Aquí los museos son de pago o son normalmente gratuitos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Edgar</span><span class="dialogue-text">Esta es una ciudad muy democrática en ese sentido. Todos los museos, salvo el Museo Catedralicio, son gratuitos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has tenido experiencias anteriores con la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Edgar</span><span class="dialogue-text">Sí. La noche misma es una experiencia porque te reunís, al ser una noche solamente, te reencuentras con la gente que siempre está en ese circuito: la gente que va a las películas extranjeras, al teatro, a las exposiciones pictóricas. Durante el año se encuentran dispersamente, pero la Larga Noche de Museos, al ser una sola noche, pues sí o sí te vas a encontrar con esa gente ahí.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Tienes una opinión sobre los objetivos que busca cubrir la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Edgar</span><span class="dialogue-text">Tal vez es mi pensamiento de docente, pero me parece muy importante que se le inculque a la juventud el ir a los museos, el ir a las exposiciones, entender que eso no es una cuestión elitista, sino una forma de ver la vida, de expresarse, de comprender tu ciudad. Los artistas son seres sensibles que necesitan lugares donde exponer sus obras. Entonces que estos museos estén abiertos y sean gratuitos, y que se acerque el artista con el público, me parece genial.</span></div>
+      </div>
+    </div>
+
+    <!-- SIRIA USECHE -->
+    <div class="tab-panel" id="tab-siria">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Siria Useche<em>56 años · Arquitecta y asesora inmobiliaria · Vive en el centro</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_SiriaUsecheenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_SiriaUsecheenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Desde tu experiencia, ¿de qué se trata la Larga Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Siria</span><span class="dialogue-text">Mira, es una activación cultural para reactivar el centro. Creo que es una movida que intenta traer a un público diverso que, de otro modo, no vendría.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Y consideras que lo están logrando?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Siria</span><span class="dialogue-text">Considero que lo logran. Incluso esa reactivación viene con un tema económico; el hecho de tener todos los museos y centros culturales abiertos masivamente genera un movimiento de consumo que hace bien a toda la comunidad del centro. Es increíble la cantidad de personas atraídas por esta convocatoria. Habla de la gran necesidad que tiene la ciudad de un punto de reunión cultural.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Tienes alguna experiencia particular de esta noche?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Siria</span><span class="dialogue-text">Deambulando por la ciudad para ver qué sorpresas nos devuelve el camino, encontramos una puerta abierta y resultó ser la construcción de Zarao. Me recordó a las "paraduras del niño" en Venezuela, donde es un evento de todo un pueblo y las casas están abiertas. Entras a casas de desconocidos y te reciben con una bebida. Aquí, apenas entré, tomé Somo y Chicha Camba. Hay una apertura estupenda en cada espacio.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué peso crees que tienen las políticas públicas en el estado del centro?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Siria</span><span class="dialogue-text">Es una suma de cosas. Las políticas no ofrecen viabilidad a los propietarios para el mantenimiento. Muchos ven las declaratorias de patrimonio como un perjuicio por las restricciones que imponen. Es una pena porque este centro es caminable gracias a sus corredores que te protegen del sol y la lluvia. Es arquitectura adaptada al clima y hay que valorizarla. La alcaldía debería encargarse de un mantenimiento profundo de aceras y corredores.</span></div>
+      </div>
+    </div>
+
+    <!-- MARÍA JOSÉ -->
+    <div class="tab-panel" id="tab-mariajose">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">María José Campos<em>Arquitecta, urbanista y gestora cultural · Plataforma Rutas y Rastros</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_mariajoseenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_mariajoseenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuéntame qué haces.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María José</span><span class="dialogue-text">Soy arquitecta, urbanista y gestora cultural aquí en Santa Cruz de la Sierra, desde la plataforma Rutas y Rastros, que nos dio la oportunidad de desarrollar distintos proyectos urbanos y culturales.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has tenido experiencias, conoces la larga noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María José</span><span class="dialogue-text">Sí, me parece una iniciativa muy interesante y también como que un poco agobiante por la cantidad de gente que viene. Los museos se llenan y muchas veces hay cosas que no puedes disfrutar, pero también se disfruta de una manera distinta por las iniciativas que hay.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cuál es lo que más te marcó de la noche de museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María José</span><span class="dialogue-text">La cantidad de gente que viene. El movimiento es lo que más resuena. La cantidad de gente que se concentra alrededor de la plaza y en los espacios culturales.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cuál es el objetivo que busca cubrir este evento?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María José</span><span class="dialogue-text">Dar a conocer los centros culturales, los museos, la cultura. También hay un intercambio y la gente camina, va descubriendo espacios escondidos que el centro tiene. Hay muchos lugares escondidos que puedes encontrar en esta zona.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Con qué frecuencia visitas museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María José</span><span class="dialogue-text">Unas tres, cuatro veces al mes, incluso más. Cada que puedo entro a la Galería Manzana 1, al Museo de Arte Contemporáneo. Me encanta.</span></div>
+      </div>
+    </div>
+
+    <!-- LUCIANA -->
+    <div class="tab-panel" id="tab-luciana">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Luciana<em>Licenciada en Marketing · Uruguó</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_lucianaenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_lucianaenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo te llamas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luciana</span><span class="dialogue-text">No, no quiero. Luciana.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has estado alguna vez en la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luciana</span><span class="dialogue-text">No, no lo conozco.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Pero tienes una expectativa? ¿Qué esperas ver?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luciana</span><span class="dialogue-text">En realidad, a partir de hoy que escuché, nunca había escuchado antes. En mi imaginación, mucha arte, digamos, esculturas o algo así, pero no me imagino tanta gente.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Con qué frecuencia visitas museos en Santa Cruz?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luciana</span><span class="dialogue-text">En realidad, no mucho. Máximo una vez al año.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cuándo fue la última vez que fuiste a un museo?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luciana</span><span class="dialogue-text">El de la Cooperación Española. No, cuenta porque mi tío me llamó para que llegue. Y en mi defensa, yo sí pinto.</span></div>
+      </div>
+    </div>
+
+    <!-- CARLOS AMBULANTE -->
+    <div class="tab-panel" id="tab-carlos">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Carlos<em>38 años · Músico callejero y artesano · Los Pozos</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_carlosAmbulanteenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_carlosAmbulanteenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿A qué te dedicas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Carlos</span><span class="dialogue-text">Me dedico a hacer música en la calle, arte callejero. Hago material artesanal, como pulseras, collares. Hoy en día tengo pulseras nada más.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué sabes de la Noche de los Museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Carlos</span><span class="dialogue-text">La verdad que soy súper ignorante. No sabía, creo que se desarrollaba esta jornada porque se celebra el Día Mundial de los Museos. Nada que ver, malísimo.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Yo creo que es una forma de que la gente conozca museos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Carlos</span><span class="dialogue-text">Es como que le ayudas a la gente a que existe el arte en las calles y en muchos lugares.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo experimentas el centro en este momento en relación a los otros días?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Carlos</span><span class="dialogue-text">Me encanta, está tremendo, la brisa es hermosa, Santa Cruz es muy linda, la gente es muy hospitalaria. Amo Santa Cruz de la Sierra.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cómo ves el negocio esta noche?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Carlos</span><span class="dialogue-text">Me parece que toda la gente va a hacer mucho dinero. Hay mucha cantidad de personas y están todos gastando. Creo que no van a dar abasto en algunos restaurantes, pero dentro de todo se va a pasar una noche muy linda, porque está hermoso para salir a tomar algo bajo la copa de un árbol.</span></div>
+      </div>
+    </div>
+
+    <!-- MARI AMBULANTE -->
+    <div class="tab-panel" id="tab-mari">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Mari<em>55 años · Vendedora ambulante · Plan 4000</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_mariAmbulanteenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_mariAmbulanteenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuénteme, ¿a qué se dedica?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Mari</span><span class="dialogue-text">Yo me dedico a vender panchitos, así en cada evento que hay.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Háblame de la larga noche de los museos. ¿Ya has estado antes en noches como esta?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Mari</span><span class="dialogue-text">El año pasado, sí. Después voy a ir a mirar los museos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuénteme qué piensa de la larga noche de los museos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Mari</span><span class="dialogue-text">Que son bonitas las cosas antiguas para verlos. Todos vienen: los estudiantes, personas de otros lugares a mirar eso. Hay las bandas también, va a haber más un rato de festivales. Muy bonito es.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Por qué piensas que se arman estas colas tan largas?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Mari</span><span class="dialogue-text">Para mirar las antigüedades. Pero es que tal vez piensan que no hay otra oportunidad del año para verlas.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Pero estos lugares están todo el año.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Mari</span><span class="dialogue-text">Todo el año redondo, pero es que la gente casi no estamos acostumbradas a venir todo el tiempo. Y aprovechan esta noche también para vender, ya que la vida está grave ahorita, muy duro la situación.</span></div>
+      </div>
+    </div>
+
+    <!-- LUIS -->
+    <div class="tab-panel" id="tab-luis">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Luis Algarayaz<em>67 años · Consultor · Santa Cruz</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_luisAlgarayazenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_luisAlgarayazenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Cuéntame, ¿de qué trata la Noche de los Museos según tu percepción personal?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luis</span><span class="dialogue-text">Bueno, pues es que los museos abren sus puertas para el público en general, a fin de que la gente conozca un poco la riqueza que tienen los museos, y muchas historias, toda la cultura de cada museo y de cada pueblo. El objetivo es ese, que la gente conozca su cultura.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Con qué frecuencia visitas el centro?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luis</span><span class="dialogue-text">Digamos que cada 10 días, más o menos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Qué sería una actividad cultural a la que te gustaría plegarte?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Luis</span><span class="dialogue-text">Hay muchas, ¿no? Hay deportivas, hay teatros, de cine, hay muchas. A mí personalmente me gustaría la parte, más que todo, de análisis económico.</span></div>
+      </div>
+    </div>
+
+    <!-- CIELO -->
+    <div class="tab-panel" id="tab-cielo">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Cielo Nicole Naranjo<em>Estudiante de marketing · Entre el 8° y el 39° anillo</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_cieloenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_cieloenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Sabes de qué se trata la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Cielo</span><span class="dialogue-text">Sí. La noche de los museos es mayormente donde los artistas vienen y muestran sus pinturas al público, y también donde los museos abren gratuitamente hacia todo el público.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Has estado en alguna noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Cielo</span><span class="dialogue-text">No, no he estado en ninguna y creo que hoy posiblemente será mi primera vez.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Tienes alguna expectativa?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Cielo</span><span class="dialogue-text">Mis expectativas son muy grandes. Espero ver literalmente a mucha gente, a niños, jóvenes disfrutando, y también ver muchas pinturas y diseñadores que están ahí reconocidos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Con qué frecuencia visitas museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Cielo</span><span class="dialogue-text">A los 16 años ya empecé a interactuar mucho con la pintura, entonces a lo largo de mis cursos fui conociendo nuevos museos, no solo de Bolivia sino también de Brasil.</span></div>
+      </div>
+    </div>
+
+    <!-- LEONARDO -->
+    <div class="tab-panel" id="tab-leonardo">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">Leonardo<em>32 años · Profesor de inglés · Octavo anillo</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_leonardoFilaenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_leonardoFilaenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Ya conoces de qué se trata la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Leonardo</span><span class="dialogue-text">Sí, sí, es acerca de los gatos. [risas]</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">Según tu percepción, ¿de qué trata la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Leonardo</span><span class="dialogue-text">Normalmente creo que siempre hay una temática y eso es de lo que se basa, digamos, en cada museo.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cuánto tiempo estás dispuesto a hacer cola para visitar un museo?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Leonardo</span><span class="dialogue-text">Entre 15 y 20 minutos, media hora tal vez.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Cuántos museos piensas que visitarás esta noche?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">Leonardo</span><span class="dialogue-text">Tal vez unos cuatro.</span></div>
+      </div>
+    </div>
+
+    <!-- MARÍA RENÉ -->
+    <div class="tab-panel" id="tab-mariarene">
+      <div class="interview-header">
+        <div>
+          <p class="interview-name">María René<em>26 años · Abogada · Secundarillo · Manzana 1</em></p>
+        </div>
+        <div class="interview-audio-wrap">
+          <p class="interview-audio-label">Audio</p>
+          <audio controls preload="none">
+            <source src="audio/entrevistas/260516_asb_mariaReneenhancedv2.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+          <a href="transcripciones/260516_asb_mariaReneenhancedv2.pdf" class="transcript-download" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar transcripción
+          </a>
+        </div>
+      </div>
+      <div class="interview-rule"></div>
+      <div class="dialogue">
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Dónde estamos y qué estamos haciendo aquí?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María René</span><span class="dialogue-text">Estamos en la Manzana 1, estamos viendo el museo de arte. Vamos a entrar al museo de los michis, que está ahorita causando sensación en las redes sociales, y también hay exposiciones de las galerías de arte que hay dentro del Museo Mitchell Pinto.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Hace cuánto conoces la experiencia de la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María René</span><span class="dialogue-text">Este es mi cuarto año consecutivo asistiendo. Veo demasiada cantidad de gente y me agrada que se esté compartiendo tanto con jóvenes como con personas mayores.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿De qué se trata la noche de los museos?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María René</span><span class="dialogue-text">Es una mezcla de arte: hay arte contemporáneo, hay arte moderno, se mezclan distintas culturas. Es un momento, una noche para interculturalizar con los jóvenes, con los niños y con los adultos.</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker host">Alejandro</span><span class="dialogue-text">¿Frecuentas las galerías de arte?</span></div>
+        <div class="dialogue-line"><span class="dialogue-speaker guest">María René</span><span class="dialogue-text">Algunas. Me gusta ir a la Federal, casi siempre hay exposiciones de arte ahí, también acá en el Mitchell Pinto. Hay otra galería a unas dos cuadras que es muy, muy bonita.</span></div>
+      </div>
+    </div>
+
+  </div><!-- /tabs-panels -->
+</section>
+
+<!-- ════════ EQUIPO ════════ -->
+<section id="equipo">
+  <div class="equipo-header">
+    <p class="section-label">Quiénes somos</p>
+    <h2>El equipo del podcast</h2>
+  </div>
+
+  <div class="perfiles-grid">
+
+    <!-- ALEJANDRO SOSA -->
+    <div class="perfil-card">
+      <img class="perfil-photo" src="imagen/Alejandro_Sosa.jpeg" alt="Alejandro Sosa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="perfil-photo-placeholder" style="display:none">foto</div>
+      <div class="perfil-body">
+        <p class="perfil-name">Alejandro Sosa</p>
+        <p class="perfil-role">Entrevistas · Producción · Edición</p>
+        <p class="perfil-bio">Emprendedor multidisciplinario radicado en Santa Cruz de la Sierra. Fundador de Statetty (PropTech) y ekvilibroLab (innovación alimentaria), host del podcast <em>Somos 10⁷</em>. Formado en ingeniería de software, ha trabajado en transformación digital pública y privada en Venezuela y Bolivia durante más de 25 años. Combina pensamiento sistémico con ejecución creativa en proyectos que atraviesan tecnología, cultura y comunidad.</p>
+      </div>
+    </div>
+
+    <!-- LUCIANA FLORES -->
+    <div class="perfil-card">
+      <div class="perfil-photo-placeholder">foto próximamente</div>
+      <div class="perfil-body">
+        <p class="perfil-name">Luciana Flores</p>
+        <p class="perfil-role">Equipo de producción</p>
+        <p class="perfil-bio">Participa en este podcast como parte del equipo de producción formado durante el taller <em>Sonar Distinto</em>. Su perfil completo estará disponible pronto.</p>
+      </div>
+    </div>
+
+    <!-- CIELO NICOLE NARANJO -->
+    <div class="perfil-card">
+      <div class="perfil-photo-placeholder">foto próximamente</div>
+      <div class="perfil-body">
+        <p class="perfil-name">Cielo Nicole Naranjo</p>
+        <p class="perfil-role">Equipo de producción</p>
+        <p class="perfil-bio">Estudiante de marketing con un vínculo personal con las artes visuales. Forma parte del equipo creativo que documentó sonoramente la Larga Noche de Museos 2026. Su perfil completo estará disponible pronto.</p>
+      </div>
+    </div>
+
+    <!-- JUAN HARRIAGUE -->
+    <div class="perfil-card">
+      <div class="perfil-photo-placeholder">foto próximamente</div>
+      <div class="perfil-body">
+        <p class="perfil-name">Juan Harriague</p>
+        <p class="perfil-role">Equipo de producción</p>
+        <p class="perfil-bio">Integrante del equipo de producción del podcast, formado en el marco del taller <em>Sonar Distinto</em> de la AECID en Santa Cruz de la Sierra. Su perfil completo estará disponible pronto.</p>
+      </div>
+    </div>
+
+    <!-- JOSÉ GABRIEL VARGAS -->
+    <div class="perfil-card">
+      <div class="perfil-photo-placeholder">foto próximamente</div>
+      <div class="perfil-body">
+        <p class="perfil-name">José Gabriel Vargas</p>
+        <p class="perfil-role">Equipo de producción</p>
+        <p class="perfil-bio">Forma parte del equipo que recorrió el centro de Santa Cruz durante la Larga Noche de Museos capturando el sonido de la ciudad. Su perfil completo estará disponible pronto.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <p class="footer-logo">Larga Noche de Museos</p>
+  <p class="footer-text">
+    Santa Cruz de la Sierra, Bolivia · Mayo 2026<br>
+    Producido durante la Larga Noche de Museos · 16 de mayo de 2026
+  </p>
+  <p class="footer-aecid">
+    Creado en el marco del taller <em>Sonar Distinto: crear desde la escucha como práctica cultural</em><br>
+    Centro de Formación de la Cooperación Española en Santa Cruz de la Sierra — AECID<br>
+    Programa ACERCA · Facilitadores: Marta García Moreno &amp; Alejandro García Amat
+  </p>
+</footer>
+
+<script>
+function showTab(id) {
+  // Hide all panels
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  // Show selected
+  document.getElementById('tab-' + id).classList.add('active');
+  // Activate button
+  event.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
