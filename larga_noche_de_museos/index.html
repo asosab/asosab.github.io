@@ -1,791 +1,796 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ══════════════════════════════════════════
-     SEO & SOCIAL SHARING — Larga Noche de Museos
-     ══════════════════════════════════════════ -->
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- ══════════════════════════════════════════
+       SEO & SOCIAL SHARING — Larga Noche de Museos
+       ══════════════════════════════════════════ -->
 
-<!-- Título y descripción canónica -->
-<title>Larga Noche de Museos — Podcast documental | Santa Cruz de la Sierra, Bolivia</title>
-<meta name="description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra durante la Larga Noche de Museos 2026. Entrevistas, música, ambiente y reflexiones sobre cultura, identidad y ciudad.">
-<meta name="keywords" content="Larga Noche de Museos, podcast, Santa Cruz de la Sierra, Bolivia, cultura, museos, identidad, centro histórico, arte, documentales sonoros, AECID, Sonar Distinto, Alejandro García Amat, Marta García Moreno, asosab, Alejandro Sosa Briceño">
-<meta name="author" content="Alejandro Sosa, Luciana Flores, Cielo Nicole Naranjo, Juan Harriague, José Gabriel Vargas">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://asosab.github.io/larga_noche_de_museos/">
+  <!-- Título y descripción canónica -->
+  <title>Larga Noche de Museos — Podcast documental | Santa Cruz de la Sierra, Bolivia</title>
+  <meta name="description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra durante la Larga Noche de Museos 2026. Entrevistas, música, ambiente y reflexiones sobre cultura, identidad y ciudad.">
+  <meta name="keywords" content="Larga Noche de Museos, podcast, Santa Cruz de la Sierra, Bolivia, cultura, museos, identidad, centro histórico, arte, documentales sonoros, AECID, Sonar Distinto, Alejandro García Amat, Marta García Moreno, asosab, Alejandro Sosa Briceño">
+  <meta name="author" content="Alejandro Sosa, Luciana Flores, Cielo Nicole Naranjo, Juan Harriague, José Gabriel Vargas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://asosab.github.io/larga_noche_de_museos/">
 
-<!-- Idioma y región -->
-<meta name="language" content="es">
-<meta name="geo.region" content="BO-S">
-<meta name="geo.placename" content="Santa Cruz de la Sierra, Bolivia">
-<meta name="geo.position" content="-17.7863;-63.1812">
-<meta name="ICBM" content="-17.7863, -63.1812">
+  <!-- Idioma y región -->
+  <meta name="language" content="es">
+  <meta name="geo.region" content="BO-S">
+  <meta name="geo.placename" content="Santa Cruz de la Sierra, Bolivia">
+  <meta name="geo.position" content="-17.7863;-63.1812">
+  <meta name="ICBM" content="-17.7863, -63.1812">
 
-<!-- Open Graph — WhatsApp, Telegram, Facebook, LinkedIn -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://asosab.github.io/larga_noche_de_museos/">
-<meta property="og:title" content="Larga Noche de Museos — Podcast documental">
-<meta property="og:description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra. 9 voces, una sola noche, una ciudad que vuelve a encontrarse consigo misma.">
-<meta property="og:image" content="https://asosab.github.io/larga_noche_de_museos/imagen/portada.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Portada del podcast Larga Noche de Museos — Santa Cruz de la Sierra 2026">
-<meta property="og:locale" content="es_BO">
-<meta property="og:site_name" content="Larga Noche de Museos">
+  <!-- Open Graph — WhatsApp, Telegram, Facebook, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asosab.github.io/larga_noche_de_museos/">
+  <meta property="og:title" content="Larga Noche de Museos — Podcast documental">
+  <meta property="og:description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra. 9 voces, una sola noche, una ciudad que vuelve a encontrarse consigo misma.">
+  <meta property="og:image" content="https://asosab.github.io/larga_noche_de_museos/imagen/portada.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Portada del podcast Larga Noche de Museos — Santa Cruz de la Sierra 2026">
+  <meta property="og:locale" content="es_BO">
+  <meta property="og:site_name" content="Larga Noche de Museos">
 
-<!-- Twitter Card — también usado por Telegram en algunos contextos -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Larga Noche de Museos — Podcast documental">
-<meta name="twitter:description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra. 9 voces, una sola noche.">
-<meta name="twitter:image" content="https://asosab.github.io/larga_noche_de_museos/imagen/portada.png">
-<meta name="twitter:image:alt" content="Portada del podcast Larga Noche de Museos — Santa Cruz de la Sierra 2026">
-
-<!-- Schema.org JSON-LD — datos estructurados para Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PodcastEpisode",
-  "name": "Larga Noche de Museos",
-  "description": "Un recorrido sonoro por las calles, patios, terrazas y museos del centro de Santa Cruz de la Sierra durante la Larga Noche de Museos 2026. Narración, entrevistas y diseño sonoro documental.",
-  "url": "https://asosab.github.io/larga_noche_de_museos/",
-  "image": "https://asosab.github.io/larga_noche_de_museos/imagen/portada.png",
-  "datePublished": "2026-05-20",
-  "inLanguage": "es",
-  "author": [
-    { "@type": "Person", "name": "Alejandro Sosa", "url": "https://linkedin.com/in/alejandrososa" },
-    { "@type": "Person", "name": "Luciana Flores" },
-    { "@type": "Person", "name": "Cielo Nicole Naranjo" },
-    { "@type": "Person", "name": "Juan Harriague" },
-    { "@type": "Person", "name": "José Gabriel Vargas" }
-  ],
-  "producer": {
-    "@type": "Organization",
-    "name": "Centro de Formación de la Cooperación Española — AECID Santa Cruz",
-    "url": "https://www.aecid.es"
-  },
-  "locationCreated": {
-    "@type": "Place",
-    "name": "Santa Cruz de la Sierra, Bolivia",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santa Cruz de la Sierra",
-      "addressCountry": "BO"
-    }
-  },
-  "partOfSeries": {
-    "@type": "PodcastSeries",
+  <!-- Twitter Card — también usado por Telegram en algunos contextos -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Larga Noche de Museos — Podcast documental">
+  <meta name="twitter:description" content="Un recorrido sonoro por las calles, patios y museos del centro de Santa Cruz de la Sierra. 9 voces, una sola noche.">
+  <meta name="twitter:image:src" content="https://asosab.github.io/larga_noche_de_museos/imagen/portada.png">
+  <meta name="twitter:image:alt" content="Portada del podcast Larga Noche de Museos — Santa Cruz de la Sierra 2026">
+  <meta name="twitter:creator" content="@asosab">
+  <meta name="twitter:url" content="https://asosab.github.io/larga_noche_de_museos/">
+  <!-- Schema.org JSON-LD — datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastEpisode",
     "name": "Larga Noche de Museos",
-    "url": "https://creators.spotify.com/pod/show/largaNochedeMuseos"
-  },
-  "associatedMedia": {
-    "@type": "AudioObject",
-    "contentUrl": "https://asosab.github.io/larga_noche_de_museos/audio/Larganochedemuseos.mp3",
-    "encodingFormat": "audio/mpeg"
-  },
-  "keywords": ", Alejandro García Amat, Marta García Moreno, asosab, Alejandro Sosa Briceño, podcast, museos, Santa Cruz de la Sierra, Bolivia, cultura, identidad urbana, noche de museos, arte, centro histórico"
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --ink: #0e0b0a;
-  --paper: #f5efe6;
-  --gold: #c8912a;
-  --gold-dim: #8a6018;
-  --amber: #e8a030;
-  --rust: #8b3a1a;
-  --night: #06050a;
-  --night2: #110e18;
-  --night3: #1c1727;
-  --mist: #2e2840;
-  --pale: #d4c8b8;
-  --warm-white: #f0e8d8;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--night);
-  color: var(--warm-white);
-  font-family: 'Libre Baskerville', Georgia, serif;
-  overflow-x: hidden;
-  cursor: default;
-}
-
-/* ── GRAIN OVERLAY ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: 0.4;
-  mix-blend-mode: overlay;
-}
-
-/* ── HERO ── */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-}
-
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 70%, rgba(200,145,42,0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 20%, rgba(139,58,26,0.08) 0%, transparent 60%),
-    linear-gradient(180deg, var(--night) 0%, var(--night2) 60%, var(--night3) 100%);
-}
-
-.hero-eyebrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  text-transform: uppercase;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeUp 1s 0.3s forwards;
-}
-
-.hero-cover {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  animation: fadeUp 1s 0.5s forwards;
-}
-
-.hero-cover img {
-  width: min(340px, 80vw);
-  height: min(340px, 80vw);
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow:
-    0 0 0 1px rgba(200,145,42,0.2),
-    0 0 60px rgba(200,145,42,0.08),
-    0 40px 80px rgba(0,0,0,0.6);
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 7vw, 5.5rem);
-  font-weight: 900;
-  line-height: 0.92;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  letter-spacing: -0.02em;
-  opacity: 0;
-  animation: fadeUp 1s 0.7s forwards;
-  max-width: 800px;
-}
-
-.hero-title em {
-  display: block;
-  font-style: italic;
-  color: var(--gold);
-}
-
-.hero-subtitle {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
-  color: var(--pale);
-  text-align: center;
-  margin-top: 1.5rem;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  animation: fadeUp 1s 0.9s forwards;
-  max-width: 520px;
-  line-height: 1.7;
-}
-
-.hero-rule {
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 2.5rem auto;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  animation: fadeIn 1s 1.1s forwards;
-}
-
-.hero-meta {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  color: var(--gold-dim);
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  animation: fadeUp 1s 1.2s forwards;
-  line-height: 2;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 0;
-  animation: fadeIn 1.5s 2s forwards;
-  color: var(--gold-dim);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.scroll-hint::after {
-  content: '';
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(180deg, var(--gold-dim), transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-
-/* ── PLAYER SECTION ── */
-#player-section {
-  background: var(--night2);
-  padding: 5rem 2rem;
-  border-top: 1px solid rgba(200,145,42,0.15);
-  border-bottom: 1px solid rgba(200,145,42,0.15);
-}
-
-.section-inner {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.section-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.player-wrap {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(200,145,42,0.2);
-  border-radius: 6px;
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.player-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--warm-white);
-}
-
-.player-desc {
-  font-size: 0.85rem;
-  color: var(--pale);
-  margin-bottom: 1.8rem;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-audio {
-  width: 100%;
-  height: 40px;
-  accent-color: var(--gold);
-  border-radius: 4px;
-}
-
-audio::-webkit-media-controls-panel {
-  background: var(--night3);
-}
-
-.spotify-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.4rem;
-  background: rgba(30,215,96,0.1);
-  border: 1px solid rgba(30,215,96,0.3);
-  border-radius: 30px;
-  color: #1ed760;
-  text-decoration: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.spotify-link:hover {
-  background: rgba(30,215,96,0.18);
-  border-color: rgba(30,215,96,0.6);
-}
-
-.spotify-icon {
-  width: 18px;
-  height: 18px;
-}
-
-/* ── MARCO SECTION ── */
-#marco {
-  padding: 6rem 2rem;
-  position: relative;
-}
-
-#marco::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
-}
-
-.marco-grid {
-  max-width: 860px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem 3rem;
-  align-items: start;
-}
-
-@media (max-width: 680px) {
-  .marco-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-}
-
-.marco-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 900;
-  line-height: 1.1;
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
-}
-
-.marco-headline em {
-  font-style: italic;
-  color: var(--gold);
-}
-
-.marco-text {
-  font-size: 0.95rem;
-  line-height: 1.85;
-  color: var(--pale);
-}
-
-.marco-text p + p { margin-top: 1rem; }
-
-.marco-aside {
-  border-left: 2px solid var(--gold);
-  padding-left: 1.5rem;
-}
-
-.marco-aside-title {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.marco-aside dl dt {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  color: var(--gold-dim);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 1rem;
-}
-
-.marco-aside dl dd {
-  font-size: 0.88rem;
-  color: var(--warm-white);
-  line-height: 1.5;
-  margin-top: 0.25rem;
-}
-
-.guion-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
-  color: var(--gold);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(200,145,42,0.4);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.guion-link:hover { color: var(--amber); border-color: var(--amber); }
-
-.guion-link svg { width: 14px; height: 14px; }
-
-/* ── ENTREVISTAS ── */
-#entrevistas {
-  background: var(--night2);
-  padding: 6rem 2rem;
-  border-top: 1px solid rgba(200,145,42,0.1);
-}
-
-.entrevistas-header {
-  max-width: 860px;
-  margin: 0 auto 3rem;
-}
-
-.entrevistas-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 900;
-  margin-top: 0.5rem;
-}
-
-/* Tabs */
-.tabs-nav {
-  max-width: 860px;
-  margin: 0 auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  border-bottom: 1px solid rgba(200,145,42,0.2);
-  padding-bottom: 0;
-  position: relative;
-}
-
-.tab-btn {
-  background: none;
-  border: none;
-  color: var(--gold-dim);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.6rem 1rem 0.7rem;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-  white-space: nowrap;
-  margin-bottom: -1px;
-}
-
-.tab-btn:hover { color: var(--gold); }
-.tab-btn.active {
-  color: var(--amber);
-  border-bottom-color: var(--amber);
-}
-
-.tabs-panels {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.tab-panel {
-  display: none;
-  padding: 3rem 0;
-}
-
-.tab-panel.active { display: block; }
-
-.interview-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.interview-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-.interview-name em {
-  display: block;
-  font-style: italic;
-  color: var(--gold);
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 0.3rem;
-}
-
-.interview-audio-wrap {
-  flex-shrink: 0;
-}
-
-.interview-audio-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: var(--gold-dim);
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
-}
-
-.interview-audio-wrap audio {
-  width: min(280px, 100%);
-}
-
-.transcript-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.6rem;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.transcript-download:hover { color: var(--gold); }
-.transcript-download svg { width: 12px; height: 12px; }
-
-.interview-rule {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(200,145,42,0.4), transparent);
-  margin-bottom: 2rem;
-}
-
-/* Dialogue rendering */
-.dialogue {
-  font-size: 0.9rem;
-  line-height: 1.85;
-  color: var(--pale);
-}
-
-.dialogue-line {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-}
-
-@media (max-width: 500px) {
-  .dialogue-line { grid-template-columns: 1fr; gap: 0.2rem; }
-}
-
-.dialogue-speaker {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding-top: 0.18em;
-  line-height: 1.6;
-}
-
-.dialogue-speaker.host { color: var(--gold); }
-.dialogue-speaker.guest { color: var(--pale); opacity: 0.7; }
-
-.dialogue-text {
-  font-style: normal;
-}
-
-/* ── EQUIPO / PERFILES ── */
-#equipo {
-  padding: 6rem 2rem;
-  position: relative;
-}
-
-#equipo::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
-}
-
-.equipo-header {
-  max-width: 860px;
-  margin: 0 auto 3.5rem;
-}
-
-.equipo-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 900;
-  margin-top: 0.5rem;
-}
-
-.perfiles-grid {
-  max-width: 860px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.perfil-card {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(200,145,42,0.15);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.perfil-card:hover {
-  border-color: rgba(200,145,42,0.35);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-.perfil-photo {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(20%) sepia(10%);
-  transition: filter 0.4s;
-}
-
-.perfil-card:hover .perfil-photo {
-  filter: grayscale(0%) sepia(0%);
-}
-
-.perfil-photo-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: var(--night3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--mist);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.perfil-body {
-  padding: 1.5rem;
-}
-
-.perfil-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.perfil-role {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.perfil-bio {
-  font-size: 0.82rem;
-  line-height: 1.75;
-  color: var(--pale);
-}
-
-/* ── FOOTER ── */
-footer {
-  background: var(--night);
-  border-top: 1px solid rgba(200,145,42,0.1);
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  font-style: italic;
-  color: var(--gold);
-  margin-bottom: 1rem;
-}
-
-.footer-text {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  color: var(--gold-dim);
-  line-height: 2;
-  text-transform: uppercase;
-}
-
-.footer-aecid {
-  margin-top: 2rem;
-  font-size: 0.78rem;
-  color: var(--mist);
-  font-style: italic;
-  line-height: 1.7;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.4; transform: scaleY(1); }
-  50%       { opacity: 1;   transform: scaleY(1.15); }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  .marco-aside { grid-column: 1; }
-  .tabs-nav { gap: 0.2rem; }
-  .tab-btn { font-size: 0.58rem; padding: 0.5rem 0.7rem; }
-}
-</style>
+    "description": "Un recorrido sonoro por las calles, patios, terrazas y museos del centro de Santa Cruz de la Sierra durante la Larga Noche de Museos 2026. Narración, entrevistas y diseño sonoro documental.",
+    "url": "https://asosab.github.io/larga_noche_de_museos/",
+    "image": "https://asosab.github.io/larga_noche_de_museos/imagen/portada.png",
+    "datePublished": "2026-05-20",
+    "inLanguage": "es",
+    "author": [
+      { "@type": "Person", "name": "Alejandro Sosa", "url": "https://linkedin.com/in/alejandrososa" },
+      { "@type": "Person", "name": "Luciana Flores" },
+      { "@type": "Person", "name": "Cielo Nicole Naranjo" },
+      { "@type": "Person", "name": "Juan Harriague" },
+      { "@type": "Person", "name": "José Gabriel Vargas" }
+    ],
+    "producer": {
+      "@type": "Organization",
+      "name": "Centro de Formación de la Cooperación Española — AECID Santa Cruz",
+      "url": "https://www.aecid.es"
+    },
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Santa Cruz de la Sierra, Bolivia",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Cruz de la Sierra",
+        "addressCountry": "BO"
+      }
+    },
+    "partOfSeries": {
+      "@type": "PodcastSeries",
+      "name": "Larga Noche de Museos",
+      "url": "https://creators.spotify.com/pod/show/largaNochedeMuseos"
+    },
+    "associatedMedia": {
+      "@type": "AudioObject",
+      "contentUrl": "https://asosab.github.io/larga_noche_de_museos/audio/Larganochedemuseos.mp3",
+      "encodingFormat": "audio/mpeg"
+    },
+    "keywords": ", Alejandro García Amat, Marta García Moreno, asosab, Alejandro Sosa Briceño, podcast, museos, Santa Cruz de la Sierra, Bolivia, cultura, identidad urbana, noche de museos, arte, centro histórico"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #0e0b0a;
+      --paper: #f5efe6;
+      --gold: #c8912a;
+      --gold-dim: #8a6018;
+      --amber: #e8a030;
+      --rust: #8b3a1a;
+      --night: #06050a;
+      --night2: #110e18;
+      --night3: #1c1727;
+      --mist: #2e2840;
+      --pale: #d4c8b8;
+      --warm-white: #f0e8d8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--night);
+      color: var(--warm-white);
+      font-family: 'Libre Baskerville', Georgia, serif;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ── GRAIN OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      mix-blend-mode: overlay;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 70%, rgba(200,145,42,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 20%, rgba(139,58,26,0.08) 0%, transparent 60%),
+        linear-gradient(180deg, var(--night) 0%, var(--night2) 60%, var(--night3) 100%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.3s forwards;
+    }
+
+    .hero-cover {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.5s forwards;
+    }
+
+    .hero-cover img {
+      width: min(340px, 80vw);
+      height: min(340px, 80vw);
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow:
+        0 0 0 1px rgba(200,145,42,0.2),
+        0 0 60px rgba(200,145,42,0.08),
+        0 40px 80px rgba(0,0,0,0.6);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      font-weight: 900;
+      line-height: 0.92;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.02em;
+      opacity: 0;
+      animation: fadeUp 1s 0.7s forwards;
+      max-width: 800px;
+    }
+
+    .hero-title em {
+      display: block;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--pale);
+      text-align: center;
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeUp 1s 0.9s forwards;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .hero-rule {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2.5rem auto;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeIn 1s 1.1s forwards;
+    }
+
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-dim);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeUp 1s 1.2s forwards;
+      line-height: 2;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1.5s 2s forwards;
+      color: var(--gold-dim);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--gold-dim), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    /* ── PLAYER SECTION ── */
+    #player-section {
+      background: var(--night2);
+      padding: 5rem 2rem;
+      border-top: 1px solid rgba(200,145,42,0.15);
+      border-bottom: 1px solid rgba(200,145,42,0.15);
+    }
+
+    .section-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .player-wrap {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(200,145,42,0.2);
+      border-radius: 6px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .player-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--warm-white);
+    }
+
+    .player-desc {
+      font-size: 0.85rem;
+      color: var(--pale);
+      margin-bottom: 1.8rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+      accent-color: var(--gold);
+      border-radius: 4px;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background: var(--night3);
+    }
+
+    .spotify-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.4rem;
+      background: rgba(30,215,96,0.1);
+      border: 1px solid rgba(30,215,96,0.3);
+      border-radius: 30px;
+      color: #1ed760;
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .spotify-link:hover {
+      background: rgba(30,215,96,0.18);
+      border-color: rgba(30,215,96,0.6);
+    }
+
+    .spotify-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ── MARCO SECTION ── */
+    #marco {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    #marco::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
+    }
+
+    .marco-grid {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 680px) {
+      .marco-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    .marco-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      grid-column: 1 / -1;
+      margin-bottom: 1rem;
+    }
+
+    .marco-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .marco-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--pale);
+    }
+
+    .marco-text p + p { margin-top: 1rem; }
+
+    .marco-aside {
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem;
+    }
+
+    .marco-aside-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .marco-aside dl dt {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .marco-aside dl dd {
+      font-size: 0.88rem;
+      color: var(--warm-white);
+      line-height: 1.5;
+      margin-top: 0.25rem;
+    }
+
+    .guion-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      color: var(--gold);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(200,145,42,0.4);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .guion-link:hover { color: var(--amber); border-color: var(--amber); }
+
+    .guion-link svg { width: 14px; height: 14px; }
+
+    /* ── ENTREVISTAS ── */
+    #entrevistas {
+      background: var(--night2);
+      padding: 6rem 2rem;
+      border-top: 1px solid rgba(200,145,42,0.1);
+    }
+
+    .entrevistas-header {
+      max-width: 860px;
+      margin: 0 auto 3rem;
+    }
+
+    .entrevistas-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      margin-top: 0.5rem;
+    }
+
+    /* Tabs */
+    .tabs-nav {
+      max-width: 860px;
+      margin: 0 auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      border-bottom: 1px solid rgba(200,145,42,0.2);
+      padding-bottom: 0;
+      position: relative;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--gold-dim);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1rem 0.7rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+      margin-bottom: -1px;
+    }
+
+    .tab-btn:hover { color: var(--gold); }
+    .tab-btn.active {
+      color: var(--amber);
+      border-bottom-color: var(--amber);
+    }
+
+    .tabs-panels {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .tab-panel {
+      display: none;
+      padding: 3rem 0;
+    }
+
+    .tab-panel.active { display: block; }
+
+    .interview-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .interview-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .interview-name em {
+      display: block;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 0.3rem;
+    }
+
+    .interview-audio-wrap {
+      flex-shrink: 0;
+    }
+
+    .interview-audio-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .interview-audio-wrap audio {
+      width: min(280px, 100%);
+    }
+
+    .transcript-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .transcript-download:hover { color: var(--gold); }
+    .transcript-download svg { width: 12px; height: 12px; }
+
+    .interview-rule {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(200,145,42,0.4), transparent);
+      margin-bottom: 2rem;
+    }
+
+    /* Dialogue rendering */
+    .dialogue {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--pale);
+    }
+
+    .dialogue-line {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 500px) {
+      .dialogue-line { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+
+    .dialogue-speaker {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-top: 0.18em;
+      line-height: 1.6;
+    }
+
+    .dialogue-speaker.host { color: var(--gold); }
+    .dialogue-speaker.guest { color: var(--pale); opacity: 0.7; }
+
+    .dialogue-text {
+      font-style: normal;
+    }
+
+    /* ── EQUIPO / PERFILES ── */
+    #equipo {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    #equipo::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,145,42,0.3), transparent);
+    }
+
+    .equipo-header {
+      max-width: 860px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .equipo-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      margin-top: 0.5rem;
+    }
+
+    .perfiles-grid {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .perfil-card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(200,145,42,0.15);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .perfil-card:hover {
+      border-color: rgba(200,145,42,0.35);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .perfil-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%) sepia(10%);
+      transition: filter 0.4s;
+    }
+
+    .perfil-card:hover .perfil-photo {
+      filter: grayscale(0%) sepia(0%);
+    }
+
+    .perfil-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--night3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mist);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .perfil-body {
+      padding: 1.5rem;
+    }
+
+    .perfil-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .perfil-role {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .perfil-bio {
+      font-size: 0.82rem;
+      line-height: 1.75;
+      color: var(--pale);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--night);
+      border-top: 1px solid rgba(200,145,42,0.1);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-dim);
+      line-height: 2;
+      text-transform: uppercase;
+    }
+
+    .footer-aecid {
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50%       { opacity: 1;   transform: scaleY(1.15); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .marco-aside { grid-column: 1; }
+      .tabs-nav { gap: 0.2rem; }
+      .tab-btn { font-size: 0.58rem; padding: 0.5rem 0.7rem; }
+    }
+  </style>
 </head>
 <body>
 
