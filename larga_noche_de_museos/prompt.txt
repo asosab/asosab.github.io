@@ -33,4 +33,8 @@ el marco del taller donde fué creado este podcast es
       "description": "Taller sobre creación desde la escucha como práctica cultural dentro del Programa ACERCA de capacitación para el desarrollo en el sector cultural."
     },  
 
+El guión también se encuentra en este proyecto y subido como .../Guión_V3.pdf para quien lo quiera leer
+
+la portada del podcast y proyecto se encuentra en .../imagen/portada.png
+
     antes de dedicarte al desarrollo del index.html landing page ¿Tienes alguna pregunta que pueda mejorar esta página?
