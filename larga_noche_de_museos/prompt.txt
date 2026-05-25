@@ -3,9 +3,7 @@ Crea una landing page para el podcast "Larga noche de Museos" para contar el pro
 este index.html será completamente autocontenido (archivo único) se alojará en asosab.github.io/larga_noche_de_museos/ donde estará la carpeta sonido y la carpeta imagen. revisar estas carpetas en línea para que veas los archivos que hay en ellas. también estarán las carpetas .../audio/entrevistas con todas lasentrevistas en mp3, para poder escucharlas desde la página, y la carpeta .../transcripciones con todas las transcripciones en .pdf si alguien desea descargarlas. en /audio/Larganochedemuseos.mp3 está el podcast para ser escuchado esde la página, pero también se mencionará el link de spotify 
 creators.spotify.com/pod/show/largaNochedeMuseos o directamente al episodio: https://open.spotify.com/episode/5zG3zw2TuvYEjQYdrZli9F
 
-para el perfil e Alejandro Sosa, usar la foto en /imagen/Alejandro_Sosa.jpeg
-
-por ahora no existen index.html en ninguna carpeta para que se pueda visualizar sus contenidos por ti
+para el perfil de Alejandro Sosa, usar la foto en /imagen/Alejandro_Sosa.jpeg
 
 el marco del taller donde fué creado este podcast es 
     {
