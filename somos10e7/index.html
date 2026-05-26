@@ -1156,6 +1156,47 @@
     ::-webkit-scrollbar-thumb { background: rgba(244,180,0,0.3); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--amarillo); }
 
+    /* ============================================================
+       ANILLOS ORBITALES — USUARIOS ACTIVOS
+    ============================================================ */
+    .hero-logo-ring {
+      display: none; /* reemplazamos el anillo original */
+    }
+
+    .orbital-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(244,180,0,0.15);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      pointer-events: none;
+    }
+
+    .orbital-dot {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--amarillo);
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(244,180,0,0.8);
+    }
+
+    .usuarios-activos-label {
+      position: absolute;
+      bottom: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-family: var(--fuente-etiqueta);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244,180,0,0.6);
+    }
   </style>
 
   <script type="application/ld+json">
@@ -1822,6 +1863,70 @@
     }, { threshold: 0.4 });
 
     sections.forEach(s => scrollSpy.observe(s));
+
+    // --- ANILLOS ORBITALES ---
+    function renderizarAnillos(n) {
+      const wrap = document.querySelector('.hero-logo-wrap');
+      if (!wrap) return;
+
+      // Limpiar anillos anteriores
+      wrap.querySelectorAll('.orbital-ring, .usuarios-activos-label').forEach(el => el.remove());
+
+      const total = Math.max(1, n); // mínimo 1 anillo aunque no haya datos aún
+      const baseSize = 300; // diámetro del primer anillo en px
+      const step     = 44;  // separación entre anillos
+      const baseDuration = 18; // segundos para el primer anillo
+
+      for (let i = 0; i < total; i++) {
+        const size     = baseSize + i * step;
+        const duration = baseDuration + i * 7; // cada anillo gira más lento
+        const direction = i % 2 === 0 ? 1 : -1; // alternan sentido
+
+        const ring = document.createElement('div');
+        ring.className = 'orbital-ring';
+        ring.style.cssText = `
+          width: ${size}px;
+          height: ${size}px;
+          margin-top: -${size / 2}px;
+          margin-left: -${size / 2}px;
+          top: 50%;
+          left: 50%;
+          border-color: rgba(244,180,0,${0.18 - i * 0.02});
+          animation: orbitSpin${direction > 0 ? 'CW' : 'CCW'} ${duration}s linear infinite;
+        `;
+
+        const dot = document.createElement('div');
+        dot.className = 'orbital-dot';
+        dot.style.cssText = `
+          width: ${Math.max(4, 8 - i)}px;
+          height: ${Math.max(4, 8 - i)}px;
+          box-shadow: 0 0 ${6 + i * 2}px rgba(244,180,0,${0.9 - i * 0.1});
+        `;
+        ring.appendChild(dot);
+        wrap.appendChild(ring);
+      }
+
+      // Etiqueta debajo del logo
+      const label = document.createElement('div');
+      label.className = 'usuarios-activos-label';
+      label.textContent = `${total} ${total === 1 ? 'persona' : 'personas'} aquí ahora`;
+      wrap.appendChild(label);
+    }
+
+    // Keyframes para rotación (se inyectan una sola vez)
+    (function injectOrbitalKeyframes() {
+      if (document.getElementById('orbital-keyframes')) return;
+      const style = document.createElement('style');
+      style.id = 'orbital-keyframes';
+      style.textContent = `
+        @keyframes orbitSpinCW  { from { transform: translate(-50%,-50%) rotate(0deg);   } to { transform: translate(-50%,-50%) rotate(360deg);  } }
+        @keyframes orbitSpinCCW { from { transform: translate(-50%,-50%) rotate(0deg);   } to { transform: translate(-50%,-50%) rotate(-360deg); } }
+      `;
+      document.head.appendChild(style);
+    })();
+
+
+
   </script>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-84695-6', 'auto');ga('send', 'pageview');</script>
 
@@ -1913,7 +2018,9 @@
     }
 
     // Ejecutar automáticamente al cargar
+    renderizarAnillos(1); // placeholder mientras carga
     actualizarContador();
+    renderizarAnillos(window.usuariosActivos);
   </script>
 
 </body>
