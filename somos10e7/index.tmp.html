@@ -364,10 +364,6 @@
       position: relative;
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 260px;
-      height: 260px;
-      margin: 0 auto;
     }
 
     .hero-logo-ring {
@@ -1882,22 +1878,17 @@
 
       const total = Math.max(1, n);
       const baseW = 320;
-      const baseH = 190;
+      const baseH = 200;
       const step  = 44;
       const baseDuration = 18;
       const tilts = [0, 12, -8, 18, -15];
 
       for (let i = 0; i < total; i++) {
-        const rx       = (baseW + i * step) / 2;   // semi-eje horizontal
-        const ry       = (baseH + i * (step * 0.55)) / 2; // semi-eje vertical
-        const w        = rx * 2;
-        const h        = ry * 2;
+        const w        = baseW + i * step;
+        const h        = baseH + i * (step * 0.6);
         const duration = baseDuration + i * 7;
         const angle    = tilts[i % tilts.length];
-        const dotSize  = Math.max(4, 8 - i);
-        const keyName  = `orbitDot_${i}`;
 
-        // Contenedor inclinado — estático, solo define la orientación del plano orbital
         const tilt = document.createElement('div');
         tilt.className = 'orbital-tilt';
         tilt.style.cssText = `
@@ -1906,85 +1897,59 @@
           height: ${h}px;
           top: 50%;
           left: 50%;
-          margin-top: -${ry}px;
-          margin-left: -${rx}px;
+          margin-top: -${h / 2}px;
+          margin-left: -${w / 2}px;
           transform: rotate(${angle}deg);
-          pointer-events: none;
         `;
 
-        // Elipse visible — fija, no animada
         const ring = document.createElement('div');
+        ring.className = 'orbital-ring';
         ring.style.cssText = `
           position: absolute;
           inset: 0;
           border-radius: 50%;
           border: 1px solid rgba(244,180,0,${0.18 - i * 0.02});
-        `;
-
-        /*
-          Técnica de órbita elíptica con CSS puro:
-          El dot-wrapper gira alrededor del centro con rotate().
-          El dot compensa esa rotación en sentido inverso con counter-rotate()
-          y aplica translateX(rx) para quedar en el borde de la elipse.
-          Como rx ≠ ry, el punto traza una elipse real.
-        */
-        injectOrbitKeyframes(keyName, rx, ry);
-
-        const dotWrap = document.createElement('div');
-        dotWrap.style.cssText = `
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          animation: ${keyName} ${duration}s linear infinite;
-          transform-origin: 0 0;
+          animation: orbitOval ${duration}s linear infinite;
         `;
 
         const dot = document.createElement('div');
         dot.className = 'orbital-dot';
         dot.style.cssText = `
           position: absolute;
-          width: ${dotSize}px;
-          height: ${dotSize}px;
+          top: -${Math.max(4, 8 - i) / 2}px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: ${Math.max(4, 8 - i)}px;
+          height: ${Math.max(4, 8 - i)}px;
           border-radius: 50%;
           background: var(--amarillo);
           box-shadow: 0 0 ${6 + i * 2}px rgba(244,180,0,${0.9 - i * 0.1});
-          transform: translate(-50%, -50%);
         `;
 
-        dotWrap.appendChild(dot);
+        ring.appendChild(dot);
         tilt.appendChild(ring);
-        tilt.appendChild(dotWrap);
         wrap.appendChild(tilt);
       }
 
-      const label = document.createElement('div');
-      label.className = 'usuarios-activos-label';
-      label.textContent = `${total} ${total === 1 ? 'persona' : 'personas'} aquí ahora`;
-      wrap.appendChild(label);
-    }
+  const label = document.createElement('div');
+  label.className = 'usuarios-activos-label';
+  label.textContent = `${total} ${total === 1 ? 'persona' : 'personas'} aquí ahora`;
+  wrap.appendChild(label);
+}
 
-    // Inyecta keyframes únicos por órbita con los semi-ejes correctos
-    function injectOrbitKeyframes(name, rx, ry) {
-      if (document.getElementById('orbital-kf-' + name)) return;
+    // Keyframes para rotación (se inyectan una sola vez)
+    (function injectOrbitalKeyframes() {
+      if (document.getElementById('orbital-keyframes')) return;
       const style = document.createElement('style');
-      style.id = 'orbital-kf-' + name;
-      // En cada paso del ángulo θ, el punto debe estar en (rx·cos θ, ry·sin θ)
-      // Se logra: el wrapper rota θ; el dot se traslada a (rx·cos θ, ry·sin θ) y compensa la rotación.
-      // Generamos 361 pasos para suavidad.
-      let steps = '';
-      const N = 72;
-      for (let k = 0; k <= N; k++) {
-        const theta = (k / N) * 2 * Math.PI;
-        const x = rx * Math.cos(theta);
-        const y = ry * Math.sin(theta);
-        const pct = ((k / N) * 100).toFixed(2);
-        steps += `${pct}% { transform: translate(${x.toFixed(2)}px, ${y.toFixed(2)}px); } `;
-      }
-      style.textContent = `@keyframes ${name} { ${steps} }`;
+      style.id = 'orbital-keyframes';
+      style.textContent = `
+        @keyframes orbitOval {
+          from { transform: translate(-50%, -50%) rotate(0deg); }
+          to   { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+      `;
       document.head.appendChild(style);
-    }
+    })();
 
 
 
