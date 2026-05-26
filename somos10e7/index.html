@@ -1846,43 +1846,74 @@
     const app = initializeApp(firebaseConfig);
   </script>
 
-  <!-- Snippet para incluir en https://asosab.github.io/somos10e7 -->
-  <script>
-    // Variable global para guardar el conteo
+  <!-- Copia y pega este bloque en tu index.html de GitHub Pages -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp, query, where, getDocs, Timestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // Credenciales reales para el proyecto somos10e7-a2e5a
+    const firebaseConfig = {
+      apiKey: "AIzaSyCppukDnujCe-Yk5TGO22ydsqhDbnaULGI",
+      authDomain: "somos10e7-a2e5a.firebaseapp.com",
+      projectId: "somos10e7-a2e5a",
+      storageBucket: "somos10e7-a2e5a.firebasestorage.app",
+      messagingSenderId: "239752161887",
+      appId: "1:239752161887:web:825de46f96d0ecfd2a49ea"
+    };
+
+    // Inicializar Firebase y Firestore
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // VARIABLE GLOBAL REQUERIDA
     window.usuariosActivos = 0;
 
-    async function actualizarContadorVisitas() {
-      const URL_FUNCION = "https://trackvisit-somos10e7-uc.a.run.app"; 
-      
+    async function actualizarContador() {
+      console.log("Iniciando contador de visitas...");
       try {
-        // Obtenemos la IP pública (opcional si la función ya la detecta, pero el usuario la pidió como variable)
-        const ipResponse = await fetch('https://api.ipify.org?format=json');
-        const { ip } = await ipResponse.json();
+        // 1. Obtener IP pública (usando ipify)
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const { ip } = await ipRes.json();
+        console.log("Tu IP detectada:", ip);
 
-        const response = await fetch(URL_FUNCION, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ ip: ip })
+        // 2. Registrar visita directamente en Firestore
+        await addDoc(collection(db, "visitas"), {
+          ip: ip,
+          fecha: serverTimestamp()
         });
 
-        if (response.ok) {
-          const count = await response.text();
-          window.usuariosActivos = parseInt(count, 10);
-          console.log("Usuarios activos (últimos 5 min):", window.usuariosActivos);
-          
-          // Opcional: Actualizar algún elemento en el DOM si existe
-          const el = document.getElementById('contador-display');
-          if (el) el.innerText = window.usuariosActivos;
-        }
-      } catch (error) {
-        console.error("Error al reportar visita:", error);
+        // 3. Consultar IPs únicas en los últimos 5 minutos
+        const cincoMinutosAtras = new Date(Date.now() - 5 * 60 * 1000);
+        const q = query(
+          collection(db, "visitas"), 
+          where("fecha", ">=", Timestamp.fromDate(cincoMinutosAtras))
+        );
+
+        const querySnapshot = await getDocs(q);
+        
+        // Usamos un Set para contar IPs únicas
+        const ipsUnicas = new Set();
+        querySnapshot.forEach((doc) => {
+          ipsUnicas.add(doc.data().ip);
+        });
+
+        // 4. GUARDAR EN VARIABLE GLOBAL
+        window.usuariosActivos = ipsUnicas.size;
+        
+        console.log("%c✅ ÉXITO", "color: green; font-weight: bold;");
+        console.log("Usuarios activos (window.usuariosActivos):", window.usuariosActivos);
+
+        // Opcional: Si tienes un elemento con id="contador", lo actualizamos
+        const el = document.getElementById('contador');
+        if (el) el.innerText = window.usuariosActivos;
+
+      } catch (e) {
+        console.error("❌ Error en el contador:", e);
       }
     }
 
-    // Ejecutar al cargar la página
-    document.addEventListener('DOMContentLoaded', actualizarContadorVisitas);
+    // Ejecutar automáticamente al cargar
+    actualizarContador();
   </script>
 
 </body>
