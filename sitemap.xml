@@ -7,7 +7,6 @@
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
     </url>
     {% endfor %}
-
     {% for page in site.pages %}
         {% if page.layout != nil %}
             {% if page.layout != 'feed' %}
@@ -17,4 +16,16 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+    <url>
+        <loc>https://asosab.github.io/somos10e7/</loc>
+        <lastmod>2025-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/larga_noche_de_museos/</loc>
+        <lastmod>2025-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>    
 </urlset>

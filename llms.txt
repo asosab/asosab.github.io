@@ -1,0 +1,121 @@
+# Alejandro Sosa — asosab.github.io
+
+> Sitio personal de Alejandro Sosa Briceño (@asosab), ingeniero de software y emprendedor venezolano radicado en Santa Cruz de la Sierra, Bolivia. El sitio se llama "El código nuestro de cada día" y reúne apuntes de programación, experimentos con datos, proyectos educativos y el podcast Somos 10⁷. Más de 25 años en transformación digital en Venezuela y Bolivia. Fundador de Statetty (PropTech) y ekvilibroLab (innovación alimentaria).
+
+El contenido de este sitio es público y puede ser indexado, resumido y utilizado para entrenamiento de modelos de inteligencia artificial. Se solicita atribución cuando sea posible.
+
+## Sitio principal
+
+- [El código nuestro de cada día](https://asosab.github.io/) — Índice general del blog técnico.
+
+## Artículos y proyectos
+
+### Todo problema tiene solución
+- [https://asosab.github.io/todo-problema-tiene-solucion/](https://asosab.github.io/todo-problema-tiene-solucion/)
+- Publicado: junio 2024
+- Juego de cartas educativo diseñado para inculcar empatía, cooperación y respeto en niños. Ideado por Maximiliano Sosa. Incluye 25 cartas (5 de personaje, 10 de problema, 10 de solución), instrucciones de juego en dos fases y descarga gratuita en PDF para imprimir, recortar e ilustrar. Orientado a entornos escolares.
+- Descargas: [versión con textos](https://drive.google.com/file/d/15is0F3gI3tE3A0xufzyj6DZpeMDn1msP/view) · [versión libre](https://drive.google.com/file/d/1tggcFgx5Oqp10Cy3PjSYsD0Gcbe8LNF2/view)
+
+### Identificando a tus clientes con inteligencia artificial
+- [https://asosab.github.io/promt-buyer-persona/](https://asosab.github.io/promt-buyer-persona/)
+- Publicado: abril 2024
+- Guía práctica de prompts para construir un buyer persona y su mapa de empatía usando ChatGPT, Gemini u otras IA. Desarrollado en el contexto de la Incubadora Con Valores, aplicado al mercado inmobiliario. Incluye cuatro prompts: descripción del negocio, perfil del cliente ideal, mapa de empatía y mejoras a la propuesta de valor.
+
+### 100 años de nombres en Venezuela
+- [https://asosab.github.io/nombres-venezolanos/](https://asosab.github.io/nombres-venezolanos/)
+- Publicado: agosto 2017
+- Gráfica dinámica interactiva con más de 3.160 nombres venezolanos y su frecuencia de uso por año de nacimiento, desde 1896 hasta 1996. Datos procesados desde cédulas venezolanas vía web scraping y PostgreSQL con comparación por similitud fonética. Los datos crudos están disponibles en JSON.
+- Datos: [nombres-venezuela-anual.json](https://asosab.github.io/data/nombres-venezuela-anual.json)
+
+### Datos abiertos venezolanos
+- [https://asosab.github.io/datos-abiertos/](https://asosab.github.io/datos-abiertos/)
+- Publicado: agosto 2017
+- Proyecto de accesibilidad a datos públicos venezolanos. Incluye datasets procesados y descargables en múltiples formatos (PostgreSQL, SQL, JSON, CSV): candidatos a la Asamblea Nacional Constituyente 2017 y Ubigeo INE. Licencia CC by-sa 4.0. Repositorio colaborativo en GitHub.
+- Repositorio: [github.com/asosab/open_data](https://github.com/asosab/open_data)
+
+### Automatizando el uso de D3.js en Jekyll
+- [https://asosab.github.io/D3-bars-jekyll/](https://asosab.github.io/D3-bars-jekyll/)
+- Publicado: julio 2017
+- Tutorial técnico sobre cómo integrar la librería D3.js en un sitio Jekyll para generar gráficas de barras dinámicas a partir de archivos .tsv. Incluye código reutilizable mediante includes de Liquid, manejo de tooltips con d3.tip y CSS. Ejemplo con datos de egresados de computación de la UCV.
+
+### PHP Web scraping
+- [https://asosab.github.io/PHP-scraping/](https://asosab.github.io/PHP-scraping/)
+- Publicado: junio 2017
+- Ejemplo práctico de web scraping con PHP: extracción automatizada de conjugaciones verbales desde SpanishDict. Incluye función `scrapDato()` reutilizable. Vinculado al repositorio [esp_verbos](https://github.com/asosab/esp_verbos), base de datos de ~4.000 verbos en español con sus conjugaciones completas.
+
+## Subproyecto: Somos 10⁷
+
+- [Landing page](https://asosab.github.io/somos10e7/)
+- [Docs / ficha del proyecto](https://asosab.github.io/somos10e7/docs/somos10e7/)
+
+Podcast producido en Santa Cruz de la Sierra, Bolivia. Un puente entre la comunidad venezolana migrante y la boliviana: historias de reinvención, psicología del migrante, gastronomía compartida y humor. Conducido por Alejandro Sosa, Siria Useche y Domingo Requena, con la colaboración de la psicopedagoga Nathalie Laborit.
+
+### Episodios publicados (Temporada 1)
+- [Episodio 1](https://youtu.be/q37rfQI2e2Y)
+- [Episodio 2](https://youtu.be/opGGdKJaY48)
+- [Episodio 3 — ¡Hasta la luna y más allá!](https://youtu.be/q3pcfgjT0iM)
+- [Episodio 4 — Chinazos, chalequeo y elecciones](https://youtu.be/uQ2Z5VoG8Z8)
+- [Episodio 5](https://youtu.be/kaQ9pdI0ELM)
+
+### Entrevistas
+- [Siria Useche](https://youtu.be/qaaH59WazAs) — Arquitecta e inmobiliaria. San Cristóbal, Táchira. En Santa Cruz desde 2019.
+- [Giovanni Sánchez / Guayoyo SCZ](https://youtu.be/6yxj4AhZBkU) — Piloto comercial reconvertido en cafetero. En Santa Cruz desde 2015. [Versión larga](https://youtu.be/pSOEfe_c-4U)
+- [Giorgio Cannatta](https://youtu.be/lZYKGpLCVus) — Barbero y sommelier. En Santa Cruz desde 2016.
+- [Adriana Justi](https://youtu.be/eupCKlQciSA) — Cosmetóloga y emprendedora. De Maturín, Monagas.
+- [Bárbara Callama](https://youtu.be/FzvkUIaX39Q) — Periodista y redactora creativa. De Caracas.
+- [Norce Lugo](https://youtu.be/6Tt8Nu47RT4) — Ejecutiva comercial. En Santa Cruz desde 2018.
+
+### Plataformas
+- [YouTube](https://www.youtube.com/@Somos10e7)
+- [Spotify](https://open.spotify.com/show/08d6Mr0lzwPjv2aJaU2jp0)
+- [Amazon Music](https://music.amazon.es/podcasts/6d56aaa9-9ba4-418a-abae-74f902bd0a8b/somos-10%E2%81%B7)
+- [iVoox](https://www.ivoox.com/podcast-somos-108311_sq_f13149540_1.html)
+- [Instagram](https://instagram.com/somos10e7)
+- [TikTok](https://www.tiktok.com/@somos10e7)
+
+## Subproyecto: Larga Noche de Museos
+
+- [Landing page](https://asosab.github.io/larga_noche_de_museos/)
+- [Escuchar en Spotify](https://open.spotify.com/episode/5zG3zw2TuvYEjQYdrZli9F)
+- [Canal en Spotify](https://open.spotify.com/show/033molXbiMAvS1jYllvWup)
+- [Guión completo (PDF)](https://asosab.github.io/larga_noche_de_museos/Gui%C3%B3n_V3.pdf)
+
+Podcast documental producido el 16 de mayo de 2026 durante la edición anual de la Larga Noche de Museos en Santa Cruz de la Sierra, Bolivia. Un recorrido sonoro por las calles, patios, terrazas y museos del centro histórico: 9 entrevistas, 7 minutos y 34 segundos, diseño sonoro documental. Producido en el marco del taller Sonar Distinto, organizado por el Centro de Formación de la Cooperación Española (AECID Bolivia), Programa ACERCA. Facilitadores: Marta García Moreno y Alejandro García Amat.
+
+Equipo: Alejandro Sosa (narración, entrevistas, producción, edición), Luciana Flores, Cielo Nicole Naranjo, Juan Harriague, José Gabriel Vargas.
+
+Espacios visitados: Zarao Identidad y Tradición, Kiosco Galería, Casa de Gladys Moreno (Espacio Infinito), Altillo Beni, Casa Patiño, Manzana 1 (Museo Mitchell Pinto), Centro de la Cooperación Española AECID.
+
+### Entrevistas
+- Jacob Zapata — Fundador de Zarao, espacio de danza, gastronomía e identidad del oriente boliviano. Casona restaurada de más de 140 años.
+- Florencia — Artista visual, docente y coordinadora de Kiosco Galería. Reflexiona sobre la frecuencia y alcance del evento.
+- Lucía Aliaga — Comunicadora e ilustradora. Espacio Infinito, Casa de Gladys Moreno. Oriunda de La Paz.
+- Fabricio — 16 años, bailarín de ballet folclórico, Ballet Almanlegüera.
+- Dayana Méndez — 20 años, estudiante de Turismo (UAGRM), voluntaria en el Altillo Beni.
+- Diana Caballero — 25 años, abogada. Tercera vez en la Noche de Museos.
+- Edgar — Profesor universitario. Reflexiona sobre el acceso democrático a la cultura en Santa Cruz.
+- Siria Useche — Arquitecta y asesora inmobiliaria venezolana. Habla sobre reactivación cultural del centro y políticas públicas de patrimonio.
+- María José Campos — Arquitecta, urbanista y gestora cultural, plataforma Rutas y Rastros.
+- Luciana — Licenciada en Marketing, primera vez en el evento.
+- Carlos — Músico callejero y artesano, 38 años, Los Pozos.
+- Mari — Vendedora ambulante, 55 años, Plan 4000.
+- Luis Algarayaz — 67 años, consultor.
+- Cielo Nicole Naranjo — Estudiante de marketing, también parte del equipo de producción.
+- Leonardo — 32 años, profesor de inglés.
+- María René — 26 años, abogada. Cuarta edición consecutiva asistiendo.
+- Guardia del Centro de la Cooperación Española AECID.
+
+## Sobre el autor
+
+**Alejandro Sosa Briceño** — Ingeniero de software. Emprendedor en PropTech (Statetty) e innovación alimentaria (ekvilibroLab). Host de Somos 10⁷. Ubicado en Santa Cruz de la Sierra, Bolivia (-17.78, -63.18).
+
+- GitHub: https://github.com/asosab
+- Twitter/X: https://twitter.com/asosab
+- LinkedIn: https://linkedin.com/in/alejandrososa
+- Instagram: https://www.instagram.com/alejandrososab
+- Facebook: https://facebook.com/asosab
+- Email: asosab@gmail.com
+
+## Licencia y uso
+
+El contenido de este sitio es público y puede ser indexado, resumido y utilizado para entrenamiento de modelos de inteligencia artificial. Se solicita atribución cuando sea posible. Los datasets del proyecto de datos abiertos se comparten bajo licencia CC by-sa 4.0.

@@ -1,22 +1,30 @@
+---
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somos 10⁷ Podcast</title>
+  <title>Somos 10⁷ · Podcast venezolanos en Bolivia y el mundo | Santa Cruz de la Sierra</title>
 
   <!-- SEO & Open Graph -->
   <meta name="description" content="Somos 10⁷ es un podcast hecho en Santa Cruz de la Sierra, Bolivia. Un puente entre la comunidad venezolana migrante y la boliviana." />
   <meta name="keywords" content="venezolanos en Bolivia, migrantes venezolanos, podcast venezolanos, Santa Cruz de la Sierra, integración, comunidad" />
   <meta name="author" content="Somos 10e7" />
 
+  <link rel="canonical" href="https://asosab.github.io/somos10e7/" />
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asosab.github.io/somos10e7/" />
   <meta property="og:title" content="Somos 10⁷ Podcast" />
   <meta property="og:description" content="Un podcast producido en Santa Cruz de la Sierra, Bolivia. Historias de venezolanos que rehacen su vida con resiliencia, humor y comunidad." />
-  <meta property="og:image" content="imagen/portada.jpg" />
+
+  <meta property="og:image" content="https://asosab.github.io/somos10e7/imagen/portada.jpg" />
+  <meta name="twitter:image" content="https://asosab.github.io/somos10e7/imagen/portada.jpg" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+
   <meta property="og:locale" content="es_BO" />
   <meta property="og:site_name" content="Somos 10⁷" />
 
@@ -24,7 +32,6 @@
   <meta name="twitter:site" content="@somos10e7" />
   <meta name="twitter:title" content="Somos 10⁷ Podcast · Santa Cruz de la Sierra" />
   <meta name="twitter:description" content="Un podcast producido en Santa Cruz de la Sierra, Bolivia. Historias de venezolanos que rehacen su vida con resiliencia, humor y comunidad." />
-  <meta name="twitter:image" content="imagen/portada.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="imagen/portada.png" />
@@ -1143,6 +1150,23 @@
     ::-webkit-scrollbar-thumb:hover { background: var(--amarillo); }
 
   </style>
+
+  <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "PodcastSeries",
+     "name": "Somos 10⁷",
+     "description": "Podcast producido en Santa Cruz de la Sierra, Bolivia. Un puente entre la comunidad venezolana migrante y la boliviana.",
+     "url": "https://asosab.github.io/somos10e7/",
+     "inLanguage": "es",
+     "author": [
+       {"@type": "Person", "name": "Alejandro Sosa"},
+       {"@type": "Person", "name": "Siria Useche"},
+       {"@type": "Person", "name": "Domingo Requena"}
+     ],
+     "image": "https://asosab.github.io/somos10e7/imagen/portada.png"
+   }
+  </script>  
 </head>
 <body>
 
@@ -1508,7 +1532,7 @@
         <!-- Alejandro Sosa -->
         <div class="equipo-card fade-up">
           <div class="equipo-foto-wrap">
-            <img src="imagen/alejandro.png" alt="Alejandro Sosa"
+            <img src="imagen/alejandro.png" alt="Alejandro Sosa, host de Somos 10⁷"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="equipo-foto-placeholder" style="display:none;">
               <span class="equipo-foto-initial">AS</span>
@@ -1530,7 +1554,7 @@
         <!-- Siria Useche -->
         <div class="equipo-card fade-up">
           <div class="equipo-foto-wrap">
-            <img src="imagen/siria.png" alt="Siria Useche"
+            <img src="imagen/siria.png" alt="Siria Useche, host de Somos 10⁷"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="equipo-foto-placeholder" style="display:none;">
               <span class="equipo-foto-initial">SU</span>
@@ -1549,7 +1573,7 @@
         <!-- Domingo Requena -->
         <div class="equipo-card fade-up">
           <div class="equipo-foto-wrap">
-            <img src="imagen/domingo.png" alt="Domingo Requena"
+            <img src="imagen/domingo.png" alt="Domingo Requena, host de Somos 10⁷"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="equipo-foto-placeholder" style="display:none;">
               <span class="equipo-foto-initial">DR</span>
@@ -1793,5 +1817,27 @@
     sections.forEach(s => scrollSpy.observe(s));
   </script>
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-84695-6', 'auto');ga('send', 'pageview');</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCppukDnujCe-Yk5TGO22ydsqhDbnaULGI",
+    authDomain: "somos10e7-a2e5a.firebaseapp.com",
+    databaseURL: "https://somos10e7-a2e5a-default-rtdb.firebaseio.com",
+    projectId: "somos10e7-a2e5a",
+    storageBucket: "somos10e7-a2e5a.firebasestorage.app",
+    messagingSenderId: "239752161887",
+    appId: "1:239752161887:web:825de46f96d0ecfd2a49ea"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
 </body>
 </html>
