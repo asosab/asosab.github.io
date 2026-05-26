@@ -2034,48 +2034,55 @@
     // VARIABLE GLOBAL REQUERIDA
     window.usuariosActivos = 0;
 
-    async function actualizarContador() {
-      console.log("Iniciando contador de visitas...");
+    // Solo consulta y actualiza la UI — sin escribir en Firestore
+    async function refrescarContador() {
       try {
-        // 1. Obtener IP pública (usando ipify)
-        const ipRes = await fetch('https://api.ipify.org?format=json');
-        const { ip } = await ipRes.json();
-        console.log("Tu IP detectada:", ip);
-
-        // 2. Registrar visita directamente en Firestore
-        await addDoc(collection(db, "visitas"), {
-          ip: ip,
-          fecha: serverTimestamp()
-        });
-
-        // 3. Consultar IPs únicas en los últimos 5 minutos
         const cincoMinutosAtras = new Date(Date.now() - 5 * 60 * 1000);
         const q = query(
-          collection(db, "visitas"), 
+          collection(db, "visitas"),
           where("fecha", ">=", Timestamp.fromDate(cincoMinutosAtras))
         );
-
         const querySnapshot = await getDocs(q);
-        
-        // Usamos un Set para contar IPs únicas
+
         const ipsUnicas = new Set();
         querySnapshot.forEach((doc) => {
           ipsUnicas.add(doc.data().ip);
         });
 
-        // 4. GUARDAR EN VARIABLE GLOBAL
-        window.usuariosActivos = ipsUnicas.size;
-        
-        console.log("%c✅ ÉXITO", "color: green; font-weight: bold;");
-        console.log("Usuarios activos (window.usuariosActivos):", window.usuariosActivos);
+        const nuevoCuenta = ipsUnicas.size;
+        if (nuevoCuenta !== window.usuariosActivos) {
+          window.usuariosActivos = nuevoCuenta;
+          console.log("Usuarios activos:", window.usuariosActivos);
+          const el = document.getElementById('contador');
+          if (el) el.innerText = window.usuariosActivos;
+          renderizarAnillos(window.usuariosActivos);
+        }
+      } catch (e) {
+        console.error("❌ Error al refrescar contador:", e);
+      }
+    }
 
-        // Opcional: Si tienes un elemento con id="contador", lo actualizamos
-        const el = document.getElementById('contador');
-        if (el) el.innerText = window.usuariosActivos;
-        renderizarAnillos(window.usuariosActivos);
+    // Registra esta visita una sola vez y arranca el refresco periódico
+    async function actualizarContador() {
+      console.log("Registrando visita...");
+      try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const { ip } = await ipRes.json();
+        console.log("IP detectada:", ip);
+
+        await addDoc(collection(db, "visitas"), {
+          ip: ip,
+          fecha: serverTimestamp()
+        });
+
+        console.log("%c✅ Visita registrada", "color: green; font-weight: bold;");
+        await refrescarContador();
+
+        // Refresca el conteo cada 30 segundos sin volver a escribir
+        setInterval(refrescarContador, 30_000);
 
       } catch (e) {
-        console.error("❌ Error en el contador:", e);
+        console.error("❌ Error al registrar visita:", e);
       }
     }
 
