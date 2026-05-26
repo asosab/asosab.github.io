@@ -368,7 +368,12 @@
 
     .hero-logo-ring {
       position: absolute;
-      inset: -20px;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+      transform: translate(-50%, -50%) rotate(0deg);
+      transform-origin: center center;
       border-radius: 50%;
       border: 1px solid rgba(244,180,0,0.2);
       animation: rotateRing 20s linear infinite;
@@ -387,8 +392,8 @@
     }
 
     @keyframes rotateRing {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .hero-logo {
@@ -2011,6 +2016,7 @@
         // Opcional: Si tienes un elemento con id="contador", lo actualizamos
         const el = document.getElementById('contador');
         if (el) el.innerText = window.usuariosActivos;
+        renderizarAnillos(window.usuariosActivos);
 
       } catch (e) {
         console.error("❌ Error en el contador:", e);
@@ -2020,7 +2026,7 @@
     // Ejecutar automáticamente al cargar
     renderizarAnillos(1); // placeholder mientras carga
     actualizarContador();
-    renderizarAnillos(window.usuariosActivos);
+    
   </script>
 
 </body>
