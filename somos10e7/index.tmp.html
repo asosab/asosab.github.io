@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="page_title">Somos 10⁷ · Podcast venezolanos en Bolivia y el mundo | Santa Cruz de la Sierra</title>
+  <title>Somos 10⁷ · Podcast venezolanos en Bolivia y el mundo | Santa Cruz de la Sierra</title>
 
   <!-- SEO & Open Graph -->
-  <meta name="description" data-i18n-attr="content:meta_description" content="Somos 10⁷ es un podcast hecho en Santa Cruz de la Sierra, Bolivia. Un puente entre la comunidad venezolana migrante y la boliviana." />
+  <meta name="description" content="Somos 10⁷ es un podcast hecho en Santa Cruz de la Sierra, Bolivia. Un puente entre la comunidad venezolana migrante y la boliviana." />
   <meta name="keywords" content="venezolanos en Bolivia, migrantes venezolanos, podcast venezolanos, Santa Cruz de la Sierra, integración, comunidad" />
   <meta name="author" content="Somos 10e7" />
 
@@ -1208,85 +1208,6 @@
     }
   </style>
 
-  <!-- ============================================================
-       SISTEMA DE INTERNACIONALIZACIÓN (i18n)
-       Carga el diccionario de idioma de forma asíncrona y no bloqueante.
-       El locale activo se guarda en localStorage bajo la clave "locale".
-       Por defecto: es_VE.
-  ============================================================ -->
-  <script>
-    (function () {
-      // ── Configuración ──────────────────────────────────────────
-      const DEFAULT_LOCALE = 'es_VE';
-      const AVAILABLE_LOCALES = ['es_VE', 'es_BO'];
-
-      // ── Helpers ────────────────────────────────────────────────
-      function getLocale() {
-        const stored = localStorage.getItem('locale');
-        return (stored && AVAILABLE_LOCALES.includes(stored)) ? stored : DEFAULT_LOCALE;
-      }
-
-      function applyDict(dict) {
-        // Texto interior (innerHTML para permitir tags como <em>, <span>)
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          if (dict[key] !== undefined) el.innerHTML = dict[key];
-        });
-
-        // Atributos: data-i18n-attr="attr1:key1 attr2:key2"
-        document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-          const pairs = el.getAttribute('data-i18n-attr').split(' ');
-          pairs.forEach(pair => {
-            const [attr, key] = pair.split(':');
-            if (dict[key] !== undefined) el.setAttribute(attr, dict[key]);
-          });
-        });
-
-        // Actualizar <html lang>
-        const locale = dict['_meta'] && dict['_meta']['locale']
-          ? dict['_meta']['locale'].replace('_', '-').toLowerCase()
-          : 'es';
-        document.documentElement.lang = locale;
-      }
-
-      // ── Carga no bloqueante ────────────────────────────────────
-      function loadLocale(locale) {
-        const url = locale + '.json';
-        // Usamos fetch + requestIdleCallback (o setTimeout) para no
-        // bloquear el render inicial. El HTML ya muestra textos por
-        // defecto; los reemplazamos cuando el JSON esté disponible.
-        const doApply = (dict) => {
-          window._i18nDict = dict;   // disponible para renderizarAnillos y otros scripts
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => applyDict(dict));
-          } else {
-            applyDict(dict);
-          }
-        };
-
-        fetch(url)
-          .then(r => r.ok ? r.json() : Promise.reject('HTTP ' + r.status))
-          .then(doApply)
-          .catch(err => console.warn('[i18n] No se pudo cargar', url, err));
-      }
-
-      // ── API pública ────────────────────────────────────────────
-      window.i18n = {
-        /** Cambia el idioma en tiempo real y lo persiste */
-        setLocale: function (locale) {
-          if (!AVAILABLE_LOCALES.includes(locale)) return;
-          localStorage.setItem('locale', locale);
-          loadLocale(locale);
-        },
-        getLocale,
-        availableLocales: AVAILABLE_LOCALES
-      };
-
-      // ── Arranque ───────────────────────────────────────────────
-      loadLocale(getLocale());
-    })();
-  </script>
-
   <script type="application/ld+json">
    {
      "@context": "https://schema.org",
@@ -1313,17 +1234,17 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
         <img src="imagen/portada.png" alt="Somos 10⁷ logo" onerror="this.style.display='none'" />
-        <span class="nav-logo-text" data-i18n="nav_logo_text">Somos <span>10⁷</span></span>
+        <span class="nav-logo-text">Somos <span>10⁷</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#ultimo" data-i18n="nav_ultimo">Último episodio</a></li>
-        <li><a href="#temporadas" data-i18n="nav_temporadas">Temporadas</a></li>
-        <li><a href="#entrevistas" data-i18n="nav_entrevistas">Entrevistas</a></li>
-        <li><a href="#equipo" data-i18n="nav_equipo">El equipo</a></li>
-        <li><a href="#redes" data-i18n="nav_redes">Redes</a></li>
-        <li><a href="#paginas-blancas" data-i18n="nav_paginas_blancas">Páginas Blancas</a></li>
+        <li><a href="#ultimo">Último episodio</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#entrevistas">Entrevistas</a></li>
+        <li><a href="#equipo">El equipo</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#paginas-blancas">Páginas Blancas</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" data-i18n-attr="aria-label:nav_toggle_aria" aria-label="Menú">
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1339,10 +1260,10 @@
       <div class="hero-text">
         <div class="hero-eyebrow">
           <div class="hero-line"></div>
-          <span data-i18n="hero_eyebrow">Podcast · Santa Cruz de la Sierra, Bolivia</span>
+          <span>Podcast · Santa Cruz de la Sierra, Bolivia</span>
         </div>
-        <h1 class="hero-title" data-i18n="hero_title">Somos <em>10⁷</em></h1>
-        <p class="hero-desc" data-i18n="hero_desc">
+        <h1 class="hero-title">Somos <em>10⁷</em></h1>
+        <p class="hero-desc">
           Un podcast hecho desde Santa Cruz de la Sierra, Bolivia.
           Un puente entre la comunidad venezolana migrante y la boliviana: historias de
           reinvención, humor, psicología del migrante y cultura compartida.
@@ -1350,9 +1271,9 @@
         <div class="hero-ctas">
           <a href="#ultimo" class="btn btn-rojo">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polygon points="5,3 13,8 5,13" fill="white"/></svg>
-            <span data-i18n="hero_cta_primary">Ver último episodio</span>
+            Ver último episodio
           </a>
-          <a href="#temporadas" class="btn btn-borde" data-i18n="hero_cta_secondary">Ver episodios</a>
+          <a href="#temporadas" class="btn btn-borde">Ver episodios</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -1371,8 +1292,8 @@
   <section id="ultimo">
     <div class="container">
       <div class="section-head fade-up">
-        <p class="section-label" data-i18n="ultimo_label">Ahora mismo</p>
-        <h2 class="section-title" data-i18n="ultimo_title">Último episodio</h2>
+        <p class="section-label">Ahora mismo</p>
+        <h2 class="section-title">Último episodio</h2>
       </div>
       <div class="ultimo-grid fade-up">
         <div class="video-wrapper">
@@ -1384,28 +1305,28 @@
           </iframe>
         </div>
         <div class="ultimo-info">
-          <span class="pill" data-i18n="ultimo_pill">Temporada 1 · Ep. 5</span>
-          <h3 data-i18n="ultimo_ep_title">Somos 10⁷ — Episodio 1×5</h3>
-          <p data-i18n="ultimo_ep_desc">
+          <span class="pill">Temporada 1 · Ep. 5</span>
+          <h3>Somos 10⁷ — Episodio 1×5</h3>
+          <p>
             El quinto episodio de la primera temporada. Conversaciones reales sobre lo que significa 
             construir una vida nueva, con la resiliencia y el buen humor que nos caracterizan.
             Una hora de compañía para quienes van por el camino largo.
           </p>
           <a href="https://youtu.be/kaQ9pdI0ELM" target="_blank" rel="noopener" class="btn btn-rojo">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><polygon points="4,2 12,7 4,12" fill="white"/></svg>
-            <span data-i18n="ultimo_ep_btn">Ver en YouTube</span>
+            Ver en YouTube
           </a>
           <div class="podcast-links">
-            <a href="https://open.spotify.com/show/08d6Mr0lzwPjv2aJaU2jp0" target="_blank" rel="noopener" class="podcast-link" data-i18n="podcast_link_spotify">
+            <a href="https://open.spotify.com/show/08d6Mr0lzwPjv2aJaU2jp0" target="_blank" rel="noopener" class="podcast-link">
               🎵 Spotify
             </a>
-            <a href="https://music.amazon.es/podcasts/6d56aaa9-9ba4-418a-abae-74f902bd0a8b/somos-10%E2%81%B7" target="_blank" rel="noopener" class="podcast-link" data-i18n="podcast_link_amazon">
+            <a href="https://music.amazon.es/podcasts/6d56aaa9-9ba4-418a-abae-74f902bd0a8b/somos-10%E2%81%B7" target="_blank" rel="noopener" class="podcast-link">
               🎧 Amazon Music
             </a>
-            <a href="https://www.ivoox.com/podcast-somos-108311_sq_f13149540_1.html" target="_blank" rel="noopener" class="podcast-link" data-i18n="podcast_link_ivoox">
+            <a href="https://www.ivoox.com/podcast-somos-108311_sq_f13149540_1.html" target="_blank" rel="noopener" class="podcast-link">
               🎙️ iVoox
             </a>
-            <a href="https://www.youtube.com/@Somos10e7" target="_blank" rel="noopener" class="podcast-link" data-i18n="podcast_link_canal">
+            <a href="https://www.youtube.com/@Somos10e7" target="_blank" rel="noopener" class="podcast-link">
               📺 Canal completo
             </a>
           </div>
@@ -1420,13 +1341,13 @@
   <section id="temporadas">
     <div class="container">
       <div class="section-head fade-up">
-        <p class="section-label" data-i18n="temporadas_label">Archivo</p>
-        <h2 class="section-title" data-i18n="temporadas_title">Temporadas</h2>
-        <p data-i18n="temporadas_desc">Todos los episodios, ordenados por temporada.</p>
+        <p class="section-label">Archivo</p>
+        <h2 class="section-title">Temporadas</h2>
+        <p>Todos los episodios, ordenados por temporada.</p>
       </div>
 
       <div class="season-tabs fade-up">
-        <button class="season-tab active" onclick="showSeason('t1', this)" data-i18n="temporada_1_tab">Temporada 1</button>
+        <button class="season-tab active" onclick="showSeason('t1', this)">Temporada 1</button>
         <!-- Futuras temporadas se agregan aquí -->
       </div>
 
@@ -1443,10 +1364,10 @@
               </div>
             </a>
             <div class="episode-info">
-              <div class="episode-num" data-i18n="ep1_num">T1 · Ep. 1</div>
-              <div class="episode-title" data-i18n="ep1_title">Primer episodio</div>
+              <div class="episode-num">T1 · Ep. 1</div>
+              <div class="episode-title">Primer episodio</div>
               <a href="https://youtu.be/q37rfQI2e2Y" target="_blank" rel="noopener" class="episode-link">
-                <span data-i18n="ep1_link">Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ver en YouTube <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </a>
             </div>
           </div>
@@ -1461,10 +1382,10 @@
               </div>
             </a>
             <div class="episode-info">
-              <div class="episode-num" data-i18n="ep2_num">T1 · Ep. 2</div>
-              <div class="episode-title" data-i18n="ep2_title">Episodio 2</div>
+              <div class="episode-num">T1 · Ep. 2</div>
+              <div class="episode-title">Episodio 2</div>
               <a href="https://youtu.be/opGGdKJaY48" target="_blank" rel="noopener" class="episode-link">
-                <span data-i18n="ep2_link">Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ver en YouTube <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </a>
             </div>
           </div>
@@ -1479,10 +1400,10 @@
               </div>
             </a>
             <div class="episode-info">
-              <div class="episode-num" data-i18n="ep3_num">T1 · Ep. 3</div>
-              <div class="episode-title" data-i18n="ep3_title">¡Hasta la luna y más allá!</div>
+              <div class="episode-num">T1 · Ep. 3</div>
+              <div class="episode-title">¡Hasta la luna y más allá!</div>
               <a href="https://youtu.be/q3pcfgjT0iM" target="_blank" rel="noopener" class="episode-link">
-                <span data-i18n="ep3_link">Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ver en YouTube <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </a>
             </div>
           </div>
@@ -1497,10 +1418,10 @@
               </div>
             </a>
             <div class="episode-info">
-              <div class="episode-num" data-i18n="ep4_num">T1 · Ep. 4</div>
-              <div class="episode-title" data-i18n="ep4_title">Chinazos, chalequeo y elecciones</div>
+              <div class="episode-num">T1 · Ep. 4</div>
+              <div class="episode-title">Chinazos, chalequeo y elecciones</div>
               <a href="https://youtu.be/uQ2Z5VoG8Z8" target="_blank" rel="noopener" class="episode-link">
-                <span data-i18n="ep4_link">Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ver en YouTube <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </a>
             </div>
           </div>
@@ -1515,10 +1436,10 @@
               </div>
             </a>
             <div class="episode-info">
-              <div class="episode-num" data-i18n="ep5_num">T1 · Ep. 5</div>
-              <div class="episode-title" data-i18n="ep5_title">Episodio 5 <span class="pill" style="font-size:0.6rem;padding:2px 8px;" data-i18n="ep5_pill">Último</span></div>
+              <div class="episode-num">T1 · Ep. 5</div>
+              <div class="episode-title">Episodio 5 <span class="pill" style="font-size:0.6rem;padding:2px 8px;">Último</span></div>
               <a href="https://youtu.be/kaQ9pdI0ELM" target="_blank" rel="noopener" class="episode-link">
-                <span data-i18n="ep5_link">Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ver en YouTube <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </a>
             </div>
           </div>
@@ -1534,9 +1455,9 @@
   <section id="entrevistas">
     <div class="container">
       <div class="section-head fade-up">
-        <p class="section-label" data-i18n="entrevistas_label">Historias reales</p>
-        <h2 class="section-title" data-i18n="entrevistas_title">Entrevistas</h2>
-        <p data-i18n="entrevistas_desc">Venezolanos que rehacen su vida en Bolivia. Cada historia, una lección.</p>
+        <p class="section-label">Historias reales</p>
+        <h2 class="section-title">Entrevistas</h2>
+        <p>Venezolanos que rehacen su vida en Bolivia. Cada historia, una lección.</p>
       </div>
       <div class="entrevistas-grid stagger">
 
@@ -1549,11 +1470,11 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="siria_nombre">Siria Useche</div>
-            <div class="entrevista-origen" data-i18n="siria_origen">San Cristóbal, Táchira → Santa Cruz, 2019</div>
-            <p class="entrevista-desc" data-i18n="siria_desc">Arquitecta y proyectista. Hoy trabaja como asesora inmobiliaria en Century 21, aplicando su ojo arquitectónico para evaluar propiedades.</p>
+            <div class="entrevista-nombre">Siria Useche</div>
+            <div class="entrevista-origen">San Cristóbal, Táchira → Santa Cruz, 2019</div>
+            <p class="entrevista-desc">Arquitecta y proyectista. Hoy trabaja como asesora inmobiliaria en Century 21, aplicando su ojo arquitectónico para evaluar propiedades.</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/qaaH59WazAs" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="siria_btn">▶ Ver entrevista</a>
+              <a href="https://youtu.be/qaaH59WazAs" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
             </div>
           </div>
         </div>
@@ -1567,12 +1488,12 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="giovanni_nombre">Giovanni Sánchez</div>
-            <div class="entrevista-origen" data-i18n="giovanni_origen">San Juan de Colón, Táchira → Santa Cruz, 2015</div>
-            <p class="entrevista-desc" data-i18n="giovanni_desc">Piloto comercial que llegó por amor. Empezó vendiendo mini-lunch en bicicleta, recorriendo 12 km diarios desde un cuarto de 6×4. Hoy es dueño de Guayoyo SCZ, cafetería con alma andina.</p>
+            <div class="entrevista-nombre">Giovanni Sánchez</div>
+            <div class="entrevista-origen">San Juan de Colón, Táchira → Santa Cruz, 2015</div>
+            <p class="entrevista-desc">Piloto comercial que llegó por amor. Empezó vendiendo mini-lunch en bicicleta, recorriendo 12 km diarios desde un cuarto de 6×4. Hoy es dueño de Guayoyo SCZ, cafetería con alma andina.</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/6yxj4AhZBkU" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="giovanni_btn">▶ Ver entrevista</a>
-              <a href="https://youtu.be/pSOEfe_c-4U" target="_blank" rel="noopener" class="btn btn-borde" style="font-size:0.72rem; padding:9px 18px;" data-i18n="giovanni_btn_larga">Versión larga</a>
+              <a href="https://youtu.be/6yxj4AhZBkU" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
+              <a href="https://youtu.be/pSOEfe_c-4U" target="_blank" rel="noopener" class="btn btn-borde" style="font-size:0.72rem; padding:9px 18px;">Versión larga</a>
             </div>
           </div>
         </div>
@@ -1586,11 +1507,11 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="giorgio_nombre">Giorgio Cannatta</div>
-            <div class="entrevista-origen" data-i18n="giorgio_origen">Upata / Puerto La Cruz → Santa Cruz, 2016</div>
-            <p class="entrevista-desc" data-i18n="giorgio_desc">Barbero y sommelier. Se certificó como sommelier alternando con su trabajo en la barbería. Valora la gastronomía local, la cercanía de la ciudad y la cultura del churrasco cruceño.</p>
+            <div class="entrevista-nombre">Giorgio Cannatta</div>
+            <div class="entrevista-origen">Upata / Puerto La Cruz → Santa Cruz, 2016</div>
+            <p class="entrevista-desc">Barbero y sommelier. Se certificó como sommelier alternando con su trabajo en la barbería. Valora la gastronomía local, la cercanía de la ciudad y la cultura del churrasco cruceño.</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/lZYKGpLCVus" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="giorgio_btn">▶ Ver entrevista</a>
+              <a href="https://youtu.be/lZYKGpLCVus" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
             </div>
           </div>
         </div>
@@ -1604,11 +1525,11 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="adriana_nombre">Adriana Justi</div>
-            <div class="entrevista-origen" data-i18n="adriana_origen">Maturín, Monagas → Santa Cruz</div>
-            <p class="entrevista-desc" data-i18n="adriana_desc">Llegó con su hermano y una prima, sus padres ya estaban aquí. Un embarazo complicado definió su permanencia. Hoy estudia cosmetología y maderoterapia. Llama al emprendimiento una "bonita revolución humana".</p>
+            <div class="entrevista-nombre">Adriana Justi</div>
+            <div class="entrevista-origen">Maturín, Monagas → Santa Cruz</div>
+            <p class="entrevista-desc">Llegó con su hermano y una prima, sus padres ya estaban aquí. Un embarazo complicado definió su permanencia. Hoy estudia cosmetología y maderoterapia. Llama al emprendimiento una "bonita revolución humana".</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/eupCKlQciSA" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="adriana_btn">▶ Ver entrevista</a>
+              <a href="https://youtu.be/eupCKlQciSA" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
             </div>
           </div>
         </div>
@@ -1622,11 +1543,11 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="barbara_nombre">Bárbara Callama "Bars"</div>
-            <div class="entrevista-origen" data-i18n="barbara_origen">Caracas → Santa Cruz, hace 7 años</div>
-            <p class="entrevista-desc" data-i18n="barbara_desc">Periodista y redactora creativa. Esperó graduarse de Comunicación Social antes de partir. Hoy trabaja en publicidad. Su mensaje: está bien sentirse mal, pero el peor día solo dura 24 horas.</p>
+            <div class="entrevista-nombre">Bárbara Callama "Bars"</div>
+            <div class="entrevista-origen">Caracas → Santa Cruz, hace 7 años</div>
+            <p class="entrevista-desc">Periodista y redactora creativa. Esperó graduarse de Comunicación Social antes de partir. Hoy trabaja en publicidad. Su mensaje: está bien sentirse mal, pero el peor día solo dura 24 horas.</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/FzvkUIaX39Q" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="barbara_btn">▶ Ver entrevista</a>
+              <a href="https://youtu.be/FzvkUIaX39Q" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
             </div>
           </div>
         </div>
@@ -1640,11 +1561,11 @@
             </div>
           </div>
           <div class="entrevista-body">
-            <div class="entrevista-nombre" data-i18n="norce_nombre">Norce Lugo</div>
-            <div class="entrevista-origen" data-i18n="norce_origen">Caracas / La Guaira → Santa Cruz, 2018</div>
-            <p class="entrevista-desc" data-i18n="norce_desc">Llegó sola siguiendo el consejo de un vecino. Ha limpiado oficinas y aprendido que aquí se vende de todo. Hoy emprende en tecnología. Su consejo: no comparar países; agradecer y adaptarse.</p>
+            <div class="entrevista-nombre">Norce Lugo</div>
+            <div class="entrevista-origen">Caracas / La Guaira → Santa Cruz, 2018</div>
+            <p class="entrevista-desc">Llegó sola siguiendo el consejo de un vecino. Ha limpiado oficinas y aprendido que aquí se vende de todo. Hoy emprende en tecnología. Su consejo: no comparar países; agradecer y adaptarse.</p>
             <div class="entrevista-links">
-              <a href="https://youtu.be/6Tt8Nu47RT4" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;" data-i18n="norce_btn">▶ Ver entrevista</a>
+              <a href="https://youtu.be/6Tt8Nu47RT4" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
             </div>
           </div>
         </div>
@@ -1659,9 +1580,9 @@
   <section id="equipo">
     <div class="container">
       <div class="section-head fade-up">
-        <p class="section-label" data-i18n="equipo_label">Detrás del micrófono</p>
-        <h2 class="section-title" data-i18n="equipo_title">Quiénes somos</h2>
-        <p data-i18n="equipo_desc">Venezolanos y venezolanas que encontraron en Bolivia un lugar y en el podcast una forma de tender puentes.</p>
+        <p class="section-label">Detrás del micrófono</p>
+        <h2 class="section-title">Quiénes somos</h2>
+        <p>Venezolanos y venezolanas que encontraron en Bolivia un lugar y en el podcast una forma de tender puentes.</p>
       </div>
       <div class="equipo-grid stagger">
 
@@ -1675,9 +1596,9 @@
             </div>
           </div>
           <div class="equipo-info">
-            <div class="equipo-nombre" data-i18n="alejandro_nombre">Alejandro Sosa</div>
-            <div class="equipo-rol" data-i18n="alejandro_rol">Host · Emprendedor</div>
-            <p class="equipo-bio" data-i18n="alejandro_bio">Fundador de Statetty y ekvilibroLab. Ingeniero de software con más de 25 años en transformación digital en Venezuela y Bolivia. Pensamiento sistémico, ejecución creativa.</p>
+            <div class="equipo-nombre">Alejandro Sosa</div>
+            <div class="equipo-rol">Host · Emprendedor</div>
+            <p class="equipo-bio">Fundador de Statetty y ekvilibroLab. Ingeniero de software con más de 25 años en transformación digital en Venezuela y Bolivia. Pensamiento sistémico, ejecución creativa.</p>
             <div class="equipo-social">
               <a href="http://instagram.com/alejandrososab" target="_blank" rel="noopener" title="Instagram">IG</a>
               <a href="https://linkedin.com/in/alejandrososa" target="_blank" rel="noopener" title="LinkedIn">LI</a>
@@ -1697,9 +1618,9 @@
             </div>
           </div>
           <div class="equipo-info">
-            <div class="equipo-nombre" data-i18n="siria_equipo_nombre">Siria Useche</div>
-            <div class="equipo-rol" data-i18n="siria_equipo_rol">Host · Arquitecta</div>
-            <p class="equipo-bio" data-i18n="siria_equipo_bio">Venezolana, arquitecta y migrante. Convencida de que tejer puentes entre realidades distintas demuestra que la empatía y el diálogo son una vía segura para la transformación social.</p>
+            <div class="equipo-nombre">Siria Useche</div>
+            <div class="equipo-rol">Host · Arquitecta</div>
+            <p class="equipo-bio">Venezolana, arquitecta y migrante. Convencida de que tejer puentes entre realidades distintas demuestra que la empatía y el diálogo son una vía segura para la transformación social.</p>
             <div class="equipo-social">
               <a href="https://youtu.be/qaaH59WazAs" target="_blank" rel="noopener" title="Ver entrevista">▶</a>
             </div>
@@ -1716,9 +1637,9 @@
             </div>
           </div>
           <div class="equipo-info">
-            <div class="equipo-nombre" data-i18n="domingo_nombre">Domingo Requena</div>
-            <div class="equipo-rol" data-i18n="domingo_rol">Host · Visitador médico</div>
-            <p class="equipo-bio" data-i18n="domingo_bio">Venezolano, abuelo de tres, padre de dos y compañero de Naty. Cocina sabroso, aunque reconoce que cerca del mar sería mejor.</p>
+            <div class="equipo-nombre">Domingo Requena</div>
+            <div class="equipo-rol">Host · Visitador médico</div>
+            <p class="equipo-bio">Venezolano, abuelo de tres, padre de dos y compañero de Naty. Cocina sabroso, aunque reconoce que cerca del mar sería mejor.</p>
             <div class="equipo-social">
               <a href="tel:+59161668987" title="Teléfono">☎</a>
             </div>
@@ -1735,9 +1656,9 @@
             </div>
           </div>
           <div class="equipo-info">
-            <div class="equipo-nombre" data-i18n="nathalie_nombre">Nathalie Laborit</div>
-            <div class="equipo-rol" data-i18n="nathalie_rol">Colaboradora · Psicopedagoga</div>
-            <p class="equipo-bio" data-i18n="nathalie_bio">Psicopedagoga venezolana. Aporta la mirada profesional sobre el proceso migratorio, el duelo y la adaptación. Acompañante del equipo y de la audiencia.</p>
+            <div class="equipo-nombre">Nathalie Laborit</div>
+            <div class="equipo-rol">Colaboradora · Psicopedagoga</div>
+            <p class="equipo-bio">Psicopedagoga venezolana. Aporta la mirada profesional sobre el proceso migratorio, el duelo y la adaptación. Acompañante del equipo y de la audiencia.</p>
             <div class="equipo-social">
               <a href="tel:+59160962012" title="Teléfono">☎</a>
             </div>
@@ -1754,9 +1675,9 @@
   <section id="redes">
     <div class="container">
       <div class="section-head fade-up">
-        <p class="section-label" data-i18n="redes_label">Seguinos</p>
-        <h2 class="section-title" data-i18n="redes_title">Donde encontrarnos</h2>
-        <p data-i18n="redes_desc">El programa está en todas las plataformas. Elegí la tuya.</p>
+        <p class="section-label">Seguinos</p>
+        <h2 class="section-title">Donde encontrarnos</h2>
+        <p>El programa está en todas las plataformas. Elegí la tuya.</p>
       </div>
       <div class="redes-grid stagger">
 
@@ -1827,33 +1748,33 @@
     <div class="container">
       <div class="pb-inner">
         <div class="pb-text fade-up">
-          <p class="section-label" data-i18n="paginas_blancas_label">Comunidad</p>
-          <h2 data-i18n="paginas_blancas_title">Páginas <em>Blancas</em></h2>
-          <p data-i18n="paginas_blancas_desc">
+          <p class="section-label">Comunidad</p>
+          <h2>Páginas <em>Blancas</em></h2>
+          <p>
             Un directorio colaborativo de venezolanos en Bolivia que ofrecen servicios y productos.
             Si tenés algo para ofrecer a la comunidad, o necesitás encontrar a alguien de confianza, este es tu espacio.
           </p>
           <ul class="pb-features">
-            <li data-i18n="pb_feature_1">Registrá tu oficio, negocio o servicio</li>
-            <li data-i18n="pb_feature_2">Conectá con venezolanos que ya están aquí</li>
-            <li data-i18n="pb_feature_3">Construí red desde el primer día</li>
-            <li data-i18n="pb_feature_4">Acceso gratuito para toda la comunidad</li>
+            <li>Registrá tu oficio, negocio o servicio</li>
+            <li>Conectá con venezolanos que ya están aquí</li>
+            <li>Construí red desde el primer día</li>
+            <li>Acceso gratuito para toda la comunidad</li>
           </ul>
           <p style="font-size:0.88rem; color:rgba(250,245,233,0.5);">
-            <span data-i18n="pb_contacto">¿Preguntas? Escribinos a</span> <a href="mailto:somos10e7@gmail.com" style="color:var(--amarillo);">somos10e7@gmail.com</a>
+            ¿Preguntas? Escribinos a <a href="mailto:somos10e7@gmail.com" style="color:var(--amarillo);">somos10e7@gmail.com</a>
           </p>
         </div>
         <div class="pb-form-wrap fade-up">
-          <h3 data-i18n="pb_form_title">Agregarte al directorio</h3>
-          <p class="pb-cta-desc" data-i18n="pb_form_desc">
+          <h3>Agregarte al directorio</h3>
+          <p class="pb-cta-desc">
             Completá el formulario y formá parte de la red de servicios de la comunidad venezolana en Bolivia.
             Es fácil, rápido y gratuito.
           </p>
           <a href="https://forms.gle/satEoABWrp2TVQet8" target="_blank" rel="noopener" class="btn btn-amarillo" style="width:100%; justify-content:center; font-size:0.85rem;">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="pb_form_btn">Registrarme en Páginas Blancas</span>
+            Registrarme en Páginas Blancas
           </a>
-          <p style="font-size:0.75rem; color:rgba(250,245,233,0.4); margin-top:16px; text-align:center;" data-i18n="pb_form_nota">
+          <p style="font-size:0.75rem; color:rgba(250,245,233,0.4); margin-top:16px; text-align:center;">
             El formulario se abre en Google Forms
           </p>
         </div>
@@ -1871,35 +1792,35 @@
           <div class="nav-logo-text" style="font-family:'Playfair Display',serif; font-size:1.5rem; color:#FAF5E9;">
             Somos <span style="color:#F4B400;">10⁷</span>
           </div>
-          <p data-i18n="footer_brand_desc">
+          <p>
             Un podcast producido en Santa Cruz de la Sierra, Bolivia.
             Un puente entre la comunidad venezolana y la boliviana, bajo la premisa de que
             los buenos somos más.
           </p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_secciones_title">Secciones</h4>
+          <h4>Secciones</h4>
           <ul>
-            <li><a href="#ultimo" data-i18n="footer_link_ultimo">Último episodio</a></li>
-            <li><a href="#temporadas" data-i18n="footer_link_temporadas">Temporadas</a></li>
-            <li><a href="#entrevistas" data-i18n="footer_link_entrevistas">Entrevistas</a></li>
-            <li><a href="#micros" data-i18n="footer_link_micros">Micros y secciones</a></li>
-            <li><a href="#equipo" data-i18n="footer_link_equipo">El equipo</a></li>
+            <li><a href="#ultimo">Último episodio</a></li>
+            <li><a href="#temporadas">Temporadas</a></li>
+            <li><a href="#entrevistas">Entrevistas</a></li>
+            <li><a href="#micros">Micros y secciones</a></li>
+            <li><a href="#equipo">El equipo</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_contacto_title">Contacto</h4>
+          <h4>Contacto</h4>
           <ul>
             <li><a href="mailto:somos10e7@gmail.com">somos10e7@gmail.com</a></li>
-            <li><a href="https://forms.gle/satEoABWrp2TVQet8" target="_blank" rel="noopener" data-i18n="footer_link_paginas">Páginas Blancas</a></li>
+            <li><a href="https://forms.gle/satEoABWrp2TVQet8" target="_blank" rel="noopener">Páginas Blancas</a></li>
             <li><a href="https://instagram.com/somos10e7" target="_blank" rel="noopener">@somos10e7</a></li>
-            <li><a href="https://www.youtube.com/@Somos10e7" target="_blank" rel="noopener" data-i18n="footer_link_canal">Canal de YouTube</a></li>
+            <li><a href="https://www.youtube.com/@Somos10e7" target="_blank" rel="noopener">Canal de YouTube</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p data-i18n="footer_copy">© 2024 Somos 10⁷ · Santa Cruz de la Sierra, Bolivia</p>
-        <p data-i18n="footer_tagline">Hecho con resiliencia y buen humor</p>
+        <p>© 2024 Somos 10⁷ · Santa Cruz de la Sierra, Bolivia</p>
+        <p>Hecho con resiliencia y buen humor</p>
       </div>
     </div>
   </footer>
@@ -2040,11 +1961,7 @@
 
       const label = document.createElement('div');
       label.className = 'usuarios-activos-label';
-      const dict = window._i18nDict || {};
-      const singular = dict['usuarios_singular'] || 'persona';
-      const plural   = dict['usuarios_plural']   || 'personas';
-      const aqui     = dict['usuarios_aqui']      || 'aquí ahora';
-      label.textContent = `${total} ${total === 1 ? singular : plural} ${aqui}`;
+      label.textContent = `${total} ${total === 1 ? 'persona' : 'personas'} aquí ahora`;
       wrap.appendChild(label);
     }
 
