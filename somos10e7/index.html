@@ -2111,33 +2111,11 @@
   </script>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-84695-6', 'auto');ga('send', 'pageview');</script>
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCppukDnujCe-Yk5TGO22ydsqhDbnaULGI",
-      authDomain: "somos10e7-a2e5a.firebaseapp.com",
-      databaseURL: "https://somos10e7-a2e5a-default-rtdb.firebaseio.com",
-      projectId: "somos10e7-a2e5a",
-      storageBucket: "somos10e7-a2e5a.firebasestorage.app",
-      messagingSenderId: "239752161887",
-      appId: "1:239752161887:web:825de46f96d0ecfd2a49ea"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-  </script>
-
-  <!-- Copia y pega este bloque en tu index.html de GitHub Pages -->
+  <!-- Firebase: contador de visitantes activos -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, addDoc, serverTimestamp, query, where, getDocs, Timestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getFirestore, collection, doc, setDoc, serverTimestamp, query, where, getDocs, Timestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-    // Credenciales reales para el proyecto somos10e7-a2e5a
     const firebaseConfig = {
       apiKey: "AIzaSyCppukDnujCe-Yk5TGO22ydsqhDbnaULGI",
       authDomain: "somos10e7-a2e5a.firebaseapp.com",
@@ -2147,11 +2125,9 @@
       appId: "1:239752161887:web:825de46f96d0ecfd2a49ea"
     };
 
-    // Inicializar Firebase y Firestore
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    // VARIABLE GLOBAL REQUERIDA
     window.usuariosActivos = 0;
 
     // Solo consulta y actualiza la UI — sin escribir en Firestore
@@ -2164,12 +2140,8 @@
         );
         const querySnapshot = await getDocs(q);
 
-        const ipsUnicas = new Set();
-        querySnapshot.forEach((doc) => {
-          ipsUnicas.add(doc.data().ip);
-        });
-
-        const nuevoCuenta = ipsUnicas.size;
+        // IP como ID único: cada doc es una IP distinta, size = usuarios únicos
+        const nuevoCuenta = querySnapshot.size;
         if (nuevoCuenta !== window.usuariosActivos) {
           window.usuariosActivos = nuevoCuenta;
           console.log("Usuarios activos:", window.usuariosActivos);
@@ -2182,7 +2154,7 @@
       }
     }
 
-    // Registra esta visita una sola vez y arranca el refresco periódico
+    // Registra o actualiza esta visita (upsert por IP) y arranca el refresco periódico
     async function actualizarContador() {
       console.log("Registrando visita...");
       try {
@@ -2190,10 +2162,11 @@
         const { ip } = await ipRes.json();
         console.log("IP detectada:", ip);
 
-        await addDoc(collection(db, "visitas"), {
+        // setDoc con merge:true actualiza fecha si el doc ya existe, lo crea si no
+        await setDoc(doc(db, "visitas", ip), {
           ip: ip,
           fecha: serverTimestamp()
-        });
+        }, { merge: true });
 
         console.log("%c✅ Visita registrada", "color: green; font-weight: bold;");
         await refrescarContador();
@@ -2206,10 +2179,8 @@
       }
     }
 
-    // Ejecutar automáticamente al cargar
     renderizarAnillos(1); // placeholder mientras carga
     actualizarContador();
-    
   </script>
 
 </body>
