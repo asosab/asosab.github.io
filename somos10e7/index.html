@@ -2123,7 +2123,7 @@
     // Solo consulta y actualiza la UI — sin escribir en Firestore
     async function refrescarContador() {
       try {
-        const cincoMinutosAtras = new Date(Date.now() - 5 * 60 * 1000);
+        const cincoMinutosAtras = new Date(Date.now() - 30 * 60 * 1000);
         const q = query(
           collection(db, "visitas"),
           where("fecha", ">=", Timestamp.fromDate(cincoMinutosAtras))
