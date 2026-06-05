@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "La historia de tu vida, contada con IA"
-date: 2026-06-05
+date: 2026-06-04
 categories: [ia, cv, herramientas]
 comments: true
 description: "Cómo usar inteligencia artificial para construir un archivo vivo de tu historia profesional, generar currículums inteligentes y hacer que los robots de reclutamiento también te lean bien."
