@@ -1,0 +1,978 @@
+{
+  "meta": {
+    "version": "1.1",
+    "last_updated": "2026-06-04",
+    "purpose": "Master professional and personal profile knowledge base for generating targeted CVs, bios and positioning narratives",
+    "language": ["es", "en"]
+  },
+
+  "identity": {
+    "full_name": "Alejandro Sosa Briceño",
+    "preferred_name": "Alejandro Sosa",
+    "location": {
+      "city": "Santa Cruz de la Sierra",
+      "country": "Bolivia"
+    },
+    "contact": {
+      "email": "asosab@gmail.com",
+      "phone": "+59174189700"
+    },
+    "sources": {
+      "official_website": null,
+      "portfolio": "https://asosab.github.io",
+      "linkedin": "https://linkedin.com/in/alejandrososa",
+      "github": "https://github.com/asosab",
+      "facebook": "https://www.facebook.com/asosab",
+      "instagram": "https://www.instagram.com/alejandrososab",
+      "youtube": "https://www.youtube.com/@asosab",
+      "tiktok": "https://www.tiktok.com/@alejandro_sosa_b",
+      "x_twitter": "https://x.com/asosab"
+    }
+  },
+
+  "family": [
+    {
+      "name": "Siria Useche",
+      "relation": "Spouse",
+      "birth_date": "1969-08-08",
+      "birth_place": "San Cristóbal, Venezuela"
+    },
+    {
+      "name": "Julieta Sosa Useche",
+      "relation": "Daughter",
+      "birth_date": "2010-10-21",
+      "birth_place": "Caracas, Venezuela"
+    },
+    {
+      "name": "Maximiliano Sosa",
+      "relation": "Son",
+      "birth_date": "2013-10-15",
+      "birth_place": "Caracas, Venezuela"
+    }
+  ],
+
+  "professional_profile": {
+    "headline": [
+      "Product Strategist",
+      "Technology Consultant",
+      "Entrepreneur",
+      "Food Fermentation Innovator",
+      "Real Estate Advisor",
+      "Systems Architect"
+    ],
+    "core_identity": "Multidisciplinary builder with experience spanning software engineering, digital transformation, public sector systems, entrepreneurship, food science innovation, media production and real estate strategy.",
+    "positioning_keywords": [
+      "systems thinking",
+      "product innovation",
+      "cross-domain execution",
+      "technical leadership",
+      "business creation",
+      "digital transformation",
+      "process optimization",
+      "education and training",
+      "community building",
+      "online community management"
+    ]
+  },
+
+  "professional_experience": [
+    {
+      "company": "Somos 10^7",
+      "industry": "Media / Podcast",
+      "role": "Host, Interviewer and Postproduction Editor",
+      "location": "Santa Cruz, Bolivia",
+      "start_date": "2026-03",
+      "end_date": null,
+      "current": true,
+      "responsibilities": [
+        "Host and narrative direction of episodes",
+        "Deep-dive interviews with prior research",
+        "Full audio/video postproduction workflow",
+        "Content publishing and distribution"
+      ],
+      "domains": ["media", "communication", "storytelling", "editing"]
+    },
+
+    {
+      "company": "Statetty",
+      "industry": "PropTech",
+      "role": "Founder & Product Strategist",
+      "location": "Santa Cruz, Bolivia",
+      "start_date": "2024-06",
+      "end_date": null,
+      "current": true,
+      "responsibilities": [
+        "Product conception and roadmap",
+        "Technical development",
+        "Automation tools for agents",
+        "Training and workshops",
+        "Commercial strategy"
+      ],
+      "domains": ["software", "real estate", "education", "automation", "IA"]
+    },
+
+    {
+      "company": "ekvilibroLab",
+      "industry": "Food Innovation / Natural Wellness",
+      "role": "CEO & Founder",
+      "location": "Santa Cruz de la Sierra, Bolivia",
+      "start_date": null,
+      "end_date": null,
+      "current": true,
+      "description": "Artisanal fermentation and natural wellness laboratory focused on probiotic foods, conscious consumption and natural formulations.",
+      "responsibilities": [
+        "Founded and lead the business",
+        "Created complete product portfolio",
+        "R&D of fermented beverages",
+        "Formulation of natural topical products",
+        "Production and quality control",
+        "Commercial strategy",
+        "Logistics and nationwide distribution",
+        "Brand positioning and digital presence"
+      ],
+      "products": [
+        {
+          "name": "Kombucha line",
+          "category": "Fermented beverages",
+          "notes": "Multiple flavors"
+        },
+        {
+          "name": "Macurcalm",
+          "category": "Natural liniment",
+          "notes": "Muscle relief"
+        },
+        {
+          "name": "Arnicure",
+          "category": "Natural liniment",
+          "notes": "Topical wellness"
+        }
+      ],
+      "brand_values": [
+        "gut health",
+        "vegan products",
+        "made in Bolivia",
+        "zero waste mindset",
+        "eco-friendly",
+        "traditional food recovery"
+      ],
+      "digital_presence": {
+        "facebook": "https://www.facebook.com/ekvilibrolab",
+        "instagram": "https://www.instagram.com/ekvilibrolab/"
+      },
+      "domains": [
+        "food science",
+        "fermentation",
+        "natural wellness",
+        "entrepreneurship",
+        "product formulation"
+      ]
+    },
+
+    {
+      "company": "RE/MAX Central Bolivia",
+      "industry": "Real Estate",
+      "role": "Associate Real Estate Advisor",
+      "location": "Santa Cruz, Bolivia",
+      "start_date": "2024-10",
+      "end_date": "2025-10",
+      "responsibilities": [
+        "Buyer and seller advisory",
+        "Property acquisition",
+        "Market analysis",
+        "Campaign design",
+        "Negotiation management"
+      ]
+    },
+
+    {
+      "company": "Gobierno Autónomo Municipal de Santa Cruz",
+      "industry": "Government",
+      "role": "Call Center Director",
+      "location": "Santa Cruz, Bolivia",
+      "start_date": "2019-04",
+      "end_date": "2021-06",
+      "achievements": [
+        "Scaled operation from 7 to 50 operators",
+        "Implemented 24/7 support",
+        "Enabled remote operations",
+        "Managed 2000+ daily COVID-related cases"
+      ]
+    },
+    {
+      "company": "INCE (Instituto Nacional de Capacitación y Educación)",
+      "industry": "Public Digital Transformation / GovTech",
+      "role": "Technology Consultant & Software Developer",
+      "location": "Caracas, Venezuela",
+      "start_date": "2013-04",
+      "end_date": "2016-10",
+      "reporting_to": [
+        { "name": "Kenny Ossa", "title": "Gerente General de Informática", "period": "2013" },
+        { "name": "Johan Gamboa", "title": "Gerente General de Informática", "period": "2016" }
+      ],
+      "context": "Consultor tecnológico externo para la Gerencia de Informática del INCES, institución pública venezolana de formación laboral. Trabajó en ciclos de consultoría con entregas mensuales documentadas mediante informes formales, abarcando desde el diseño de arquitectura de software hasta la implementación de sistemas internos de gestión.",
+      "projects": [
+        {
+          "name": "Sistema de Pago de Tributos en Línea (SINCERA)",
+          "description": "Desarrollo del sistema de autoliquidación y pago electrónico de tributos para aportantes del INCES, con integración directa al Banco de Venezuela mediante intercambio de XML. Incluyó diseño completo de base de datos relacional, arquitectura MVC bajo el framework YII (PHP), control de versiones con Git, y múltiples ciclos de refactorización técnica.",
+          "tech_stack": ["PHP", "YII Framework", "MySQL", "PostgreSQL", "InnoDB", "XML", "jQuery", "Git", "Bootstrap", "LDAP"],
+          "notable_decisions": [
+            "Selección de YII sobre otros frameworks PHP por equilibrio entre curva de aprendizaje y andamiaje avanzado",
+            "Adopción de InnoDB como motor de base de datos por soporte de transacciones ACID e integridad referencial",
+            "Migración de MySQL a PostgreSQL en ciclos posteriores del proyecto",
+            "Implementación de control de versiones Git con sincronización rsync como práctica de resguardo individual antes de la adopción institucional del repositorio compartido"
+          ],
+          "modules_implemented": [
+            "Módulo de usuarios con autenticación por correo/clave",
+            "Control de accesos y perfiles (módulo Rights, módulo Users)",
+            "Formulario de aportantes con validación dinámica jQuery",
+            "Comunicación cliente-servidor con simulador bancario (envío/recepción XML)",
+            "Traducción completa del sistema al español",
+            "Estandarización de datos geográficos a partir del CNE"
+          ]
+        },
+        {
+          "name": "Sistema de Videovigilancia IP",
+          "description": "Implementación de solución de videovigilancia web (Motion + kmotion) sobre las cámaras IP del departamento de informática. Incluyó análisis del sistema de captura existente (tarjetas GeoVision sobre Windows) y elaboración de recomendaciones técnicas para una eventual migración a GNU/Linux.",
+          "tech_stack": ["Motion", "kmotion", "GNU/Linux", "GeoVision", "IP cameras"],
+          "outcome": "Sistema en producción con registro visual continuo. Informe técnico con recomendaciones para modernización del sistema de captura institucional."
+        },
+        {
+          "name": "Sistema de Registro Mi Casa Bien Equipada — Personal INCES",
+          "description": "Creación de base de datos y página web de registro y censo para el programa social 'Mi Casa Bien Equipada', desplegada en el subdominio institucional ws.inces.gob.ve/mcbe/.",
+          "tech_stack": ["Web development", "Database design", "Government deployment"],
+          "year": 2016
+        },
+        {
+          "name": "WebService de Integración Interinstitucional",
+          "description": "Desarrollo del WebService cliente-servidor para la recepción y procesamiento de datos provenientes de tres organismos del Estado venezolano: SENIAT, IVSS (Instituto Venezolano de los Seguros Sociales) y SAIME. Incluyó diseño de las bases de datos locales para mantener copia sincronizada de los datos recibidos.",
+          "tech_stack": ["Web services", "PostgreSQL", "Data integration", "VPN"],
+          "year": 2016,
+          "scope": "Datos del personal en nómina INCES cruzados con IVSS, SAIME y CNE para verificación de cédulas y centros de votación"
+        },
+        {
+          "name": "Apoyo a Puesta en Producción — SINSERA y RNCP",
+          "description": "Soporte técnico en la puesta en producción de los sistemas institucionales SINSERA y RNCP, incluyendo configuración de VPN bancaria y reestructuración del departamento de servidores.",
+          "year": 2016
+        },
+        {
+          "name": "Exploración de Control de Acceso Biométrico",
+          "description": "Investigación y pruebas de reconocimiento facial y lectura de código de barras con OCR sobre carnets institucionales, como prototipo de sistema de control de acceso. Proyecto detenido por priorización de otros desarrollos.",
+          "tech_stack": ["Facial recognition", "OCR", "Barcode reading", "Webcam"],
+          "status": "Prototype / Suspended"
+        }
+      ],
+      "responsibilities": [
+        "Diseño y desarrollo de aplicaciones web institucionales bajo arquitectura MVC",
+        "Dirección técnica del equipo de desarrollo para el sistema de pago de tributos",
+        "Selección y evaluación de frameworks, motores de base de datos y herramientas de desarrollo",
+        "Integración con servicios externos de organismos del Estado venezolano (SENIAT, IVSS, SAIME, CNE, Banco de Venezuela)",
+        "Implementación y administración de sistemas de videovigilancia IP",
+        "Configuración de servidor Git institucional y definición de flujos de trabajo colaborativo",
+        "Entrega de informes técnicos mensuales con detalle de avances, decisiones y recomendaciones",
+        "Presentaciones internas de herramientas tecnológicas (SVG/InkScape para presentaciones, modelado BPMN)"
+      ],
+      "domains": [
+        "software development",
+        "web applications",
+        "government systems",
+        "database architecture",
+        "systems integration",
+        "version control",
+        "surveillance systems",
+        "public sector digital transformation"
+      ],
+      "tech_stack_summary": [
+        "PHP", "YII Framework", "MySQL", "PostgreSQL", "InnoDB",
+        "XML", "jQuery", "Bootstrap", "Git", "LDAP",
+        "Motion", "kmotion", "GNU/Linux", "Web services"
+      ]
+    },
+
+    {
+      "company": "FUNDABIT",
+      "industry": "GovTech / Ministerio de Educación (MPPE)",
+      "role": "Technology Solutions Consultant & Lead Developer",
+      "location": "Caracas, Venezuela",
+      "start_date": "2011-04",
+      "end_date": "2012-07",
+      "context": "Consultor tecnológico y desarrollador líder para FUNDABIT (Fundación Bolivariana de Informática y Telemática), adscrita al Ministerio del Poder Popular para la Educación (MPPE). Responsable del diseño, desarrollo y coordinación técnica del sistema REÚNE, un proyecto nacional de registro digital de planteles, personal docente y estudiantes del sistema educativo venezolano. Las entregas se documentaron mediante informes técnicos semanales dirigidos a la dirección del proyecto.",
+      "projects": [
+        {
+          "name": "REÚNE — Registro Único Nacional del Sistema Educativo",
+          "description": "Sistema nacional de registro en red local para el levantamiento exhaustivo de datos de planteles públicos y privados, personal docente/administrativo/obrero y estudiantes. Diseñado para operar offline en laptops desplegadas en cada plantel, con sincronización posterior a servidores centrales CANTV. Desarrollado en PHP sobre el framework CodeIgniter con base de datos PostgreSQL y servidor Apache. Implementado como liveCD para despliegue masivo en laptops. El sistema fue concebido como base de futuros servicios educativos digitales: publicación de horarios y pensum, seguimiento de notas, comunicación plantel-zona educativa y verificación cruzada contra la nómina del MPPE.",
+          "objectives": [
+            "Registro verificable y exhaustivo de todos los centros educativos del país, sus trabajadores y estudiantes",
+            "Proveer transparencia mediante trazabilidad de accesos: quién, cuándo y desde dónde se modifica cada dato",
+            "Servir de base para servicios educativos digitales posteriores (notas, horarios, comunicación institucional)",
+            "Contrastar y normalizar los datos de nómina del Ministerio de Educación",
+            "Verificación de identidad de personal mediante captahuellas CNE y fotografía"
+          ],
+          "scale": {
+            "db_tables": 112,
+            "form_fields_plantel": 471,
+            "form_fields_personal": 82,
+            "form_fields_estudiantes": 213,
+            "pilot_schools": 3,
+            "pilot_records_total": 2446,
+            "laptops_deployed_pilot": 39,
+            "sede_records_registered": "2076+ personas registradas en sede MPPE",
+            "zona_educativa_dc": "429 personas registradas (Zona Educativa Distrito Capital)",
+            "national_deployment": "Censos realizados en planteles del estado Zulia y estado Mérida, además de los pilotos en Caracas y La Guaira"
+          },
+          "timeline": {
+            "development_start": "2011-06-13",
+            "pilot_test": "2011-07-25 al 2011-07-29",
+            "pilot_schools": [
+              "El Libertador (Chacao, Caracas)",
+              "Gran Colombia (Santa Rosalía, Caracas)",
+              "República de Panamá (La Guaira)"
+            ],
+            "sede_registration": "2011-08-30 al 2011-09-22",
+            "zona_educativa_dc_registration": "2011-09 en adelante",
+            "national_states": ["Distrito Capital", "La Guaira", "Zulia", "Mérida"]
+          },
+          "tech_stack": [
+            "PHP", "CodeIgniter (framework base adaptado)", "PostgreSQL", "Apache",
+            "JavaScript", "HTML", "CSS", "LAN wireless",
+            "Informix (integración nómina)", "COBOL (integración nómina pasivos)",
+            "Windows", "Linux", "liveCD deployment", "CANTV servers",
+            "Captahuellas CNE", "Webcam (foto de personal y estudiantes)"
+          ],
+          "architecture": {
+            "pattern": "Offline-first con sincronización posterior",
+            "client": "Formulario web local en laptop (sin dependencia de conectividad en campo)",
+            "sync": "Backup comprimido generado por script de línea de comandos, enviado a servidor CANTV al final de cada jornada o plantel",
+            "server": "Servidores CANTV como repositorio central de consolidación",
+            "deployment": "liveCD clonado en todas las laptops para garantizar entorno idéntico en cada equipo de campo",
+            "db_design": "Base de datos receptora del formulario separada de la base de datos final, para evitar restricciones NOT NULL que obligarían a datos falsos"
+          },
+          "modules_implemented": [
+            "Formulario de plantel (471 campos) con validación dinámica y coordenadas geográficas",
+            "Formulario de personal (82 campos) con captahuellas CNE y fotografía",
+            "Formulario de estudiantes (213 campos) con fotografía",
+            "Sistema de acceso y seguridad con registro de usuarios (módulo preexistente adaptado)",
+            "Carga de tablas de apoyo para selección dinámica desde listas desplegables",
+            "Script de línea de comandos para backup, compresión y envío al servidor remoto",
+            "Red LAN centralizada para sincronización entre laptops por plantel",
+            "Módulo de incidencias y reporte de errores de transcripción",
+            "Sistema de consolidación de datos multi-plantel",
+            "Módulo de reportes para técnicos"
+          ],
+          "development_process": {
+            "team_size": 5,
+            "team_structure": "3 desarrolladores de formularios + 1 modelado y carga de BD + 1 coordinador técnico (Alejandro)",
+            "methodology": "Sistema experto con participación transversal en modelado; trabajo colaborativo por encima del mérito individual",
+            "location": "FUNDABIT, Piso 3, Ministerio de Educación, Caracas",
+            "reporting": "Informes técnicos semanales a dirección del proyecto"
+          },
+          "field_implementation": {
+            "deployment_model": "Técnico + personal CNE (captahuellas) + personal de seguridad por plantel",
+            "data_sync_model": "Transmisión diaria en CBit o punto CANTV zonal; copia en CD como respaldo físico",
+            "double_verification": "Datos enviados vía red + CD llevado al MPPE para contraste",
+            "transcription_times": {
+              "plantel": "20 min",
+              "estudiante_con_expediente": "8 min",
+              "personal_docente": "2 min",
+              "personal_administrativo": "2 min",
+              "personal_obrero": "1.5 min",
+              "madre_procesadora": "1.5 min"
+            },
+            "pilot_results": {
+              "total_records": 2446,
+              "breakdown": {
+                "republica_de_panama": "159 personal + 995 estudiantes = 1154",
+                "gran_colombia": "490 personal",
+                "el_libertador": "264 personal + 538 estudiantes = 802"
+              }
+            }
+          },
+          "notable_decisions": [
+            "Elección de PostgreSQL como gestor de datos por robustez y por ser estándar en el MPPE, facilitando integración directa con SINACOE y nómina",
+            "Elección de PHP por su orientación a interfaces web con BD, permitiendo acceso desde cualquier dispositivo y SO",
+            "Adopción de CodeIgniter como framework base (código abierto adaptado) para acelerar el desarrollo",
+            "Arquitectura offline-first para operar sin dependencia de conectividad en planteles",
+            "Portado de Linux a Windows dos días antes de la prueba piloto para habilitar integración con captahuellas CNE",
+            "Centralización de BD en una laptop con antena wireless por plantel para eliminar duplicación de registros",
+            "Recomendación de usar solo equipos del proyecto (no infraestructura CBit) para reducir variables técnicas en campo",
+            "Separación de BD receptora del formulario de BD final para evitar datos falsos por campos obligatorios sin información disponible",
+            "Diseño del código único de plantel georreferenciado a partir de estado, municipio, parroquia, tipo y nivel educativo",
+            "Propuesta de dividir formulario de planteles en datos administrativos y planta física tras reunión con FEDE"
+          ],
+          "interinstitutional_coordination": [
+            "CNE (tablas geopolíticas, captahuellas, 30 laptops aportadas para el piloto)",
+            "CANTV (servidores de consolidación, tablas geográficas estandarizadas, metro ethernet)",
+            "SENIFA (integración de simoncitos al registro)",
+            "FEDE (infraestructura física de planteles)",
+            "Misión Vivienda (metodología de campo y scripts de sincronización)",
+            "Viceministerio de Telecomunicaciones",
+            "Dirección de Educación Especial del MPPE",
+            "Dirección de Estadísticas del MPPE",
+            "CENAMEC",
+            "Departamento de Nómina del MPPE (personal fijo, contratado y pasivo)"
+          ]
+        },
+        {
+          "name": "Levantamiento de seguridad de bases de datos de nómina del MPPE",
+          "description": "Análisis y reporte técnico sobre el estado de las bases de datos de nómina del Ministerio de Educación (personal fijo y contratado en Informix, pasivos en COBOL/PostgreSQL), ante riesgo de sabotaje institucional. Incluyó recomendaciones de backup mediante clonación de discos, resguardo externo en CANTV y migración urgente a PostgreSQL.",
+          "year": "2011-06",
+          "outcome": "Informe técnico con recomendaciones de resguardo y plan de normalización de bases de datos hacia PostgreSQL"
+        }
+      ],
+      "responsibilities": [
+        "Liderazgo técnico y coordinación del equipo de desarrollo del sistema REÚNE (5 analistas)",
+        "Diseño de arquitectura de base de datos relacional (112 tablas) y formularios web",
+        "Coordinación interinstitucional con CNE, CANTV, SENIFA, FEDE, Misión Vivienda y Viceministerio de Telecomunicaciones",
+        "Supervisión de prueba piloto en tres planteles de Caracas y La Guaira (39 laptops, 2446 registros)",
+        "Supervisión del registro presencial en sede central del MPPE (2076+ personas)",
+        "Coordinación y supervisión de censos en planteles de los estados Zulia y Mérida",
+        "Diseño de metodología de campo para registro masivo en planteles a escala nacional",
+        "Entregas semanales mediante informes técnicos documentados a dirección del proyecto",
+        "Análisis de seguridad de bases de datos de nómina institucional"
+      ],
+      "domains": [
+        "software development",
+        "government systems",
+        "database architecture",
+        "field data collection",
+        "systems integration",
+        "education sector",
+        "public sector digital transformation",
+        "technical leadership",
+        "offline-first systems",
+        "national census systems",
+        "identity verification systems"
+      ],
+      "tech_stack_summary": [
+        "PHP", "CodeIgniter", "PostgreSQL", "Apache", "JavaScript", "HTML", "CSS",
+        "LAN wireless", "Informix (integration)", "COBOL (integration)",
+        "Windows", "Linux", "liveCD", "CANTV servers"
+      ]
+    },
+
+    {
+      "company": "Smartmatic",
+      "industry": "Technology",
+      "role": "Usability Engineer",
+      "location": "Caracas, Venezuela",
+      "start_date": "2006-05",
+      "end_date": "2007-07",
+      "description": "Worked as Usability Engineer on a non-electoral project developed by Smartmatic focused on audience measurement systems, including rating, share and related broadcast statistics. This engagement is unrelated to the company's voting or electoral systems.",
+      "domains": ["usability", "audience measurement", "media analytics", "UX"]
+    },
+
+    {
+      "company": "CONAVI",
+      "industry": "Housing / Government",
+      "role": "Technology Consultant",
+      "location": "Caracas, Venezuela",
+      "start_date": "2000-07",
+      "end_date": "2002-08"
+    },
+
+    {
+      "company": "C-COM",
+      "industry": "Telecommunications",
+      "role": "Senior Help Desk & Software Developer",
+      "location": "Caracas, Venezuela",
+      "start_date": "1996",
+      "end_date": "1998"
+    }
+  ],
+
+  "skill_matrix": {
+    "technology": [
+      "Backend development",
+      "Microservices architecture",
+      "Web scraping",
+      "Relational databases",
+      "NoSQL",
+      "AI-assisted development",
+      "Systems implementation",
+      "Digital transformation"
+    ],
+    "business": [
+      "Product strategy",
+      "Entrepreneurship",
+      "Commercial strategy",
+      "Operations management",
+      "Training design",
+      "Sales enablement"
+    ],
+    "food_science": [
+      "Controlled fermentation",
+      "Kombucha production",
+      "Natural product formulation",
+      "Quality control",
+      "Functional foods"
+    ],
+    "real_estate": [
+      "Property prospecting",
+      "Negotiation",
+      "Market analysis",
+      "Property marketing"
+    ],
+    "creative": [
+      "Podcast production",
+      "Interviewing",
+      "Storytelling",
+      "Content editing"
+    ],
+    "community_management": [
+      "Online community moderation",
+      "Community curation",
+      "Behavioral policy enforcement",
+      "Volunteer team coordination",
+      "Community growth management"
+    ]
+  },
+
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Professional"
+    }
+  ],
+
+  "interests": [
+    "Entrepreneurship",
+    "Food experimentation",
+    "Photography",
+    "Technology exploration",
+    "Digital inclusion",
+    "Education",
+    "Community building",
+    "Natural wellness",
+    "Archery",
+    "Precision sports",
+    "Outdoor development"
+  ],
+
+  "career_narratives": {
+    "technology_track": "Builder of digital systems and automation platforms with public and private sector experience.",
+    "entrepreneurship_track": "Founder of multidisciplinary ventures spanning proptech, food innovation and media.",
+    "wellness_track": "Developer of natural fermentation and topical wellness products rooted in applied experimentation.",
+    "education_track": "Trainer and workshop facilitator focused on digital capability building.",
+    "community_track": "Long-track record of building, leading and curating digital communities with high standards of conduct and sustained engagement."
+  },
+
+  "notable_cross_domain_strengths": [
+    "Ability to transfer systems thinking across unrelated industries",
+    "Rapid learning across technical and scientific domains",
+    "Full-cycle product creation from concept to commercialization",
+    "Operational execution with strategic vision",
+    "Community leadership and long-term stewardship of digital spaces"
+  ],
+
+  "future_enrichment_fields": {
+    "education": [],
+    "quantified_achievements": [],
+    "major_failures_and_learnings": [],
+    "personal_projects": [],
+    "mentors_and_influences": [],
+    "philosophy_and_values": [],
+    "publications": [],
+    "speaking_engagements": []
+  },
+
+  "community_leadership": [
+    {
+      "organization": "¿Alguien Sabe Venezuela?",
+      "platform": "Facebook Group",
+      "role": "Founder & Administrator",
+      "location": "Digital / Diaspora venezolana global",
+      "start_date": "2015",
+      "end_date": "2023",
+      "current": false,
+      "description": "Comunidad digital de apoyo mutuo para venezolanos en el mundo. El grupo canalizaba preguntas, necesidades y recursos entre miembros de la diáspora venezolana global. Mantenía un espíritu de colaboración genuina: quienes conocían la respuesta a una necesidad respondían o ayudaban a orientar al que preguntaba.",
+      "governance": {
+        "max_members_enforced": 20000,
+        "target_reached": "100000+",
+        "rationale": "Se limitó intencionalmente el crecimiento para preservar la calidad del intercambio y el control de conducta.",
+        "admin_team_size": 5,
+        "moderation_approach": "Control estricto de comportamiento. Exclusión inmediata ante irrespeto o mal uso del espacio."
+      },
+      "closure": {
+        "cause": "Eliminación automática por bot de Facebook",
+        "impact": "Pérdida de toda la historia, incluyendo cientos de miles de conversaciones.",
+        "succession": "La responsabilidad fue transferida voluntariamente a otras personas que fundaron una nueva versión con el mismo espíritu pero diferente gestión. Ninguno de los administradores originales continúa."
+      },
+      "competencies_developed": [
+        "online community management",
+        "moderation and curation",
+        "behavioral policy design",
+        "team coordination",
+        "controlled community growth",
+        "diaspora network facilitation",
+        "crisis and continuity planning"
+      ],
+      "domains": ["community", "social media", "diaspora", "Venezuela", "leadership"]
+    },
+    {
+      "organization": "Asamblea de Ciclismo Urbano de Caracas (ACUC)",
+      "platform": "Urban Cycling Civic Assembly",
+      "role": "Active Member & Technical Contributor",
+      "location": "Caracas, Venezuela",
+      "start_date": "2015",
+      "end_date": "2015",
+      "current": false,
+      "description": "Participación activa en la ACUC, espacio de gobernanza horizontal del movimiento ciclista urbano de Caracas que reunía colectivos, activistas independientes e instituciones para tomar decisiones sobre rodadas masivas, infraestructura ciclista, normativa vial y política pública. La asamblea operaba mediante consenso presencial con comisiones temáticas de comunicación, diseño, rodadas masivas, seguimiento e infraestructura.",
+      "contributions": [
+        {
+          "type": "Redacción de minutas",
+          "description": "Coredactor de la minuta de la Reunión N°20 (enero 2015), la de mayor asistencia del período documentado, con más de 20 participantes y presencia de representantes del Concejo Municipal de Libertador y la Cruz Roja Venezolana."
+        },
+        {
+          "type": "Gestión tecnológica e institucional",
+          "description": "Encargado oficial de gestionar ante el INCES (Nueva Granada) el espacio físico, los equipos y la logística para el 1er Taller ACUC de manejo de blog y calendario. Se comprometió ante la institución a garantizar el buen uso del espacio y actuar como anfitrión."
+        },
+        {
+          "type": "Propuesta de sistema web ciclista",
+          "description": "En la Reunión N°22 (marzo 2015), la asamblea aprobó que Alejandro Sosa gestionara en nombre de la ACUC el desarrollo de un sistema de registro de bicicletas (seriales de cuadros, alertas de robo), incluyendo dominio .org y servidor. Proyecto colaborativo con Dimas Pineda y Manuel Davoín como producto oficial de la ACUC."
+        },
+        {
+          "type": "Gestión de infraestructura comunitaria",
+          "description": "Asignado como responsable de contactar líderes comunales en el Paseo Anauco para gestionar la BiciEscuela y actividades derivadas (talleres, cursos, proyecciones, conciertos, ferias), en coordinación con la Cruz Roja Venezolana."
+        }
+      ],
+      "context": {
+        "assembly_scope": "La ACUC articulaba más de 15 colectivos ciclistas de Caracas (Masa Crítica, MRCU, BiciAventuras, Ser Urbano, CicloGuerrilla, BiciOeste, Bicimamis, entre otros) y mantenía relaciones institucionales con el IMDERE, alcaldías, PNB Tránsito e INTT.",
+        "meeting_format": "Reuniones quincenales presenciales en el Teatro Teresa Carreño, con minuta documentada, redacción rotativa y sistema de comisiones permanentes.",
+        "evidence": "Aparece nombrado como asistente y/o responsable en minutas de las Asambleas XX, XXII, XXIV y la Asamblea diferida N°27."
+      },
+      "competencies_developed": [
+        "civic assembly participation",
+        "horizontal governance",
+        "institutional liaison",
+        "technical project proposal",
+        "community infrastructure management",
+        "minute drafting and documentation"
+      ],
+      "domains": ["cycling", "urban mobility", "civic activism", "Venezuela", "Caracas", "governance"]
+    },
+    {
+      "organization": "Masa Crítica Caracas",
+      "platform": "Urban Movement / Cycling Community",
+      "role": "Active Participant, Videographer & Cultural Event Collaborator",
+      "location": "Caracas, Venezuela",
+      "start_date": "2012",
+      "end_date": "2015",
+      "current": false,
+      "description": "Participación activa en la comunidad ciclista Masa Crítica Caracas, movimiento global de ciclistas urbanos que recupera el espacio público mediante rodadas colectivas semanales y eventos socioculturales. La agrupación promueve el ciclismo urbano como forma de movilidad, comunidad y expresión.",
+      "activities": [
+        {
+          "type": "Rodada semanal",
+          "description": "Participación regular en el evento Masa Crítica, rodada colectiva semanal por las calles de Caracas."
+        },
+        {
+          "type": "Marcha Ciclonudista Mundial 2015",
+          "description": "Participación en la edición caraqueña de la World Naked Bike Ride (WNBR) 2015, evento global de protesta pacífica y celebración del ciclismo y el cuerpo humano. Rol dual: ciclista participante y videógrafo de la jornada.",
+          "url": "https://youtu.be/IX7E2Xumwb4",
+          "year": 2015
+        }
+      ],
+      "media_produced": [
+        {
+          "format": "Video",
+          "description": "Registro videográfico de eventos de la comunidad, incluyendo la Marcha Ciclonudista Mundial 2015.",
+          "url": "https://youtu.be/rtIosg0pZv0"
+        }
+      ],
+      "competencies_developed": [
+        "urban cycling advocacy",
+        "community participation",
+        "event documentation",
+        "videography",
+        "social and cultural event organization",
+        "public space activism"
+      ],
+      "domains": ["cycling", "urban mobility", "community", "activism", "videography", "Venezuela"]
+    },
+    {
+      "organization": "Al Trabajo en Bici",
+      "platform": "Urban Cycling Initiative (subproyecto de Masa Crítica Caracas)",
+      "role": "Promoter & Advocate",
+      "location": "Caracas, Venezuela",
+      "start_date": "2013",
+      "end_date": "2015",
+      "current": false,
+      "description": "Iniciativa preexistente surgida del ecosistema de Masa Crítica Caracas orientada a facilitar el uso de la bicicleta como medio de transporte cotidiano al trabajo. La dinámica consistía en coordinar horarios y rutas entre participantes para que pudieran ir y regresar juntos desde y hacia sus empleos, reduciendo la barrera psicológica del ciclismo urbano solitario y fomentando el hábito mediante el acompañamiento colectivo. Alejandro participó como promotor e impulsor activo de la iniciativa, contribuyendo a su difusión y dinamización. La organización continúa activa y se ha replicado en múltiples ciudades del mundo.",
+      "participation": {
+        "approximate_regular_participants": 20,
+        "active_routes": 5,
+        "note": "Cifras correspondientes al período de participación activa en Caracas (2013–2015)"
+      },
+      "status": {
+        "active": true,
+        "scope": "global",
+        "note": "La iniciativa persiste y se ha replicado en múltiples ciudades del mundo"
+      },
+      "media_produced": [
+        {
+          "format": "Video",
+          "description": "Registro del proyecto y sus dinámicas de coordinación y rodada.",
+          "url": "https://youtu.be/YheeMq5fBCQ"
+        }
+      ],
+      "competencies_developed": [
+        "grassroots initiative design",
+        "community coordination",
+        "urban mobility promotion",
+        "behavioral change facilitation",
+        "logistics and route planning",
+        "videography"
+      ],
+      "domains": ["cycling", "urban mobility", "community", "behavior change", "Venezuela"]
+    },
+    {
+      "organization": "Iniciativas Legislativas de Movilidad Ciclista",
+      "platform": "Civic Policy / Legislative Drafting",
+      "role": "Co-author & Reviewer — Cycling Policy Documents",
+      "locations": [
+        "Santa Cruz de la Sierra, Bolivia",
+        "Caracas, Venezuela"
+      ],
+      "current": false,
+      "description": "Participación en la redacción y revisión de instrumentos normativos orientados a la institucionalización del bicitransporte urbano en dos contextos municipales distintos.",
+      "legislative_contributions": [
+        {
+          "document": "Anteproyecto de Ley Municipal del Bicitransporte",
+          "jurisdiction": "Santa Cruz de la Sierra, Bolivia",
+          "date": "2021-05",
+          "role": "Co-redactor y revisor del borrador",
+          "driven_by": "Carlos Bellott",
+          "description": "Participación en la creación y revisión del borrador del anteproyecto de ley municipal orientado a regular e institucionalizar el bicitransporte en el municipio de Santa Cruz de la Sierra.",
+          "type": "Municipal Bill Draft"
+        },
+        {
+          "document": "Revisión del Proyecto de Ordenanza para la Circulación de Bicicletas en el Ámbito del Municipio Bolivariano Libertador del Distrito Capital",
+          "jurisdiction": "Caracas, Venezuela",
+          "date": "2016",
+          "role": "Redactor y colaborador en la revisión del proyecto",
+          "channel": "Asamblea de Ciclismo Urbano de Caracas (ACUC)",
+          "description": "Participación desde la ACUC en la redacción y desarrollo de la revisión del proyecto de ordenanza municipal para regular la circulación de bicicletas en el Municipio Bolivariano Libertador, Distrito Capital.",
+          "type": "Municipal Ordinance Review"
+        }
+      ],
+      "competencies_developed": [
+        "legislative drafting",
+        "urban mobility policy",
+        "civic advocacy",
+        "normative review",
+        "inter-institutional coordination",
+        "public policy writing"
+      ],
+      "domains": ["cycling", "urban mobility", "public policy", "legislation", "civic activism", "Venezuela", "Bolivia"]
+    },
+    {
+      "organization": "ARBAT",
+      "role": "Community Activity Promoter",
+      "start_date": "2025-11",
+      "current": true,
+      "responsibilities": [
+        "Designs and promotes Friday recreational archery events",
+        "Creates precision-based competitive games",
+        "Strengthens participation and community engagement"
+      ]
+    }
+  ],
+  "sports_and_hobbies_history": [
+    {
+      "activity": "Urban Cycling",
+      "location": ["Caracas, Venezuela", "Santa Cruz de la Sierra, Bolivia"],
+      "start_date": "1990",
+      "end_date": null,
+      "current": true,
+      "details": [
+        "Urban cyclist with over 30 years of experience, progressively adopting the bicycle as the primary mode of urban transportation",
+        "Integrated cycling into daily routines such as grocery shopping, commuting to work and managing family logistics",
+        "Transported children using adapted front and rear child seats for several years",
+        "Promoted early cycling autonomy in daughter, who began commuting to school independently from age 9 while being accompanied",
+        "Sustained practice across two cities: Caracas and Santa Cruz de la Sierra"
+      ],
+      "competencies_developed": [
+        "sustainability mindset",
+        "discipline",
+        "urban navigation",
+        "logistics planning",
+        "family coordination",
+        "physical endurance"
+      ]
+    },
+    {
+      "activity": "Recurve Archery",
+      "institution": "ARBAT",
+      "location": "Roca y Coronado #1800, Santa Cruz de la Sierra, Bolivia",
+      "start_date": "2025-11",
+      "end_date": null,
+      "current": true,
+      "details": [
+        "Active recurve archery practitioner",
+        "Promotes weekly recreational events and precision-based competitions",
+        "Facilitates Friday gamified target challenges",
+        "Encourages community participation through skill-building dynamics"
+      ],
+      "competencies_developed": [
+        "focus",
+        "precision",
+        "discipline",
+        "event facilitation",
+        "community engagement"
+      ]
+    },
+    {
+      "activity": "Competitive Swimming",
+      "period": "Childhood",
+      "recognition": "Standout swimmer during formative years",
+      "competencies_developed": [
+        "discipline",
+        "performance consistency",
+        "physical endurance"
+      ]
+    },
+    {
+      "activity": "Scouting",
+      "organization": "Grupo Las Palmas #3",
+      "location": "Caracas, Venezuela",
+      "start_date": "1985",
+      "end_date": "1987",
+      "details": [
+        "Participated in youth scouting activities",
+        "Outdoor education and collaborative challenges",
+        "Early development of leadership and self-reliance"
+      ],
+      "competencies_developed": [
+        "teamwork",
+        "adaptability",
+        "leadership",
+        "resourcefulness"
+      ]
+    }
+  ],
+
+  "certifications": [
+    {
+      "title": "Atención al Vecino",
+      "issuer": "Gobierno Autónomo Municipal de Santa Cruz de la Sierra",
+      "location": "Santa Cruz de la Sierra, Bolivia",
+      "date": "2019-12-27",
+      "duration_hours": 3,
+      "credential_type": "Professional Training Certificate",
+      "skills_acquired": [
+        "Citizen service",
+        "Public attention protocols",
+        "Conflict resolution",
+        "Service communication",
+        "Public sector responsiveness"
+      ],
+      "relevance": ["public service", "customer experience", "communication", "operations"]
+    },
+    {
+      "title": "BOXES ONLINE of Astronomy, Astrobiology, Astrophysics and Cultural Astronomy NASE-IAU",
+      "issuer": "Network for Astronomy School Education (NASE) / International Astronomical Union",
+      "location": "Venezuela",
+      "date": "2021-08-27",
+      "duration_hours": 40,
+      "credential_type": "International Academic Certification",
+      "skills_acquired": [
+        "Astronomy fundamentals",
+        "Astrobiology concepts",
+        "Scientific reasoning",
+        "Astrophysics foundations",
+        "Analytical thinking"
+      ],
+      "relevance": ["scientific literacy", "systems thinking", "analytical reasoning", "continuous learning"]
+    },
+    {
+      "title": "13ª Edición Incubadora CON VALORES",
+      "issuer": "Incubadora CON VALORES",
+      "location": "Valencia, España",
+      "date": "2024-09",
+      "duration_months": 5,
+      "training_hours": 54,
+      "mentoring_hours": 24,
+      "field_validation_hours": 40,
+      "credential_type": "Entrepreneurship Acceleration Program",
+      "skills_acquired": [
+        "Business strategy",
+        "Business model design",
+        "Marketing",
+        "Social media strategy",
+        "Elevator pitch",
+        "Agile methodologies",
+        "Financial/legal business foundations",
+        "Customer validation"
+      ],
+      "relevance": ["entrepreneurship", "venture building", "product validation", "commercial strategy"]
+    }
+  ],
+
+  "press_and_mentions": {
+    "podcast_appearances": [
+      {
+        "title": "Una Línea al Día — Capítulo 1",
+        "podcast": "Una Línea al Día",
+        "episode_number": 1,
+        "role": [
+          "Host",
+          "Scriptwriter",
+          "Concept Creator",
+          "Episode Developer",
+          "Narrator"
+        ],
+        "description": "Episodio inaugural del podcast Una Línea al Día, un microformato literario creado y desarrollado por Alejandro Sosa Briceño enfocado en recorrer las grandes obras de la humanidad una línea a la vez. En este capítulo se explora La Guerra y La Paz de León Tolstói, contextualizando la relevancia histórica y literaria de la obra antes de escuchar una breve línea relacionada con el poder imperial y la complejidad política de la Rusia zarista. El episodio combina divulgación cultural, narrativa sonora, reflexión literaria en formato breve, sugestivo y absurdo.",
+        "featured_work": {
+          "title": "La Guerra y La Paz",
+          "author": "León Tolstói",
+          "publication_year": 1869,
+          "excerpt_reference": {
+            "book": "Libro III",
+            "part": "Segunda Parte",
+            "chapter": "Capítulo VI",
+            "line": 86
+          }
+        },
+        "audio_direction": {
+          "opening_music": "Moanin — Charles Mingus",
+          "secondary_music": "Cuadros de una Exposición — Modest Mussorgsky",
+          "closing_music": "Payasos — Dimitri Kabalevski"
+        },
+        "language": "es",
+        "format": [
+          "literary commentary",
+          "audio storytelling",
+          "micro podcast",
+          "cultural dissemination"
+        ],
+        "themes": [
+          "literature",
+          "russian classics",
+          "politics",
+          "society",
+          "historical narrative",
+          "reflection",
+          "storytelling"
+        ],
+        "distribution_platforms": [
+          {
+            "platform": "Audio.com",
+            "url": "https://audio.com/alejandro-sosa-briceno/collections/una-linea-al-dia"
+          }
+        ],
+        "credits": {
+          "voice_and_text": "Alejandro Sosa",
+          "ai_assistance": "ChatGPT"
+        },
+        "status": "published",
+        "release_year": 2026
+      }
+    ],
+    "articles": [],
+    "interviews": [],
+    "awards": [],
+    "community_mentions": []
+  }
+}
