@@ -8,7 +8,7 @@ description: "Cómo usar inteligencia artificial para construir un archivo vivo 
 tags: [inteligencia artificial, curriculum, json, notebooklm, adobe podcast, jekyll, ats, datos abiertos]
 havecharts: false
 published: true
-image: mente_historia_ia.png
+image: mente_historia_ia.jpg
 ---
 
 ¿Cuántas cosas has hecho en tu vida profesional que ya no recuerdas?
@@ -195,7 +195,7 @@ Si querés ver el resultado de este proceso aplicado a una trayectoria real, ac�
 
 Este artículo no se escribió sentado frente a un teclado. Es el resultado de un flujo de trabajo que usa exactamente las mismas herramientas que describe.
 
-<img class="ri" alt="Diagrama del flujo de trabajo: del audio al post con IA" src="{{ '/imagen/del_audio_al_md.png' | prepend: site.url }}">
+<img class="ri" alt="Diagrama del flujo de trabajo: del audio al post con IA" src="{{ '/imagen/del_audio_al_md.jpg' | prepend: site.url }}">
 
 El recorrido fue este: grabé un audio con el celular mientras caminaba por la ciudad, con ruido de tráfico y conversaciones de fondo incluidas. Lo limpié con [Adobe Podcast](https://podcast.adobe.com), que usa IA para separar la voz del ruido ambiente y reconstruir el canal de audio principal. El resultado lo subí a [NotebookLM](https://notebooklm.google.com), que es la única IA gratuita que acepta audios de cualquier duración y genera una transcripción completa. Con esa transcripción como base, le pedí a Claude que organizara el contenido en una entrada para este blog, respetando la estructura y el estilo del sitio.
 
