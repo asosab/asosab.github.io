@@ -17,13 +17,6 @@
         </svg>
       </a>
       <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-            {% if page.title != 'Etiquetas' %}
-              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
         <a href="https://linkedin.com/in/{{site.author.linkedin}}">CV</a>
       </div>
     </nav>
