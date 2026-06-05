@@ -204,7 +204,7 @@ El recorrido fue este: grabé un audio con el celular mientras caminaba por la c
 El audio original, el texto sucio, la transcripción y el prompt viajaron por cinco herramientas distintas antes de convertirse en lo que leíste. Todo sin escribir una sola palabra desde cero y en escasos 30 minutos
 
 [linkedin]: https://linkedin.com/in/alejandrososa
-[cv_general]: assets/docs/CV_ASB.pdf
-[cv_aceleradora]: assets//docs/CV_asb_aceleradora.pdf
-[json_cv]: assets/docs/asb.json
-[audio_cv]: assets/audio/asb_una_mirada_con_ia.mp3
+[cv_general]: https://asosab.github.io/assets/docs/CV_ASB.pdf
+[cv_aceleradora]: https://asosab.github.io/assets//docs/CV_asb_aceleradora.pdf
+[json_cv]: https://asosab.github.io/assets/docs/asb.json
+[audio_cv]: https://asosab.github.io/assets/audio/asb_una_mirada_con_ia.mp3
