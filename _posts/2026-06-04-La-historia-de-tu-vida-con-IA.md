@@ -26,6 +26,8 @@ Un currículum tiene fama de ser ese documento que mandas cuando buscas trabajo 
 
 Con IA, ese archivo puede ser tan detallado que incluya no solo tus trabajos, sino también tus proyectos personales, tus estudios, tus intereses, los deportes que practicas, organizaciones en las que participaste. Todo lo que forma quién eres.
 
+Pero hay algo que no esperaba cuando empecé: la IA abre la puerta a un autoconocimiento del que no era consciente. Al conectar todos los pasos de tu historia, le da relevancia a cosas que hoy quizás ves pequeñas pero que forman parte de cómo te has construido como persona y como profesional. Yo hoy puedo ver con claridad cuánto aprendí de proyectos que en su momento me dejaron enojado, frustrado o con la sensación de haber perdido el tiempo. La IA no juzga, no descarta y no olvida. Conecta los puntos y te muestra un camino que tú mismo recorriste sin darte cuenta de su coherencia.
+
 ---
 
 ## El JSON: el corazón del sistema
@@ -107,7 +109,7 @@ El mismo archivo sirve para crear propuestas comerciales. Le describes el proyec
 
 ### Bio para podcasts, landing pages o perfiles
 
-En lugar de escribir sobre tú mismo desde cero, le pides al proyecto que ya tiene tu JSON que te genere un párrafo de presentación orientado al contexto específico. Para un podcast, para un perfil de inversor, para una página de equipo.
+En lugar de escribir sobre ti mismo desde cero, le pides al proyecto que ya tiene tu JSON que te genere un párrafo de presentación orientado al contexto específico. Para un podcast, para un perfil de inversor, para una página de equipo.
 
 ### Un bot en WhatsApp que sabe todo de ti
 
@@ -204,7 +206,7 @@ El recorrido fue este: grabé un audio con el celular mientras caminaba por la c
 El audio original, el texto sucio, la transcripción y el prompt viajaron por cinco herramientas distintas antes de convertirse en lo que leíste. Todo sin escribir una sola palabra desde cero y en escasos 30 minutos
 
 [linkedin]: https://linkedin.com/in/alejandrososa
-[cv_general]: https://asosab.github.io/assets/docs/CV_ASB.pdf
-[cv_aceleradora]: https://asosab.github.io/assets//docs/CV_asb_aceleradora.pdf
-[json_cv]: https://asosab.github.io/assets/docs/asb.json
-[audio_cv]: https://asosab.github.io/assets/audio/asb_una_mirada_con_ia.mp3
+[cv_general]: assets/docs/CV_ASB.pdf
+[cv_aceleradora]: assets//docs/CV_asb_aceleradora.pdf
+[json_cv]: assets/docs/asb.json
+[audio_cv]: assets/audio/asb_una_mirada_con_ia.mp3
