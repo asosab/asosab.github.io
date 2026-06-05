@@ -22,9 +22,9 @@ A mí me pasa. Me olvido por completo de informes que entregué, de proyectos qu
 
 ## ¿Por qué un currículum para uno mismo?
 
-Un currículum tiene fama de ser ese documento que mandas cuando buscas trabajo y que luego olvidás en un cajón. Acá propongo pensarlo diferente: un currículum completo es un archivo personal. Es para que tú sepas de dónde vienes, por dónde pasaste y qué acumulaste en el camino.
+Un currículum tiene fama de ser ese documento que mandas cuando buscas trabajo y que luego olvidas en un cajón. Aquí propongo pensarlo diferente: un currículum completo es un archivo personal. Es para que tú sepas de dónde vienes, por dónde pasaste y qué acumulaste en el camino.
 
-Con IA, ese archivo puede ser tan detallado que incluya no solo tus trabajos, sino también tus proyectos personales, tus estudios, tus intereses, los deportes que practicás, organizaciones en las que participaste. Todo lo que forma quién sos.
+Con IA, ese archivo puede ser tan detallado que incluya no solo tus trabajos, sino también tus proyectos personales, tus estudios, tus intereses, los deportes que practicas, organizaciones en las que participaste. Todo lo que forma quién eres.
 
 ---
 
@@ -76,42 +76,42 @@ Lo elijo sobre un Word o un PDF porque es modular: puedo agregar, modificar o ex
 
 ### ¿Cómo se alimenta?
 
-Cada vez que aparece una fuente nueva de información —un currículum viejo, un informe entregado en una empresa, un PDF guardado en Drive desde hace años— se lo pasás a la IA y le decís: *"Dado este archivo JSON que ya existe, agregá esta nueva información donde corresponda."*
+Cada vez que aparece una fuente nueva de información —un currículum viejo, un informe entregado en una empresa, un PDF guardado en Drive desde hace años— se lo pasas a la IA y le dices: *"Dado este archivo JSON que ya existe, agrega esta nueva información donde corresponda."*
 
 El archivo crece con el tiempo. Nunca va a estar completamente terminado, y eso está bien.
 
 ### El problema de los tokens y cómo resolverlo
 
-Las IAs tienen un límite de cuánto texto pueden procesar en una sola conversación. Cuando el JSON se vuelve muy grande, la solución es trabajar de forma **modular**: en lugar de cargar todo el archivo, abrís solo el objeto que querés trabajar en ese momento. Por ejemplo, te concentrás solo en la sección de una empresa, la completás, la guardás, y pasás a la siguiente.
+Las IAs tienen un límite de cuánto texto pueden procesar en una sola conversación. Cuando el JSON se vuelve muy grande, la solución es trabajar de forma **modular**: en lugar de cargar todo el archivo, abres solo el objeto que quieres trabajar en ese momento. Por ejemplo, te concentras solo en la sección de una empresa, la completas, la guardas, y pasas a la siguiente.
 
-Si aun así se te agotan los tokens, podés abrir otra cuenta de Google y empezar una sesión nueva. No es trampa, es gestión de recursos.
+Si aun así se te agotan los tokens, puedes abrir otra cuenta de Google y empezar una sesión nueva. No es trampa, es gestión de recursos.
 
 ---
 
-## ¿Qué podés hacer con el JSON?
+## ¿Qué puedes hacer con el JSON?
 
 ### Currículums orientados, no genéricos
 
 Un currículum genérico es el que funciona para nadie en particular. El que funciona es el que habla exactamente el idioma de quien lo va a leer.
 
-Con el JSON completo, le pedís a la IA: *"Generá un currículum orientado a empresas de tecnología cívica"* o *"Generá un resumen para presentarme ante una aceleradora de startups"*. El resultado es un documento que selecciona y jerarquiza tu información según ese objetivo.
+Con el JSON completo, le pides a la IA: *"Genera un currículum orientado a empresas de tecnología cívica"* o *"Genera un resumen para presentarme ante una aceleradora de startups"*. El resultado es un documento que selecciona y jerarquiza tu información según ese objetivo.
 
-Podés ver dos ejemplos concretos de currículums generados de esta manera:
+Puedes ver dos ejemplos concretos de currículums generados de esta manera:
 
 - [CV general técnico][cv_general]
 - [CV orientado a aceleradoras][cv_aceleradora]
 
 ### Ofertas de servicio
 
-El mismo archivo sirve para crear propuestas comerciales. Le describís el proyecto, le adjuntás el JSON y le pedís un informe ejecutivo. En mi caso, generé tanto un documento PDF profesional como una landing page completa para presentar la Línea Abierta Vecinal como servicio replicable.
+El mismo archivo sirve para crear propuestas comerciales. Le describes el proyecto, le adjuntas el JSON y le pides un informe ejecutivo. En mi caso, generé tanto un documento PDF profesional como una landing page completa para presentar la Línea Abierta Vecinal como servicio replicable.
 
 ### Bio para podcasts, landing pages o perfiles
 
-En lugar de escribir sobre vos mismo desde cero, le pedís al proyecto que ya tiene tu JSON que te genere un párrafo de presentación orientado al contexto específico. Para un podcast, para un perfil de inversor, para una página de equipo.
+En lugar de escribir sobre tú mismo desde cero, le pides al proyecto que ya tiene tu JSON que te genere un párrafo de presentación orientado al contexto específico. Para un podcast, para un perfil de inversor, para una página de equipo.
 
-### Un bot en WhatsApp que sabe todo de vos
+### Un bot en WhatsApp que sabe todo de ti
 
-Podés conectar el JSON como contexto de un bot conversacional vinculado a tu número de WhatsApp. Alguien que quiera contratarte puede preguntarle al bot y recibir respuestas basadas en tu historia real. Incluso vos mismo podés preguntarle: *"¿En qué año trabajé en tal empresa?"* o *"¿Qué habilidades desarrollé en tal proyecto?"*
+Puedes conectar el JSON como contexto de un bot conversacional vinculado a tu número de WhatsApp. Alguien que quiera contratarte puede preguntarle al bot y recibir respuestas basadas en tu historia real. Incluso tú mismo puedes preguntarle: *"¿En qué año trabajé en tal empresa?"* o *"¿Qué habilidades desarrollé en tal proyecto?"*
 
 ---
 
@@ -121,7 +121,7 @@ Muchas empresas grandes usan sistemas automatizados llamados **ATS** (Applicant 
 
 Estas son las reglas para un currículum que los bots leen perfectamente:
 
-**Texto seleccionable, siempre.** El PDF debe generarse desde texto, nunca desde una imagen escaneada. Si escaneás tu CV y lo guardás como PDF, un ATS no puede leer nada.
+**Texto seleccionable, siempre.** El PDF debe generarse desde texto, nunca desde una imagen escaneada. Si escaneas tu CV y lo guardas como PDF, un ATS no puede leer nada.
 
 **Sin columnas ni tablas complejas.** Los ATS leen de izquierda a derecha y de arriba a abajo, en una sola columna. Los diseños en dos columnas mezclan información de forma impredecible para la máquina.
 
@@ -137,21 +137,21 @@ Estas son las reglas para un currículum que los bots leen perfectamente:
 
 **Sin logos ni imágenes decorativas.** Ocupan espacio y los bots los ignoran.
 
-La buena noticia: si generás el CV a partir del JSON con una IA y le pedís explícitamente que lo haga compatible con ATS, va a respetar todas estas reglas por defecto.
+La buena noticia: si generas el CV a partir del JSON con una IA y le pides explícitamente que lo haga compatible con ATS, va a respetar todas estas reglas por defecto.
 
 ---
 
 ## NotebookLM: tu CV convertido en podcast
 
-[NotebookLM](https://notebooklm.google.com) es una IA de Google orientada al estudio de documentos. Lo que la hace especial es que responde basándose exclusivamente en los archivos que vos le subís, sin mezclar información externa. Podés subirle PDFs, audios, videos, documentos de texto.
+[NotebookLM](https://notebooklm.google.com) es una IA de Google orientada al estudio de documentos. Lo que la hace especial es que responde basándose exclusivamente en los archivos que tú le subes, sin mezclar información externa. Puedes subirle PDFs, audios, videos, documentos de texto.
 
-Uno de sus usos más llamativos es generar un **audio en formato podcast**, donde dos comentaristas ficticios analizan el documento que les subiste. El resultado, cuando el documento es tu propio JSON con toda tu trayectoria, es algo genuinamente emocionante: escuchás a dos personas hablar de la coherencia de tu carrera, de las conexiones entre proyectos que quizás vos mismo no habías notado.
+Uno de sus usos más llamativos es generar un **audio en formato podcast**, donde dos comentaristas ficticios analizan el documento que les subiste. El resultado, cuando el documento es tu propio JSON con toda tu trayectoria, es algo genuinamente emocionante: escuchas a dos personas hablar de la coherencia de tu carrera, de las conexiones entre proyectos que quizás tú mismo no habías notado.
 
-Podés escuchar el podcast generado a partir de mi propio archivo de datos acá:
+Puedes escuchar el podcast generado a partir de mi propio archivo de datos aquí:
 
 🎧 [Escuchar: Una mirada con IA a la trayectoria de Alejandro Sosa Briceño][audio_cv]
 
-Si alguna vez sentís que no has hecho nada importante, escuchate así. Funciona.
+Si alguna vez sientes que no has hecho nada importante, escúchate así. Funciona.
 
 ---
 
@@ -159,27 +159,27 @@ Si alguna vez sentís que no has hecho nada importante, escuchate así. Funciona
 
 Algunas cosas que aprendí a base de repetición:
 
-**Pedile preguntas antes de que actúe.** Antes de pedirle a la IA que genere algo, pedile que analice la información, que haga preguntas, que proponga mejoras. Eso garantiza que los dos están en la misma página.
+**Pídele preguntas antes de que actúe.** Antes de pedirle a la IA que genere algo, pídele que analice la información, que haga preguntas, que proponga mejoras. Eso garantiza que los dos están en la misma página.
 
-**Pedile que te explique la tarea antes de ejecutarla.** Es una forma de verificar que te explicaste bien. Si la IA describe mal la tarea, el problema está en el prompt, no en la IA.
+**Pídele que te explique la tarea antes de ejecutarla.** Es una forma de verificar que te explicaste bien. Si la IA describe mal la tarea, el problema está en el prompt, no en la IA.
 
-**Trabajá en módulos.** Cualquier proyecto puede descomponerse en partes más pequeñas. Desarrollá cada parte por separado y asegurate de que quede bien antes de pasar a la siguiente.
+**Trabaja en módulos.** Cualquier proyecto puede descomponerse en partes más pequeñas. Desarrolla cada parte por separado y asegúrate de que quede bien antes de pasar a la siguiente.
 
-**Guardá resúmenes, borrá conversaciones.** Antes de cerrar un chat, pedile a la IA que genere un resumen de lo trabajado, las decisiones tomadas y los próximos pasos. Guardá ese resumen. Borrá la conversación. Los chats largos hacen que la IA pierda el hilo; los resúmenes te permiten retomar sin perder nada.
+**Guarda resúmenes, borra conversaciones.** Antes de cerrar un chat, pídele a la IA que genere un resumen de lo trabajado, las decisiones tomadas y los próximos pasos. Guarda ese resumen. Borra la conversación. Los chats largos hacen que la IA pierda el hilo; los resúmenes te permiten retomar sin perder nada.
 
-**Documentos vivos para IA de escritorio.** Si usás una IA que puede modificar archivos en tu computador, mantené documentos actualizados que ella pueda leer al empezar cada sesión: qué estás buscando, qué se ha hecho, qué falta, qué errores aparecieron y cómo se resolvieron. Eso reduce drásticamente las alucinaciones y los desvíos.
+**Documentos vivos para IA de escritorio.** Si usas una IA que puede modificar archivos en tu computador, mantén documentos actualizados que ella pueda leer al empezar cada sesión: qué estás buscando, qué se ha hecho, qué falta, qué errores aparecieron y cómo se resolvieron. Eso reduce drásticamente las alucinaciones y los desvíos.
 
 ---
 
 ## Tu turno
 
-Todo lo descrito acá es accesible. No requiere conocimientos de programación. Requiere curiosidad, paciencia y un celular con micrófono.
+Todo lo descrito aquí es accesible. No requiere conocimientos de programación. Requiere curiosidad, paciencia y un celular con micrófono.
 
-El primer paso es el más sencillo: grabá un audio de diez minutos contando tu historia profesional. Desde el primer trabajo hasta hoy. Sin estructura, sin guion. Solo contalo como si le hablaras a un amigo.
+El primer paso es el más sencillo: graba un audio de diez minutos contando tu historia profesional. Desde el primer trabajo hasta hoy. Sin estructura, sin guion. Solo cuéntalo como si le hablaras a un amigo.
 
 De ahí en adelante, la IA te ayuda a organizarlo.
 
-Si querés ver el resultado de este proceso aplicado a una trayectoria real, acá podés explorar:
+Si quieres ver el resultado de este proceso aplicado a una trayectoria real, acá puedes explorar:
 
 - [LinkedIn de Alejandro Sosa Briceño][linkedin]
 - [Currículum general][cv_general]
@@ -189,7 +189,7 @@ Si querés ver el resultado de este proceso aplicado a una trayectoria real, ac�
 
 ---
 
-*¿Tenés preguntas sobre algún paso del proceso? ¿Ya probaste algo parecido? Dejá un comentario más abajo.*
+*¿Tienes preguntas sobre algún paso del proceso? ¿Ya probaste algo parecido? Deja un comentario más abajo.*
 
 ---
 
