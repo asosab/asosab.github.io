@@ -14,6 +14,8 @@ image: mente_historia_ia.jpg
 ¿Cuántas cosas has hecho en tu vida profesional que ya no recuerdas?
 ¿En qué año fue ese proyecto? ¿Cuánto duró ese trabajo? ¿Qué aprendiste exactamente en aquella empresa?
 
+<img src="/imagen/mente_historia_ia.jpg" alt="La IA como herramienta de procesos mentales" width="605">
+
 A mí me pasa. Me olvido por completo de informes que entregué, de proyectos que lideré, o de analizar qué habilidades desarrollé ahí. Desde hace unos días comencé a construir algo que podría llamarse *el archivo vivo de mi vida profesional*, y la inteligencia artificial es la herramienta principal para hacerlo. Este artículo cuenta cómo lo hago, paso a paso, con todas las herramientas involucradas.
 
 ---
@@ -202,7 +204,7 @@ El recorrido fue este: grabé un audio con el celular mientras caminaba por la c
 El audio original, el texto sucio, la transcripción y el prompt viajaron por cinco herramientas distintas antes de convertirse en lo que leíste. Todo sin escribir una sola palabra desde cero y en escasos 30 minutos
 
 [linkedin]: https://linkedin.com/in/alejandrososa
-[cv_general]: {{ site.assetsFolder }}/docs/CV_ASB.pdf
-[cv_aceleradora]: {{ site.assetsFolder }}/docs/CV_asb_aceleradora.pdf
-[json_cv]: {{ site.assetsFolder }}/docs/asb.json
-[audio_cv]: {{ site.assetsFolder }}/audio/asb_una_mirada_con_ia.mp3
+[cv_general]: assets/docs/CV_ASB.pdf
+[cv_aceleradora]: assets//docs/CV_asb_aceleradora.pdf
+[json_cv]: assets/docs/asb.json
+[audio_cv]: assets/audio/asb_una_mirada_con_ia.mp3
