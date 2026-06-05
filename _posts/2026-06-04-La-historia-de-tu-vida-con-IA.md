@@ -14,7 +14,7 @@ image: mente_historia_ia.jpg
 ¿Cuántas cosas has hecho en tu vida profesional que ya no recuerdas?
 ¿En qué año fue ese proyecto? ¿Cuánto duró ese trabajo? ¿Qué aprendiste exactamente en aquella empresa?
 
-<img src="/imagen/mente_historia_ia.jpg" alt="La IA como herramienta de procesos mentales" width="605">
+<img src="/imagen/mente_historia_ia.jpg" alt="La IA como herramienta de procesos mentales" style="width:95%;height:auto;">
 
 A mí me pasa. Me olvido por completo de informes que entregué, de proyectos que lideré, o de analizar qué habilidades desarrollé ahí. Desde hace unos días comencé a construir algo que podría llamarse *el archivo vivo de mi vida profesional*, y la inteligencia artificial es la herramienta principal para hacerlo. Este artículo cuenta cómo lo hago, paso a paso, con todas las herramientas involucradas.
 
@@ -199,7 +199,7 @@ Si quieres ver el resultado de este proceso aplicado a una trayectoria real, ac�
 
 Este artículo no se escribió sentado frente a un teclado. Es el resultado de un flujo de trabajo que usa exactamente las mismas herramientas que describe.
 
-<img class="ri" alt="Diagrama del flujo de trabajo: del audio al post con IA" src="{{ '/imagen/del_audio_al_md.jpg' | prepend: site.url }}" width="605">
+<img class="ri" alt="Diagrama del flujo de trabajo: del audio al post con IA" src="{{ '/imagen/del_audio_al_md.jpg' | prepend: site.url }}" style="width:95%;height:auto;">
 
 El recorrido fue este: grabé un audio con el celular mientras caminaba por la ciudad, con ruido de tráfico y conversaciones de fondo incluidas. Lo limpié con [Adobe Podcast](https://podcast.adobe.com), que usa IA para separar la voz del ruido ambiente y reconstruir el canal de audio principal. El resultado lo subí a [NotebookLM](https://notebooklm.google.com), que es la única IA gratuita que acepta audios de cualquier duración y genera una transcripción completa. Con esa transcripción como base, le pedí a Claude que organizara el contenido en una entrada para este blog, respetando la estructura y el estilo del sitio.
 
