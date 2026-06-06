@@ -60,7 +60,7 @@
 
   "entrevistas_label": "Historias reales",
   "entrevistas_title": "Entrevistas",
-  "entrevistas_desc": "Venezolanos que rehacen su vida en Bolivia. Cada historia, una lección.",
+  "entrevistas_desc": "Venezolanos que rehacen su vida en Otras tierras. Cada historia, una lección.",
 
   "siria_nombre": "Siria Useche",
   "siria_origen": "San Cristóbal, Táchira → Santa Cruz, 2019",
