@@ -678,9 +678,13 @@ section:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transicion);
+  opacity: 0;
+  transition: opacity var(--transicion), background var(--transicion);
 }
-.entrevista-card:hover .entrevista-video-overlay { background: rgba(207,47,53,0.25); }
+.entrevista-card:hover .entrevista-video-overlay {
+  opacity: 1;
+  background: rgba(13,27,42,0.5);
+}
 
 .entrevista-body {
   padding: 24px;
