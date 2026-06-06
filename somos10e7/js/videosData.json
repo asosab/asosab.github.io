@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "canal": "Somos 10⁷",
+    "channelId": "UCbxvMb4YcFx38RWjHBDhczQ",
+    "handle": "@somos10e7",
+    "actualizadoEn": "2026-06-06T16:15:30.880Z",
+    "totalVideos": 24,
+    "totalPlaylists": 3
+  },
+  "playlists": [
+    {
+      "playlistId": "PLBNceXnQumHGQdDlYWJi3PGI37bLpXHNb",
+      "titulo": "Emprendedores",
+      "descripcion": "",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHGQdDlYWJi3PGI37bLpXHNb"
+    },
+    {
+      "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+      "titulo": "20 preguntas",
+      "descripcion": "",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+    },
+    {
+      "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+      "titulo": "Primera temporada Somos 10⁷",
+      "descripcion": "Somos 10e7 es un programa de radio y podcast producido en Santa Cruz de la Sierra, Bolivia. Su nombre simboliza a los 10 millones de venezolanos dispersos por el mundo. Es conducido por Siria Useche, Alejandro Sosa y Domingo Requena, con la colaboración de la psicopedagoga Nathalie Laborit.\nEl espacio busca ser un puente de integración entre la comunidad migrante y la boliviana bajo la premisa de que los buenos somos más. Su contenido incluye entrevistas sobre historias de reinvención, noticias de actualidad y secciones como el Banco del Tiempo, para el intercambio de habilidades, y Qué bueno sería así, para fomentar la cultura ciudadana. También aborda la psicología del migrante, la agenda cultural local y las similitudes gastronómicas y sociales entre ambos países. Con un tono resiliente y cercano, el programa ofrece una plataforma para compartir vivencias, humor y consejos para quienes han hecho de Bolivia su nuevo hogar.",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+    }
+  ],
+  "videos": [
+    {
+      "videoId": "VR1Sk8jqxI0",
+      "titulo": "Entrevista a Enden Hidalgo, por Nathalie Laborit",
+      "publicado": "2026-06-01",
+      "url": "https://www.youtube.com/watch?v=VR1Sk8jqxI0",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "kaQ9pdI0ELM",
+      "titulo": "Somos 10⁷ 1x5",
+      "publicado": "2026-04-26",
+      "url": "https://www.youtube.com/watch?v=kaQ9pdI0ELM",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+          "titulo": "Primera temporada Somos 10⁷",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+        }
+      ]
+    },
+    {
+      "videoId": "6Tt8Nu47RT4",
+      "titulo": "Entrevistando a Norce Lugo, por @asosab  #somos10e7",
+      "publicado": "2026-04-20",
+      "url": "https://www.youtube.com/watch?v=6Tt8Nu47RT4",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "uQ2Z5VoG8Z8",
+      "titulo": "Somos 10⁷ 1x4: Chinazos, chalequeo y elecciones",
+      "publicado": "2026-04-19",
+      "url": "https://www.youtube.com/watch?v=uQ2Z5VoG8Z8",
+      "descripcion": "¡Bienvenidos a un episodio especial de Somos 10⁷! En esta edición, Siria Useche, Domingo Requena y Alejandro Sosa nos acompañan desde la sede de Century 21 Nexo para una jornada donde la radio rompe f",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+          "titulo": "Primera temporada Somos 10⁷",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+        }
+      ]
+    },
+    {
+      "videoId": "q3pcfgjT0iM",
+      "titulo": "Somos10e7 1x3 ¡Hasta la luna y más allá!",
+      "publicado": "2026-04-13",
+      "url": "https://www.youtube.com/watch?v=q3pcfgjT0iM",
+      "descripcion": "Programa transmitido en vivo por Atlántica FM 88.9 en Santa Cruz de la Sierra ¡Bienvenidos a un nuevo episodio de Somos 10⁷! En esta edición, titulada ¡Hasta la luna y más allá!, exploramos temas fasc",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+          "titulo": "Primera temporada Somos 10⁷",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+        }
+      ]
+    },
+    {
+      "videoId": "FzvkUIaX39Q",
+      "titulo": "Entrevista a Bárbara Callama para #Somos 10⁷ por Nathalie Laborit",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/watch?v=FzvkUIaX39Q",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "opGGdKJaY48",
+      "titulo": "Somos 10⁷ 1x2",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/watch?v=opGGdKJaY48",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+          "titulo": "Primera temporada Somos 10⁷",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+        }
+      ]
+    },
+    {
+      "videoId": "q37rfQI2e2Y",
+      "titulo": "Somos 10⁷ 1x1",
+      "publicado": "2026-04-05",
+      "url": "https://www.youtube.com/watch?v=q37rfQI2e2Y",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS",
+          "titulo": "Primera temporada Somos 10⁷",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHHEGADAs7f3DhxUOng6LJLS"
+        }
+      ]
+    },
+    {
+      "videoId": "qaaH59WazAs",
+      "titulo": "Entrevista a Siria Useche para #Somos10e7 por @asosab",
+      "publicado": "2026-04-04",
+      "url": "https://www.youtube.com/watch?v=qaaH59WazAs",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "6yxj4AhZBkU",
+      "titulo": "Entrevista a Yobani, creador de Guayoyo en SCZ, con el estamos @asosab  y Domingo Requena",
+      "publicado": "2026-03-31",
+      "url": "https://www.youtube.com/watch?v=6yxj4AhZBkU",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "pSOEfe_c-4U",
+      "titulo": "Entrevista a Giovanni, creador de Guayoyo SCZ",
+      "publicado": "2026-03-31",
+      "url": "https://www.youtube.com/watch?v=pSOEfe_c-4U",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHGQdDlYWJi3PGI37bLpXHNb",
+          "titulo": "Emprendedores",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHGQdDlYWJi3PGI37bLpXHNb"
+        }
+      ]
+    },
+    {
+      "videoId": "lZYKGpLCVus",
+      "titulo": "Entrevista a Giorgio Canatta, por Siria Useche",
+      "publicado": "2026-03-31",
+      "url": "https://www.youtube.com/watch?v=lZYKGpLCVus",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "eupCKlQciSA",
+      "titulo": "Entrevista a Adriana Justi, por Nathalie Laborit",
+      "publicado": "2026-03-31",
+      "url": "https://www.youtube.com/watch?v=eupCKlQciSA",
+      "descripcion": "",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "20 preguntas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
+    {
+      "videoId": "lw6MbTR_WKY",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=lw6MbTR_WKY",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "t97K0JO4qpo",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=t97K0JO4qpo",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "s4mwjE9iV5A",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=s4mwjE9iV5A",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "x8KySl_o7jI",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=x8KySl_o7jI",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "mqQqgtIwnBg",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=mqQqgtIwnBg",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "opC7u5hhkTY",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=opC7u5hhkTY",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "I-b7NAmSGEs",
+      "titulo": "Veinte preguntas: Alejandro Sosa",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=I-b7NAmSGEs",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "-YEn6ze7noM",
+      "titulo": "Invitación de Siria Useche",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=-YEn6ze7noM",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "mp8Sc2OHmWo",
+      "titulo": "Saludos de Jorge Parra",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=mp8Sc2OHmWo",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "ImENymvtE7U",
+      "titulo": "Saludos de Gustavo Brasil @gustavobrasilbjj",
+      "publicado": "2026-03-30",
+      "url": "https://www.youtube.com/watch?v=ImENymvtE7U",
+      "descripcion": "",
+      "playlists": []
+    },
+    {
+      "videoId": "ha_tRL0zo9g",
+      "titulo": "Este domingo 29 a las 9am, primer episodio de Somos 10⁷ 🎉 por Atlantica FM 88.9 - SCZ Bolivia",
+      "publicado": "2026-03-25",
+      "url": "https://www.youtube.com/watch?v=ha_tRL0zo9g",
+      "descripcion": "",
+      "playlists": []
+    }
+  ],
+  "colaboraciones": [
+    {
+      "videoId": "hnfqiisuB6w",
+      "titulo": "Mariana Cubillán",
+      "canal": "@asosab",
+      "url": "https://www.youtube.com/watch?v=hnfqiisuB6w",
+      "publicado": "2024-06-05",
+      "descripcion": "Salió forzada por una enfermedad crónica que Venezuela ya no podía tratar. En Chile, el Estado cubre sus 17 medicamentos diarios. Ha trabajado desde call center hasta auxiliar de aseo; hoy lleva 8 años construyendo vida con resiliencia y sin perder su 'naranja' venezolano."
+    }
+  ]
+}
