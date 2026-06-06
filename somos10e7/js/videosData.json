@@ -173,10 +173,10 @@
     },
     {
       "videoId": "pSOEfe_c-4U",
-      "titulo": "Entrevista a Giovanni, creador de Guayoyo SCZ",
+      "titulo": "Yobani Sánchez",
       "publicado": "2026-03-31",
       "url": "https://www.youtube.com/watch?v=pSOEfe_c-4U",
-      "descripcion": "",
+      "descripcion": "San Juan de Colón, Táchira → Santa Cruz, 2015 | Piloto comercial que llegó por amor. Empezó vendiendo mini-lunch en bicicleta, recorriendo 12 km diarios desde un cuarto de 6×4. Hoy es dueño de Guayoyo SCZ, cafetería con alma andina.",
       "playlists": [
         {
           "playlistId": "PLBNceXnQumHGQdDlYWJi3PGI37bLpXHNb",
@@ -309,7 +309,12 @@
       "canal": "@asosab",
       "url": "https://www.youtube.com/watch?v=hnfqiisuB6w",
       "publicado": "2024-06-05",
-      "descripcion": "Salió forzada por una enfermedad crónica que Venezuela ya no podía tratar. En Chile, el Estado cubre sus 17 medicamentos diarios. Ha trabajado desde call center hasta auxiliar de aseo; hoy lleva 8 años construyendo vida con resiliencia y sin perder su 'naranja' venezolano."
+      "descripcion": "Caracas / Maracaibo / Cagua → Santiago de Chile, 2018 | Salió forzada por una enfermedad crónica que Venezuela ya no podía tratar. En Chile, el Estado cubre sus 17 medicamentos diarios. Ha trabajado desde call center hasta auxiliar de aseo; hoy lleva 8 años construyendo vida con resiliencia y sin perder su 'naranja' venezolano.",
+      "playlists": [
+        {
+          "titulo": "20 preguntas",
+        }
+      ]
     }
   ]
 }

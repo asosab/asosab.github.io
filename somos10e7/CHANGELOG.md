@@ -10,6 +10,7 @@ Formato: `YYYY-MM-DD | categoría | descripción`
 | **Refactor** | i18n separado a `js/i18n.js` (cargado con `defer` en `<head>`) |
 | **Refactor** | Lógica del sitio (nav, tabs, scroll, anillos) separada a `js/main.js` |
 | **Refactor** | Firebase counter separado a `js/firebase-counter.js` (type="module") |
+| **Refactor** | Sección ENTREVISTAS: cards generados dinámicamente desde `js/videosData.json`, filtrados por playlist "20 preguntas", ordenados por fecha descendente.~170 líneas menos en `index.html` |
 | **Config** | Creación de `AGENTS.md` con directrices para OpenCode |
 | **Config** | Creación de `PLAN.md` con estado actual y gaps del proyecto |
 | **Config** | Creación de `CHANGELOG.md` para registro de cambios |

@@ -146,3 +146,63 @@ function injectOrbitKeyframes(name, rx, ry) {
   style.textContent = `@keyframes ${name} { ${steps} }`;
   document.head.appendChild(style);
 }
+
+// --- ENTREVISTAS DINÁMICAS ---
+const FORMULARIO_HISTORIA = 'https://docs.google.com/forms/d/e/1FAIpQLSc1d0TOZk0pNWtV65ZrGza3MuGPeOdBg5xEPiCC1RvJ5RDdEA/viewform?usp=pp_url&entry.1972386230=%2B591&entry.1368310175=Si&entry.1504919473=%C2%A1Si!';
+
+function crearCard(entry) {
+  const pipeIdx = entry.descripcion.indexOf(' | ');
+  const origen = pipeIdx !== -1 ? entry.descripcion.substring(0, pipeIdx) : '';
+  const desc = pipeIdx !== -1 ? entry.descripcion.substring(pipeIdx + 3) : entry.descripcion;
+
+  return `
+    <div class="entrevista-card fade-up">
+      <a href="${entry.url}" target="_blank" rel="noopener">
+        <div class="entrevista-video">
+          <img src="https://img.youtube.com/vi/${entry.videoId}/mqdefault.jpg" alt="${entry.titulo}" loading="lazy" />
+          <div class="entrevista-video-overlay">
+            <div class="play-icon"><svg width="18" height="18" viewBox="0 0 18 18"><polygon points="5,3 15,9 5,15" fill="white"/></svg></div>
+          </div>
+        </div>
+        <div class="entrevista-body">
+          <div class="entrevista-nombre">${entry.titulo}</div>
+          <div class="entrevista-origen">${origen}</div>
+          <p class="entrevista-desc">${desc}</p>
+          <p class="entrevista-historia">¿Te gustaría contarnos tu historia? Contáctanos <a href="${FORMULARIO_HISTORIA}" target="_blank" rel="noopener" class="entrevista-historia-link">aquí</a></p>
+          <div class="entrevista-links">
+            <a href="${entry.url}" target="_blank" rel="noopener" class="btn btn-rojo" style="font-size:0.72rem; padding:9px 18px;">▶ Ver entrevista</a>
+          </div>
+        </div>
+      </a>
+    </div>`;
+}
+
+async function renderizarEntrevistas() {
+  try {
+    const res = await fetch('js/videosData.json');
+    const data = await res.json();
+    const grid = document.getElementById('entrevistasGrid');
+    if (!grid) return;
+
+    const filtradas = [
+      ...data.videos.filter(v => v.playlists && v.playlists.some(p => p.titulo === '20 preguntas')),
+      ...data.colaboraciones.filter(c => c.playlists && c.playlists.some(p => p.titulo === '20 preguntas'))
+    ];
+
+    filtradas.sort((a, b) => new Date(a.publicado) - new Date(b.publicado));
+
+    grid.innerHTML = filtradas.map(crearCard).join('');
+
+    grid.querySelectorAll('.fade-up').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  } catch (e) {
+    console.error('[entrevistas] Error al cargar', e);
+  }
+}
+
+renderizarEntrevistas();

@@ -21,6 +21,7 @@
 - **Refactor**: Lógica del sitio (nav, tabs, scroll, anillos) separada a `js/main.js`
 - **Refactor**: Firebase counter separado a `js/firebase-counter.js` (type="module")
 - **Resultado**: `index.html` pasó de ~2241 → 748 líneas (~67% más corto)
+- **Refactor**: Cards de ENTREVISTAS ahora se generan dinámicamente desde `js/videosData.json` filtrando por playlist "20 preguntas" (videos + colaboraciones), ordenados por fecha descendente. `index.html` redujo ~170 líneas más (de 748 → 578).
 
 ## Known gaps / future work
 
