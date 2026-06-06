@@ -1,0 +1,83 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "instructions": ["AGENTS.md"],
+
+  "provider": {
+    "mi-proveedor-custom": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama Local",
+      "options": {
+        "baseURL": "http://host.docker.internal:11434/v1",
+        "apiKey": "opcional-si-es-local"
+      },
+      "models": {
+        "qwen3:4b": {
+          "name": "Qwen3-4B"
+        }
+      }
+    }
+  },
+  "model": "qwen/qwen3-4b",
+
+  "agent": {
+    "plan": {
+      "mode": "primary",
+      "description": "general purpuse",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask",
+        "webfetch": "allow",
+        "websearch": "allow",
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "skill": "allow"
+      }
+    },
+    "build": {
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "allow",
+        "websearch": "allow",
+        "read": "allow",
+        "skill": "allow",
+        "glob": "allow",
+        "grep": "allow"
+      }
+    }
+  },
+
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-3ed8fe7b-65c0-4c38-9f08-4a6c2dbe2a02"
+      },
+      "enabled": true
+    },
+    "buscador-web": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@oevortex/ddg_search"
+      ]
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "enabled": true
+    }
+  },
+
+  "permission": {
+    "skill": "allow"
+  }
+}
