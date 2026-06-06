@@ -16,6 +16,10 @@ Formato: `YYYY-MM-DD | categoría | descripción`
 | **Config** | Creación de `CHANGELOG.md` para registro de cambios |
 | **Config** | Creación de `MEJORAS.md` con 8 recomendaciones de diseño frontend |
 | **Docs** | `es_VE.txt` actualizado |
+| **UI** | Overlay de play en entrevistas oculto por defecto, visible solo en hover (como episodios) |
+| **UI** | Podcast links: emojis reemplazados por SVGs inline (Spotify, Amazon Music, iVoox, YouTube) |
+| **UI** | Hero: gradiente animado con `@keyframes heroGradient` (3 capas radiales, `background-position` en bucle 20s) |
+| **UI** | Season tabs rediseñados: estilo underline (magazine), `::after` con `scaleX`, sin bordes/background |
 
 ## 2026-06-05
 
