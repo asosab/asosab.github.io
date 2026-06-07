@@ -5,8 +5,6 @@ CSS + vanilla JS. No build, no framework, no npm, no Jekyll processing.
 
 ## Key facts
 
-- **Everything is in `index.html`** — CSS in `<style>`, JS inline at end of `<body>`,
-  episodes and interviews hand-written in HTML. No separate files.
 - **No tests, no linter, no CI.** Do not invent commands for these.
 - **No build step.** To preview: open `index.html` in a browser or serve with any
   static server (`python -m http.server`). `start index.html` on Windows.
@@ -18,23 +16,11 @@ state and planned work. After making changes, update `PLAN.md` to reflect
 what was done, what changed, and any new gaps or next steps discovered.
 Also add a line to `CHANGELOG.md` with date, category, and description.
 
-## i18n quirks (will cause bugs if ignored)
-
-- Locale files `es_VE.txt` and `es_BO.txt` are **JSON with a `.txt` extension**
-  so GitHub Pages serves them as `text/plain`. Do NOT rename to `.json`.
-- The i18n fetcher hardcodes `https://asosab.github.io/somos10e7/` as base URL
-  for the fetch. **Moving this directory or changing the host will break i18n.**
-  Update both `const base =` in the i18n script and all `og:url`/`canonical` meta tags.
-- A `data-i18n` key must exist in **both** locale files or the text falls back to
-  the raw HTML default. Keep keys in sync.
-- Locale is persisted in `localStorage` under key `locale`. Available: `es_VE` (default),
-  `es_BO`.
-
 ## Editing content
 
 - **Episodes:** hand-written `.episode-card` blocks inside `#temporadas`. Adding one
   requires: copy a card block, replace YouTube video ID in 3 places (href, img src,
-  episode link), add i18n keys to both `.txt` files.
+  episode link).
 - **Interviews:** hand-written `.entrevista-card` blocks inside `#entrevistas`.
 - **Team:** hand-written `.equipo-card` blocks. Photos in `imagen/<name>.png`;
   fallback to initials via `onerror`.

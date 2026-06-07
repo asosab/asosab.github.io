@@ -7,8 +7,8 @@
 - 7 interview cards
 - 4 team member cards
 - Firebase live visitor counter active
-- i18n with es_VE (default) and es_BO
 - Google Analytics (UA-84695-6)
+- i18n removido — texto estático en tuteo venezolano (es_VE), sin capa de internacionalización
 - `#micros` section: placeholder, empty
 - `AGENTS.md` — directrices para OpenCode
 - `PLAN.md` — registro de plan y estado
@@ -31,7 +31,6 @@
 
 - `#micros` section is empty — needs content if the section is meant to be visible
 - Only one season tab exists; new seasons need tab + panel added
-- `es_BO.txt` and `es_VE.txt` copyright year in footer says 2024 (index.html says 2024 too) — may need updating
 - No privacy policy or cookie notice (GA + Firebase + ipify)
 - `MEJORAS.md` → `## FRONTEND` — 3/8 recomendaciones implementadas: hero animado, tabs underline, emojis→SVG. Pendientes: episode cards (alternar layout), entrevistas feature card, equipo hover overlay, nav auto-hide, scrollbar gradiente, verde en paleta, Páginas Blancas carrusel
 

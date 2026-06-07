@@ -2,6 +2,12 @@
 
 Formato: `YYYY-MM-DD | categoría | descripción`
 
+## 2026-06-07
+
+| Categoría | Descripción |
+|-----------|-------------|
+| **Refactor** | i18n desinstalado: eliminados `js/i18n.js`, `es_VE.txt`, `es_BO.txt`; removidos todos los atributos `data-i18n` y `data-i18n-attr`; textos fijados en tuteo venezolano (es_VE). Footer © 2024 → 2026 |
+
 ## 2026-06-06
 
 | Categoría | Descripción |
