@@ -618,7 +618,8 @@ section:nth-child(even) {
 /* ============================================================
    ENTREVISTAS
 ============================================================ */
-#entrevistas {
+#entrevistas,
+#emprendedores {
   background: rgba(26,58,107,0.08);
 }
 

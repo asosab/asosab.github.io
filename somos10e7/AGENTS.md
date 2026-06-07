@@ -23,6 +23,7 @@ Also add a line to `CHANGELOG.md` with date, category, and description.
   "Episodios" y regenerar `videosData.json` con `node js/youtube_videos.mjs`.
   Luego actualizar la sección `#ultimo` para que apunte al nuevo episodio.
 - **Interviews:** auto-generados desde `videosData.json` filtrando por playlist "Entrevistas".
+- **Emprendedores:** auto-generados desde `videosData.json` filtrando por playlist "Emprendedores". Misma card style que entrevistas.
 - **Team:** hand-written `.equipo-card` blocks. Photos in `imagen/<name>.png`;
   fallback to initials via `onerror`.
 

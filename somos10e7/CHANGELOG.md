@@ -9,6 +9,7 @@ Formato: `YYYY-MM-DD | categoría | descripción`
 | **Refactor** | i18n desinstalado: eliminados `js/i18n.js`, `es_VE.txt`, `es_BO.txt`; removidos todos los atributos `data-i18n` y `data-i18n-attr`; textos fijados en tuteo venezolano (es_VE). Footer © 2024 → 2026 |
 | **Refactor** | Temporadas eliminadas: sección `#temporadas` → `#episodios`, removidos season-tabs y showSeason(), episodios ahora secuenciales (Episodio 1–5) sin numeración por temporada |
 | **Refactor** | Episodios dinámicos: reemplazadas 5 cards estáticas por render desde `videosData.json` filtrando por playlist "Episodios". Se extrae n° y título temático vía regex, se muestra fecha de publicación, el más reciente recibe pill "Último" automático |
+| **Feature** | Nueva sección "Emprendedores" con label "Detrás del negocio". Renderiza desde `videosData.json` filtrando por playlist "Emprendedores", reusa card style de entrevistas |
 
 ## 2026-06-06
 

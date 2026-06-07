@@ -261,5 +261,40 @@ async function renderizarEntrevistas() {
   }
 }
 
+// --- EMPRENDEDORES ---
+
+async function renderizarEmprendedores() {
+  try {
+    const res = await fetch('js/videosData.json');
+    const data = await res.json();
+    const grid = document.getElementById('emprendedoresGrid');
+    if (!grid) return;
+
+    const emprendedores = [
+      ...data.videos.filter(v =>
+        v.playlists && v.playlists.some(p => p.titulo === 'Emprendedores')
+      ),
+      ...data.colaboraciones.filter(c =>
+        c.playlists && c.playlists.some(p => p.titulo === 'Emprendedores')
+      )
+    ];
+
+    emprendedores.sort((a, b) => new Date(b.publicado) - new Date(a.publicado));
+
+    grid.innerHTML = emprendedores.map(crearCard).join('');
+
+    grid.querySelectorAll('.fade-up').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  } catch (e) {
+    console.error('[emprendedores] Error al cargar', e);
+  }
+}
+
 renderizarEpisodios();
 renderizarEntrevistas();
+renderizarEmprendedores();
