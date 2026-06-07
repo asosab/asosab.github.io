@@ -594,6 +594,13 @@ section:nth-child(even) {
   margin-bottom: 12px;
 }
 
+.episode-date {
+  font-family: var(--fuente-etiqueta);
+  font-size: 0.7rem;
+  color: rgba(250,245,233,0.4);
+  margin-bottom: 10px;
+}
+
 .episode-link {
   font-family: var(--fuente-etiqueta);
   font-size: 0.72rem;

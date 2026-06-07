@@ -130,6 +130,79 @@ function injectOrbitKeyframes(name, rx, ry) {
   document.head.appendChild(style);
 }
 
+// --- EPISODIOS DINÁMICOS ---
+
+function extraerInfoEpisodio(titulo) {
+  const m = titulo.match(/1x(\d+)[: ]?(.*)/);
+  if (!m) return { numero: null, tituloTematico: titulo };
+  const num = parseInt(m[1], 10);
+  const tematico = m[2].trim();
+  return {
+    numero: num,
+    tituloTematico: tematico || 'Episodio ' + num
+  };
+}
+
+function formatearFecha(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('es-ES', {
+    day: 'numeric', month: 'short', year: 'numeric'
+  }).replace('.', '');
+}
+
+function crearEpisodioCard(entry, esUltimo) {
+  const { numero, tituloTematico } = extraerInfoEpisodio(entry.titulo);
+  const fecha = formatearFecha(entry.publicado);
+  return `
+    <div class="episode-card fade-up">
+      <a href="${entry.url}" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://img.youtube.com/vi/${entry.videoId}/mqdefault.jpg" alt="Episodio ${numero}" loading="lazy" />
+          <div class="episode-play-btn">
+            <div class="play-icon"><svg width="18" height="18" viewBox="0 0 18 18"><polygon points="5,3 15,9 5,15" fill="white"/></svg></div>
+          </div>
+        </div>
+      </a>
+      <div class="episode-info">
+        <div class="episode-num">
+          Episodio ${numero}
+          ${esUltimo ? '<span class="pill" style="font-size:0.6rem;padding:2px 8px;margin-left:6px;">Último</span>' : ''}
+        </div>
+        <div class="episode-date">${fecha}</div>
+        <div class="episode-title">${tituloTematico}</div>
+        <a href="${entry.url}" target="_blank" rel="noopener" class="episode-link">
+          <span>Ver en YouTube</span> <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>`;
+}
+
+async function renderizarEpisodios() {
+  try {
+    const res = await fetch('js/videosData.json');
+    const data = await res.json();
+    const grid = document.getElementById('episodiosGrid');
+    if (!grid) return;
+
+    const episodios = data.videos.filter(v =>
+      v.playlists && v.playlists.some(p => p.titulo === 'Episodios')
+    );
+    episodios.sort((a, b) => new Date(b.publicado) - new Date(a.publicado));
+
+    grid.innerHTML = episodios.map((e, i) => crearEpisodioCard(e, i === 0)).join('');
+
+    grid.querySelectorAll('.fade-up').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  } catch (e) {
+    console.error('[episodios] Error al cargar', e);
+  }
+}
+
 // --- ENTREVISTAS DINÁMICAS ---
 const FORMULARIO_HISTORIA = 'https://docs.google.com/forms/d/e/1FAIpQLSc1d0TOZk0pNWtV65ZrGza3MuGPeOdBg5xEPiCC1RvJ5RDdEA/viewform?usp=pp_url&entry.1972386230=%2B591&entry.1368310175=Si&entry.1504919473=%C2%A1Si!';
 
@@ -188,4 +261,5 @@ async function renderizarEntrevistas() {
   }
 }
 
+renderizarEpisodios();
 renderizarEntrevistas();

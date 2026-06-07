@@ -3,8 +3,8 @@
 ## Current state
 
 - Landing page published at `https://asosab.github.io/somos10e7/`
-- 5 episodes (secuenciales, sin temporadas)
-- 7 interview cards
+- 5 episodes (dinámicos desde `videosData.json`)
+- 7 interview cards (dinámicos desde `videosData.json`)
 - 4 team member cards
 - Firebase live visitor counter active
 - Google Analytics (UA-84695-6)

@@ -108,45 +108,27 @@ dentro de `index.html` (constante `AVAILABLE_LOCALES`).
 
 ## Cómo agregar un episodio
 
-Los episodios están **hardcodeados** dentro de `<section id="episodios">`
-en `index.html`. No se generan automáticamente desde
-`videosData.json`. Para añadir uno:
+Los episodios se generan automáticamente desde `js/videosData.json`
+filtrando por la playlist "Episodios". Para agregar uno nuevo:
 
-1. Copiá un bloque `.episode-card` existente.
-2. Reemplazá el ID del video de YouTube en tres lugares:
-   - `href` del `<a>` que envuelve el thumb
-   - `src` del `<img>` del thumb: `https://img.youtube.com/vi/<ID>/mqdefault.jpg`
-   - `href` del enlace "Ver en YouTube"
-3. Actualizá el número de episodio (ej. `Episodio 6`) y el pill si corresponde.
-4. Actualizá la sección `#ultimo` para que apunte al nuevo episodio.
-
-> El script `js/youtube_videos.mjs` puede listar todos los videos del canal,
-> pero **la landing page no lo consume**. Los episodios se mantienen a mano
-> para tener control editorial sobre el orden, los títulos y las portadas.
+1. Subí el video a YouTube y agregalo a la playlist "Episodios".
+2. Regenerá `videosData.json` con `node js/youtube_videos.mjs`.
+3. Actualizá la sección `#ultimo` en `index.html` para que apunte al nuevo episodio.
 
 ## Cómo agregar una entrevista
 
-Las tarjetas viven en `<section id="entrevistas">`. Para añadir una:
+Las entrevistas se generan automáticamente desde `js/videosData.json`
+filtrando por la playlist "Entrevistas". Para agregar una nueva:
 
-1. Copiá un bloque `.entrevista-card` existente.
-2. Reemplazá el ID de YouTube en el `<a>` y en el `src` del `<img>`.
-3. Reemplazá `.entrevista-nombre`, `.entrevista-origen` y
-   `.entrevista-desc`. Si querés que se traduzcan, usá `data-i18n` y
-   agregá las claves a los dos diccionarios.
-4. Si la entrevista tiene versión larga o un canal propio, duplicá el
-   `<a class="btn …">` interno y ajustá el estilo (`btn-rojo` para el
-   principal, `btn-borde` para los secundarios).
+1. Subí el video a YouTube y agregalo a la playlist "Entrevistas".
+2. Regenerá `videosData.json` con `node js/youtube_videos.mjs`.
 
 ## Hardcodes que pueden romper
 
-- **URL base absoluta.** El i18n fetcher usa literalmente
-  `https://asosab.github.io/somos10e7/`. Si movés la carpeta a otro path o
-  cambias el hosting, **actualizá esa línea** en el `<script>` de i18n
-  dentro de `index.html` (buscá `const base =`). Lo mismo aplica a las
-  meta-tags `og:url` y `canonical`.
-- **El CSS está embebido en el `<style>`** dentro de `<head>`. No hay un
-  `main.css` separado. Si necesitás variables de color, están en `:root`
-  al principio del bloque.
+- Las meta-tags `og:url` y `canonical` apuntan a
+  `https://asosab.github.io/somos10e7/`. Si movés la carpeta, actualizalas.
+- El CSS está en `css/styles.css` separado de `index.html`. Las variables
+  de color están en `:root` al principio del archivo.
 
 ## OpenCode
 

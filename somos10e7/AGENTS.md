@@ -18,14 +18,13 @@ Also add a line to `CHANGELOG.md` with date, category, and description.
 
 ## Editing content
 
-- **Episodes:** hand-written `.episode-card` blocks inside `#episodios`. Adding a new
-  one requires: copy a card block, replace YouTube video ID in 3 places (href, img src,
-  episode link), update the episode number (e.g. `Episodio 6`) and update the
-  `#ultimo` section to feature the newest episode.
-- **Interviews:** hand-written `.entrevista-card` blocks inside `#entrevistas`.
+- **Episodes:** auto-generados desde `videosData.json` filtrando por playlist "Episodios".
+  Para agregar uno nuevo basta con subir el video a YouTube, agregarlo a la playlist
+  "Episodios" y regenerar `videosData.json` con `node js/youtube_videos.mjs`.
+  Luego actualizar la sección `#ultimo` para que apunte al nuevo episodio.
+- **Interviews:** auto-generados desde `videosData.json` filtrando por playlist "Entrevistas".
 - **Team:** hand-written `.equipo-card` blocks. Photos in `imagen/<name>.png`;
   fallback to initials via `onerror`.
-
 
 ## Secrets in git history (compromised, do not reuse)
 
@@ -37,9 +36,9 @@ Also add a line to `CHANGELOG.md` with date, category, and description.
 ## `js/youtube_videos.mjs`
 
 One-shot Node script that fetches YouTube Data API v3 and writes
-`js/videosData.json`. **Not consumed by the landing page** — episodes are
-hand-written. Requires Node 18+, `npm install node-fetch`. Run from `js/` as
-`node youtube_videos.mjs`.
+`js/videosData.json`. Consumed by the landing page to render episodes and
+interviews dynamically. Requires Node 18+, `npm install node-fetch`. Run from
+`js/` as `node youtube_videos.mjs`.
 
 ## Firebase live visitor counter
 
