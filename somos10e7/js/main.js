@@ -180,7 +180,7 @@ async function renderizarEntrevistas() {
       ...data.colaboraciones.filter(c => c.playlists && c.playlists.some(p => p.titulo === '20 preguntas'))
     ];
 
-    filtradas.sort((a, b) => new Date(a.publicado) - new Date(b.publicado));
+    filtradas.sort((a, b) => new Date(b.publicado) - new Date(a.publicado));
 
     grid.innerHTML = filtradas.map(crearCard).join('');
 
