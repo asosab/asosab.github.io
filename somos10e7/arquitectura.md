@@ -64,28 +64,14 @@ sequenceDiagram
     participant B as Navegador
     participant GH as GitHub Pages
     participant GF as Google Fonts
-    participant I18N as i18n IIFE<br/>(inline en index.html)
-    participant LS as localStorage
-    participant LOC as es_VE.txt / es_BO.txt<br/>(servido por GH Pages)
     participant YT as YouTube
 
     U->>B: Pega https://asosab.github.io/somos10e7/
     B->>GH: GET /somos10e7/
-    GH-->>B: 200 index.html (HTML + CSS embebido + JS inline)
+    GH-->>B: 200 index.html (HTML + CSS + JS inline)
     B->>B: Parsea HTML, descubre recursos
     B->>GF: GET CSS de Playfair, Barlow (woff2)
     GF-->>B: fuentes
-
-    Note over B,I18N: DOMContentLoaded
-    B->>I18N: Ejecuta IIFE
-    I18N->>LS: getItem("locale")
-    LS-->>I18N: "es_VE" | "es_BO" | null
-    I18N->>I18N: Fallback a "es_VE" si vacío o inválido
-    I18N->>LOC: GET https://asosab.github.io/somos10e7/{locale}.txt
-    LOC-->>I18N: 200 application/json (servido como text/plain)
-    I18N->>I18N: Parsea JSON, expone window._i18nDict
-    I18N->>B: Aplica data-i18n y data-i18n-attr al DOM
-    I18N->>B: Actualiza document.documentElement.lang
 
     B->>YT: GET iframe embed + thumbnails img.youtube.com
     YT-->>B: HTML del reproductor + JPEGs
@@ -94,19 +80,10 @@ sequenceDiagram
     B->>B: Scroll → fade-in de .fade-up
     B->>B: Scroll → scroll-spy resalta link activo del nav
     U->>B: Click en sección
-    B->>B: showSeason(id) si es tab de temporada<br/>o navLinks.classList.toggle si es mobile
+    B->>B: navLinks.classList.toggle si es mobile
 ```
 
-**Puntos críticos del flujo:**
-
-1. El **fetch del locale** es no bloqueante: el HTML ya muestra textos
-   por defecto; el JS los reemplaza cuando llega el JSON.
-2. La URL del i18n es **absoluta** (`https://asosab.github.io/somos10e7/`).
-   Cambiar el path del directorio rompe el fetch.
-3. `.txt` se sirve con `Content-Type: text/plain`; el JS hace
-   `r => r.json()` igualmente porque el cuerpo es JSON válido.
-4. La persistencia del locale es **solo cliente** (`localStorage`).
-   No hay sesión, no hay cookie, no hay backend.
+*(Sin i18n — textos estáticos en tuteo venezolano)*
 
 ---
 
@@ -119,14 +96,13 @@ flowchart TB
         JSONLD["JSON-LD Schema.org<br/>PodcastSeries"]
         FONTS["&lt;link&gt; Google Fonts"]
         CSS["&lt;style&gt;<br/>Variables, layout, animaciones<br/>(~1000 líneas embebidas)"]
-        I18N["&lt;script&gt; i18n IIFE"]
     end
 
     subgraph BODY["&lt;body&gt;"]
         NAV["#navbar<br/>nav fijo + mobile toggle"]
         HERO["#hero<br/>título + CTAs + anillos orbitales"]
         ULT["#ultimo<br/>iframe del último episodio"]
-        TEMP["#temporadas<br/>tabs por temporada +<br/>grid de episode-cards"]
+        EPI["#episodios<br/>grid de episode-cards"]
         ENT["#entrevistas<br/>grid de entrevista-cards"]
         MIC["#micros<br/>(placeholder, vacío)"]
         EQ["#equipo<br/>4 cards del equipo"]
@@ -137,13 +113,9 @@ flowchart TB
 
     subgraph SCRIPTS["&lt;script&gt; al final del body"]
         NAVJS["navToggle handler"]
-        SEAS["showSeason(id, btn)"]
         IO["IntersectionObserver<br/>fade-in + scroll-spy"]
     end
 
-    I18N -. "lee/escribe" .-> LS2[("localStorage<br/>key='locale'")]
-    I18N -. "fetch" .-> LOC2["{locale}.txt"]
-    TEMP --> SEAS
     NAV --> NAVJS
     BODY --> IO
     CSS -. "anima" .-> IO
@@ -160,8 +132,8 @@ flowchart TB
 
 - `#micros` está declarado en el nav y en el footer pero la sección
   está vacía (placeholder) en el HTML actual.
-- No hay bundler ni módulo ES: todo el JS es `<script>` clásico en orden
-  de ejecución (i18n en `<head>`, handlers al final del `<body>`).
+- No hay bundler ni módulo ES: todo el JS es `<script>` clásico con `defer`
+  o al final del `<body>`.
 - El CSS está **embebido en `<style>`**, no en `assets/`. Para
   temas/variables hay que editar el bloque `:root` dentro de `index.html`.
 
@@ -204,7 +176,7 @@ JSON queda en disco solo como referencia editorial.
 | ------------------- | ------------------------------------ | ------------------------------------- |
 | **Build**           | Nada (HTML/CSS/JS estático)          | Jekyll (solo en el resto del repo)    |
 | **Runtime**         | Navegador del visitante              | GitHub Pages (solo hosting)            |
-| **Estado**          | `localStorage.locale`                | Cookies, sesión, base de datos        |
+| **Estado**          | — (sin estado persistente)           | Cookies, sesión, base de datos        |
 | **Datos dinámicos** | YouTube embeds, Google Forms         | Backend propio (no existe)            |
 | **Configuración**   | `opencode.jsonc` (solo OpenCode)     | Variables de entorno, secretos        |
 | **Secretos**        | `API_KEY` de YT, `CONTEXT7_API_KEY`  | ⚠️ Commiteados en el repo             |

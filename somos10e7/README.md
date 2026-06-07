@@ -108,25 +108,21 @@ dentro de `index.html` (constante `AVAILABLE_LOCALES`).
 
 ## Cómo agregar un episodio
 
-Los episodios están **hardcodeados** dentro de `<section id="temporadas">`
+Los episodios están **hardcodeados** dentro de `<section id="episodios">`
 en `index.html`. No se generan automáticamente desde
 `videosData.json`. Para añadir uno:
 
-1. Copiá un bloque `.episode-card` existente (líneas ~1466–1554).
+1. Copiá un bloque `.episode-card` existente.
 2. Reemplazá el ID del video de YouTube en tres lugares:
    - `href` del `<a>` que envuelve el thumb
    - `src` del `<img>` del thumb: `https://img.youtube.com/vi/<ID>/mqdefault.jpg`
    - `href` del enlace "Ver en YouTube"
-3. Actualizá los `data-i18n` (`epN_num`, `epN_title`, `epN_link`) y añadí
-   las mismas claves a `es_VE.txt` y `es_BO.txt`.
-4. Si abriste una **nueva temporada**, agregá:
-   - Un botón en `.season-tabs` con `onclick="showSeason('tN', this)"`.
-   - Un `<div id="tN" class="season-panel">` con su grid de episodios.
+3. Actualizá el número de episodio (ej. `Episodio 6`) y el pill si corresponde.
+4. Actualizá la sección `#ultimo` para que apunte al nuevo episodio.
 
 > El script `js/youtube_videos.mjs` puede listar todos los videos del canal,
 > pero **la landing page no lo consume**. Los episodios se mantienen a mano
-> para tener control editorial sobre el orden, los títulos traducidos y las
-> portadas.
+> para tener control editorial sobre el orden, los títulos y las portadas.
 
 ## Cómo agregar una entrevista
 

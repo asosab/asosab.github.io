@@ -508,51 +508,11 @@ section:nth-child(even) {
 }
 
 /* ============================================================
-   TEMPORADAS
+   EPISODIOS
 ============================================================ */
-#temporadas {
+#episodios {
   background: var(--oscuro);
 }
-
-.season-tabs {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.season-tab {
-  position: relative;
-  font-family: var(--fuente-etiqueta);
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 8px 8px 12px;
-  background: none;
-  border: none;
-  color: rgba(250,245,233,0.45);
-  cursor: pointer;
-  transition: color var(--transicion);
-}
-.season-tab:hover { color: rgba(250,245,233,0.75); }
-.season-tab.active { color: var(--crema); }
-
-.season-tab::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--rojo);
-  transform: scaleX(0);
-  transition: transform var(--transicion);
-}
-.season-tab.active::after { transform: scaleX(1); }
-
-.season-panel { display: none; }
-.season-panel.active { display: block; }
 
 .episodes-grid {
   display: grid;

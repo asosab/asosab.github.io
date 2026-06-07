@@ -3,7 +3,7 @@
 ## Current state
 
 - Landing page published at `https://asosab.github.io/somos10e7/`
-- One season (Temporada 1) with 5 episodes
+- 5 episodes (secuenciales, sin temporadas)
 - 7 interview cards
 - 4 team member cards
 - Firebase live visitor counter active
@@ -25,14 +25,13 @@
 - **UI**: Overlay de play en entrevistas ahora oculto por defecto, visible solo en hover (como episodios)
 - **UI**: Podcast links reemplazan emojis por SVGs inline (Spotify, Amazon Music, iVoox, YouTube)
 - **UI**: Hero con gradiente animado vía `@keyframes heroGradient` (`background-position` en bucle lento)
-- **UI**: Season tabs rediseñados con estilo underline (magazine-style `::after` con `scaleX`)
+- **UI**: Season tabs eliminados — episodios ahora secuenciales sin temporadas
 
 ## Known gaps / future work
 
 - `#micros` section is empty — needs content if the section is meant to be visible
-- Only one season tab exists; new seasons need tab + panel added
 - No privacy policy or cookie notice (GA + Firebase + ipify)
-- `MEJORAS.md` → `## FRONTEND` — 3/8 recomendaciones implementadas: hero animado, tabs underline, emojis→SVG. Pendientes: episode cards (alternar layout), entrevistas feature card, equipo hover overlay, nav auto-hide, scrollbar gradiente, verde en paleta, Páginas Blancas carrusel
+- `MEJORAS.md` → `## FRONTEND` — 2/8 recomendaciones implementadas: hero animado, emojis→SVG. Pendientes: episode cards (alternar layout), entrevistas feature card, equipo hover overlay, nav auto-hide, scrollbar gradiente, verde en paleta, Páginas Blancas carrusel
 
 ## Active plan
 

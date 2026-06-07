@@ -4,14 +4,6 @@ const navLinks  = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-// --- SEASON TABS ---
-function showSeason(id, btn) {
-  document.querySelectorAll('.season-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.season-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-}
-
 // --- SCROLL FADE-IN ---
 const fadeEls = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver((entries) => {

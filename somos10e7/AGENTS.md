@@ -18,14 +18,14 @@ Also add a line to `CHANGELOG.md` with date, category, and description.
 
 ## Editing content
 
-- **Episodes:** hand-written `.episode-card` blocks inside `#temporadas`. Adding one
-  requires: copy a card block, replace YouTube video ID in 3 places (href, img src,
-  episode link).
+- **Episodes:** hand-written `.episode-card` blocks inside `#episodios`. Adding a new
+  one requires: copy a card block, replace YouTube video ID in 3 places (href, img src,
+  episode link), update the episode number (e.g. `Episodio 6`) and update the
+  `#ultimo` section to feature the newest episode.
 - **Interviews:** hand-written `.entrevista-card` blocks inside `#entrevistas`.
 - **Team:** hand-written `.equipo-card` blocks. Photos in `imagen/<name>.png`;
   fallback to initials via `onerror`.
-- **New season:** add a `.season-tab` button and a `.season-panel` div with its
-  grid of episode cards.
+
 
 ## Secrets in git history (compromised, do not reuse)
 
