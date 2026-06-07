@@ -80,14 +80,6 @@ function renderizarAnillos(n) {
       pointer-events: none;
     `;
 
-    const ring = document.createElement('div');
-    ring.style.cssText = `
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 1px solid rgba(244,180,0,${0.18 - i * 0.02});
-    `;
-
     injectOrbitKeyframes(keyName, rx, ry);
 
     const dotWrap = document.createElement('div');
@@ -114,7 +106,6 @@ function renderizarAnillos(n) {
     `;
 
     dotWrap.appendChild(dot);
-    tilt.appendChild(ring);
     tilt.appendChild(dotWrap);
     wrap.appendChild(tilt);
   }

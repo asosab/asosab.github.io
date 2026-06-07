@@ -20,6 +20,7 @@ Formato: `YYYY-MM-DD | categoría | descripción`
 | **UI** | Podcast links: emojis reemplazados por SVGs inline (Spotify, Amazon Music, iVoox, YouTube) |
 | **UI** | Hero: gradiente animado con `@keyframes heroGradient` (3 capas radiales, `background-position` en bucle 20s) |
 | **UI** | Season tabs rediseñados: estilo underline (magazine), `::after` con `scaleX`, sin bordes/background |
+| **UI** | Anillos orbitales: oculta la elipse de recorrido, solo visible el planetoide (dot) |
 
 ## 2026-06-05
 
