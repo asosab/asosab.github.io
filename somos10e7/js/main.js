@@ -168,8 +168,8 @@ async function renderizarEntrevistas() {
     if (!grid) return;
 
     const filtradas = [
-      ...data.videos.filter(v => v.playlists && v.playlists.some(p => p.titulo === '20 preguntas')),
-      ...data.colaboraciones.filter(c => c.playlists && c.playlists.some(p => p.titulo === '20 preguntas'))
+        ...data.videos.filter(v => v.playlists && v.playlists.some(p => p.titulo === 'Entrevistas')),
+      ...data.colaboraciones.filter(c => c.playlists && c.playlists.some(p => p.titulo === 'Entrevistas'))
     ];
 
     filtradas.sort((a, b) => new Date(b.publicado) - new Date(a.publicado));
