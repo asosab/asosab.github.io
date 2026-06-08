@@ -3,8 +3,8 @@
     "canal": "Somos 10⁷",
     "channelId": "UCbxvMb4YcFx38RWjHBDhczQ",
     "handle": "@somos10e7",
-    "actualizadoEn": "2026-06-07T21:01:06.286Z",
-    "totalVideos": 24,
+    "actualizadoEn": "2026-06-08T01:50:32.788Z",
+    "totalVideos": 25,
     "totalPlaylists": 3
   },
   "playlists": [
@@ -31,6 +31,20 @@
     }
   ],
   "videos": [
+    {
+      "videoId": "WtULC6eFUCQ",
+      "titulo": "Luz Pérez",
+      "publicado": "2026-06-08",
+      "url": "https://www.youtube.com/watch?v=WtULC6eFUCQ",
+      "descripcion": "Luz comparte su conmovedora y resiliente historia como migrante venezolana en Santa Cruz, Bolivia, donde tras ocho años se define con orgullo como una \"cambasolana\". Ha logrado transformar desafíos pr",
+      "playlists": [
+        {
+          "playlistId": "PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G",
+          "titulo": "Entrevistas",
+          "url": "https://www.youtube.com/playlist?list=PLBNceXnQumHG3QGeRRu52CKr2TZ604p2G"
+        }
+      ]
+    },
     {
       "videoId": "VR1Sk8jqxI0",
       "titulo": "Enden \"Ender\" Hidalgo",
