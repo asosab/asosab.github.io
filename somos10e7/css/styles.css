@@ -508,6 +508,46 @@ section:nth-child(even) {
 }
 
 /* ============================================================
+   EMERGENCIA / BREAKING NEWS (overrides for #ultimo)
+============================================================ */
+.emergencia-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--rojo), #ff6b6b, var(--rojo));
+  background-size: 200% 100%;
+  animation: barraAlerta 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+@keyframes barraAlerta {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.emergencia-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  animation: latido 1.5s ease-in-out infinite;
+}
+@keyframes latido {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.6; }
+}
+
+.emergencia-pill {
+  background: var(--rojo) !important;
+  color: #fff !important;
+  font-size: 0.75rem;
+  animation: latido 1.5s ease-in-out infinite;
+}
+
+.emergencia-video {
+  box-shadow: var(--sombra), 0 0 0 2px var(--rojo), 0 0 20px rgba(207,47,53,0.3);
+}
+
+/* ============================================================
    EPISODIOS
 ============================================================ */
 #episodios {

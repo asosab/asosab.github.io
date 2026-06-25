@@ -35,4 +35,4 @@
 
 ## Active plan
 
-*(Describe the current task/feature being worked on here when starting work.)*
+- **2026-06-25**: Breaking news section — `#ultimo` reemplazado con video de emergencia (Terremoto en Venezuela, 24-jun-2026). Se agregó barra roja animada, pill "EMERGENCIA", latido en label, borde rojo glow en video-wrapper. Nav y hero CTA actualizados a "Noticias". El episodio más reciente se puede ver en la grilla de #episodios.

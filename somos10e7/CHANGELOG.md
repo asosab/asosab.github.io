@@ -2,6 +2,12 @@
 
 Formato: `YYYY-MM-DD | categoría | descripción`
 
+## 2026-06-25
+
+| Categoría | Descripción |
+|-----------|-------------|
+| **Content** | Sección `#ultimo` reemplazada con noticia de emergencia: Terremoto en Venezuela (video u83JUu047lc). Barra roja animada, pill "EMERGENCIA", label con latido, borde rojo glow. Nav/CTA actualizados a "Noticias" |
+
 ## 2026-06-07
 
 | Categoría | Descripción |
