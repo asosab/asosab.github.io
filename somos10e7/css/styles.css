@@ -547,6 +547,29 @@ section:nth-child(even) {
   box-shadow: var(--sombra), 0 0 0 2px var(--rojo), 0 0 20px rgba(207,47,53,0.3);
 }
 
+.ultimo-full {
+  margin-top: 40px;
+  padding: 0 0 32px;
+  border-bottom: 1px solid rgba(207,47,53,0.2);
+}
+.ultimo-full p,
+.ultimo-full ul {
+  color: rgba(250,245,233,0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ultimo-full ul {
+  padding-left: 24px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.ultimo-full ul li {
+  margin-bottom: 4px;
+}
+
 /* ============================================================
    EPISODIOS
 ============================================================ */
