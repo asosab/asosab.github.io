@@ -1342,6 +1342,38 @@
     requestAnimationFrame(tick);
   }
 
+  // ── HERO VIDEO: diagnóstico + red de seguridad para autoplay bloqueado ───────
+  (function () {
+    const heroVideo = document.querySelector('.hero-video');
+    if (!heroVideo) return;
+
+    heroVideo.addEventListener('error', () => {
+      const err = heroVideo.error;
+      console.warn('[hero-video] Error al cargar el video:', err && err.code, err && err.message);
+    });
+
+    function tryPlay() {
+      const p = heroVideo.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch((err) => {
+          console.warn('[hero-video] Autoplay bloqueado por el navegador:', err.name, err.message);
+          // Reintenta en la primera interacción del usuario (tap/click),
+          // que es lo único que puede destrabar el autoplay en algunos casos (p. ej. Low Power Mode en iOS).
+          const retry = () => { heroVideo.play().catch(() => {}); };
+          ['pointerdown', 'touchstart', 'click'].forEach(evt =>
+            document.addEventListener(evt, retry, { once: true, passive: true })
+          );
+        });
+      }
+    }
+
+    if (heroVideo.readyState >= 2) {
+      tryPlay();
+    } else {
+      heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
+    }
+  })();
+
   // ── HERO COUNTER ─────────────────────────────────────────────────────────────
   const heroCounter = document.getElementById('hero-counter');
   let heroFired = false;
