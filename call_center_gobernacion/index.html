@@ -125,6 +125,12 @@
       object-fit: cover;
       z-index: 0;
     }
+    .hero-video-bg {
+      display: none;
+      filter: blur(30px) brightness(0.55) saturate(1.1);
+      transform: scale(1.15);
+      pointer-events: none;
+    }
     .hero-video-overlay {
       position: absolute;
       inset: 0;
@@ -847,11 +853,20 @@
       .phases-row { grid-template-columns: 1fr; }
       .contact-row { gap: 1.5rem; }
       .hero-number { font-size: clamp(4rem, 20vw, 7rem); }
-      .hero-video {
-        object-fit: contain;
-        background: var(--bg);
+      .hero-video-fg {
+        object-fit: cover;
+        object-position: 15% top;
       }
-
+    }
+    /* Proporciones extremas (muy angostas/altas): volver al esquema con blur de fondo + video completo */
+    @media (max-width: 580px) and (max-aspect-ratio: 2/5) {
+      .hero-video-bg {
+        display: block;
+      }
+      .hero-video-fg {
+        object-fit: contain;
+        background: transparent;
+      }
     }
     @media (prefers-reduced-motion: reduce) {
       .rev { opacity: 1; transform: none; transition: none; }
@@ -876,7 +891,10 @@
 
 <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" aria-hidden="true" disablepictureinpicture>
+  <video class="hero-video hero-video-bg" autoplay muted loop playsinline preload="auto" poster="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" aria-hidden="true" disablepictureinpicture tabindex="-1">
+    <source src="https://asosab.github.io/call_center_gobernacion/video/LAV01.mp4?v=99" type="video/mp4">
+  </video>
+  <video class="hero-video hero-video-fg" autoplay muted loop playsinline preload="auto" poster="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" aria-hidden="true" disablepictureinpicture>
     <source src="https://asosab.github.io/call_center_gobernacion/video/LAV01.mp4?v=99" type="video/mp4">
     Tu navegador no soporta la reproducción de video.
   </video>
@@ -1343,34 +1361,36 @@
 
   // ── HERO VIDEO: diagnóstico + red de seguridad para autoplay bloqueado ───────
   (function () {
-    const heroVideo = document.querySelector('.hero-video');
-    if (!heroVideo) return;
+    const heroVideos = document.querySelectorAll('.hero-video');
+    if (!heroVideos.length) return;
 
-    heroVideo.addEventListener('error', () => {
-      const err = heroVideo.error;
-      console.warn('[hero-video] Error al cargar el video:', err && err.code, err && err.message);
-    });
+    heroVideos.forEach((heroVideo) => {
+      heroVideo.addEventListener('error', () => {
+        const err = heroVideo.error;
+        console.warn('[hero-video] Error al cargar el video:', err && err.code, err && err.message);
+      });
 
-    function tryPlay() {
-      const p = heroVideo.play();
-      if (p && typeof p.catch === 'function') {
-        p.catch((err) => {
-          console.warn('[hero-video] Autoplay bloqueado por el navegador:', err.name, err.message);
-          // Reintenta en la primera interacción del usuario (tap/click),
-          // que es lo único que puede destrabar el autoplay en algunos casos (p. ej. Low Power Mode en iOS).
-          const retry = () => { heroVideo.play().catch(() => {}); };
-          ['pointerdown', 'touchstart', 'click'].forEach(evt =>
-            document.addEventListener(evt, retry, { once: true, passive: true })
-          );
-        });
+      function tryPlay() {
+        const p = heroVideo.play();
+        if (p && typeof p.catch === 'function') {
+          p.catch((err) => {
+            console.warn('[hero-video] Autoplay bloqueado por el navegador:', err.name, err.message);
+            // Reintenta en la primera interacción del usuario (tap/click),
+            // que es lo único que puede destrabar el autoplay en algunos casos (p. ej. Low Power Mode en iOS).
+            const retry = () => { heroVideo.play().catch(() => {}); };
+            ['pointerdown', 'touchstart', 'click'].forEach(evt =>
+              document.addEventListener(evt, retry, { once: true, passive: true })
+            );
+          });
+        }
       }
-    }
 
-    if (heroVideo.readyState >= 2) {
-      tryPlay();
-    } else {
-      heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
-    }
+      if (heroVideo.readyState >= 2) {
+        tryPlay();
+      } else {
+        heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
+      }
+    });
   })();
 
   // ── HERO COUNTER ─────────────────────────────────────────────────────────────
