@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Atención Ciudadana · Gobernación Santa Cruz · Alejandro Sosa Briceño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #0D1821;
+      --bg-card:   #132030;
+      --bg-card2:  #1A2E44;
+      --amber:     #F59E0B;
+      --amber-dim: #7A5109;
+      --amber-glow:rgba(245,158,11,0.12);
+      --sky:       #38BDF8;
+      --text:      #DDE8F2;
+      --muted:     #6A8BAA;
+      --border:    #1F3350;
+      --white:     #FFFFFF;
+      --display:   'Bebas Neue', sans-serif;
+      --body:      'Inter', sans-serif;
+      --rounding:  3px;
+      --max:       1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      background: rgba(13,24,33,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-brand {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--amber); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,158,11,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,158,11,.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-bg-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 75% 55% at 50% 38%, rgba(245,158,11,.09) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--amber-dim);
+    }
+    .hero-number {
+      font-family: var(--display);
+      font-size: clamp(5.5rem, 17vw, 12rem);
+      line-height: 0.9;
+      color: var(--white);
+      letter-spacing: .01em;
+    }
+    .hero-number-caption {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-top: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-headline {
+      font-family: var(--display);
+      font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 1.4rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 2.8rem;
+      line-height: 1.8;
+    }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-a {
+      background: var(--amber);
+      color: #0D1821;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: .85rem 2.2rem;
+      border-radius: var(--rounding);
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-a:hover { background: #FBB731; transform: translateY(-1px); }
+    .btn-b {
+      background: transparent;
+      color: var(--text);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: .85rem 2.2rem;
+      border-radius: var(--rounding);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+      display: inline-block;
+    }
+    .btn-b:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* SECTION COMMONS */
+    .pg-section {
+      padding: 6rem 2rem;
+    }
+    .pg-section--alt { background: var(--bg-card); }
+    .pg-wrap { max-width: var(--max); margin: 0 auto; }
+    .pg-label {
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .pg-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .pg-heading {
+      font-family: var(--display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1.02;
+      margin-bottom: 0.9rem;
+    }
+    .pg-sub {
+      font-size: .95rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    .pg-header { margin-bottom: 3.5rem; }
+
+    /* KPI GRID */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--rounding);
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .kpi-cell {
+      background: var(--bg-card2);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .kpi-val {
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      color: var(--amber);
+      line-height: 1;
+      letter-spacing: .02em;
+    }
+    .kpi-val sup {
+      font-size: 50%;
+      letter-spacing: 0;
+    }
+    .kpi-name {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .5rem;
+    }
+    .kpi-detail {
+      font-size: .73rem;
+      color: var(--muted);
+      margin-top: .25rem;
+      opacity: .7;
+    }
+
+    /* TABLE */
+    .data-tbl {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    .data-tbl th {
+      background: var(--bg-card2);
+      color: var(--muted);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: .85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-tbl th:not(:first-child) { text-align: center; }
+    .data-tbl td {
+      padding: .8rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-tbl td:not(:first-child) { text-align: center; color: var(--muted); }
+    .data-tbl tr:last-child td { border-bottom: none; }
+    .data-tbl tr:hover td { background: var(--amber-glow); }
+    .tbl-note {
+      font-size: .73rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: .7rem;
+      line-height: 1.6;
+    }
+
+    /* SERVICES */
+    .services-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .svc-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--amber);
+      border-radius: var(--rounding);
+      padding: 2rem 1.75rem;
+      transition: border-color .2s, background .2s;
+    }
+    .svc-card:hover {
+      background: rgba(26,46,68,.8);
+      border-color: var(--amber);
+    }
+    .svc-letter {
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: .7rem;
+    }
+    .svc-title {
+      font-family: var(--display);
+      font-size: 1.75rem;
+      letter-spacing: .04em;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: .9rem;
+    }
+    .svc-desc {
+      font-size: .84rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .svc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .svc-list li {
+      font-size: .81rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: .55rem;
+      line-height: 1.5;
+    }
+    .svc-list li::before {
+      content: '›';
+      color: var(--amber);
+      font-size: .9rem;
+      flex-shrink: 0;
+      margin-top: -.05rem;
+    }
+
+    /* PHASES */
+    .phases-wrap {
+      position: relative;
+    }
+    .phase-connector {
+      position: absolute;
+      top: 19px;
+      left: calc(10% + 20px);
+      right: calc(10% + 20px);
+      height: 1px;
+      background: linear-gradient(to right, var(--border), var(--amber-dim), var(--border));
+      pointer-events: none;
+    }
+    .phases-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+    .phase {
+      padding: 0 .6rem;
+    }
+    .phase-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      font-family: var(--display);
+      font-size: 1.05rem;
+      color: var(--amber);
+      position: relative;
+      z-index: 1;
+      transition: background .3s, border-color .3s;
+    }
+    .phase:hover .phase-dot {
+      background: var(--amber-glow);
+      border-color: var(--amber);
+    }
+    .phase-period {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      text-align: center;
+      margin-bottom: .35rem;
+    }
+    .phase-name {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: .7rem;
+      line-height: 1.3;
+    }
+    .phase-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+    .phase-items li {
+      font-size: .73rem;
+      color: var(--muted);
+      line-height: 1.45;
+      padding-left: .7rem;
+      position: relative;
+    }
+    .phase-items li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--amber-dim);
+    }
+
+    /* DIFFERENTIATORS */
+    .diff-stack {
+      border-top: 1px solid var(--border);
+    }
+    .diff-row {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      min-height: 110px;
+    }
+    .diff-row:nth-child(even) { flex-direction: row-reverse; }
+    .diff-label-side {
+      width: 38%;
+      flex-shrink: 0;
+      background: var(--bg-card2);
+      padding: 2rem 2rem;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid var(--border);
+    }
+    .diff-row:nth-child(even) .diff-label-side {
+      border-right: none;
+      border-left: 1px solid var(--border);
+    }
+    .diff-label-txt {
+      font-family: var(--display);
+      font-size: 1.45rem;
+      letter-spacing: .03em;
+      color: var(--white);
+      line-height: 1.15;
+    }
+    .diff-label-txt span {
+      display: block;
+      font-family: var(--body);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: .3rem;
+    }
+    .diff-text-side {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .diff-text-side p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .diff-text-side p strong { color: var(--text); font-weight: 500; }
+
+    /* CV */
+    .cv-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .cv-timeline {
+      border-left: 2px solid var(--border);
+      padding-left: 2rem;
+      margin-left: .5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .cv-entry {
+      position: relative;
+      padding-bottom: 2.2rem;
+    }
+    .cv-entry:last-child { padding-bottom: 0; }
+    .cv-entry::before {
+      content: '';
+      position: absolute;
+      left: -2.55rem;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--border);
+      border: 2px solid var(--bg-card);
+    }
+    .cv-entry.hi::before {
+      background: var(--amber);
+      box-shadow: 0 0 0 5px rgba(245,158,11,.13);
+    }
+    .cv-period {
+      font-size: .63rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: .2rem;
+    }
+    .cv-role {
+      font-size: .93rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: .1rem;
+    }
+    .cv-org {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-bottom: .45rem;
+    }
+    .cv-note {
+      font-size: .79rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: 3rem;
+    }
+    .chip {
+      font-size: .63rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      padding: .28rem .7rem;
+      border-radius: 2px;
+    }
+
+    /* CTA / CONTACTO */
+    .cta-block {
+      background: var(--bg-card2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .cta-quote {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+      letter-spacing: .04em;
+      color: var(--white);
+      max-width: 780px;
+      margin: 0 auto 1.4rem;
+      line-height: 1.18;
+    }
+    .cta-quote em { color: var(--amber); font-style: normal; }
+    .cta-attr {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+    }
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.8rem;
+    }
+    .contact-item { text-align: center; }
+    .contact-lbl {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .35rem;
+    }
+    .contact-val {
+      font-size: .92rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .contact-val a {
+      color: var(--amber);
+      text-decoration: none;
+    }
+    .contact-val a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      padding: 1.4rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-size: .68rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+
+    /* REVEAL */
+    .rev {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .rev.in-view { opacity: 1; transform: none; }
+    .rev-d1 { transition-delay: .1s; }
+    .rev-d2 { transition-delay: .2s; }
+    .rev-d3 { transition-delay: .3s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 920px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-row { grid-template-columns: 1fr; }
+      .phases-row { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .phase-connector { display: none; }
+      .diff-row,
+      .diff-row:nth-child(even) { flex-direction: column; }
+      .diff-label-side { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+      .diff-row:nth-child(even) .diff-label-side { border-left: none; }
+      .cv-two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 580px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .phases-row { grid-template-columns: 1fr; }
+      .contact-row { gap: 1.5rem; }
+      .hero-number { font-size: clamp(4rem, 20vw, 7rem); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rev { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<nav>
+  <span class="nav-brand">Alejandro Sosa Briceño</span>
+  <ul class="nav-links">
+    <li><a href="#lav">La LAV</a></li>
+    <li><a href="#propuesta">Propuesta</a></li>
+    <li><a href="#fases">Fases</a></li>
+    <li><a href="#diferenciadores">Diferenciadores</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Propuesta de Servicios · Gobernación de Santa Cruz · 2026</p>
+    <div class="hero-number" id="hero-counter">0</div>
+    <p class="hero-number-caption">Casos gestionados · Línea Abierta Vecinal · 2019 — 2021</p>
+    <h1 class="hero-headline">El Centro de Atención Ciudadana Departamental que Santa Cruz Merece</h1>
+    <p class="hero-sub">
+      Diseñé, construí y dirigí el primer call center ciudadano 24/7 de Santa Cruz — <strong>sin presupuesto nuevo</strong>, con personal ya contratado, durante la pandemia. Propongo replicarlo y escalarlo para la Gobernación.
+    </p>
+    <div class="hero-actions">
+      <a href="#propuesta" class="btn-a">Ver la propuesta</a>
+      <a href="#contacto" class="btn-b">Contacto directo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── LA LAV ─────────────────────────────────────────────────────────── -->
+<section class="pg-section pg-section--alt" id="lav">
+  <div class="pg-wrap">
+
+    <div class="pg-header rev">
+      <p class="pg-label">Evidencia verificable</p>
+      <h2 class="pg-heading">La Línea Abierta Vecinal</h2>
+      <p class="pg-sub">Entre 2019 y 2021, construí y dirigí el primer call center ciudadano 24/7 de Santa Cruz de la Sierra — desde cero, con recursos institucionales existentes, bajo la peor crisis sanitaria de la ciudad en décadas.</p>
+    </div>
+
+    <div class="kpi-grid rev">
+      <div class="kpi-cell">
+        <div class="kpi-val" data-count="52500">0</div>
+        <div class="kpi-name">Casos gestionados</div>
+        <div class="kpi-detail">Sep 2019 — Mar 2021</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-val">1.500<sup>/día</sup></div>
+        <div class="kpi-name">Pico máximo de llamadas</div>
+        <div class="kpi-detail">Inicio de pandemia COVID-19</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-val">24/7</div>
+        <div class="kpi-name">Cobertura operativa</div>
+        <div class="kpi-detail">365 días al año</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-val" data-count="100">0</div>
+        <div class="kpi-name">Operadores simultáneos</div>
+        <div class="kpi-detail">Escalado desde 7 al inicio</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-val">388</div>
+        <div class="kpi-name">Días gestionando pandemia</div>
+        <div class="kpi-detail">138 casos COVID diarios promedio</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-val" data-count="300">0</div>
+        <div class="kpi-name">Servidores capacitados</div>
+        <div class="kpi-detail">Metodología SCRUM adaptada</div>
+      </div>
+    </div>
+
+    <div class="rev">
+      <table class="data-tbl">
+        <thead>
+          <tr>
+            <th>Tipo de caso</th>
+            <th>Registros</th>
+            <th>% Atendidos</th>
+            <th>Casos resueltos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>COVID-19 (apoyo al COEM)</td><td>12.802</td><td>98,2 %</td><td>3.657</td></tr>
+          <tr><td>Donación de alimentos</td><td>13.106</td><td>21,7 %*</td><td>6.553</td></tr>
+          <tr><td>No acatan cuarentena</td><td>802</td><td>31,2 %</td><td>401</td></tr>
+          <tr><td>Emergencias médicas</td><td>1.132</td><td>66,4 %</td><td>283</td></tr>
+          <tr><td>Especulación de precios</td><td>1.133</td><td>100 %</td><td>206</td></tr>
+          <tr><td>Alumbrado público</td><td>593</td><td>67,6 %</td><td>148</td></tr>
+          <tr><td>Árboles caídos / poda</td><td>954</td><td>~27 %</td><td>317</td></tr>
+          <tr><td>Caballos en la ciudad</td><td>327</td><td>15,6 %</td><td>109</td></tr>
+        </tbody>
+      </table>
+      <p class="tbl-note">* El bajo porcentaje en donación de alimentos responde a deficiencias en el sistema de listas de la Alcaldía, no a fallas operativas del call center.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROPUESTA ─────────────────────────────────────────────────────────── -->
+<section class="pg-section" id="propuesta">
+  <div class="pg-wrap">
+
+    <div class="pg-header rev">
+      <p class="pg-label">Alcance de la propuesta</p>
+      <h2 class="pg-heading">Tres Servicios Integrados</h2>
+      <p class="pg-sub">Un centro de atención ciudadana departamental requiere tres pilares simultáneos. Los ofrezco y ejecuto todos juntos.</p>
+    </div>
+
+    <div class="services-row">
+      <div class="svc-card rev rev-d1">
+        <p class="svc-letter">Componente A</p>
+        <h3 class="svc-title">Software de Gestión</h3>
+        <p class="svc-desc">Plataforma web y móvil desarrollada para la Gobernación. Sin licencias extranjeras. El código queda en manos de la institución al finalizar.</p>
+        <ul class="svc-list">
+          <li>Panel de recepción y registro en tiempo real</li>
+          <li>Asignación automática a secretaría competente</li>
+          <li>Seguimiento de casos hasta el cierre</li>
+          <li>Integración: teléfono, WhatsApp, formulario web</li>
+          <li>Dashboard de estadísticas para autoridades</li>
+          <li>Georreferenciación y mapas de calor territorial</li>
+          <li>Módulo de IA para triage y clasificación automática</li>
+          <li>API abierta para integración institucional</li>
+        </ul>
+      </div>
+
+      <div class="svc-card rev rev-d2">
+        <p class="svc-letter">Componente B</p>
+        <h3 class="svc-title">Estructura Operativa</h3>
+        <p class="svc-desc">Diseño completo de la arquitectura humana y los procesos. El sistema más sofisticado falla sin estructura bien diseñada detrás.</p>
+        <ul class="svc-list">
+          <li>Organigrama: Director, Coordinadores, Receptores</li>
+          <li>Flujos de trabajo y protocolos de atención</li>
+          <li>Sistema de turnos 24/7 desde el día uno</li>
+          <li>Metodología ágil adaptada a call center ciudadano</li>
+          <li>Plan de escalamiento: de 7 a 100+ operadores</li>
+          <li>Protocolos de teletrabajo y operación remota</li>
+          <li>KPIs y sistema de rendición de cuentas</li>
+          <li>Coordinación con secretarías departamentales</li>
+        </ul>
+      </div>
+
+      <div class="svc-card rev rev-d3">
+        <p class="svc-letter">Componente C</p>
+        <h3 class="svc-title">Formación y Dirección</h3>
+        <p class="svc-desc">Entrenamiento del equipo y acompañamiento directo en los primeros 90 días. Transferencia total de conocimiento al finalizar.</p>
+        <ul class="svc-list">
+          <li>Capacitación intensiva del equipo directivo</li>
+          <li>Talleres de atención ciudadana y gestión de crisis</li>
+          <li>Formación de formadores internos</li>
+          <li>Capacitación a servidores de todas las secretarías</li>
+          <li>Acompañamiento directo durante los primeros 90 días</li>
+          <li>Manual operativo completo</li>
+          <li>Documentación técnica entregada a la Gobernación</li>
+          <li>Plan de contingencia para emergencias departamentales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FASES ─────────────────────────────────────────────────────────────── -->
+<section class="pg-section pg-section--alt" id="fases">
+  <div class="pg-wrap">
+
+    <div class="pg-header rev">
+      <p class="pg-label">Plan de implementación</p>
+      <h2 class="pg-heading">Cinco Fases · 24 Semanas</h2>
+      <p class="pg-sub">De cero a un centro de atención departamental completamente operativo y transferido, en seis meses.</p>
+    </div>
+
+    <div class="phases-wrap rev">
+      <div class="phase-connector"></div>
+      <div class="phases-row">
+        <div class="phase">
+          <div class="phase-dot">1</div>
+          <p class="phase-period">Sem. 1–3</p>
+          <p class="phase-name">Diagnóstico y Arquitectura</p>
+          <ul class="phase-items">
+            <li>Relevamiento con secretarías</li>
+            <li>Definición de alcance técnico</li>
+            <li>Diseño de arquitectura de software</li>
+            <li>Selección del local y equipamiento</li>
+            <li>Organigrama inicial</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">2</div>
+          <p class="phase-period">Sem. 3–8</p>
+          <p class="phase-name">Desarrollo del Software</p>
+          <ul class="phase-items">
+            <li>Panel de recepción y registro</li>
+            <li>Asignación y seguimiento de casos</li>
+            <li>Integración telefónica y WhatsApp</li>
+            <li>Dashboard de estadísticas</li>
+            <li>Pruebas y ajustes</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">3</div>
+          <p class="phase-period">Sem. 8–11</p>
+          <p class="phase-name">Formación y Lanzamiento</p>
+          <ul class="phase-items">
+            <li>Capacitación del equipo completo</li>
+            <li>Simulacros operativos</li>
+            <li>Lanzamiento en modo piloto</li>
+            <li>Ajustes en tiempo real</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">4</div>
+          <p class="phase-period">Sem. 11–20</p>
+          <p class="phase-name">Operación Plena</p>
+          <ul class="phase-items">
+            <li>Ampliación a cobertura 24/7</li>
+            <li>Canales adicionales</li>
+            <li>Módulo de IA para triage</li>
+            <li>Georreferenciación departamental</li>
+            <li>Informe de gestión a 90 días</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">5</div>
+          <p class="phase-period">Sem. 20–24</p>
+          <p class="phase-name">Transferencia Total</p>
+          <ul class="phase-items">
+            <li>Documentación completa</li>
+            <li>Transferencia al equipo interno</li>
+            <li>Plan de contingencia</li>
+            <li>Evaluación: expansión a municipios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIFERENCIADORES ───────────────────────────────────────────────────── -->
+<section class="pg-section" id="diferenciadores">
+  <div class="pg-wrap">
+
+    <div class="pg-header rev">
+      <p class="pg-label">Por qué esta propuesta</p>
+      <h2 class="pg-heading">Lo Que Nos Diferencia</h2>
+      <p class="pg-sub">No es una licitación más. Es un sistema probado bajo condiciones extremas, en esta misma ciudad, con los mismos tipos de recursos que tiene la Gobernación hoy.</p>
+    </div>
+
+    <div class="diff-stack">
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>01</span>Experiencia real, no teórica</div>
+        </div>
+        <div class="diff-text-side">
+          <p>Diseñé, construí y dirigí la LAV desde cero, escalándola de <strong>7 a 100 operadores</strong> durante la peor emergencia sanitaria de Santa Cruz en décadas. Sé exactamente qué falla, qué funciona y cómo reaccionar cuando el sistema es puesto a prueba real.</p>
+        </div>
+      </div>
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>02</span>Sin presupuesto nuevo</div>
+        </div>
+        <div class="diff-text-side">
+          <p>El modelo LAV funcionó con <strong>personal ya en planilla, equipos existentes y espacios institucionales</strong>. No se creó ningún ítem presupuestario nuevo. La Gobernación ya tiene los recursos humanos y físicos necesarios — lo que falta es arquitectura, metodología y dirección.</p>
+        </div>
+      </div>
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>03</span>Software propio, sin dependencias</div>
+        </div>
+        <div class="diff-text-side">
+          <p>La plataforma se desarrolla <strong>para la Gobernación</strong>. Sin licencias extranjeras, sin dependencia de terceros. El código y la infraestructura quedan en manos de la institución al finalizar. Boliviano desde el inicio hasta el final.</p>
+        </div>
+      </div>
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>04</span>Escalabilidad probada bajo presión</div>
+        </div>
+        <div class="diff-text-side">
+          <p>La LAV pasó de 10 horas/día a <strong>24/7 en menos de 48 horas</strong> al inicio de la pandemia. El modelo de teletrabajo fue implementado el 8 de marzo de 2020, días antes del decreto de cuarentena. Ese plan de escalamiento está documentado y es reproducible.</p>
+        </div>
+      </div>
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>05</span>Visión de sistema, no solo tecnología</div>
+        </div>
+        <div class="diff-text-side">
+          <p>Un call center funciona como sistema integral: <strong>tecnología + personas + procesos + datos</strong>. La herramienta sin estructura organizativa no escala. Entrego los tres componentes integrados, no piezas sueltas sin coordinación.</p>
+        </div>
+      </div>
+      <div class="diff-row rev">
+        <div class="diff-label-side">
+          <div class="diff-label-txt"><span>06</span>Alineado con la visión del Gobernador</div>
+        </div>
+        <div class="diff-text-side">
+          <p>Velasco declaró la <strong>digitalización y la eficiencia técnica</strong> como ejes de su gestión. Este proyecto es exactamente el puente entre esa visión y el ciudadano real del departamento: un producto probado, con métricas reales, construido con recursos existentes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRAYECTORIA ───────────────────────────────────────────────────────── -->
+<section class="pg-section pg-section--alt" id="trayectoria">
+  <div class="pg-wrap">
+
+    <div class="pg-header rev">
+      <p class="pg-label">Trayectoria profesional</p>
+      <h2 class="pg-heading">Alejandro Sosa Briceño</h2>
+      <p class="pg-sub">Más de 25 años construyendo sistemas digitales, plataformas de atención ciudadana y empresas en Venezuela y Bolivia. Desarrollador full-stack, estratega de producto y emprendedor.</p>
+    </div>
+
+    <div class="cv-two-col rev">
+      <div>
+        <div class="cv-timeline">
+          <div class="cv-entry hi">
+            <p class="cv-period">2019 — 2021</p>
+            <p class="cv-role">Director · Call Center Ciudadano (LAV)</p>
+            <p class="cv-org">Gobierno Autónomo Municipal de Santa Cruz</p>
+            <p class="cv-note">Diseñé y puse en marcha la Línea Abierta Vecinal. Escalé de 7 a 100 operadores. 52.500+ casos gestionados incluyendo coordinación COVID-19. Capacité a 300+ servidores públicos en metodologías ágiles.</p>
+          </div>
+          <div class="cv-entry hi">
+            <p class="cv-period">2024 — Presente</p>
+            <p class="cv-role">Fundador & Estratega de Producto</p>
+            <p class="cv-org">Statetty · PropTech</p>
+            <p class="cv-note">Plataforma digital para el sector inmobiliario boliviano. Arquitectura de software, automatización e IA para agentes.</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">2024 — 2025</p>
+            <p class="cv-role">Asesor Inmobiliario Asociado</p>
+            <p class="cv-org">RE/MAX Central Bolivia</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">2019 — Presente</p>
+            <p class="cv-role">CEO & Fundador</p>
+            <p class="cv-org">ekvilibroLab · Innovación Alimentaria</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">2026 — Presente</p>
+            <p class="cv-role">Host & Postproductor</p>
+            <p class="cv-org">Somos 10^7 · Podcast</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cv-timeline">
+          <div class="cv-entry hi">
+            <p class="cv-period">2013 — 2016</p>
+            <p class="cv-role">Consultor Tecnológico & Desarrollador</p>
+            <p class="cv-org">INCE · GovTech · Venezuela</p>
+            <p class="cv-note">Sistema nacional de pago de tributos (SINCERA), videovigilancia IP, webservices de integración con SENIAT, IVSS y SAIME. Stack: PHP, YII, PostgreSQL, MySQL, Git.</p>
+          </div>
+          <div class="cv-entry hi">
+            <p class="cv-period">2011 — 2012</p>
+            <p class="cv-role">Consultor y Líder de Desarrollo</p>
+            <p class="cv-org">FUNDABIT · Ministerio de Educación · Venezuela</p>
+            <p class="cv-note">Sistema REÚNE: registro nacional de planteles y docentes. 112 tablas, 39 laptops desplegadas, 2.446 registros en piloto. Coordinación interinstitucional con CNE, CANTV y SENIFA.</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">2006 — 2007</p>
+            <p class="cv-role">Ingeniero de Usabilidad</p>
+            <p class="cv-org">Smartmatic · Tecnología · Venezuela</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">2000 — 2002</p>
+            <p class="cv-role">Consultor de Tecnología</p>
+            <p class="cv-org">CONAVI · Gobierno · Venezuela</p>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-period">1996 — 1998</p>
+            <p class="cv-role">Desarrollador Senior & Help Desk</p>
+            <p class="cv-org">C-COM Telecomunicaciones · Venezuela</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-chips rev">
+      <span class="chip">Backend Development</span>
+      <span class="chip">Microservicios</span>
+      <span class="chip">SQL / NoSQL</span>
+      <span class="chip">Automatización</span>
+      <span class="chip">Inteligencia Artificial</span>
+      <span class="chip">Estrategia de Producto</span>
+      <span class="chip">Gestión de Crisis</span>
+      <span class="chip">Transformación Digital</span>
+      <span class="chip">Metodologías Ágiles</span>
+      <span class="chip">Dirección de Equipos</span>
+      <span class="chip">GovTech</span>
+      <span class="chip">Español Nativo</span>
+      <span class="chip">Inglés Profesional</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ──────────────────────────────────────────────────────────── -->
+<section class="cta-block" id="contacto">
+  <p class="pg-label" style="justify-content:center;margin-bottom:2.5rem;">Próximos pasos</p>
+  <p class="cta-quote">
+    "Santa Cruz puede tener el mejor centro de atención ciudadana de Bolivia.
+    <em>Ya lo hice</em> en el momento más difícil. Ahora lo haremos con tiempo, tecnología y los recursos que ya existen."
+  </p>
+  <p class="cta-attr">— Alejandro Sosa Briceño</p>
+
+  <div class="contact-row">
+    <div class="contact-item">
+      <p class="contact-lbl">Email</p>
+      <p class="contact-val"><a href="mailto:asosab@gmail.com">asosab@gmail.com</a></p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-lbl">WhatsApp</p>
+      <p class="contact-val"><a href="tel:+59174189700">+591 74 189 700</a></p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-lbl">LinkedIn</p>
+      <p class="contact-val"><a href="https://linkedin.com/in/alejandrososa" target="_blank" rel="noopener">linkedin.com/in/alejandrososa</a></p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-lbl">GitHub</p>
+      <p class="contact-val"><a href="https://github.com/asosab" target="_blank" rel="noopener">github.com/asosab</a></p>
+    </div>
+  </div>
+
+  <div class="hero-actions">
+    <a href="mailto:asosab@gmail.com" class="btn-a">Escribir mensaje</a>
+    <a href="https://linkedin.com/in/alejandrososa" class="btn-b" target="_blank" rel="noopener">Ver perfil LinkedIn</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<footer>
+  <p>Alejandro Sosa Briceño &nbsp;·&nbsp; Santa Cruz de la Sierra, Bolivia &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Propuesta de Servicios Profesionales</p>
+</footer>
+
+<script>
+  // ── EASING ──────────────────────────────────────────────────────────────────
+  function easeOutExpo(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function runCounter(el, target, duration) {
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const val = Math.round(easeOutExpo(p) * target);
+      el.textContent = val.toLocaleString('es-BO');
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // ── HERO COUNTER ─────────────────────────────────────────────────────────────
+  const heroCounter = document.getElementById('hero-counter');
+  let heroFired = false;
+  window.addEventListener('load', () => {
+    if (!heroFired) { heroFired = true; runCounter(heroCounter, 52500, 2600); }
+  });
+
+  // ── INTERSECTION OBSERVER ────────────────────────────────────────────────────
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in-view');
+      revObs.unobserve(e.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.rev').forEach(el => revObs.observe(el));
+
+  // ── KPI COUNTERS ON SCROLL ───────────────────────────────────────────────────
+  const kpiObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const target = parseInt(e.target.dataset.count, 10);
+      if (!isNaN(target)) runCounter(e.target, target, 1800);
+      kpiObs.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('[data-count]').forEach(el => kpiObs.observe(el));
+
+  // ── NAV ACTIVE STATE ─────────────────────────────────────────────────────────
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section[id]');
+
+  const secObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.getAttribute('id');
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--amber)' : '';
+      });
+    });
+  }, { threshold: 0.35 });
+
+  sections.forEach(s => secObs.observe(s));
+</script>
+</body>
+</html>
