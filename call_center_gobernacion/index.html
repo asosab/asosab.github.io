@@ -371,6 +371,11 @@
       border: 1px solid var(--border);
       border-top: 2px solid var(--amber);
       background: var(--bg-card2);
+      cursor: pointer;
+    }
+    .lav-gallery figure:focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 2px;
     }
     .lav-gallery img {
       display: block;
@@ -383,16 +388,92 @@
     .lav-gallery figcaption {
       position: absolute;
       inset: auto 0 0 0;
-      padding: .9rem 1rem .7rem;
-      font-size: .68rem;
+      padding: 1.6rem 1rem .75rem;
+      font-size: .74rem;
       font-weight: 600;
-      letter-spacing: .04em;
-      color: var(--text);
-      background: linear-gradient(180deg, transparent, rgba(13,24,33,.92) 70%);
+      letter-spacing: .02em;
+      color: var(--white);
+      text-shadow: 0 1px 3px rgba(0,0,0,.5);
+      background: linear-gradient(180deg, transparent, rgba(13,24,33,.55) 40%, rgba(13,24,33,.96) 100%);
     }
+    .lav-gallery figure::after {
+      content: '⤢';
+      position: absolute;
+      top: .6rem;
+      right: .6rem;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(13,24,33,.7);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--amber);
+      font-size: .85rem;
+      opacity: 0;
+      transition: opacity .2s, border-color .2s;
+    }
+    .lav-gallery figure:hover::after,
+    .lav-gallery figure:focus-visible::after { opacity: 1; }
     @media (max-width: 768px) {
       .lav-gallery { grid-template-columns: 1fr; }
       .lav-gallery img { height: 220px; }
+      .lav-gallery figure::after { opacity: 1; }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem 2.5rem;
+      background: rgba(13,24,33,.96);
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-figure {
+      margin: 0;
+      width: 100%;
+      max-width: 880px;
+      text-align: center;
+    }
+    .lightbox-figure img {
+      width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+      border-radius: var(--rounding);
+      border: 1px solid var(--border);
+      background: var(--bg-card2);
+    }
+    .lightbox-figure figcaption {
+      margin: 1.4rem auto 0;
+      max-width: 680px;
+      font-size: .92rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.6rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .lightbox-close:hover,
+    .lightbox-close:focus-visible {
+      border-color: var(--amber);
+      color: var(--amber);
     }
 
     /* SERVICES */
@@ -795,7 +876,7 @@
     <p class="hero-number-caption">Casos gestionados · Línea Abierta Vecinal · 2019 — 2021</p>
     <h1 class="hero-headline">El Centro de Atención Ciudadana Departamental que Santa Cruz Merece</h1>
     <p class="hero-sub">
-      Diseñé, construí y dirigí el primer call center ciudadano 24/7 de Santa Cruz — <strong>sin presupuesto nuevo</strong>, con personal ya contratado, durante la pandemia. Propongo replicarlo y escalarlo para la Gobernación.
+      Diseñé, construí y dirigí el primer call center ciudadano 24/7 de Santa Cruz — <strong>con presupuesto y personal ya existentes</strong>, durante la pandemia. Propongo replicarlo y escalarlo para la Gobernación.
     </p>
     <div class="hero-actions">
       <a href="#propuesta" class="btn-a">Ver la propuesta</a>
@@ -872,17 +953,17 @@
     </div>
 
     <div class="lav-gallery rev">
-      <figure>
-        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV00.jpg" alt="Línea Abierta Vecinal - registro fotográfico 1" loading="lazy" decoding="async">
-        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      <figure tabindex="0" role="button" aria-label="Ampliar foto: Coordinación interinstitucional" data-caption="Gestionamos un espacio cedido por la Secretaría de Educación para coordinar a más de 300 servidores públicos de la Alcaldía, capacitándolos para atender emergencias ciudadanas desde sus propios celulares, estuvieran donde estuvieran.">
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV00.jpg" alt="Coordinación de más de 300 servidores públicos de la Alcaldía desde un espacio cedido por la Secretaría de Educación" loading="lazy" decoding="async">
+        <figcaption>Coordinación interinstitucional · 300+ servidores capacitados</figcaption>
       </figure>
-      <figure>
-        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" alt="Línea Abierta Vecinal - registro fotográfico 2" loading="lazy" decoding="async">
-        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      <figure tabindex="0" role="button" aria-label="Ampliar foto: Adaptación bajo presión" data-caption="Nos trasladamos a la Secretaría Municipal de Movilidad Urbana para operar con sus equipos y personal, garantizando atención inmediata durante el paro cívico de 2019.">
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" alt="Operación de la LAV desde la Secretaría Municipal de Movilidad Urbana durante el paro cívico de 2019" loading="lazy" decoding="async">
+        <figcaption>Adaptación bajo presión · Paro cívico 2019</figcaption>
       </figure>
-      <figure>
-        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV02.jpg" alt="Línea Abierta Vecinal - registro fotográfico 3" loading="lazy" decoding="async">
-        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      <figure tabindex="0" role="button" aria-label="Ampliar foto: Entrenamiento permanente" data-caption="Formamos al equipo permanente de la LAV en atención al público, contención psicológica en situaciones extremas y primeros auxilios — aquí, aprendiendo RCP junto a Bomberos.">
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV02.jpg" alt="Entrenamiento del equipo de la LAV en primeros auxilios junto a Bomberos" loading="lazy" decoding="async">
+        <figcaption>Entrenamiento permanente · Primeros auxilios con Bomberos</figcaption>
       </figure>
     </div>
   </div>
@@ -902,7 +983,7 @@
       <div class="svc-card rev rev-d1">
         <p class="svc-letter">Componente A</p>
         <h3 class="svc-title">Software de Gestión</h3>
-        <p class="svc-desc">Plataforma web y móvil desarrollada para la Gobernación. Sin licencias extranjeras. El código queda en manos de la institución al finalizar.</p>
+        <p class="svc-desc">Plataforma web y móvil desarrollada para la Gobernación, con licencia y propiedad 100% bolivianas. El código queda en manos de la institución al finalizar.</p>
         <ul class="svc-list">
           <li>Panel de recepción y registro en tiempo real</li>
           <li>Asignación automática a secretaría competente</li>
@@ -918,7 +999,7 @@
       <div class="svc-card rev rev-d2">
         <p class="svc-letter">Componente B</p>
         <h3 class="svc-title">Estructura Operativa</h3>
-        <p class="svc-desc">Diseño completo de la arquitectura humana y los procesos. El sistema más sofisticado falla sin estructura bien diseñada detrás.</p>
+        <p class="svc-desc">Diseño completo de la arquitectura humana y los procesos. El sistema más sofisticado depende de una estructura bien diseñada detrás.</p>
         <ul class="svc-list">
           <li>Organigrama: Director, Coordinadores, Receptores</li>
           <li>Flujos de trabajo y protocolos de atención</li>
@@ -1033,7 +1114,7 @@
     <div class="pg-header rev">
       <p class="pg-label">Por qué esta propuesta</p>
       <h2 class="pg-heading">Lo Que Nos Diferencia</h2>
-      <p class="pg-sub">No es una licitación más. Es un sistema probado bajo condiciones extremas, en esta misma ciudad, con los mismos tipos de recursos que tiene la Gobernación hoy.</p>
+      <p class="pg-sub">Un sistema ya probado bajo condiciones extremas, en esta misma ciudad, con los mismos tipos de recursos que tiene la Gobernación hoy.</p>
     </div>
 
     <div class="diff-stack">
@@ -1047,18 +1128,18 @@
       </div>
       <div class="diff-row rev">
         <div class="diff-label-side">
-          <div class="diff-label-txt"><span>02</span>Sin presupuesto nuevo</div>
+          <div class="diff-label-txt"><span>02</span>Con recursos ya existentes</div>
         </div>
         <div class="diff-text-side">
-          <p>El modelo LAV funcionó con <strong>personal ya en planilla, equipos existentes y espacios institucionales</strong>. No se creó ningún ítem presupuestario nuevo. La Gobernación ya tiene los recursos humanos y físicos necesarios — lo que falta es arquitectura, metodología y dirección.</p>
+          <p>El modelo LAV funcionó con <strong>personal ya en planilla, equipos existentes y espacios institucionales</strong>, dentro del presupuesto ya asignado. La Gobernación ya tiene los recursos humanos y físicos necesarios — lo que falta es arquitectura, metodología y dirección.</p>
         </div>
       </div>
       <div class="diff-row rev">
         <div class="diff-label-side">
-          <div class="diff-label-txt"><span>03</span>Software propio, sin dependencias</div>
+          <div class="diff-label-txt"><span>03</span>Software propio y boliviano</div>
         </div>
         <div class="diff-text-side">
-          <p>La plataforma se desarrolla <strong>para la Gobernación</strong>. Sin licencias extranjeras, sin dependencia de terceros. El código y la infraestructura quedan en manos de la institución al finalizar. Boliviano desde el inicio hasta el final.</p>
+          <p>La plataforma se desarrolla <strong>para la Gobernación</strong>, con licencia y propiedad 100% bolivianas. El código y la infraestructura quedan en manos de la institución al finalizar, de principio a fin.</p>
         </div>
       </div>
       <div class="diff-row rev">
@@ -1071,10 +1152,10 @@
       </div>
       <div class="diff-row rev">
         <div class="diff-label-side">
-          <div class="diff-label-txt"><span>05</span>Visión de sistema, no solo tecnología</div>
+          <div class="diff-label-txt"><span>05</span>Visión de sistema integral</div>
         </div>
         <div class="diff-text-side">
-          <p>Un call center funciona como sistema integral: <strong>tecnología + personas + procesos + datos</strong>. La herramienta sin estructura organizativa no escala. Entrego los tres componentes integrados, no piezas sueltas sin coordinación.</p>
+          <p>Un call center funciona como sistema integral: <strong>tecnología + personas + procesos + datos</strong>. La estructura organizativa es lo que permite que la herramienta escale. Entrego los tres componentes integrados y coordinados entre sí.</p>
         </div>
       </div>
       <div class="diff-row rev">
@@ -1221,6 +1302,15 @@
   <p>Alejandro Sosa Briceño &nbsp;·&nbsp; Santa Cruz de la Sierra, Bolivia &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Propuesta de Servicios Profesionales</p>
 </footer>
 
+<!-- ── LIGHTBOX ──────────────────────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Foto ampliada">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen ampliada" type="button">&times;</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
 <script>
   // ── EASING ──────────────────────────────────────────────────────────────────
   function easeOutExpo(t) {
@@ -1283,6 +1373,52 @@
   }, { threshold: 0.35 });
 
   sections.forEach(s => secObs.observe(s));
+
+  // ── LIGHTBOX ─────────────────────────────────────────────────────────────────
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+  let lastFocused = null;
+
+  function openLightbox(figure) {
+    const img = figure.querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = figure.dataset.caption || '';
+    lastFocused = document.activeElement;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightboxClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('.lav-gallery figure').forEach(figure => {
+    figure.addEventListener('click', () => openLightbox(figure));
+    figure.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(figure);
+      }
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
+
 </script>
 </body>
 </html>
