@@ -356,6 +356,45 @@
       line-height: 1.6;
     }
 
+    /* PHOTO GALLERY */
+    .lav-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .lav-gallery figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--rounding);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--amber);
+      background: var(--bg-card2);
+    }
+    .lav-gallery img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .lav-gallery figure:hover img { transform: scale(1.05); }
+    .lav-gallery figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: .9rem 1rem .7rem;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--text);
+      background: linear-gradient(180deg, transparent, rgba(13,24,33,.92) 70%);
+    }
+    @media (max-width: 768px) {
+      .lav-gallery { grid-template-columns: 1fr; }
+      .lav-gallery img { height: 220px; }
+    }
+
     /* SERVICES */
     .services-row {
       display: grid;
@@ -745,6 +784,7 @@
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" aria-hidden="true" disablepictureinpicture>
     <source src="https://asosab.github.io/call_center_gobernacion/video/LAV01.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
   </video>
   <div class="hero-video-overlay"></div>
   <div class="hero-bg-grid"></div>
@@ -829,6 +869,21 @@
         </tbody>
       </table>
       <p class="tbl-note">* El bajo porcentaje en donación de alimentos responde a deficiencias en el sistema de listas de la Alcaldía, no a fallas operativas del call center.</p>
+    </div>
+
+    <div class="lav-gallery rev">
+      <figure>
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV00.jpg" alt="Línea Abierta Vecinal - registro fotográfico 1" loading="lazy" decoding="async">
+        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      </figure>
+      <figure>
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV01.jpg" alt="Línea Abierta Vecinal - registro fotográfico 2" loading="lazy" decoding="async">
+        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      </figure>
+      <figure>
+        <img src="https://asosab.github.io/call_center_gobernacion/imagen/LAV02.jpg" alt="Línea Abierta Vecinal - registro fotográfico 3" loading="lazy" decoding="async">
+        <figcaption>Línea Abierta Vecinal · 2019 – 2021</figcaption>
+      </figure>
     </div>
   </div>
 </section>
