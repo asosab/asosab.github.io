@@ -5,6 +5,7 @@ date:   2026-07-25 10:00
 categories: estrategia
 comments: true
 description: "Guía práctica: cómo reemplazar el PDF de propuesta de servicios por una landing page, redes sociales, blog y SEO."
+image: /imagen/call_center_gobernacion.png
 tags: [estrategia, comunicación, landing page, SEO, marketing digital, propuestas]
 published: true
 ---
@@ -13,7 +14,11 @@ Esta propuesta técnica para la Gobernación de Santa Cruz es un ejemplo directo
 
 **[asosab.github.io/call_center_gobernacion](https://asosab.github.io/call_center_gobernacion)**
 
+![Landing page de la propuesta para la Gobernación de Santa Cruz](https://asosab.github.io/imagen/call_center_gobernacion.png)
+
 En lugar de un PDF de servicios enviado por correo, es una landing page propia con video, métricas en vivo, fases de implementación y trayectoria profesional. Se difunde por redes sociales, se refuerza con publicaciones de blog como esta, y está construida con SEO desde el inicio.
+
+Esta página nació del mismo proceso descrito en [La historia de tu vida, contada con IA](https://asosab.github.io/La-historia-de-tu-vida-con-IA/): a partir del archivo JSON con toda la trayectoria profesional, se generó tanto el CV como esta landing page de propuesta.
 
 ## Ventajas concretas de una landing page sobre un PDF
 
