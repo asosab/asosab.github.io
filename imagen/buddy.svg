@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f5f0"/>
+  <text x="400" y="280" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="600" fill="#1a1a2e" text-anchor="middle">Buddy</text>
+  <text x="400" y="330" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#555" text-anchor="middle">Estáticos con superpoderes</text>
+</svg>

@@ -3,7 +3,7 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{% if page.keywords %}{{ site.keywords }}, {{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
     <link rel="shortlink" href="{% if page.shortlink %}{{ page.shortlink }}{% else %}{{ site.shortlink }}{% endif %}">
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="https://www.googletagmanager.com" rel="dns-prefetch">
     <link rel="search" type="application/opensearchdescription+xml" href="{{'/opensearch.xml'| prepend: site.url}}" title="Busca dentro de {{ page.title }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" itemprop="url">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
@@ -26,7 +26,6 @@
     <meta property="og:site_name" content="{{ site.title }}" />
     {% if site.author.facebook %}<meta property="article:author" content="https://www.facebook.com/{{site.author.facebook}}"/>{% endif %}
     <meta content="{{site.author.name}}" name="author">
-    {% if site.author.googleplus %}<link href="https://plus.google.com/+{{site.author.googleplus}}" rel="author">{% endif %}
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{{ site.author.twitter }}" />

@@ -5,9 +5,537 @@
     <description>Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Sep 2017 20:48:04 -0400</pubDate>
-    <lastBuildDate>Mon, 11 Sep 2017 20:48:04 -0400</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Wed, 19 Aug 2026 14:54:08 -0400</pubDate>
+    <lastBuildDate>Wed, 19 Aug 2026 14:54:08 -0400</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>De la propuesta en PDF a la landing page: cómo comunicar un proyecto hoy</title>
+        <description>&lt;p&gt;Esta propuesta técnica para la Gobernación de Santa Cruz es un ejemplo directo de una estrategia:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://asosab.github.io/call_center_gobernacion&quot;&gt;asosab.github.io/call_center_gobernacion&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://asosab.github.io/imagen/call_center_gobernacion.png&quot; alt=&quot;Landing page de la propuesta para la Gobernación de Santa Cruz&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En lugar de un PDF de servicios enviado por correo, es una landing page propia con video, métricas en vivo, fases de implementación y trayectoria profesional. Se difunde por redes sociales, se refuerza con publicaciones de blog como esta, y está construida con SEO desde el inicio.&lt;/p&gt;
+
+&lt;p&gt;Esta página nació del mismo proceso descrito en &lt;a href=&quot;https://asosab.github.io/La-historia-de-tu-vida-con-IA/&quot;&gt;La historia de tu vida, contada con IA&lt;/a&gt;: a partir del archivo JSON con toda la trayectoria profesional, se generó tanto el CV como esta landing page de propuesta.&lt;/p&gt;
+
+&lt;h2 id=&quot;ventajas-concretas-de-una-landing-page-sobre-un-pdf&quot;&gt;Ventajas concretas de una landing page sobre un PDF&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Se comparte con un enlace, en WhatsApp, LinkedIn o correo, sin adjuntos.&lt;/li&gt;
+  &lt;li&gt;Se puede medir: visitas, tiempo de lectura, secciones más vistas.&lt;/li&gt;
+  &lt;li&gt;Se actualiza en cualquier momento sin reenviar nada.&lt;/li&gt;
+  &lt;li&gt;Aparece en buscadores gracias a título, descripción e imagen configurados para SEO.&lt;/li&gt;
+  &lt;li&gt;Admite video y contenido interactivo, no solo texto e imágenes estáticas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cómo-distribuirla&quot;&gt;Cómo distribuirla&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Publica el enlace en LinkedIn y otras redes donde esté tu audiencia.&lt;/li&gt;
+  &lt;li&gt;Envíalo directo por WhatsApp o correo a la persona clave, en lugar de un adjunto.&lt;/li&gt;
+  &lt;li&gt;Pide a colegas o aliados que lo compartan en sus propias redes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cómo-usar-el-blog-para-reforzar-el-proyecto&quot;&gt;Cómo usar el blog para reforzar el proyecto&lt;/h2&gt;
+
+&lt;p&gt;Escribe publicaciones como esta, que enlacen directo a la landing page. Cada publicación:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suma contexto y enlaces que mejoran el SEO de la página principal.&lt;/li&gt;
+  &lt;li&gt;Queda indexada y disponible para búsquedas futuras relacionadas al tema.&lt;/li&gt;
+  &lt;li&gt;Da una narrativa al proyecto, más allá de la oferta comercial.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;seo-la-pieza-que-conecta-todo&quot;&gt;SEO: la pieza que conecta todo&lt;/h2&gt;
+
+&lt;p&gt;Configura en la landing page: título, descripción, imagen de vista previa y palabras clave relevantes. Enlaza desde el blog hacia la landing page. Comparte ambos en redes. Cada pieza refuerza a las otras y el conjunto sigue generando visibilidad después de la primera reunión.&lt;/p&gt;
+
+&lt;h2 id=&quot;herramientas-para-que-la-página-sea-visible-en-buscadores&quot;&gt;Herramientas para que la página sea visible en buscadores&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Google Search Console&lt;/strong&gt;: registra el dominio, envía el sitemap.xml y revisa el estado de indexación.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bing Webmaster Tools&lt;/strong&gt;: mismo proceso que Search Console, cubre Bing y Yahoo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IndexNow&lt;/strong&gt;: protocolo que notifica a Bing y otros motores compatibles en el momento en que publicas o actualizas la página.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sitemap.xml y robots.txt&lt;/strong&gt;: mantén ambos archivos actualizados en la raíz del dominio.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Datos estructurados (schema.org)&lt;/strong&gt;: agrega marcado JSON-LD para que los buscadores entiendan el tipo de contenido (organización, artículo, oferta de servicios).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;herramientas-para-que-se-vea-bien-al-compartir-en-redes&quot;&gt;Herramientas para que se vea bien al compartir en redes&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Open Graph&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;og:title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;og:description&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;og:image&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;og:url&lt;/code&gt;): define cómo se ve el enlace al compartirlo en LinkedIn y Facebook.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Twitter Card&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twitter:card&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twitter:title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twitter:image&lt;/code&gt;): define la vista previa al compartir en X.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Meta Sharing Debugger&lt;/strong&gt;: revisa y refresca cómo Facebook y LinkedIn leen los metadatos de la página.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Card Validator de X&lt;/strong&gt;: revisa la vista previa de Twitter Card antes de publicar.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Google Analytics o Plausible&lt;/strong&gt;: mide de dónde viene el tráfico, cuánto tiempo se queda cada visitante y qué secciones lee.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;contactar-directamente-a-los-interesados&quot;&gt;Contactar directamente a los interesados&lt;/h2&gt;
+
+&lt;p&gt;Identifica quién puede accionar la decisión: la persona con el cargo, el equipo que ejecuta, o quien lidera el área relacionada. Investiga sus nombres completos, cargos actuales y canales públicos.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Agrega esos nombres y cargos a las palabras clave (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;meta-keywords&lt;/code&gt;) de la landing page. Así la página aparece cuando alguien busca ese nombre.&lt;/li&gt;
+  &lt;li&gt;Si tienes contacto directo (correo, teléfono, referido), úsalo primero.&lt;/li&gt;
+  &lt;li&gt;Si no tienes acceso directo, contáctalos por LinkedIn con un mensaje breve y el enlace a la página.&lt;/li&gt;
+  &lt;li&gt;Si no responden por LinkedIn, contacta directamente a la institución o empresa donde trabajan actualmente (mesa de partes, secretaría, área de comunicación).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;aplicado-al-ejemplo&quot;&gt;Aplicado al ejemplo&lt;/h3&gt;
+
+&lt;p&gt;En la propuesta del Centro de Atención Ciudadana, los interesados directos son:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Juan Pablo Velasco&lt;/strong&gt;, Gobernador de Santa Cruz, con capacidad de autorizar el proyecto.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Paola Aguirre&lt;/strong&gt;, Vicegobernadora, coautora de la agenda de transformación digital 2026-2031.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Lía Andrea Moscoso Medina&lt;/strong&gt;, Secretaria de Gestión Institucional, área responsable de ejecutar un proyecto de este tipo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sus nombres y cargos están incluidos en los metadatos de la página, para que aparezca en búsquedas relacionadas a cada uno de ellos.&lt;/p&gt;
+
+&lt;h2 id=&quot;checklist-para-tu-próximo-proyecto&quot;&gt;Checklist para tu próximo proyecto&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Construye una landing page con los datos de tu propuesta.&lt;/li&gt;
+  &lt;li&gt;Identifica a los interesados directos: quién decide, quién ejecuta, quién lidera el área relacionada.&lt;/li&gt;
+  &lt;li&gt;Configura metadatos de SEO y de redes (título, descripción, imagen, keywords con nombres y cargos, Open Graph, Twitter Card).&lt;/li&gt;
+  &lt;li&gt;Registra la página en Google Search Console y Bing Webmaster Tools, y envía el sitemap.&lt;/li&gt;
+  &lt;li&gt;Escribe un post de blog que enlace a la página.&lt;/li&gt;
+  &lt;li&gt;Comparte el enlace en redes sociales y por mensaje directo.&lt;/li&gt;
+  &lt;li&gt;Contacta a cada interesado por su canal disponible: directo, LinkedIn, o a través de su institución.&lt;/li&gt;
+  &lt;li&gt;Revisa métricas de visitas en Analytics y ajusta el contenido.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sat, 25 Jul 2026 10:00:00 -0400</pubDate>
+        <link>http://localhost:4000/de-pdf-a-landing-page/</link>
+        <guid isPermaLink="true">http://localhost:4000/de-pdf-a-landing-page/</guid>
+        
+        <category>estrategia</category>
+        
+        <category>comunicación</category>
+        
+        <category>landing page</category>
+        
+        <category>SEO</category>
+        
+        <category>marketing digital</category>
+        
+        <category>propuestas</category>
+        
+        
+        <category>estrategia</category>
+        
+      </item>
+    
+      <item>
+        <title>La historia de tu vida, contada con IA</title>
+        <description>&lt;p&gt;¿Cuántas cosas has hecho en tu vida profesional que ya no recuerdas?
+¿En qué año fue ese proyecto? ¿Cuánto duró ese trabajo? ¿Qué aprendiste exactamente en aquella empresa?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/imagen/mente_historia_ia.jpg&quot; alt=&quot;La IA como herramienta de procesos mentales&quot; style=&quot;width:95%;height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A mí me pasa. Me olvido por completo de informes que entregué, de proyectos que lideré, o de analizar qué habilidades desarrollé ahí. Desde hace unos días comencé a construir algo que podría llamarse &lt;em&gt;el archivo vivo de mi vida profesional&lt;/em&gt;, y la inteligencia artificial es la herramienta principal para hacerlo. Este artículo cuenta cómo lo hago, paso a paso, con todas las herramientas involucradas.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;por-qué-un-currículum-para-uno-mismo&quot;&gt;¿Por qué un currículum para uno mismo?&lt;/h2&gt;
+
+&lt;p&gt;Un currículum tiene fama de ser ese documento que mandas cuando buscas trabajo y que luego olvidas en un cajón. Aquí propongo pensarlo diferente: un currículum completo es un archivo personal. Es para que tú sepas de dónde vienes, por dónde pasaste y qué acumulaste en el camino.&lt;/p&gt;
+
+&lt;p&gt;Con IA, ese archivo puede ser tan detallado que incluya no solo tus trabajos, sino también tus proyectos personales, tus estudios, tus intereses, los deportes que practicas, organizaciones en las que participaste. Todo lo que forma quién eres.&lt;/p&gt;
+
+&lt;p&gt;Pero hay algo que no esperaba cuando empecé: la IA abre la puerta a un autoconocimiento del que no era consciente. Al conectar todos los pasos de tu historia, le da relevancia a cosas que hoy quizás ves pequeñas pero que forman parte de cómo te has construido como persona y como profesional. Yo hoy puedo ver con claridad cuánto aprendí de proyectos que en su momento me dejaron enojado, frustrado o con la sensación de haber perdido el tiempo. La IA no juzga, no descarta y no olvida. Conecta los puntos y te muestra un camino que tú mismo recorriste sin darte cuenta de su coherencia.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;el-json-el-corazón-del-sistema&quot;&gt;El JSON: el corazón del sistema&lt;/h2&gt;
+
+&lt;h3 id=&quot;por-qué-json&quot;&gt;¿Por qué JSON?&lt;/h3&gt;
+
+&lt;p&gt;JSON es un formato de datos estructurado, legible tanto para humanos como para máquinas. Parece técnico, pero la idea es sencilla: es como un formulario muy completo donde cada campo tiene su nombre y su valor. Una IA puede leerlo, entenderlo y usarlo para generar cualquier documento que necesites.&lt;/p&gt;
+
+&lt;p&gt;Lo elijo sobre un Word o un PDF porque es modular: puedo agregar, modificar o expandir una sección sin tocar el resto.&lt;/p&gt;
+
+&lt;h3 id=&quot;cómo-luce-por-dentro&quot;&gt;¿Cómo luce por dentro?&lt;/h3&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;persona&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;nombre&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alejandro Sosa Bello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;linkedin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://linkedin.com/in/alejandrososa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;resumen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Especialista en tecnología, datos y gestión pública...&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;experiencia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;empresa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Statetty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://statetty.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;cargo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Co-fundador&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desde&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2022&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hasta&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;presente&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;logros&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Desarrollo del producto mínimo viable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Gestión de negociación con aceleradoras&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;empresa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alcaldía de Santa Cruz de la Sierra&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;cargo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Responsable de Línea Abierta Vecinal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desde&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2021&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;hasta&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2023&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;logros&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Creación del sistema de atención ciudadana digital&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Coordinación con múltiples áreas municipales&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;formacion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;habilidades&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;otros&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cómo-se-alimenta&quot;&gt;¿Cómo se alimenta?&lt;/h3&gt;
+
+&lt;p&gt;Cada vez que aparece una fuente nueva de información —un currículum viejo, un informe entregado en una empresa, un PDF guardado en Drive desde hace años— se lo pasas a la IA y le dices: &lt;em&gt;“Dado este archivo JSON que ya existe, agrega esta nueva información donde corresponda.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;El archivo crece con el tiempo. Nunca va a estar completamente terminado, y eso está bien.&lt;/p&gt;
+
+&lt;h3 id=&quot;el-problema-de-los-tokens-y-cómo-resolverlo&quot;&gt;El problema de los tokens y cómo resolverlo&lt;/h3&gt;
+
+&lt;p&gt;Las IAs tienen un límite de cuánto texto pueden procesar en una sola conversación. Cuando el JSON se vuelve muy grande, la solución es trabajar de forma &lt;strong&gt;modular&lt;/strong&gt;: en lugar de cargar todo el archivo, abres solo el objeto que quieres trabajar en ese momento. Por ejemplo, te concentras solo en la sección de una empresa, la completas, la guardas, y pasas a la siguiente.&lt;/p&gt;
+
+&lt;p&gt;Si aun así se te agotan los tokens, puedes abrir otra cuenta de Google y empezar una sesión nueva. No es trampa, es gestión de recursos.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;qué-puedes-hacer-con-el-json&quot;&gt;¿Qué puedes hacer con el JSON?&lt;/h2&gt;
+
+&lt;h3 id=&quot;currículums-orientados-no-genéricos&quot;&gt;Currículums orientados, no genéricos&lt;/h3&gt;
+
+&lt;p&gt;Un currículum genérico es el que funciona para nadie en particular. El que funciona es el que habla exactamente el idioma de quien lo va a leer.&lt;/p&gt;
+
+&lt;p&gt;Con el JSON completo, le pides a la IA: &lt;em&gt;“Genera un currículum orientado a empresas de tecnología cívica”&lt;/em&gt; o &lt;em&gt;“Genera un resumen para presentarme ante una aceleradora de startups”&lt;/em&gt;. El resultado es un documento que selecciona y jerarquiza tu información según ese objetivo.&lt;/p&gt;
+
+&lt;p&gt;Puedes ver dos ejemplos concretos de currículums generados de esta manera:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/docs/CV_ASB.pdf&quot;&gt;CV general técnico&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets//docs/CV_asb_aceleradora.pdf&quot;&gt;CV orientado a aceleradoras&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ofertas-de-servicio&quot;&gt;Ofertas de servicio&lt;/h3&gt;
+
+&lt;p&gt;El mismo archivo sirve para crear propuestas comerciales. Le describes el proyecto, le adjuntas el JSON y le pides un informe ejecutivo. En mi caso, generé tanto un documento PDF profesional como una landing page completa para presentar la Línea Abierta Vecinal como servicio replicable.&lt;/p&gt;
+
+&lt;h3 id=&quot;bio-para-podcasts-landing-pages-o-perfiles&quot;&gt;Bio para podcasts, landing pages o perfiles&lt;/h3&gt;
+
+&lt;p&gt;En lugar de escribir sobre ti mismo desde cero, le pides al proyecto que ya tiene tu JSON que te genere un párrafo de presentación orientado al contexto específico. Para un podcast, para un perfil de inversor, para una página de equipo.&lt;/p&gt;
+
+&lt;h3 id=&quot;un-bot-en-whatsapp-que-sabe-todo-de-ti&quot;&gt;Un bot en WhatsApp que sabe todo de ti&lt;/h3&gt;
+
+&lt;p&gt;Puedes conectar el JSON como contexto de un bot conversacional vinculado a tu número de WhatsApp. Alguien que quiera contratarte puede preguntarle al bot y recibir respuestas basadas en tu historia real. Incluso tú mismo puedes preguntarle: &lt;em&gt;“¿En qué año trabajé en tal empresa?”&lt;/em&gt; o &lt;em&gt;“¿Qué habilidades desarrollé en tal proyecto?”&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;que-los-robots-también-te-lean-bien-currículums-aptos-para-ats&quot;&gt;Que los robots también te lean bien: currículums aptos para ATS&lt;/h2&gt;
+
+&lt;p&gt;Muchas empresas grandes usan sistemas automatizados llamados &lt;strong&gt;ATS&lt;/strong&gt; (Applicant Tracking Systems) para leer currículums antes de que lo haga cualquier persona. Estos sistemas extraen datos del PDF y los cargan en una base de datos. Si tu CV no está preparado para esto, puede que llegue invisible aunque sea excelente.&lt;/p&gt;
+
+&lt;p&gt;Estas son las reglas para un currículum que los bots leen perfectamente:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Texto seleccionable, siempre.&lt;/strong&gt; El PDF debe generarse desde texto, nunca desde una imagen escaneada. Si escaneas tu CV y lo guardas como PDF, un ATS no puede leer nada.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sin columnas ni tablas complejas.&lt;/strong&gt; Los ATS leen de izquierda a derecha y de arriba a abajo, en una sola columna. Los diseños en dos columnas mezclan información de forma impredecible para la máquina.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fuentes estándar.&lt;/strong&gt; Arial, Calibri, Times New Roman, Georgia. Las fuentes decorativas o personalizadas pueden no renderizarse correctamente en todos los sistemas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Títulos de sección predecibles.&lt;/strong&gt; Los ATS buscan palabras clave como “Experiencia”, “Educación”, “Habilidades”. Títulos creativos como “Mi camino” o “Lo que sé hacer” pueden confundirlos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Palabras clave del sector.&lt;/strong&gt; Los ATS filtran por términos específicos del área. Si la oferta de trabajo menciona “gestión de proyectos ágiles”, tu CV debería usar esa misma terminología, con naturalidad.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fechas en formato claro.&lt;/strong&gt; Mes y año, de forma consistente. “Enero 2021 – Marzo 2023” es mejor que “principios de 2021”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sin encabezados ni pies de página con información clave.&lt;/strong&gt; Algunos ATS no leen el contenido de los encabezados. Tu nombre y contacto deben estar también en el cuerpo del documento.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sin logos ni imágenes decorativas.&lt;/strong&gt; Ocupan espacio y los bots los ignoran.&lt;/p&gt;
+
+&lt;p&gt;La buena noticia: si generas el CV a partir del JSON con una IA y le pides explícitamente que lo haga compatible con ATS, va a respetar todas estas reglas por defecto.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;notebooklm-tu-cv-convertido-en-podcast&quot;&gt;NotebookLM: tu CV convertido en podcast&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://notebooklm.google.com&quot;&gt;NotebookLM&lt;/a&gt; es una IA de Google orientada al estudio de documentos. Lo que la hace especial es que responde basándose exclusivamente en los archivos que tú le subes, sin mezclar información externa. Puedes subirle PDFs, audios, videos, documentos de texto.&lt;/p&gt;
+
+&lt;p&gt;Uno de sus usos más llamativos es generar un &lt;strong&gt;audio en formato podcast&lt;/strong&gt;, donde dos comentaristas ficticios analizan el documento que les subiste. El resultado, cuando el documento es tu propio JSON con toda tu trayectoria, es algo genuinamente emocionante: escuchas a dos personas hablar de la coherencia de tu carrera, de las conexiones entre proyectos que quizás tú mismo no habías notado.&lt;/p&gt;
+
+&lt;p&gt;Puedes escuchar el podcast generado a partir de mi propio archivo de datos aquí:&lt;/p&gt;
+
+&lt;p&gt;🎧 &lt;a href=&quot;assets/audio/asb_una_mirada_con_ia.mp3&quot;&gt;Escuchar: Una mirada con IA a la trayectoria de Alejandro Sosa Briceño&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Si alguna vez sientes que no has hecho nada importante, escúchate así. Funciona.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;buenas-prácticas-para-trabajar-con-ia&quot;&gt;Buenas prácticas para trabajar con IA&lt;/h2&gt;
+
+&lt;p&gt;Algunas cosas que aprendí a base de repetición:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pídele preguntas antes de que actúe.&lt;/strong&gt; Antes de pedirle a la IA que genere algo, pídele que analice la información, que haga preguntas, que proponga mejoras. Eso garantiza que los dos están en la misma página.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pídele que te explique la tarea antes de ejecutarla.&lt;/strong&gt; Es una forma de verificar que te explicaste bien. Si la IA describe mal la tarea, el problema está en el prompt, no en la IA.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Trabaja en módulos.&lt;/strong&gt; Cualquier proyecto puede descomponerse en partes más pequeñas. Desarrolla cada parte por separado y asegúrate de que quede bien antes de pasar a la siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Guarda resúmenes, borra conversaciones.&lt;/strong&gt; Antes de cerrar un chat, pídele a la IA que genere un resumen de lo trabajado, las decisiones tomadas y los próximos pasos. Guarda ese resumen. Borra la conversación. Los chats largos hacen que la IA pierda el hilo; los resúmenes te permiten retomar sin perder nada.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Documentos vivos para IA de escritorio.&lt;/strong&gt; Si usas una IA que puede modificar archivos en tu computador, mantén documentos actualizados que ella pueda leer al empezar cada sesión: qué estás buscando, qué se ha hecho, qué falta, qué errores aparecieron y cómo se resolvieron. Eso reduce drásticamente las alucinaciones y los desvíos.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;tu-turno&quot;&gt;Tu turno&lt;/h2&gt;
+
+&lt;p&gt;Todo lo descrito aquí es accesible. No requiere conocimientos de programación. Requiere curiosidad, paciencia y un celular con micrófono.&lt;/p&gt;
+
+&lt;p&gt;El primer paso es el más sencillo: graba un audio de diez minutos contando tu historia profesional. Desde el primer trabajo hasta hoy. Sin estructura, sin guion. Solo cuéntalo como si le hablaras a un amigo.&lt;/p&gt;
+
+&lt;p&gt;De ahí en adelante, la IA te ayuda a organizarlo.&lt;/p&gt;
+
+&lt;p&gt;Si quieres ver el resultado de este proceso aplicado a una trayectoria real, acá puedes explorar:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://linkedin.com/in/alejandrososa&quot;&gt;LinkedIn de Alejandro Sosa Briceño&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/docs/CV_ASB.pdf&quot;&gt;Currículum general&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets//docs/CV_asb_aceleradora.pdf&quot;&gt;Currículum orientado a aceleradoras&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/docs/asb.json&quot;&gt;Archivo de datos JSON&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;assets/audio/asb_una_mirada_con_ia.mp3&quot;&gt;🎧 Podcast generado por IA sobre mi trayectoria&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;¿Tienes preguntas sobre algún paso del proceso? ¿Ya probaste algo parecido? Deja un comentario más abajo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;tip-al-margen-cómo-se-escribió-este-artículo&quot;&gt;Tip al margen: cómo se escribió este artículo&lt;/h2&gt;
+
+&lt;p&gt;Este artículo no se escribió sentado frente a un teclado. Es el resultado de un flujo de trabajo que usa exactamente las mismas herramientas que describe.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;ri&quot; alt=&quot;Diagrama del flujo de trabajo: del audio al post con IA&quot; src=&quot;http://localhost:4000/imagen/del_audio_al_md.jpg&quot; style=&quot;width:95%;height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El recorrido fue este: grabé un audio con el celular mientras caminaba por la ciudad, con ruido de tráfico y conversaciones de fondo incluidas. Lo limpié con &lt;a href=&quot;https://podcast.adobe.com&quot;&gt;Adobe Podcast&lt;/a&gt;, que usa IA para separar la voz del ruido ambiente y reconstruir el canal de audio principal. El resultado lo subí a &lt;a href=&quot;https://notebooklm.google.com&quot;&gt;NotebookLM&lt;/a&gt;, que es la única IA gratuita que acepta audios de cualquier duración y genera una transcripción completa. Con esa transcripción como base, le pedí a Claude que organizara el contenido en una entrada para este blog, respetando la estructura y el estilo del sitio.&lt;/p&gt;
+
+&lt;p&gt;El audio original, el texto sucio, la transcripción y el prompt viajaron por cinco herramientas distintas antes de convertirse en lo que leíste. Todo sin escribir una sola palabra desde cero y en escasos 30 minutos&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Jun 2026 03:00:00 -0400</pubDate>
+        <link>http://localhost:4000/La-historia-de-tu-vida-con-IA/</link>
+        <guid isPermaLink="true">http://localhost:4000/La-historia-de-tu-vida-con-IA/</guid>
+        
+        <category>inteligencia artificial</category>
+        
+        <category>curriculum</category>
+        
+        <category>json</category>
+        
+        <category>notebooklm</category>
+        
+        <category>adobe podcast</category>
+        
+        <category>jekyll</category>
+        
+        <category>ats</category>
+        
+        <category>datos abiertos</category>
+        
+        
+        <category>IA</category>
+        
+      </item>
+    
+      <item>
+        <title>Todo problema tiene solución</title>
+        <description>&lt;p&gt;Le han pedido a Maximiliano que desarrolle un juego sobre el buen trato y todos en casa nos hemos puesto manos a la obra. Debo subrayar que la idea, personajes y estructura base del juego son invención de Max&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/imagen/tpts01.jpg&quot; alt=&quot;Maximiliano entrando al colegio, con su prototipo en mano&quot; width=&quot;605&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La intención del juego es ser una herramienta para inculcar valores fundamentales como la empatía, la cooperación y el respeto. Los jugadores deben actuar los personajes y las situaciones, promoviendo una comprensión más profunda de las experiencias ajenas reforzando además la importancia del buen trato. Las cartas para descargar vienen sin dibujos, invitando a los jugadores a ilustrarlas ellos mismos para personalizar la experiencia. Este enfoque reflexivo y participativo ayuda a los niños a internalizar los valores de una manera práctica y memorable, construyendo un ambiente escolar más positivo y respetuoso.&lt;/p&gt;
+
+&lt;h3 id=&quot;componentes-del-juego&quot;&gt;Componentes del Juego&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;25 Cartas&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;5 Cartas de Personaje&lt;/li&gt;
+      &lt;li&gt;10 Cartas de Problema (2 por personaje)&lt;/li&gt;
+      &lt;li&gt;10 Cartas de Solución (2 por personaje)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;juguemos&quot;&gt;¡Juguemos!&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Preparación&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Reparte las cartas de personaje entre los participantes (2 a 5 jugadores). Las cartas sobrantes se colocan sobre la mesa como si fueran otros jugadores.&lt;/li&gt;
+      &lt;li&gt;Mezcla y reparte las cartas de problemas y soluciones entre los jugadores.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Primera Fase&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;El jugador más joven o el que tenga el Bebé, si posee una carta de problema, comienza el juego.&lt;/li&gt;
+      &lt;li&gt;Los jugadores colocan cartas de problema en los personajes, asegurándose de que los colores de las cartas no coincidan con los personajes.&lt;/li&gt;
+      &lt;li&gt;Solo se pueden colocar cartas de solución junto a un problema, y en esta etapa, solo si los colores no coinciden.&lt;/li&gt;
+      &lt;li&gt;Tanto quien coloca cartas como quien las recibe deben actuar la situación y los personajes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Segunda Fase&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Una vez colocadas todas las cartas sobre la mesa comenzará la segunda fase. Los jugadores se seguirán turnando en el sentido del movimiento de las manecillas del reloj&lt;/li&gt;
+      &lt;li&gt;Cada jugador en su turno debe intercambiar soluciones en problemas del mismo color y cuando una solución coincide en color con su problema podrán intercambiar el par entre personajes, hasta asegurar que los colores de personaje, problema y solución coincidan.&lt;/li&gt;
+      &lt;li&gt;Se deben actuar los nuevos problemas y soluciones recibidos.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Final del Juego&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;El juego termina cuando todos los personajes hayan resuelto sus problemas con las soluciones correctas. ¡Todos ganan y pasan un buen rato!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;beneficios-educativos&quot;&gt;Beneficios Educativos&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Desarrollo de Habilidades Socioemocionales&lt;/strong&gt;: Los niños practican la empatía y la colaboración mientras resuelven problemas juntos, mejorando su capacidad para entender y gestionar sus emociones y las de los demás.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fomento de la Motricidad Gruesa y Fina&lt;/strong&gt;: La actividad de recortar y pegar las cartas ayuda a los niños a mejorar sus habilidades motoras, tanto gruesas como finas.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Estimulación de la Imaginación&lt;/strong&gt;: Ilustrar cada situación fomenta la creatividad y el pensamiento innovador, permitiendo a los niños explorar y expresar sus ideas de manera visual.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Personalización del Aprendizaje&lt;/strong&gt;: Las cartas en blanco permiten a los jugadores definir sus propios personajes, creando historias y situaciones relevantes para su entorno, lo que facilita un aprendizaje más significativo y personalizado.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reflexión sobre la Realidad Local&lt;/strong&gt;: Los jugadores pueden desarrollar personajes locales, vislumbrar sus problemas y pensar en soluciones, haciendo el juego más íntimo y relevante para sus vidas diarias.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Promoción del Buen Trato&lt;/strong&gt;: Actuar las situaciones ayuda a los niños a entender y valorar el respeto y la empatía en la vida diaria, promoviendo interacciones positivas y respetuosas.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Generación de Discusiones y Reflexiones&lt;/strong&gt;: Las situaciones cómicas y desafiantes del juego generan discusiones y reflexiones, ayudando a los niños a analizar y comprender diferentes perspectivas y soluciones.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Participación Activa&lt;/strong&gt;: Al ilustrar y personalizar las cartas, los niños se involucran activamente en el proceso de aprendizaje, aumentando su compromiso y motivación.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adaptabilidad&lt;/strong&gt;: El juego se puede adaptar a diferentes contextos y realidades, lo que lo hace útil en diversas comunidades y situaciones educativas.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;descarga-el-juego&quot;&gt;Descarga el Juego&lt;/h3&gt;
+
+&lt;p&gt;Preparamos una versión digital en formato pdf, listo para imprimir, recortar, pegar y dibujar&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/15is0F3gI3tE3A0xufzyj6DZpeMDn1msP/view?usp=sharing&quot;&gt;Descargar versión con textos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/1tggcFgx5Oqp10Cy3PjSYsD0Gcbe8LNF2/view?usp=sharing&quot;&gt;Descargar versión libre&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Gracias infinitas a &lt;a href=&quot;https://www.instagram.com/atomo2.0/&quot;&gt;Azur&lt;/a&gt; y a &lt;a href=&quot;https://www.instagram.com/mayra.desinger/&quot;&gt;Mayra&lt;/a&gt; por su apoyo con el diseño para la versión digital. Parece una cosa simple hasta que te sientas e intentas resolverlo tu mismo&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 12 Jun 2024 03:00:00 -0400</pubDate>
+        <link>http://localhost:4000/todo-problema-tiene-solucion/</link>
+        <guid isPermaLink="true">http://localhost:4000/todo-problema-tiene-solucion/</guid>
+        
+        <category>juego</category>
+        
+        <category>cartas</category>
+        
+        <category>niños</category>
+        
+        <category>valores</category>
+        
+        <category>respeto</category>
+        
+        <category>cooperación</category>
+        
+        <category>dibujar</category>
+        
+        <category>recortar</category>
+        
+        
+        <category>Juegos</category>
+        
+      </item>
+    
+      <item>
+        <title>Identificando a tus clientes con inteligencia artificial</title>
+        <description>&lt;h2 id=&quot;creación-de-un-buyer-persona-y-mapa-de-empatía&quot;&gt;Creación de un Buyer persona y mapa de empatía&lt;/h2&gt;
+&lt;p&gt;Participando en la &lt;a href=&quot;https://incubadoraconvalores.org&quot;&gt;Incubadora Con Valores&lt;/a&gt; una de las tareas de creación de tu emprendimiento es la parametrización de tu cliente ideal, por lo que en cierto punto me han pedido definir un mapa de empatía de este perfil. Mi emprendimiento está orientado al mercado inmobiliario por lo que recurrí a mi agente inmobiliario estrella &lt;a href=&quot;https://www.instagram.com/siria.remax/&quot;&gt;Siria Useche&lt;/a&gt; para entrevistarla. cuando terminé de levantar un mapa de empatía decidí crear un formulario con los seis puntos del mapa de empatía para entrevistar a otros agentes inmobiliarios y ya me veía (o me veo, aún) de oficina en oficina conversando con un montón de gente, registrando cosas como cuáles son sus frustaciones, problemas, obstáculos o cuáles son sus deseos y necesidades. Ese puede ser un proceso largo y cíclico pero esta tarea la quiero entregar hoy, por lo que recurriré a Chat GPT para que me termine de redondear la información que me dió Siria.&lt;/p&gt;
+
+&lt;h2 id=&quot;prompts-y-chatgpt&quot;&gt;Prompts y ChatGPT&lt;/h2&gt;
+&lt;p&gt;La forma en que uno se comunica y hace preguntas a una IA como chatGPT se le llama Prompt, encontré un ejemplo de prompt para crear un buyer persona en la página de &lt;a href=&quot;https://sebastianpendino.com/buyer-persona-con-inteligencia-artificial/&quot;&gt;Sebastian Pendino&lt;/a&gt; y le hice un par de modificaciones, como definir las variables fuera de la instrucción y un tercer prompt específico sobre el mapa de empatía&lt;/p&gt;
+
+&lt;p&gt;1) Describe tu negocio, tu propuesta de valor y ubicación de tu mercado, luego observa las empresas que ofertan de forma similar, posible competencia:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1c99718438796c2a8717d36b36a38687.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;2) Crea posibles buyer-persona y perfila tu público objetivo:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/fd1c51b7162b77235150d85af20cddda.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;3) Realiza un mapa de empatía:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e179ba4cc968b2bbec1060a8ba8dd1fd.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;4) Conclusiones y mejoras a la oferta de valor&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f8f6085534c17aba9026ba27f1e72904.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Pueden experimentar estos prompts por ustedes mismos en IA’s como &lt;a href=&quot;https://chat.openai.com/&quot;&gt;chatGPT&lt;/a&gt;, &lt;a href=&quot;https://gemini.google.com/app&quot;&gt;Gemini&lt;/a&gt; o &lt;a href=&quot;https://you.com&quot;&gt;you.com&lt;/a&gt; en caso de que estés en Venezuela. También puedes ver el proceso y resultado que obtuve en &lt;a href=&quot;https://chat.openai.com/share/20aadea6-66e1-43ff-ae19-948ba8ed8020&quot;&gt;este link&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 28 Apr 2024 16:43:00 -0400</pubDate>
+        <link>http://localhost:4000/promt-buyer-persona/</link>
+        <guid isPermaLink="true">http://localhost:4000/promt-buyer-persona/</guid>
+        
+        <category>prompt</category>
+        
+        <category>ChatGPT</category>
+        
+        <category>negocios</category>
+        
+        <category>marketing</category>
+        
+        <category>IA</category>
+        
+        <category>mapa de empatía</category>
+        
+        
+        <category>IA</category>
+        
+      </item>
     
       <item>
         <title>100 años de nombres en Venezuela</title>
@@ -43,7 +571,7 @@ var Utils = {};
 Utils.randomInt = function(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
 };
-var anos = ['x']; for(i = 1896; i &lt;= 1996; i++) anos.push(i);
+var anos = [&apos;x&apos;]; for(i = 1896; i &lt;= 1996; i++) anos.push(i);
 var nombres = [];
 var porcent = [];
 var tipoNum = 1;
@@ -52,34 +580,34 @@ var urlNombres = [] // se le van agregando los nombres seleccionados
 var azar = [];
 /*
 function updateURL(){
-	var url = '/nombres-venezolanos//?nombres='+ urlNombres.explode('|');
+	var url = &apos;/nombres-venezolanos//?nombres=&apos;+ urlNombres.explode(&apos;|&apos;);
 }
 // onload page hacer click a la lista de nombres que aparecen en el url
 
 */
 function addBoton(nombre, total, sexo){
-  var size = total&gt;10000? 'btn-lg':(total&gt;6000? '':(total&gt;3500? 'btn-sm':'btn-xs'));
-  var color = sexo=='f'? 'btn-success':'btn-primary';
+  var size = total&gt;10000? &apos;btn-lg&apos;:(total&gt;6000? &apos;&apos;:(total&gt;3500? &apos;btn-sm&apos;:&apos;btn-xs&apos;));
+  var color = sexo==&apos;f&apos;? &apos;btn-success&apos;:&apos;btn-primary&apos;;
   var selecto = &quot;&quot;;
-  if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
-    $.url('?n').split('|').forEach(function(element){if(element ==nombre) selecto = 'selected';});
+  if($.url(&apos;?n&apos;)!=undefined &amp;&amp; $.url(&apos;?n&apos;)!=&apos;&apos;){
+    $.url(&apos;?n&apos;).split(&apos;|&apos;).forEach(function(element){if(element ==nombre) selecto = &apos;selected&apos;;});
   }
 
-  var boton = $('&lt;option id=&quot;'+nombre+'&quot; value=&quot;'+nombre+'&quot; '+selecto+ '&gt;'+nombre +' ('+total+')&lt;/option&gt;');
-//  var boton = $('&lt;li&gt;&lt;a id=&quot;'+nombre+'&quot; &gt;'+nombre+' ('+total+')&lt;/a&gt;&lt;/li&gt;');
-//  var boton = $('&lt;button id=&quot;'+nombre+'&quot; type=&quot;button&quot; class=&quot;btn ' + color + ' '+size+'&quot;&gt;'+nombre+' &lt;span class=&quot;badge&quot;&gt;'+total+'&lt;/span&gt;&lt;/button&gt;&amp;nbsp;');
+  var boton = $(&apos;&lt;option id=&quot;&apos;+nombre+&apos;&quot; value=&quot;&apos;+nombre+&apos;&quot; &apos;+selecto+ &apos;&gt;&apos;+nombre +&apos; (&apos;+total+&apos;)&lt;/option&gt;&apos;);
+//  var boton = $(&apos;&lt;li&gt;&lt;a id=&quot;&apos;+nombre+&apos;&quot; &gt;&apos;+nombre+&apos; (&apos;+total+&apos;)&lt;/a&gt;&lt;/li&gt;&apos;);
+//  var boton = $(&apos;&lt;button id=&quot;&apos;+nombre+&apos;&quot; type=&quot;button&quot; class=&quot;btn &apos; + color + &apos; &apos;+size+&apos;&quot;&gt;&apos;+nombre+&apos; &lt;span class=&quot;badge&quot;&gt;&apos;+total+&apos;&lt;/span&gt;&lt;/button&gt;&amp;nbsp;&apos;);
   $(&quot;#listaNombres&quot;).append(boton);
 }
 
 function switchG(){
   tipoNum = tipoNum==1?0:1;
 //  chart.unload();
-  if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
-    $.url('?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+  if($.url(&apos;?n&apos;)!=undefined &amp;&amp; $.url(&apos;?n&apos;)!=&apos;&apos;){
+    $.url(&apos;?n&apos;).split(&apos;|&apos;).forEach(function(element) {if(nombres[element]) addName(element);});
   }
 }
 function tipoN(nombre,tipo){if(tipo==1) return porcent[nombre];else return nombres[nombre];}
-function addName(nombre){chart.load({columns:[tipoN(nombre,tipoNum)], type: 'spline'});}
+function addName(nombre){chart.load({columns:[tipoN(nombre,tipoNum)], type: &apos;spline&apos;});}
 function delName(nombre){chart.unload({ids: nombre});}
 
 function nombresAlAzar(cuantos,frecuencia,rango){
@@ -102,12 +630,12 @@ function nombresAlAzar(cuantos,frecuencia,rango){
 	return azar;
 }
 var urlNames = &quot;?n=&quot;
-if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){urlNames = urlNames + $.url( '?n');}
+if($.url(&apos;?n&apos;)!=undefined &amp;&amp; $.url(&apos;?n&apos;)!=&apos;&apos;){urlNames = urlNames + $.url( &apos;?n&apos;);}
 
 $(function() {
-//  urlNames = urlNames + $.url( '?n');
+//  urlNames = urlNames + $.url( &apos;?n&apos;);
 
-  $('#listaNombres').on('change', function(evt, params) {
+  $(&apos;#listaNombres&apos;).on(&apos;change&apos;, function(evt, params) {
     if(params.selected){
       addName(params.selected);
       urlNames = urlNames + params.selected +&quot;|&quot;;
@@ -115,7 +643,7 @@ $(function() {
     } 
     if(params.deselected) {
       delName(params.deselected);
-      urlNames = urlNames.replace(params.deselected+'|','');
+      urlNames = urlNames.replace(params.deselected+&apos;|&apos;,&apos;&apos;);
       window.history.pushState(&quot;&quot;, &quot;&quot;, urlNames);
     }
   });
@@ -134,27 +662,27 @@ $(function() {
 
 
     var columnas = [anos];
-    if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
-      $.url( '?n').split('|').forEach(function(element) {
+    if($.url(&apos;?n&apos;)!=undefined &amp;&amp; $.url(&apos;?n&apos;)!=&apos;&apos;){
+      $.url( &apos;?n&apos;).split(&apos;|&apos;).forEach(function(element) {
         if(nombres[element]) columnas.push(tipoN(element,tipoNum));
       });
-    }else{columnas.push(tipoN('Brigido',tipoNum));}
+    }else{columnas.push(tipoN(&apos;Brigido&apos;,tipoNum));}
 
     chart = c3.generate({
-      bindto: '#chart',
+      bindto: &apos;#chart&apos;,
       data: {
-        x: 'x', 
+        x: &apos;x&apos;, 
         columns: columnas,
-        type: 'spline'
+        type: &apos;spline&apos;
       },
       point: {
           show: false
       }
     });
-    delName('Brigido');
+    delName(&apos;Brigido&apos;);
 
-    if($.url('?n')!=undefined &amp;&amp; $.url('?n')!=''){
-      $.url( '?n').split('|').forEach(function(element) {if(nombres[element]) addName(element);});
+    if($.url(&apos;?n&apos;)!=undefined &amp;&amp; $.url(&apos;?n&apos;)!=&apos;&apos;){
+      $.url( &apos;?n&apos;).split(&apos;|&apos;).forEach(function(element) {if(nombres[element]) addName(element);});
     }
 
     $(&quot;#limpiar&quot;).click(function(){chart.unload();});
@@ -184,8 +712,8 @@ La presente muestra contiene los primeros 3160 nombres más frecuentes en cédul
 &lt;a href=&quot;/PHP-scraping/&quot;&gt;Web scraping&lt;/a&gt;. No son todos los nombres venezolanos, los que se repiten menos de 500 veces quedan excluidos por falta de tiempo de procesador (suman más de 160 mil nombres distintos los que se repiten al menos una vez, a dos minutos el nombre lo dejo para otro año), mi amiga Lenka no se va a encontrar aquí ya que sólo han existido cinco personas con su nombre en la historia de la cedulación venezolana, menos aún su hermana y querida amiga Lianka, cuyo nombre es único en nuestro pais. La verdad es que no puedo saber si esto que escribo es cierto, la fuente de los datos no solo no es oficial sino que está incompleta, motivo por el cual la grafica muere en 1996. Sería genial si el INE y SAIME se pusieran de acuerdo para publicar datos estadísticos oficiales basados en nombres y fechas de nacimiento, yo quisiera contarles sobre la incidencia de las cesareas analizada desde el estudio de los días en que nacen los venezolanos (principalmente martes, miércoles y jueves, supongo que por comodidad del equipo de cirugía que programa la intervención quirúrgica), pero la falta de material oficial en qué basarme me deja hablando mejor de otra cosa. Para ver datos abiertos venezolanos de fuentes oficiales les invito a que se den una vuelta por mi &lt;a href=&quot;/datos-abiertos/&quot;&gt;proyecto de open data&lt;/a&gt;, que espero ver crecer tan rápido como las nuevas modas en cuestiones de nombres raros.
 &lt;br /&gt;
 &lt;h4&gt;Base de datos&lt;/h4&gt;
-Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto un query que totalice por año repeticiones del nombre (&quot;... WHERE unaccent(nombre1) % unaccent('maria') AND similarity(unaccent(nombre1), unaccent('maria')) &amp;gt; 0.7) donde básicamente comparo el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtro por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos ('maria' es distinto de 'mario' pero 'ana' se parece a 'anna'). 
-Por ejemplo, en el caso de 'María', el sistema contabiliza todas las personas registradas como &quot;Maria&quot;, &quot;MARIA   V&quot;, &quot;María&quot;, &quot;|MARIA&quot;, &quot;MARIA D&quot;, &quot;D' MARÍA&quot;, &quot;MARIA|&quot;, &quot;MARIÁ&quot;, &quot;MARIA  A&quot;, &quot;Marìa&quot;, &quot;MARIA T&quot;, &quot;MARIA L&quot;, &quot;MARIA  Y&quot;, &quot;MARIA         I&quot;, &quot;MARIA         D&quot;, &quot;MARIA J&quot;, &quot;MARY MARIA&quot;, &quot;MARIA  J&quot;, &quot;MARIA         G&quot;, &quot;MARIA V&quot;, &quot;S MARIA&quot;, &quot;MARU MARIA&quot;, &quot;MARIA   A&quot;, &quot;MARIA  S&quot;, &quot;MARIA  I&quot;, &quot;MARIA&quot;, &quot;MARIA R&quot;, &quot;MARIA         E&quot;, &quot;MARIA S&quot;, &quot;MARÍA&quot;, &quot;A MARIA&quot;, &quot;MARIA         N&quot;, &quot;MARIA C&quot;, &quot;MARIA I&quot;, &quot;MARÌA&quot;, &quot;MARIA N.&quot;, &quot;MARIA G&quot;, &quot;MARIA         L&quot;, &quot;MARIA   E&quot;, &quot;MARIA E&quot;, &quot;MARIA A&quot;, &quot;MARIAMARIA&quot;, &quot;MARIA Y&quot;, &quot;MARIA M&quot;, &quot;MARIA N&quot; y &quot;MARIA F&quot;. Hay un margen de error pequeño, fíjense que se me pasó una 'Maru'. Así de sucios están los datos. Finalmente obtengo el numero de registros anuales de cada grupo de nombres similares.
+Los datos crudos los almacené en una base de datos postgreSQL, creé una lista de nombres ordenada de mayor a menor por el número de veces que se repiten (más de 800.000 nombres), y sobre cada elemento de esta lista ejecuto un query que totalice por año repeticiones del nombre (&quot;... WHERE unaccent(nombre1) % unaccent(&apos;maria&apos;) AND similarity(unaccent(nombre1), unaccent(&apos;maria&apos;)) &amp;gt; 0.7) donde básicamente comparo el nombre sin acento con cada uno de los que están en la base de datos y luego al grupo obtenido lo filtro por nivel de similaridad, donde el 0.7 basta para identificar como iguales los que se diferencien solo por espacios, caracteres extraños y otros pequeños detalles fonéticos (&apos;maria&apos; es distinto de &apos;mario&apos; pero &apos;ana&apos; se parece a &apos;anna&apos;). 
+Por ejemplo, en el caso de &apos;María&apos;, el sistema contabiliza todas las personas registradas como &quot;Maria&quot;, &quot;MARIA   V&quot;, &quot;María&quot;, &quot;|MARIA&quot;, &quot;MARIA D&quot;, &quot;D&apos; MARÍA&quot;, &quot;MARIA|&quot;, &quot;MARIÁ&quot;, &quot;MARIA  A&quot;, &quot;Marìa&quot;, &quot;MARIA T&quot;, &quot;MARIA L&quot;, &quot;MARIA  Y&quot;, &quot;MARIA         I&quot;, &quot;MARIA         D&quot;, &quot;MARIA J&quot;, &quot;MARY MARIA&quot;, &quot;MARIA  J&quot;, &quot;MARIA         G&quot;, &quot;MARIA V&quot;, &quot;S MARIA&quot;, &quot;MARU MARIA&quot;, &quot;MARIA   A&quot;, &quot;MARIA  S&quot;, &quot;MARIA  I&quot;, &quot;MARIA&quot;, &quot;MARIA R&quot;, &quot;MARIA         E&quot;, &quot;MARIA S&quot;, &quot;MARÍA&quot;, &quot;A MARIA&quot;, &quot;MARIA         N&quot;, &quot;MARIA C&quot;, &quot;MARIA I&quot;, &quot;MARÌA&quot;, &quot;MARIA N.&quot;, &quot;MARIA G&quot;, &quot;MARIA         L&quot;, &quot;MARIA   E&quot;, &quot;MARIA E&quot;, &quot;MARIA A&quot;, &quot;MARIAMARIA&quot;, &quot;MARIA Y&quot;, &quot;MARIA M&quot;, &quot;MARIA N&quot; y &quot;MARIA F&quot;. Hay un margen de error pequeño, fíjense que se me pasó una &apos;Maru&apos;. Así de sucios están los datos. Finalmente obtengo el numero de registros anuales de cada grupo de nombres similares.
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 19 Aug 2017 08:43:00 -0400</pubDate>
@@ -229,7 +757,7 @@ La ley de infogobierno venezolana dice entre otras cosas que todo lo que produzc
       &lt;td&gt;&lt;a href=&quot;http://constituyente2017.cne.gob.ve/resultados_2017Final/&quot;&gt;CNE&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Ubigeo basado en el ubigeo INE&lt;/td&gt;
+      &lt;td&gt;Ubigeo INE&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;https://github.com/asosab/open_data/raw/master/ubigeo_INE/ubigeo_INE.tsv&quot;&gt;.tsv&lt;/a&gt;, &lt;a href=&quot;https://github.com/asosab/open_data/raw/master/ubigeo_INE/ubigeo_INE.json&quot;&gt;.json&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;http://www.ine.gov.ve/documentos/AspectosFisicos/DivisionpoliticoTerritorial/pdf/DPTconFinesEstadisticosOperativa2013.pdf&quot;&gt;INE&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -249,9 +777,9 @@ La ley de infogobierno venezolana dice entre otras cosas que todo lo que produzc
 &lt;h2 id=&quot;quieres-ayudar-agregando-o-limpiando-datos&quot;&gt;¿Quieres ayudar agregando o limpiando datos?&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;Has un &lt;a href=&quot;https://github.com/asosab/open_data&quot;&gt;fork&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Crea una rama propia (&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b mi_rama&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Has un Commit con tus cambios (&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &quot;Descripción de los cambios&quot;&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Sube los cambios a tu rama (&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin mi_rama&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Crea una rama propia (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout -b mi_rama&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Has un Commit con tus cambios (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -am &quot;Descripción de los cambios&quot;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Sube los cambios a tu rama (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin mi_rama&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;Crea un &lt;a href=&quot;http://github.com/asosab/open_data/pulls&quot;&gt;Pull Request&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;¿Hay algún formato en que desees obtener los datos? ¡Déjame un comentario más abajo!&lt;/li&gt;
 &lt;/ol&gt;
@@ -310,10 +838,10 @@ var xAxis = d3.svg.axis().scale(x).orient(&quot;bottom&quot;);
 var yAxis = d3.svg.axis().scale(y).orient(&quot;left&quot;) //.tickFormat(formatPercent);
 
 var tipCh1 = d3.tip()
-  .attr('class', 'd3-tip')
+  .attr(&apos;class&apos;, &apos;d3-tip&apos;)
   .offset([-10, 0])
   .html(function(d) {
-    return &quot;&lt;strong&gt;&quot;+d[Object.keys(d)[0]]+&quot;:&lt;/strong&gt; &lt;span style='color:red'&gt;&quot; + d[Object.keys(d)[1]] + &quot;&lt;/span&gt;&quot;;
+    return &quot;&lt;strong&gt;&quot;+d[Object.keys(d)[0]]+&quot;:&lt;/strong&gt; &lt;span style=&apos;color:red&apos;&gt;&quot; + d[Object.keys(d)[1]] + &quot;&lt;/span&gt;&quot;;
   })
 
 var svgCh1 = d3.select(&quot;#Ch1&quot;)
@@ -326,7 +854,7 @@ svgCh1.call(tipCh1);
 
 d3.tsv(&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;, type, function(error, data) {
   x.domain(data.map(function(d) { 
-    $('#tituloCh1').contents().filter(function() {return this.nodeType == 3}).each(function(){this.textContent = this.textContent.replace('Datos a mostrar',Object.keys(d)[0]);});
+    $(&apos;#tituloCh1&apos;).contents().filter(function() {return this.nodeType == 3}).each(function(){this.textContent = this.textContent.replace(&apos;Datos a mostrar&apos;,Object.keys(d)[0]);});
     return d[Object.keys(d)[0]]; }));
   y.domain([0, d3.max(data, function(d) {tituloY=Object.keys(d)[1]; return d[Object.keys(d)[1]]; })]);
   svgCh1.append(&quot;g&quot;)
@@ -339,7 +867,7 @@ d3.tsv(&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;, type, func
       .attr(&quot;dy&quot;, &quot;.15em&quot;)
       .attr(&quot;transform&quot;, &quot;rotate(-65)&quot; );
 
-  $('#tituloCh1').html(function(d) { return x(Object.keys(d)[0]); });
+  $(&apos;#tituloCh1&apos;).html(function(d) { return x(Object.keys(d)[0]); });
 
   svgCh1.append(&quot;g&quot;)
       .attr(&quot;class&quot;, &quot;y axis&quot;)
@@ -359,8 +887,8 @@ d3.tsv(&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;, type, func
       .attr(&quot;width&quot;, x.rangeBand())
       .attr(&quot;y&quot;, function(d) { return y(d[Object.keys(d)[1]]); })
       .attr(&quot;height&quot;, function(d) { return height - y(d[Object.keys(d)[1]]); })
-      .on('mouseover', tipCh1.show)
-      .on('mouseout', tipCh1.hide)
+      .on(&apos;mouseover&apos;, tipCh1.show)
+      .on(&apos;mouseout&apos;, tipCh1.hide)
 
 });
 
@@ -375,46 +903,46 @@ function type(d) {
 
 &lt;p&gt;Como primer paso debes tener un archivo con datos para mostrar, puedes usar json como forma de notación o simplemente datos tabulados, que son fáciles de leer a ojo y uno de los formatos más ligeros para transmitirlos por Internet. Puedes usar el archivo de datos tabulados que uso en &lt;a href=&quot;/data/UCV-computacion-total-por-ano-egresados.tsv&quot;&gt;este ejemplo&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Ahora prepara tu sitio Web para poder usar la librería de &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;. En el lugar donde cargas los elementos de la cabeza (por defecto /_includes/head.html) agrega unas líneas:
-true&lt;script src=&quot;https://gist.github.com/efaf7dc8d3e3b897821c1f722e56f738.js&quot;&gt; &lt;/script&gt;
-Agrego permanentemente jquery porque deseo usarla en otros sitios pero el código que les muestro la usará un par de veces, d3.tip es una extención de D3js que le agrega cajitas de texto sobre la barra que señales. Fíjense que uso un condicional con la variable ‘page.havecharts’, la idea es que sólo cargaré las librerías cuando las necesite, entonces bastará con agregar ‘havecharts=true’ en el encabezado de mi documento con gráficos para que se carguen las librerías.&lt;/p&gt;
+&lt;p&gt;Ahora prepara tu sitio Web para poder usar la librería de &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;. En el lugar donde cargas los elementos de la cabeza (por defecto /_includes/head.html) agrega unas líneas:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/efaf7dc8d3e3b897821c1f722e56f738.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Agrego permanentemente jquery porque deseo usarla en otros sitios pero el código que les muestro la usará un par de veces, d3.tip es una extención de D3js que le agrega cajitas de texto sobre la barra que señales. Fíjense que uso un condicional con la variable ‘page.havecharts’, la idea es que sólo cargaré las librerías cuando las necesite, entonces bastará con agregar ‘havecharts=true’ en el encabezado de mi documento con gráficos para que se carguen las librerías.&lt;/p&gt;
 
 &lt;p&gt;Crearemos el archivo que se va a encargar de revisar el tipo de gráfica, ponerle un título y un par de links a las fuentes de datos. Yo le llamo showdata.html y lo guardo en _includes/&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/6b8733ed5e9d6500b95317974520cf6d.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Antes de ir al corazón del asunto les voy a mostrar cómo se vé el código incertado en una publicación, esta misma como ejemplo:&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/9f94abd1ba7e83e366a1e78646a07321.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Recuerden que mi blog es código abierto, así que si quieren ver esta publicación por dentro son &lt;a href=&quot;https://github.com/asosab&quot;&gt;bienvenidos&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.
-true&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;
-Un cambio importante es la orientación del texto del eje X. Para inclinarlo un poco  primero le di más espacio en la variable margin&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Vamos al meollo, para este primer estadio de pruebas tomé como punto de partida el código de &lt;a href=&quot;http://bl.ocks.org/Caged/6476579&quot;&gt;ejemplo de creación de una gráfica de barras con indicadores flotantes&lt;/a&gt; hecho con &lt;a href=&quot;https://d3js.org/&quot;&gt;D3.js&lt;/a&gt;, básicamente lo calqué, con algunas modificaciones menores, como tomar el tamaño de la pantalla como referencia del ancho de la gráfica, para que se vea bien en celulares. Mi código toma dinámicamente el nombre de los ejes X y Y del documento y los usa como leyenda vertical permanente y como título sobre la gráfica, para esto hay qe asegurarse que la primera columna tenga por nombre una referencia al valor de la segunda columna y el título de la segunda columna valga como título de la gráfica a mostrar.&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3ab7480f3df2d209866911d34ed1f137.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Un cambio importante es la orientación del texto del eje X. Para inclinarlo un poco  primero le di más espacio en la variable margin&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;y luego agegué por código unos cambios a los atributos de la etiqueta&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
-6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text-anchor&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;end&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dx&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;-.8em&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.15em&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transform&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rotate(-65)&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text-anchor&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-.8em&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.15em&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;rotate(-65)&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Ya casi listos para ver resultados, el render necesita un poco de css, que agregué a mi archivo main.css&lt;/p&gt;
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
@@ -449,7 +977,8 @@ Un cambio importante es la orientación del texto del eje X. Para inclinarlo un 
 33
 34
 35
-36&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+36
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.axis&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -485,9 +1014,7 @@ Un cambio importante es la orientación del texto del eje X. Para inclinarlo un 
 &lt;span class=&quot;c&quot;&gt;/* Style northward tooltips differently */&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.d3-tip.n&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.chart-title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;padding-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Sun, 30 Jul 2017 17:34:00 -0400</pubDate>
@@ -512,14 +1039,12 @@ Un cambio importante es la orientación del texto del eje X. Para inclinarlo un 
       <item>
         <title>PHP Web scraping</title>
         <description>&lt;p&gt;Si quisiera saber todas las formas de conjugar un verbo podría ir a la web &lt;a href=&quot;http://www.spanishdict.com/conjugate/esperar&quot;&gt;spanishdict&lt;/a&gt; y averiguarlo allí, pero si necesito obtener esa información programáticamente, o descargarme todas las conjugaciones de todos los verbos de forma automatizada debo empezar por crearme una función para hacer &lt;a href=&quot;https://es.wikipedia.org/wiki/Web_scraping&quot;&gt;Web scraping&lt;/a&gt;&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/c9c49502042b4d9e3f88ad1153ca5e20.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;La idea es que mediante pistas y un estudio previo de la web a “escrapear” podamos decirle a nuestra función cómo obtener esa información que desconocemos pero sabemos encontrar. Supongamos que obtenemos toda la página mediante file_get_contents, veamos dos ejemplos de cómo usar la función scrapDato()&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;404: Not Found&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/667c1a7a3c4af907d9d83e357e11232e.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Existen códigos fabulosos para hacer Web scraping, uno bastante serio es &lt;a href=&quot;https://github.com/FriendsOfPHP/Goutte&quot;&gt;Goutte&lt;/a&gt;, para hacer mucho más que tomar datos de una Web.&lt;/p&gt;

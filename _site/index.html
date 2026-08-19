@@ -4,10 +4,13 @@
   <head itemscope itemtype="http://schema.org/WebSite">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
     <title itemprop='name'>El código nuestro de cada día</title>
     <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     		<!-- generated with http://www.favicon-generator.org/ -->
 		<link rel="apple-touch-icon" sizes="57x57" 					href="http://localhost:4000/imagen/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" 					href="http://localhost:4000/imagen/favicon/apple-icon-60x60.png">
@@ -32,7 +35,7 @@
     
     <meta name="title" content="El código nuestro de cada día">
     <meta name="description" content="Pedazos de código de uso cotidiano, apuntes sobre lenguajes de programación, bases de datos y tecnologías de la información">
-    <meta name="keywords" content="PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data">
+    <meta name="keywords" content="PHP, webscraping, postgresql, bases de datos, node.js, datos abiertos, estadística, big data, robot, whatsapp, asistente">
     <link rel="shortlink" href="http://j.mp/dia-cod">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link rel="search" type="application/opensearchdescription+xml" href="http://localhost:4000/opensearch.xml" title="Busca dentro de ">
@@ -64,10 +67,10 @@
     <meta name="twitter:url" content="http://localhost:4000/">
     <meta name="twitter:creator" content="@asosab" />
 
-    <meta name="geo.region" content="VE-S" />
-    <meta name="geo.placename" content="Patiecitos" />
-    <meta name="geo.position" content="7.831472;-72.2297509" />
-    <meta name="ICBM" content="7.831472;-72.2297509" />    
+    <meta name="geo.region" content="BO-S" />
+    <meta name="geo.placename" content="Santa Cruz de la Sierra" />
+    <meta name="geo.position" content="-17.7833152;-63.1821236" />
+    <meta name="ICBM" content="-17.7833152;-63.1821236" />    
 		
     
     <link rel="alternate" hreflang="es" href="http://localhost:4000/">
@@ -121,8 +124,7 @@
         </svg>
       </a>
       <div class="trigger">
-
-        <a href="https://linkedin.com/in/alejandrososa">CV</a>
+        <a href="/cv/">CV</a>
       </div>
     </nav>
 
@@ -134,29 +136,134 @@
     <div class="page-content">
       <div class="wrap">
       <div class="home">
-  <ul class="posts">
-    
-      <li>
-        <!--span class="post-date">Aug 19, 2017</span-->
-        <a class="post-link" href="/nombres-venezolanos/">100 años de nombres en Venezuela</a>
-      </li>
-    
-      <li>
-        <!--span class="post-date">Aug 4, 2017</span-->
-        <a class="post-link" href="/datos-abiertos/">Datos abiertos venezolanos</a>
-      </li>
-    
-      <li>
-        <!--span class="post-date">Jul 30, 2017</span-->
-        <a class="post-link" href="/D3-bars-jekyll/">Automatizando el uso de D3.js en Jekyll</a>
-      </li>
-    
-      <li>
-        <!--span class="post-date">Jun 17, 2017</span-->
-        <a class="post-link" href="/PHP-scraping/">PHP Web scraping</a>
-      </li>
-    
-  </ul>
+
+  <section class="home-section">
+    <p class="section-label">Proyectos propios</p>
+    <div class="grid">
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/statetty.png" alt="Statetty" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title"><a href="https://statetty.com" target="_blank" rel="noopener">Statetty</a></h3>
+          <p class="card__text">Bot de Telegram que automatiza la búsqueda y el monitoreo de inmuebles: filtra anuncios, escucha grupos de WhatsApp, y genera mapas, gráficas y reportes en PDF.</p>
+          <a class="btn-secondary" href="https://statetty.com" target="_blank" rel="noopener">Visitar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/ekvilibrolab.png" alt="ekvilibroLab" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title"><a href="http://localhost:4000/ekvilibrolab/" target="_blank">ekvilibroLab</a></h3>
+          <p class="card__text">Laboratorio de fermentación artesanal: kombucha, linimentos naturales (Macurcalm, Arnicure) y formulaciones de bienestar hechas en Bolivia.</p>
+          <a class="btn-secondary" href="http://localhost:4000/ekvilibrolab/">Visitar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/somos10e7.png" alt="Somos 10⁷" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title"><a href="http://localhost:4000/somos10e7/" target="_blank">Somos 10⁷</a></h3>
+          <p class="card__text">Podcast de entrevistas: conducción, investigación previa y postproducción audiovisual completa.</p>
+          <a class="btn-secondary" href="http://localhost:4000/somos10e7/">Visitar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/ulad.png" alt="Una Línea al Día" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title"><a href="https://audio.com/alejandro-sosa-briceno/collections/una-linea-al-dia" target="_blank" rel="noopener">Una Línea al Día</a></h3>
+          <p class="card__text">Microformato literario: una línea de una gran obra, analizada por episodio. Concepto, guion y narración propios.</p>
+          <a class="btn-secondary" href="https://audio.com/alejandro-sosa-briceno/collections/una-linea-al-dia" target="_blank" rel="noopener">Escuchar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/buddy.svg" alt="Buddy" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Buddy</h3>
+          <p class="card__text">Plataforma que amplía las posibilidades de los sitios web estáticos, incorporando servicios que normalmente requieren un backend: inicio de sesión de usuarios, acceso y gestión de datos, contenido dinámico, juegos interactivos y experiencias personalizadas, manteniendo la simplicidad y las ventajas de publicar un sitio estático.</p>
+          <p class="card__text">Con Buddy exploro una idea que atraviesa varios de mis proyectos: aprovechar tecnologías web sencillas para construir experiencias más completas, interactivas y útiles, sin necesidad de convertir cada proyecto en una aplicación tradicional.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <p class="section-label">Colaboraciones</p>
+    <div class="grid grid--2">
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/arbat.png" alt="ARBAT" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <p class="card__rol">Creador del sitio web</p>
+          <h3 class="card__title"><a href="https://arbatarchery.com" target="_blank" rel="noopener">ARBAT</a></h3>
+          <p class="card__text">En ARBAT soy creador y desarrollador del sitio web, integrando tecnología y experiencia digital para acompañar el proyecto y su comunidad. El sitio no solo presenta las actividades de tiro con arco, sino que incorpora herramientas y experiencias interactivas pensadas para hacer más dinámica la participación de sus visitantes.</p>
+          <a class="btn-secondary" href="https://arbatarchery.com" target="_blank" rel="noopener">Visitar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="http://localhost:4000/imagen/lnm.png" alt="Larga Noche de Museos" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <p class="card__rol">Coordinador, editor sonoro, entrevistador y guionista</p>
+          <h3 class="card__title"><a href="http://localhost:4000/larga_noche_de_museos/" target="_blank">Larga Noche de Museos</a></h3>
+          <p class="card__text">Podcast documental: recorrido sonoro por el centro histórico de Santa Cruz durante la Larga Noche de Museos 2026.</p>
+          <a class="btn-secondary" href="http://localhost:4000/larga_noche_de_museos/">Escuchar</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <p class="section-label">Notas y artículos</p>
+    <ul class="posts">
+      
+        <li>
+          <a class="post-link" href="/de-pdf-a-landing-page/">De la propuesta en PDF a la landing page: cómo comunicar un proyecto hoy</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/La-historia-de-tu-vida-con-IA/">La historia de tu vida, contada con IA</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/todo-problema-tiene-solucion/">Todo problema tiene solución</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/promt-buyer-persona/">Identificando a tus clientes con inteligencia artificial</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/nombres-venezolanos/">100 años de nombres en Venezuela</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/datos-abiertos/">Datos abiertos venezolanos</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/D3-bars-jekyll/">Automatizando el uso de D3.js en Jekyll</a>
+        </li>
+      
+        <li>
+          <a class="post-link" href="/PHP-scraping/">PHP Web scraping</a>
+        </li>
+      
+    </ul>
+  </section>
 
 
 </div>
@@ -224,6 +331,12 @@
 
   </div>
 
+</footer>
+
+    <footer class="site-credit">
+  <div class="wrap">
+    <p>Diseñado y desarrollado por <strong>Alejandro Sosa</strong></p>
+  </div>
 </footer>
 
     <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-84695-6', 'auto');ga('send', 'pageview');</script>
