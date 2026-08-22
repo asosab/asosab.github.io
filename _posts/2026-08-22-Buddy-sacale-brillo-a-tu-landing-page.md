@@ -4,7 +4,7 @@ title:  "Buddy: Sácale brillo a tu landing page"
 date:   2026-08-22 00:00
 categories: ingenieria
 comments: true
-description: "Cómo un minijuego de arquería pensado para no aburrir a las visitas de una landing page terminó convertido en Buddy: un motor modular que le suma a cualquier sitio estático login sin contraseña compartido entre sitios, mensajería contextual con datos reales y medición de conversión, todo instalable con una sola línea de script."
+description: "Cómo un minijuego de arquería pensado gancho al call to action de un sitio web terminó convertido en Buddy: un motor modular que le suma a cualquier sitio estático login sin contraseña compartido entre sitios, mensajería contextual con datos reales y medición de conversión, todo instalable con una sola línea de script."
 image: /imagen/post/buddy_arbat.png
 tags: [arquitectura de software, javascript, autenticación sin contraseña, engagement, sitios estáticos, producto]
 published: true
