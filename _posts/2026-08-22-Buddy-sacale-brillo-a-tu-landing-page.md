@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Buddy: Sácale brillo a tu landing page"
-date:   2026-08-22 10:00
+date:   2026-08-22 00:00
 categories: ingenieria
 comments: true
 description: "Cómo un minijuego de arquería pensado para no aburrir a las visitas de una landing page terminó convertido en Buddy: un motor modular que le suma a cualquier sitio estático login sin contraseña compartido entre sitios, mensajería contextual con datos reales y medición de conversión, todo instalable con una sola línea de script."
