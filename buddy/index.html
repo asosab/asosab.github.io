@@ -499,6 +499,85 @@
     .addons-grid{grid-template-columns:1fr;}
   }
 
+  /* ---------- calculadora ---------- */
+  .calc-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:2.2em;
+    align-items:start;
+  }
+  .calc-block{margin-bottom:2em;}
+  .calc-block:last-child{margin-bottom:0;}
+  .calc-block-title{
+    font-family:var(--font-display);
+    font-style:italic;
+    color:var(--teal);
+    font-size:1.05rem;
+    margin-bottom:0.9em;
+  }
+  .calc-plan-list, .calc-addon-list{display:flex; flex-direction:column; gap:0.7em;}
+  .calc-option{
+    display:flex;
+    align-items:center;
+    gap:0.9em;
+    padding:0.9em 1.1em;
+    border:1.5px solid var(--paper-line);
+    border-radius:var(--radius-md);
+    cursor:pointer;
+    background:var(--paper);
+    transition:border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .calc-option.is-checked{
+    border-color:var(--teal);
+    background:var(--teal-paper);
+  }
+  .calc-option input{flex:none; width:17px; height:17px; accent-color:var(--teal);}
+  .calc-option-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex:1;
+    gap:1em;
+  }
+  .calc-option-name{font-weight:600; font-size:0.96rem;}
+  .calc-option-desc{display:block; font-size:0.82rem; color:var(--ink-faint); font-weight:400; margin-top:0.15em;}
+  .calc-option-price{font-family:var(--font-mono); font-size:0.85rem; color:var(--ink-faint); white-space:nowrap; text-align:right;}
+
+  .calc-summary{
+    position:sticky;
+    top:24px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:var(--radius-lg);
+    padding:2em 1.8em;
+    box-shadow:var(--shadow-soft);
+  }
+  .calc-summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1em;
+  }
+  .calc-summary-row strong{
+    font-family:var(--font-display);
+    font-size:1.8rem;
+    color:var(--amber);
+    white-space:nowrap;
+  }
+  .calc-summary-row-muted{margin-top:1.6em; padding-top:1.4em; border-top:1px solid rgba(243,240,228,0.16);}
+  .calc-summary-row-muted strong{font-size:1.3rem; color:var(--paper);}
+  .calc-summary-note{
+    font-size:0.82rem;
+    color:rgba(243,240,228,0.65);
+    margin:0.5em 0 0;
+  }
+  .calc-summary .btn{width:100%; justify-content:center; margin-top:1.8em;}
+
+  @media (max-width:860px){
+    .calc-grid{grid-template-columns:1fr;}
+    .calc-summary{position:static;}
+  }
+
   /* ---------- roadmap strip ---------- */
   .roadmap{
     display:flex;
@@ -909,84 +988,12 @@
       <p>Cada plan incluye todo lo del anterior. Los precios son de lanzamiento — se ajustan según el proyecto.</p>
     </div>
 
-    <div class="price-grid">
-      <div class="price-card">
-        <span class="price-tag">Lite</span>
-        <h3>Lite</h3>
-        <p class="price-tagline">El personaje habla solo en tu sitio.</p>
-        <div class="price-amount">$19<span class="price-per"> / mes</span></div>
-        <ul class="price-includes">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Personaje + frases automáticas</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Chat con la persona visitante</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Telemetría base</li>
-        </ul>
-        <a class="btn btn-ghost js-wa" data-msg="Hola, quiero el plan Lite de Buddy" href="#">Elegir Lite</a>
-      </div>
-
-      <div class="price-card">
-        <span class="price-tag">Identidad</span>
-        <h3>Identidad</h3>
-        <p class="price-tagline">La gente se loguea y vos la reconocés.</p>
-        <div class="price-amount">$49<span class="price-per"> / mes</span></div>
-        <ul class="price-includes">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Todo lo de Lite</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Login sin contraseña</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Perfil + clics de WhatsApp</li>
-        </ul>
-        <a class="btn btn-ghost js-wa" data-msg="Hola, quiero el plan Identidad de Buddy" href="#">Elegir Identidad</a>
-      </div>
-
-      <div class="price-card popular">
-        <span class="price-tag">Más elegido</span>
-        <h3>Growth</h3>
-        <p class="price-tagline">Ves todo en un panel — y lo administrás vos.</p>
-        <div class="price-amount">$99<span class="price-per"> / mes</span></div>
-        <ul class="price-includes">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Todo lo de Identidad</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Panel de métricas</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Administradores + configuración remota</li>
-        </ul>
-        <a class="btn btn-on-dark js-wa" data-msg="Hola, quiero el plan Growth de Buddy" href="#">Elegir Growth</a>
-      </div>
-
-      <div class="price-card">
-        <span class="price-tag">Multi-sitio</span>
-        <h3>Multi-sitio</h3>
-        <p class="price-tagline">Un mismo usuario en todos tus proyectos.</p>
-        <div class="price-amount">$249<span class="price-per"> / mes</span></div>
-        <ul class="price-includes">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Todo lo de Growth</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Hasta 5 sitios con identidad cruzada</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Roles compartidos entre sitios</li>
-        </ul>
-        <a class="btn btn-ghost js-wa" data-msg="Hola, quiero el plan Multi-sitio de Buddy" href="#">Elegir Multi-sitio</a>
-      </div>
-    </div>
+    <!-- Los planes y los addons se generan desde BUDDY_PRECIOS (ver script al final del archivo). -->
+    <div class="price-grid" id="price-grid"></div>
 
     <div class="addons">
       <p class="addons-label">A la carta</p>
-      <div class="addons-grid">
-        <div class="addon">
-          <h4>Personaje a medida</h4>
-          <p>Un diseño propio en vez de Alejito o Raulito.</p>
-          <p class="addon-price">desde $150 (pago único)</p>
-        </div>
-        <div class="addon">
-          <h4>Vertical a medida</h4>
-          <p>Tipo escuela o comunidad, con tus propios roles.</p>
-          <p class="addon-price">desde $129 / mes</p>
-        </div>
-        <div class="addon">
-          <h4>Minijuego de engagement</h4>
-          <p>Una mecánica simple con ranking entre usuarios.</p>
-          <p class="addon-price">desde $59 / mes</p>
-        </div>
-        <div class="addon">
-          <h4>Instalación asistida</h4>
-          <p>Te lo dejamos andando nosotros, en tu sitio.</p>
-          <p class="addon-price">$99 (pago único)</p>
-        </div>
-      </div>
+      <div class="addons-grid" id="addons-grid"></div>
     </div>
 
     <p class="price-footnote">Dato curioso: cada clic en estos botones de WhatsApp es, literalmente, el tipo de conversión que el módulo de clics de WhatsApp mediría por vos.</p>
@@ -997,6 +1004,45 @@
       <span>Pagos sin backend</span>
       <span>Formularios propios</span>
       <span>Marketplace de personajes</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="calculadora">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow-label">Calculadora</p>
+      <h2>Armá tu plan y mirá cuánto pagás</h2>
+      <p>Elegí un plan base, sumá lo que necesites de la carta, y mirá el primer pago y lo que queda pagando cada mes después.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-options">
+        <div class="calc-block">
+          <h4 class="calc-block-title">Plan base</h4>
+          <div class="calc-plan-list" id="calc-planes"></div>
+        </div>
+        <div class="calc-block">
+          <h4 class="calc-block-title">A la carta (opcional)</h4>
+          <div class="calc-addon-list" id="calc-addons"></div>
+        </div>
+      </div>
+
+      <div class="calc-summary">
+        <div class="calc-summary-row">
+          <span>Primer pago</span>
+          <strong id="calc-primer-pago">$0</strong>
+        </div>
+        <p class="calc-summary-note" id="calc-primer-detalle"></p>
+
+        <div class="calc-summary-row calc-summary-row-muted">
+          <span>Pago mensual, desde el mes 2</span>
+          <strong id="calc-pago-mensual">$0</strong>
+        </div>
+        <p class="calc-summary-note" id="calc-mensual-detalle"></p>
+
+        <a class="btn btn-on-dark" id="calc-wa-btn" href="#" target="_blank" rel="noopener">Consultar esta combinación</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1060,6 +1106,248 @@
 <script>
   var WHATSAPP_NUMBER = "59174189700";
 
+  // ---------------------------------------------------------------------
+  // BUDDY_PRECIOS — única fuente de verdad para precios y planes.
+  // Para actualizar montos, nombres o qué incluye cada plan/addon, editar
+  // solo este objeto: las tarjetas de precios, la carta de addons y la
+  // calculadora se generan todas a partir de acá.
+  // ---------------------------------------------------------------------
+  var BUDDY_PRECIOS = {
+    moneda: '$',
+
+    planes: [
+      {
+        id: 'lite',
+        tag: 'Lite',
+        nombre: 'Lite',
+        tagline: 'El personaje habla solo en tu sitio.',
+        precioMensual: 19,
+        popular: false,
+        incluye: [
+          'Personaje + frases automáticas',
+          'Chat con la persona visitante',
+          'Telemetría base'
+        ]
+      },
+      {
+        id: 'identidad',
+        tag: 'Identidad',
+        nombre: 'Identidad',
+        tagline: 'La gente se loguea y vos la reconocés.',
+        precioMensual: 49,
+        popular: false,
+        incluye: [
+          'Todo lo de Lite',
+          'Login sin contraseña',
+          'Perfil + clics de WhatsApp'
+        ]
+      },
+      {
+        id: 'growth',
+        tag: 'Más elegido',
+        nombre: 'Growth',
+        tagline: 'Ves todo en un panel — y lo administrás vos.',
+        precioMensual: 99,
+        popular: true,
+        incluye: [
+          'Todo lo de Identidad',
+          'Panel de métricas',
+          'Administradores + configuración remota'
+        ]
+      },
+      {
+        id: 'multisitio',
+        tag: 'Multi-sitio',
+        nombre: 'Multi-sitio',
+        tagline: 'Un mismo usuario en todos tus proyectos.',
+        precioMensual: 249,
+        popular: false,
+        incluye: [
+          'Todo lo de Growth',
+          'Hasta 5 sitios con identidad cruzada',
+          'Roles compartidos entre sitios'
+        ]
+      }
+    ],
+
+    addons: [
+      {
+        id: 'personaje',
+        nombre: 'Personaje a medida',
+        desc: 'Un diseño propio en vez de Alejito o Raulito.',
+        precio: 150,
+        cobro: 'unico',
+        desde: true
+      },
+      {
+        id: 'vertical',
+        nombre: 'Vertical a medida',
+        desc: 'Tipo escuela o comunidad, con tus propios roles.',
+        precio: 129,
+        cobro: 'mensual',
+        desde: true
+      },
+      {
+        id: 'minijuego',
+        nombre: 'Minijuego de engagement',
+        desc: 'Una mecánica simple con ranking entre usuarios.',
+        precio: 59,
+        cobro: 'mensual',
+        desde: true
+      },
+      {
+        id: 'instalacion',
+        nombre: 'Instalación asistida',
+        desc: 'Te lo dejamos andando nosotros, en tu sitio.',
+        precio: 99,
+        cobro: 'unico',
+        desde: false
+      }
+    ]
+  };
+
+  function money(n){
+    return BUDDY_PRECIOS.moneda + n;
+  }
+
+  function formatAddonPrice(addon){
+    var precio = (addon.desde ? 'desde ' : '') + money(addon.precio);
+    return precio + (addon.cobro === 'unico' ? ' (pago único)' : ' / mes');
+  }
+
+  // ---------------------------------------------------------------------
+  // Render de las tarjetas de planes y de la carta de addons.
+  // ---------------------------------------------------------------------
+  function renderPlanes(){
+    var grid = document.getElementById('price-grid');
+    if (!grid) return;
+
+    grid.innerHTML = BUDDY_PRECIOS.planes.map(function(p){
+      var items = p.incluye.map(function(item){
+        return '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>' + item + '</li>';
+      }).join('');
+
+      return (
+        '<div class="price-card' + (p.popular ? ' popular' : '') + '">' +
+          '<span class="price-tag">' + p.tag + '</span>' +
+          '<h3>' + p.nombre + '</h3>' +
+          '<p class="price-tagline">' + p.tagline + '</p>' +
+          '<div class="price-amount">' + money(p.precioMensual) + '<span class="price-per"> / mes</span></div>' +
+          '<ul class="price-includes">' + items + '</ul>' +
+          '<a class="btn ' + (p.popular ? 'btn-on-dark' : 'btn-ghost') + ' js-wa" data-msg="Hola, quiero el plan ' + p.nombre + ' de Buddy" href="#">Elegir ' + p.nombre + '</a>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
+  function renderAddons(){
+    var grid = document.getElementById('addons-grid');
+    if (!grid) return;
+
+    grid.innerHTML = BUDDY_PRECIOS.addons.map(function(a){
+      return (
+        '<div class="addon">' +
+          '<h4>' + a.nombre + '</h4>' +
+          '<p>' + a.desc + '</p>' +
+          '<p class="addon-price">' + formatAddonPrice(a) + '</p>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
+  // ---------------------------------------------------------------------
+  // Calculadora: primer pago vs. pago mensual recurrente.
+  // Primer pago  = plan (mes 1) + addons de pago único + addons mensuales (mes 1)
+  // Pago mensual = plan + addons mensuales (los pagos únicos no se repiten)
+  // ---------------------------------------------------------------------
+  function renderCalculadora(){
+    var planesWrap = document.getElementById('calc-planes');
+    var addonsWrap = document.getElementById('calc-addons');
+    if (!planesWrap || !addonsWrap) return;
+
+    planesWrap.innerHTML = BUDDY_PRECIOS.planes.map(function(p, i){
+      return (
+        '<label class="calc-option">' +
+          '<input type="radio" name="calc-plan" value="' + p.id + '"' + (i === 0 ? ' checked' : '') + '>' +
+          '<span class="calc-option-main">' +
+            '<span class="calc-option-name">' + p.nombre + '</span>' +
+            '<span class="calc-option-price">' + money(p.precioMensual) + ' / mes</span>' +
+          '</span>' +
+        '</label>'
+      );
+    }).join('');
+
+    addonsWrap.innerHTML = BUDDY_PRECIOS.addons.map(function(a){
+      return (
+        '<label class="calc-option">' +
+          '<input type="checkbox" name="calc-addon" value="' + a.id + '">' +
+          '<span class="calc-option-main">' +
+            '<span class="calc-option-name">' + a.nombre + '<span class="calc-option-desc">' + a.desc + '</span></span>' +
+            '<span class="calc-option-price">' + formatAddonPrice(a) + '</span>' +
+          '</span>' +
+        '</label>'
+      );
+    }).join('');
+
+    planesWrap.addEventListener('change', actualizarCalculadora);
+    addonsWrap.addEventListener('change', actualizarCalculadora);
+    actualizarCalculadora();
+  }
+
+  function actualizarCalculadora(){
+    // Resalta visualmente la opción marcada (radios y checkboxes).
+    document.querySelectorAll('#calc-planes .calc-option, #calc-addons .calc-option').forEach(function(label){
+      var input = label.querySelector('input');
+      label.classList.toggle('is-checked', !!(input && input.checked));
+    });
+
+    var planId = (document.querySelector('input[name="calc-plan"]:checked') || {}).value;
+    var plan = BUDDY_PRECIOS.planes.filter(function(p){ return p.id === planId; })[0] || BUDDY_PRECIOS.planes[0];
+
+    var seleccionados = Array.prototype.slice.call(document.querySelectorAll('input[name="calc-addon"]:checked'))
+      .map(function(input){
+        return BUDDY_PRECIOS.addons.filter(function(a){ return a.id === input.value; })[0];
+      })
+      .filter(Boolean);
+
+    var unicos = seleccionados.filter(function(a){ return a.cobro === 'unico'; });
+    var mensuales = seleccionados.filter(function(a){ return a.cobro === 'mensual'; });
+
+    var sumaUnicos = unicos.reduce(function(t, a){ return t + a.precio; }, 0);
+    var sumaMensuales = mensuales.reduce(function(t, a){ return t + a.precio; }, 0);
+
+    var primerPago = plan.precioMensual + sumaMensuales + sumaUnicos;
+    var pagoMensual = plan.precioMensual + sumaMensuales;
+
+    document.getElementById('calc-primer-pago').textContent = money(primerPago);
+    document.getElementById('calc-pago-mensual').textContent = money(pagoMensual);
+
+    var detallePrimero = [plan.nombre + ': ' + money(plan.precioMensual)];
+    mensuales.forEach(function(a){ detallePrimero.push(a.nombre + ': ' + money(a.precio)); });
+    unicos.forEach(function(a){ detallePrimero.push(a.nombre + ': ' + money(a.precio) + ' (único)'); });
+    document.getElementById('calc-primer-detalle').textContent = detallePrimero.join(' + ');
+
+    var detalleMensual = [plan.nombre + ': ' + money(plan.precioMensual)];
+    mensuales.forEach(function(a){ detalleMensual.push(a.nombre + ': ' + money(a.precio)); });
+    document.getElementById('calc-mensual-detalle').textContent = detalleMensual.join(' + ') +
+      (unicos.length ? ' (los pagos únicos ya no se repiten)' : '');
+
+    var waBtn = document.getElementById('calc-wa-btn');
+    if (waBtn) {
+      var nombresAddons = seleccionados.map(function(a){ return a.nombre; }).join(', ');
+      var msg = 'Hola, arme un plan de Buddy: ' + plan.nombre +
+        (nombresAddons ? ' + ' + nombresAddons : '') +
+        '. Primer pago ' + money(primerPago) + ', luego ' + money(pagoMensual) + ' por mes.';
+      waBtn.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg));
+    }
+  }
+
+  renderPlanes();
+  renderAddons();
+  renderCalculadora();
+
+  // El resto de los botones de WhatsApp del sitio (hero, CTA final, etc.)
+  // arman su link a partir de data-msg.
   document.querySelectorAll('.js-wa').forEach(function(el){
     var msg = el.getAttribute('data-msg') || 'Hola, quiero saber más de Buddy';
     el.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg));
