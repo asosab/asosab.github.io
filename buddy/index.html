@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buddy — el personaje que le suma identidad y analítica a tu sitio</title>
-<meta name="description" content="Buddy es una capa de identidad, conversación y analítica que instalás con una línea de script. Sin servidor, sin base de datos, sin mantenimiento.">
+<title>Buddy — identidad, conversación y analítica para cualquier sitio, en una línea de código</title>
+<meta name="description" content="Buddy le suma identidad, conversación y analítica a cualquier sitio con una sola línea de script — incluso a páginas completamente estáticas.">
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,440;1,9..144,560&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -390,77 +392,6 @@
     .modrow{gap:0.3em;}
   }
 
-  /* ---------- pricing ---------- */
-  .price-note{font-size:0.92rem; color:var(--ink-faint); margin-top:-1.6em; margin-bottom:2.6em;}
-  .price-grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:1.2em;
-    align-items:stretch;
-  }
-  .price-card{
-    border:1.5px solid var(--paper-line);
-    border-radius:var(--radius-lg);
-    padding:1.8em 1.6em;
-    display:flex;
-    flex-direction:column;
-    background:var(--paper);
-  }
-  .price-card.popular{
-    background:var(--ink);
-    color:var(--paper);
-    border-color:var(--ink);
-    box-shadow:var(--shadow-soft);
-    transform:translateY(-8px);
-  }
-  .price-tag{
-    font-size:0.78rem;
-    font-weight:700;
-    letter-spacing:0.02em;
-    color:var(--amber-deep);
-    background:rgba(230,161,58,0.16);
-    display:inline-block;
-    padding:0.3em 0.8em;
-    border-radius:999px;
-    margin-bottom:1em;
-    width:fit-content;
-  }
-  .price-card.popular .price-tag{background:rgba(230,161,58,0.22); color:var(--amber);}
-  .price-card h3{font-size:1.3rem; margin-bottom:0.2em;}
-  .price-tagline{
-    font-size:0.92rem;
-    color:var(--ink-soft);
-    margin-bottom:1.2em;
-    min-height:2.6em;
-  }
-  .price-card.popular .price-tagline{color:rgba(243,240,228,0.75);}
-  .price-amount{
-    font-family:var(--font-display);
-    font-size:2.2rem;
-    font-weight:600;
-    margin-bottom:0.1em;
-  }
-  .price-per{font-size:0.85rem; color:var(--ink-faint); font-weight:400; font-family:var(--font-body);}
-  .price-card.popular .price-per{color:rgba(243,240,228,0.6);}
-  .price-includes{
-    list-style:none;
-    margin:1.4em 0 1.8em;
-    padding:0;
-    font-size:0.9rem;
-    flex-grow:1;
-  }
-  .price-includes li{
-    padding:0.5em 0;
-    border-top:1px solid var(--paper-line);
-    display:flex;
-    gap:0.6em;
-  }
-  .price-card.popular .price-includes li{border-top:1px solid rgba(243,240,228,0.14);}
-  .price-includes li:first-child{border-top:none;}
-  .price-includes svg{width:16px; height:16px; flex:none; margin-top:0.2em; color:var(--teal);}
-  .price-card.popular .price-includes svg{color:var(--amber);}
-  .price-card .btn{justify-content:center; width:100%;}
-
   .addons{
     margin-top:3.4em;
     border-top:1px solid var(--paper-line);
@@ -472,110 +403,6 @@
     color:var(--teal);
     font-size:1.15rem;
     margin-bottom:1.2em;
-  }
-  .addons-grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:1.4em;
-  }
-  .addon h4{font-size:0.98rem; margin-bottom:0.25em;}
-  .addon p{font-size:0.88rem; color:var(--ink-soft); margin-bottom:0;}
-  .addon .addon-price{font-weight:700; color:var(--ink); font-family:var(--font-mono); font-size:0.85rem;}
-
-  .price-footnote{
-    margin-top:2.6em;
-    font-size:0.9rem;
-    color:var(--ink-faint);
-    font-style:italic;
-  }
-
-  @media (max-width:980px){
-    .price-grid{grid-template-columns:repeat(2, 1fr);}
-    .addons-grid{grid-template-columns:repeat(2, 1fr);}
-    .price-card.popular{transform:none;}
-  }
-  @media (max-width:600px){
-    .price-grid{grid-template-columns:1fr;}
-    .addons-grid{grid-template-columns:1fr;}
-  }
-
-  /* ---------- calculadora ---------- */
-  .calc-grid{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:2.2em;
-    align-items:start;
-  }
-  .calc-block{margin-bottom:2em;}
-  .calc-block:last-child{margin-bottom:0;}
-  .calc-block-title{
-    font-family:var(--font-display);
-    font-style:italic;
-    color:var(--teal);
-    font-size:1.05rem;
-    margin-bottom:0.9em;
-  }
-  .calc-plan-list, .calc-addon-list{display:flex; flex-direction:column; gap:0.7em;}
-  .calc-option{
-    display:flex;
-    align-items:center;
-    gap:0.9em;
-    padding:0.9em 1.1em;
-    border:1.5px solid var(--paper-line);
-    border-radius:var(--radius-md);
-    cursor:pointer;
-    background:var(--paper);
-    transition:border-color 0.15s ease, background-color 0.15s ease;
-  }
-  .calc-option.is-checked{
-    border-color:var(--teal);
-    background:var(--teal-paper);
-  }
-  .calc-option input{flex:none; width:17px; height:17px; accent-color:var(--teal);}
-  .calc-option-main{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex:1;
-    gap:1em;
-  }
-  .calc-option-name{font-weight:600; font-size:0.96rem;}
-  .calc-option-desc{display:block; font-size:0.82rem; color:var(--ink-faint); font-weight:400; margin-top:0.15em;}
-  .calc-option-price{font-family:var(--font-mono); font-size:0.85rem; color:var(--ink-faint); white-space:nowrap; text-align:right;}
-
-  .calc-summary{
-    position:sticky;
-    top:24px;
-    background:var(--ink);
-    color:var(--paper);
-    border-radius:var(--radius-lg);
-    padding:2em 1.8em;
-    box-shadow:var(--shadow-soft);
-  }
-  .calc-summary-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:1em;
-  }
-  .calc-summary-row strong{
-    font-family:var(--font-display);
-    font-size:1.8rem;
-    color:var(--amber);
-    white-space:nowrap;
-  }
-  .calc-summary-row-muted{margin-top:1.6em; padding-top:1.4em; border-top:1px solid rgba(243,240,228,0.16);}
-  .calc-summary-row-muted strong{font-size:1.3rem; color:var(--paper);}
-  .calc-summary-note{
-    font-size:0.82rem;
-    color:rgba(243,240,228,0.65);
-    margin:0.5em 0 0;
-  }
-  .calc-summary .btn{width:100%; justify-content:center; margin-top:1.8em;}
-
-  @media (max-width:860px){
-    .calc-grid{grid-template-columns:1fr;}
-    .calc-summary{position:static;}
   }
 
   /* ---------- roadmap strip ---------- */
@@ -827,19 +654,19 @@
 
 <div class="topbar">
   <a class="brand" href="#top"><span class="brand-dot"></span>Buddy</a>
-  <a class="btn btn-ghost btn-small" href="#precios">Ver planes</a>
+  <a class="btn btn-ghost btn-small" href="#modulos">Ver módulos</a>
 </div>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>Tu sitio ya funciona.<br>No lo vamos a tocar.</h1>
-        <p class="hero-sub">Buddy es un personaje que instalás con una sola línea de código. Le suma cuentas de usuario, conversación y analítica a cualquier sitio estático — sin servidor, sin base de datos, sin contraseñas que cuidar.</p>
+        <h1>Una línea de código,<br>muchas posibilidades más.</h1>
+        <p class="hero-sub">Buddy es una herramienta que le suma identidad, conversación y analítica a cualquier sitio con una sola línea de código — incluso a páginas completamente estáticas, sin servidor propio. La vengo probando y afinando en mis propios proyectos (Statetty, Arbat), y queda lista para instalarse en cualquier otro.</p>
         <div class="code-chip"><span class="code-dot"></span>&lt;script src="https://statetty.com/assets/buddy.js?v=1"&gt;&lt;/script&gt;</div>
-        <p class="code-caption">Así de larga es la instalación.</p>
+        <p class="code-caption">Así de larga es la instalación en un sitio nuevo.</p>
         <div class="hero-cta-row">
-          <a class="btn btn-primary" href="#precios">Quiero un Buddy para mi sitio</a>
+          <a class="btn btn-primary" href="#modulos">Ver qué le suma a cualquier sitio</a>
           <a class="hero-link" href="#como-funciona">Ver cómo funciona</a>
         </div>
       </div>
@@ -853,18 +680,18 @@
     <div class="trato-grid">
       <div class="trato-item">
         <svg class="trato-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4 3 12l5 8M16 4l5 8-5 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Cero infraestructura</h3>
-        <p>Un <code>&lt;script&gt;</code>. Sin servidor propio, sin base de datos, sin contraseñas que proteger.</p>
+        <h3>Cero infraestructura por sitio</h3>
+        <p>Un <code>&lt;script&gt;</code> en el HTML. Ningún proyecto nuevo necesita servidor propio, base de datos ni contraseñas que proteger: todo eso ya existe en Buddy.</p>
       </div>
       <div class="trato-item">
         <svg class="trato-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke-linecap="round"/></svg>
-        <h3>Un usuario, todos tus sitios</h3>
-        <p>La persona se identifica una vez y Buddy la reconoce en cualquier otro sitio donde esté instalado.</p>
+        <h3>Un usuario, en cualquier sitio</h3>
+        <p>La persona se identifica una vez y Buddy la reconoce en cualquier otro proyecto donde esté instalado — sin pedirle nada de nuevo.</p>
       </div>
       <div class="trato-item">
         <svg class="trato-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7" stroke-linecap="round"/></svg>
-        <h3>Números que son tuyos</h3>
-        <p>Audiencia, conversión y clics de intención (como WhatsApp) en un panel propio — no en el de Google.</p>
+        <h3>Números en un panel propio</h3>
+        <p>Audiencia, conversión y clics de intención (como WhatsApp) quedan en un panel propio, compartido por todos los sitios que usan Buddy.</p>
       </div>
     </div>
   </div>
@@ -906,7 +733,7 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow-label" style="color:#8fd8c8;">Identidad cruzada</p>
-      <h2>El mismo usuario, en cualquiera de tus sitios</h2>
+      <h2>El mismo usuario, en cualquier sitio donde esté instalado</h2>
       <p>El personaje puede cambiar de cara y de marca en cada sitio. La persona detrás, no.</p>
     </div>
     <div class="identidad-cards">
@@ -936,35 +763,46 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow-label">Módulos</p>
-      <h2>Activá solo lo que tu sitio necesita</h2>
-      <p>Cada módulo se prende o apaga por sitio, sin tocar código. Con esa combinación se arman los planes de la página siguiente.</p>
+      <h2>Todo lo que ya no vuelvo a programar</h2>
+      <p>Cada módulo resuelve un problema una sola vez y queda disponible, ya probado, para cualquier sitio que lo instale —estático o no. Se prenden o apagan por sitio desde un panel, sin tocar código ni redeployar.</p>
     </div>
 
     <div class="modgroup">
       <div class="modgroup-label">Personaje &amp;<br>conversación</div>
       <div class="modrow-list">
-        <div class="modrow"><h4>Personaje</h4><p>Elegís su cara —por ahora, Alejito o Raulito— y su forma de hablar. Se anima y señala lo importante en pantalla.</p></div>
-        <div class="modrow"><h4>Frases automáticas</h4><p>Habla solo, cada tanto, sin interrumpir si la persona está ocupada en otra pestaña.</p></div>
-        <div class="modrow"><h4>Chat</h4><p>Un cuadro de texto para que te escriban directamente, con atajo de teclado.</p></div>
-        <div class="modrow"><h4>Menú</h4><p>Un botón flotante que agrupa login, perfil y el resto de los módulos activos.</p></div>
+        <div class="modrow"><h4>Personaje</h4><p>Elijo su cara y su forma de hablar —hoy Alejito o Raulito— y aparece animado, señalando lo importante en pantalla.</p></div>
+        <div class="modrow"><h4>Frases automáticas (says)</h4><p>Habla solo cada cierto tiempo, sin interrumpir si la persona está en otra pestaña. Las frases se administran desde un panel, no quedan hardcodeadas en cada sitio.</p></div>
+        <div class="modrow"><h4>Voz</h4><p>Puede leer sus propios mensajes en voz alta con la síntesis de voz del navegador (Web Speech API) — sin costo de servidor.</p></div>
+        <div class="modrow"><h4>Chat</h4><p>Un cuadro de texto para conversar con él directamente, con atajo de teclado.</p></div>
+        <div class="modrow"><h4>Menú</h4><p>Un botón flotante que agrupa login, perfil y el resto de los módulos activos en ese sitio.</p></div>
       </div>
     </div>
 
     <div class="modgroup">
       <div class="modgroup-label">Identidad</div>
       <div class="modrow-list">
-        <div class="modrow"><h4>Login sin contraseña</h4><p>Un enlace por correo. Nada que la persona deba recordar, nada que puedan robarte.</p></div>
-        <div class="modrow"><h4>Perfil</h4><p>Nombre, teléfono e idioma, pedidos una sola vez y reutilizados en cualquier sitio con Buddy.</p></div>
+        <div class="modrow"><h4>Login sin contraseña</h4><p>Un enlace por correo (magic link) en vez de contraseña. Nada que la persona olvide, nada que a mí me puedan robar en una filtración.</p></div>
+        <div class="modrow"><h4>Perfil universal</h4><p>Nombre, teléfono e idioma se piden una sola vez y se reutilizan en cualquier sitio con Buddy: statetty.com, arbatarchery.com o el que siga.</p></div>
+        <div class="modrow"><h4>Sesiones controladas</h4><p>Cada persona tiene un límite de sesiones activas por sitio. Los tokens rotan solos y, si detecto un reuso sospechoso, se revoca toda la cadena.</p></div>
       </div>
     </div>
 
     <div class="modgroup">
       <div class="modgroup-label">Gestión &amp;<br>analítica</div>
       <div class="modrow-list">
-        <div class="modrow"><h4>Panel de métricas</h4><p>Audiencia, embudo, adquisición y clics de WhatsApp de los últimos 30 días.</p></div>
-        <div class="modrow"><h4>Administradores</h4><p>Quién puede entrar al panel de tu sitio, y con qué rol.</p></div>
-        <div class="modrow"><h4>Configuración remota</h4><p>Prendés y ajustás módulos desde un panel, sin redeploy.</p></div>
-        <div class="modrow"><h4>Clics de WhatsApp</h4><p>Cada clic a un enlace <code>wa.me</code> queda registrado como lo que es: intención de compra.</p></div>
+        <div class="modrow"><h4>Telemetría propia</h4><p>Un único cliente HTTP centraliza todos los eventos de todos los módulos; el sitio nunca espera a que la telemetría termine de guardarse.</p></div>
+        <div class="modrow"><h4>Panel de métricas</h4><p>Audiencia, embudo, adquisición y clics de WhatsApp de los últimos 30 días, por sitio.</p></div>
+        <div class="modrow"><h4>Administradores</h4><p>Defino quién entra al panel de cada sitio y con qué rol, sin tocar código.</p></div>
+        <div class="modrow"><h4>Configuración remota</h4><p>Prendo y ajusto módulos desde un panel; los cambios llegan al sitio sin redeploy.</p></div>
+        <div class="modrow"><h4>Clics de WhatsApp</h4><p>Cada clic a un enlace <code>wa.me</code> queda registrado como lo que es: intención de compra, no una visita más.</p></div>
+      </div>
+    </div>
+
+    <div class="modgroup">
+      <div class="modgroup-label">Seguridad,<br>de fábrica</div>
+      <div class="modrow-list">
+        <div class="modrow"><h4>Nada expuesto al frente</h4><p>La configuración pública nunca entrega secretos: las claves y contraseñas llegan enmascaradas incluso al panel de administración.</p></div>
+        <div class="modrow"><h4>Orígenes controlados</h4><p>Solo los dominios que autorizo explícitamente pueden hablarle a la API — hoy, entre otros, arbatarchery.com y el panel propio de Statetty.</p></div>
       </div>
     </div>
 
@@ -972,76 +810,45 @@
       <div class="modgroup-label">Verticales &amp;<br>juego</div>
       <div>
         <div class="modrow-list">
-          <div class="modrow"><h4>Escuela o comunidad</h4><p>Perfiles de alumno, instructor y equipo — pensado para academias y clubes, no solo para tiro con arco.</p></div>
-          <div class="modrow"><h4>Minijuego</h4><p>Un juego de puntería embebido que suma minutos de sitio y ranking entre usuarios.</p></div>
+          <div class="modrow"><h4>Escuela o comunidad</h4><p>Perfiles de alumno, instructor y equipo, con historial versionado de atributos — pensado para academias y clubes, no solo para tiro con arco.</p></div>
+          <div class="modrow"><h4>Minijuego</h4><p>Un juego de puntería embebido con ranking público entre usuarios, que suma minutos de sitio.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-deep" id="precios">
+<section class="section bg-deep" id="ventajas">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow-label">Planes</p>
-      <h2>Pagás por los módulos que usás</h2>
-      <p>Cada plan incluye todo lo del anterior. Los precios son de lanzamiento — se ajustan según el proyecto.</p>
+      <p class="eyebrow-label">Alcance</p>
+      <h2>Lo que gana cualquier sitio con esa línea</h2>
+      <p>No importa si el sitio es completamente estático y sin backend propio: con un solo <code>&lt;script&gt;</code> suma identidad, conversación y analítica ya resueltas. Hoy corre en el panel de Statetty y en arbatarchery.com — ejemplos de lo que puede sumarle a cualquier otro proyecto.</p>
     </div>
 
-    <!-- Los planes y los addons se generan desde BUDDY_PRECIOS (ver script al final del archivo). -->
-    <div class="price-grid" id="price-grid"></div>
+    <div class="trato-grid">
+      <div class="trato-item">
+        <h3>Login resuelto</h3>
+        <p>Magic-link, JWT y rotación de tokens ya están escritos: el sitio gana autenticación sin implementarla desde cero.</p>
+      </div>
+      <div class="trato-item">
+        <h3>Dashboard resuelto</h3>
+        <p>Métricas, embudo y clics de WhatsApp aparecen apenas se instala el script, sin montar analítica propia.</p>
+      </div>
+      <div class="trato-item">
+        <h3>Panel de administración resuelto</h3>
+        <p>Administradores, sesiones y configuración remota se gestionan desde un mismo panel, para cualquier sitio que lo tenga instalado.</p>
+      </div>
+    </div>
 
     <div class="addons">
-      <p class="addons-label">A la carta</p>
-      <div class="addons-grid" id="addons-grid"></div>
-    </div>
-
-    <p class="price-footnote">Dato curioso: cada clic en estos botones de WhatsApp es, literalmente, el tipo de conversión que el módulo de clics de WhatsApp mediría por vos.</p>
-
-    <div class="roadmap">
-      <span>Notificaciones proactivas</span>
-      <span>CRM ligero</span>
-      <span>Pagos sin backend</span>
-      <span>Formularios propios</span>
-      <span>Marketplace de personajes</span>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="calculadora">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow-label">Calculadora</p>
-      <h2>Armá tu plan y mirá cuánto pagás</h2>
-      <p>Elegí un plan base, sumá lo que necesites de la carta, y mirá el primer pago y lo que queda pagando cada mes después.</p>
-    </div>
-
-    <div class="calc-grid">
-      <div class="calc-options">
-        <div class="calc-block">
-          <h4 class="calc-block-title">Plan base</h4>
-          <div class="calc-plan-list" id="calc-planes"></div>
-        </div>
-        <div class="calc-block">
-          <h4 class="calc-block-title">A la carta (opcional)</h4>
-          <div class="calc-addon-list" id="calc-addons"></div>
-        </div>
-      </div>
-
-      <div class="calc-summary">
-        <div class="calc-summary-row">
-          <span>Primer pago</span>
-          <strong id="calc-primer-pago">$0</strong>
-        </div>
-        <p class="calc-summary-note" id="calc-primer-detalle"></p>
-
-        <div class="calc-summary-row calc-summary-row-muted">
-          <span>Pago mensual, desde el mes 2</span>
-          <strong id="calc-pago-mensual">$0</strong>
-        </div>
-        <p class="calc-summary-note" id="calc-mensual-detalle"></p>
-
-        <a class="btn btn-on-dark" id="calc-wa-btn" href="#" target="_blank" rel="noopener">Consultar esta combinación</a>
+      <p class="addons-label">En el radar</p>
+      <div class="roadmap">
+        <span>Notificaciones proactivas</span>
+        <span>CRM ligero</span>
+        <span>Pagos sin backend</span>
+        <span>Formularios propios</span>
+        <span>Personajes nuevos por vertical</span>
       </div>
     </div>
   </div>
@@ -1059,12 +866,12 @@
         <p>No. Todo el estado —usuarios, sesiones, métricas— vive en el backend de Buddy. Tu sitio sigue siendo HTML, CSS y JS estático.</p>
       </details>
       <details>
-        <summary>¿Puedo usar mi propio personaje?</summary>
-        <p>Sí. El personaje es un módulo separado del resto de la lógica; podés pedir un diseño a medida (ver "Personaje a medida" entre los planes).</p>
+        <summary>¿Puedo usar un personaje distinto por sitio?</summary>
+        <p>Sí. El personaje es un módulo separado del resto de la lógica; cada sitio elige su cara (hoy Alejito o Raulito) sin afectar identidad, telemetría ni el resto de los módulos.</p>
       </details>
       <details>
         <summary>¿Qué pasa si tengo varios sitios?</summary>
-        <p>Con el plan Multi-sitio, un mismo usuario se reconoce en todos los sitios donde instales Buddy, aunque cada uno tenga su propio personaje y su propia marca.</p>
+        <p>Un mismo usuario se reconoce en todos los sitios donde instale Buddy, aunque cada uno tenga su propio personaje y su propia marca.</p>
       </details>
       <details>
         <summary>¿Esto reemplaza a Google Analytics?</summary>
@@ -1075,8 +882,8 @@
         <p>Es una línea de <code>&lt;script&gt;</code>. La mayoría de los sitios lo tiene funcionando en menos de un día.</p>
       </details>
       <details>
-        <summary>¿Puedo cambiar de plan después?</summary>
-        <p>Sí. Los módulos se activan y desactivan por sitio desde el panel de configuración, sin redeploy.</p>
+        <summary>¿Cómo sumo un sitio nuevo a Buddy?</summary>
+        <p>Instalo el script, doy de alta el sitio en el panel de configuración y activo los módulos que necesite. Los cambios llegan sin redeploy del sitio.</p>
       </details>
     </div>
   </div>
@@ -1086,12 +893,12 @@
   <div class="wrap">
     <div class="cta-grid">
       <div>
-        <h2>Hablemos de tu sitio</h2>
-        <p>Contanos qué sitio tenés y qué te gustaría que Buddy resuelva primero. En unos minutos vemos qué plan te conviene.</p>
+        <h2>Una línea de código, muchas puertas abiertas</h2>
+        <p>Cualquier sitio, incluso uno completamente estático, puede sumar identidad, conversación y analítica ya resueltas con un solo script. Los módulos se activan según lo que cada proyecto necesite.</p>
         <div class="hero-cta-row" style="margin-top:1.6em;">
-          <a class="btn btn-on-dark js-wa" data-msg="Hola, quiero conversar sobre Buddy para mi sitio" href="#">Escribir por WhatsApp</a>
+          <a class="btn btn-on-dark" href="#modulos">Repasar los módulos</a>
         </div>
-        <p class="cta-note">Muy pronto, este mismo Buddy va a poder responder estas preguntas acá mismo, en esta página.</p>
+        <p class="cta-note">El personaje que ves en esta misma página es el Buddy real, funcionando en vivo — con suerte, ya te contó algo de esto él mismo.</p>
       </div>
     </div>
   </div>
@@ -1099,260 +906,30 @@
 
 <footer>
   <div class="wrap">
-    <span>Buddy — un producto de Statetty</span>
+    <span>Buddy — desarrollado por Statetty</span>
     <span>api.statetty.com</span>
   </div>
 </footer>
 <script>
-  var WHATSAPP_NUMBER = "59174189700";
-
   // ---------------------------------------------------------------------
-  // BUDDY_PRECIOS — única fuente de verdad para precios y planes.
-  // Para actualizar montos, nombres o qué incluye cada plan/addon, editar
-  // solo este objeto: las tarjetas de precios, la carta de addons y la
-  // calculadora se generan todas a partir de acá.
+  // Frases para que Buddy hable de sí mismo en esta página.
+  // Son solo contenido: para que el personaje realmente las diga hay que
+  // cargarlas como una fuente del módulo "says" (vía panel/BD, igual que
+  // el resto de las frases automáticas) — acá quedan listas para eso.
   // ---------------------------------------------------------------------
-  var BUDDY_PRECIOS = {
-    moneda: '$',
-
-    planes: [
-      {
-        id: 'lite',
-        tag: 'Lite',
-        nombre: 'Lite',
-        tagline: 'El personaje habla solo en tu sitio.',
-        precioMensual: 19,
-        popular: false,
-        incluye: [
-          'Personaje + frases automáticas',
-          'Telemetría base'
-        ]
-      },
-      {
-        id: 'identidad',
-        tag: 'Identidad',
-        nombre: 'Identidad',
-        tagline: 'La gente se loguea y vos la reconocés.',
-        precioMensual: 49,
-        popular: false,
-        incluye: [
-          'Todo lo de Lite',
-          'Login sin contraseña',
-          'Perfil + clics de WhatsApp'
-        ]
-      },
-      {
-        id: 'growth',
-        tag: 'Más elegido',
-        nombre: 'Growth',
-        tagline: 'Ves todo en un panel — y lo administrás vos.',
-        precioMensual: 99,
-        popular: true,
-        incluye: [
-          'Todo lo de Identidad',
-          'Panel de métricas',
-          'Administradores + configuración remota'
-        ]
-      },
-      {
-        id: 'multisitio',
-        tag: 'Multi-sitio',
-        nombre: 'Multi-sitio',
-        tagline: 'Un mismo usuario en todos tus proyectos.',
-        precioMensual: 249,
-        popular: false,
-        incluye: [
-          'Todo lo de Growth',
-          'Hasta 5 sitios con identidad cruzada',
-          'Roles compartidos entre sitios'
-        ]
-      }
-    ],
-
-    addons: [
-      {
-        id: 'personaje',
-        nombre: 'Personaje a medida',
-        desc: 'Un diseño propio en vez de Alejito o Raulito.',
-        precio: 58,
-        cobro: 'unico',
-        desde: true
-      },
-      {
-        id: 'vertical',
-        nombre: 'Vertical a medida',
-        desc: 'Tipo escuela o comunidad, con tus propios roles.',
-        precio: 35,
-        cobro: 'mensual',
-        desde: true
-      },
-      {
-        id: 'minijuego',
-        nombre: 'Minijuego de engagement',
-        desc: 'Una mecánica simple con ranking entre usuarios.',
-        precio: 5,
-        cobro: 'mensual',
-        desde: true
-      },
-      {
-        id: 'instalacion',
-        nombre: 'Instalación asistida',
-        desc: 'Te lo dejamos andando nosotros, en tu sitio.',
-        precio: 20,
-        cobro: 'unico',
-        desde: false
-      }
-    ]
-  };
-
-  function money(n){
-    return BUDDY_PRECIOS.moneda + n;
-  }
-
-  function formatAddonPrice(addon){
-    var precio = (addon.desde ? 'desde ' : '') + money(addon.precio);
-    return precio + (addon.cobro === 'unico' ? ' (pago único)' : ' / mes');
-  }
-
-  // ---------------------------------------------------------------------
-  // Render de las tarjetas de planes y de la carta de addons.
-  // ---------------------------------------------------------------------
-  function renderPlanes(){
-    var grid = document.getElementById('price-grid');
-    if (!grid) return;
-
-    grid.innerHTML = BUDDY_PRECIOS.planes.map(function(p){
-      var items = p.incluye.map(function(item){
-        return '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>' + item + '</li>';
-      }).join('');
-
-      return (
-        '<div class="price-card' + (p.popular ? ' popular' : '') + '">' +
-          '<span class="price-tag">' + p.tag + '</span>' +
-          '<h3>' + p.nombre + '</h3>' +
-          '<p class="price-tagline">' + p.tagline + '</p>' +
-          '<div class="price-amount">' + money(p.precioMensual) + '<span class="price-per"> / mes</span></div>' +
-          '<ul class="price-includes">' + items + '</ul>' +
-          '<a class="btn ' + (p.popular ? 'btn-on-dark' : 'btn-ghost') + ' js-wa" data-msg="Hola, quiero el plan ' + p.nombre + ' de Buddy" href="#">Elegir ' + p.nombre + '</a>' +
-        '</div>'
-      );
-    }).join('');
-  }
-
-  function renderAddons(){
-    var grid = document.getElementById('addons-grid');
-    if (!grid) return;
-
-    grid.innerHTML = BUDDY_PRECIOS.addons.map(function(a){
-      return (
-        '<div class="addon">' +
-          '<h4>' + a.nombre + '</h4>' +
-          '<p>' + a.desc + '</p>' +
-          '<p class="addon-price">' + formatAddonPrice(a) + '</p>' +
-        '</div>'
-      );
-    }).join('');
-  }
-
-  // ---------------------------------------------------------------------
-  // Calculadora: primer pago vs. pago mensual recurrente.
-  // Primer pago  = plan (mes 1) + addons de pago único + addons mensuales (mes 1)
-  // Pago mensual = plan + addons mensuales (los pagos únicos no se repiten)
-  // ---------------------------------------------------------------------
-  function renderCalculadora(){
-    var planesWrap = document.getElementById('calc-planes');
-    var addonsWrap = document.getElementById('calc-addons');
-    if (!planesWrap || !addonsWrap) return;
-
-    planesWrap.innerHTML = BUDDY_PRECIOS.planes.map(function(p, i){
-      return (
-        '<label class="calc-option">' +
-          '<input type="radio" name="calc-plan" value="' + p.id + '"' + (i === 0 ? ' checked' : '') + '>' +
-          '<span class="calc-option-main">' +
-            '<span class="calc-option-name">' + p.nombre + '</span>' +
-            '<span class="calc-option-price">' + money(p.precioMensual) + ' / mes</span>' +
-          '</span>' +
-        '</label>'
-      );
-    }).join('');
-
-    addonsWrap.innerHTML = BUDDY_PRECIOS.addons.map(function(a){
-      return (
-        '<label class="calc-option">' +
-          '<input type="checkbox" name="calc-addon" value="' + a.id + '">' +
-          '<span class="calc-option-main">' +
-            '<span class="calc-option-name">' + a.nombre + '<span class="calc-option-desc">' + a.desc + '</span></span>' +
-            '<span class="calc-option-price">' + formatAddonPrice(a) + '</span>' +
-          '</span>' +
-        '</label>'
-      );
-    }).join('');
-
-    planesWrap.addEventListener('change', actualizarCalculadora);
-    addonsWrap.addEventListener('change', actualizarCalculadora);
-    actualizarCalculadora();
-  }
-
-  function actualizarCalculadora(){
-    // Resalta visualmente la opción marcada (radios y checkboxes).
-    document.querySelectorAll('#calc-planes .calc-option, #calc-addons .calc-option').forEach(function(label){
-      var input = label.querySelector('input');
-      label.classList.toggle('is-checked', !!(input && input.checked));
-    });
-
-    var planId = (document.querySelector('input[name="calc-plan"]:checked') || {}).value;
-    var plan = BUDDY_PRECIOS.planes.filter(function(p){ return p.id === planId; })[0] || BUDDY_PRECIOS.planes[0];
-
-    var seleccionados = Array.prototype.slice.call(document.querySelectorAll('input[name="calc-addon"]:checked'))
-      .map(function(input){
-        return BUDDY_PRECIOS.addons.filter(function(a){ return a.id === input.value; })[0];
-      })
-      .filter(Boolean);
-
-    var unicos = seleccionados.filter(function(a){ return a.cobro === 'unico'; });
-    var mensuales = seleccionados.filter(function(a){ return a.cobro === 'mensual'; });
-
-    var sumaUnicos = unicos.reduce(function(t, a){ return t + a.precio; }, 0);
-    var sumaMensuales = mensuales.reduce(function(t, a){ return t + a.precio; }, 0);
-
-    var primerPago = plan.precioMensual + sumaMensuales + sumaUnicos;
-    var pagoMensual = plan.precioMensual + sumaMensuales;
-
-    document.getElementById('calc-primer-pago').textContent = money(primerPago);
-    document.getElementById('calc-pago-mensual').textContent = money(pagoMensual);
-
-    var detallePrimero = [plan.nombre + ': ' + money(plan.precioMensual)];
-    mensuales.forEach(function(a){ detallePrimero.push(a.nombre + ': ' + money(a.precio)); });
-    unicos.forEach(function(a){ detallePrimero.push(a.nombre + ': ' + money(a.precio) + ' (único)'); });
-    document.getElementById('calc-primer-detalle').textContent = detallePrimero.join(' + ');
-
-    var detalleMensual = [plan.nombre + ': ' + money(plan.precioMensual)];
-    mensuales.forEach(function(a){ detalleMensual.push(a.nombre + ': ' + money(a.precio)); });
-    document.getElementById('calc-mensual-detalle').textContent = detalleMensual.join(' + ') +
-      (unicos.length ? ' (los pagos únicos ya no se repiten)' : '');
-
-    var waBtn = document.getElementById('calc-wa-btn');
-    if (waBtn) {
-      var nombresAddons = seleccionados.map(function(a){ return a.nombre; }).join(', ');
-      var msg = 'Hola, arme un plan de Buddy: ' + plan.nombre +
-        (nombresAddons ? ' + ' + nombresAddons : '') +
-        '. Primer pago ' + money(primerPago) + ', luego ' + money(pagoMensual) + ' por mes.';
-      waBtn.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg));
-    }
-  }
-
-  renderPlanes();
-  renderAddons();
-  renderCalculadora();
-
-  // El resto de los botones de WhatsApp del sitio (hero, CTA final, etc.)
-  // arman su link a partir de data-msg.
-  document.querySelectorAll('.js-wa').forEach(function(el){
-    var msg = el.getAttribute('data-msg') || 'Hola, quiero saber más de Buddy';
-    el.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg));
-    el.setAttribute('target', '_blank');
-    el.setAttribute('rel', 'noopener');
-  });
+  var BUDDY_FRASES_SOBRE_SI_MISMO = [
+    "Cada sitio donde estoy instalado ya tiene login, panel y métricas resueltos.",
+    "Me instalás con una línea de código y el resto lo resuelvo yo.",
+    "A María la conocí en un sitio y la reconocí en otro — mismo user.id en los dos.",
+    "Mis tokens van con hash: quedan inservibles fuera de acá.",
+    "El servidor soy yo: te ahorrás tener que armar uno propio.",
+    "Cada clic a WhatsApp que registro es una conversión que antes se perdía.",
+    "Mi cara cambia de sitio en sitio. Lo que sé de cada persona viaja conmigo.",
+    "Cuando alguien reusa un token viejo, corto toda la sesión. Prefiero desconfiar a tiempo.",
+    "Tengo un panel donde prendés justo lo que cada sitio necesita.",
+    "Funciono incluso en páginas completamente estáticas, sin backend detrás.",
+    "En cualquier sitio nuevo, ya estoy resuelto — solo falta instalarme."
+  ];
 </script>
 
 <script src="https://statetty.com/assets/buddy/buddy.js?v=a4" defer></script>
