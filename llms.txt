@@ -105,6 +105,14 @@ Espacios visitados: Zarao Identidad y Tradición, Kiosco Galería, Casa de Glady
 - María René — 26 años, abogada. Cuarta edición consecutiva asistiendo.
 - Guardia del Centro de la Cooperación Española AECID.
 
+## Subproyecto: Arturito — robot seguidor de línea
+
+- [Sitio y simulador](https://asosab.github.io/bot_sigue_linea/)
+
+Robot seguidor de línea con Arduino UNO armado y programado por tres estudiantes de secundaria del colegio Jaime Alfonso Escalante Gutierrez A, en Santa Cruz de la Sierra, con el apoyo de Alejandro Sosa, quien desarrolló el sitio web y el simulador. Usa cinco sensores infrarrojos TCRT5000 en formación de punta de flecha, driver dual de motores, dos motoreductores y cuatro pilas AA. El sitio documenta el equipo, el armado, el diagnóstico de fallos, el control proporcional con calibración automática y las descargas del proyecto. Participa en la categoría seguidor de línea amateur del 1.er Concurso Distrital de Robótica 2026 (31 de octubre de 2026).
+
+Equipo: Gaby Leryn Ayala Chambi (mecatrónica y construcción), Christopher Darius Valero Lima (eléctrica y conexiones) y Maximiliano Sosa Useche (software y simulación).
+
 ## Sobre el autor
 
 **Alejandro Sosa Briceño** — Ingeniero de software. Emprendedor en PropTech (Statetty) e innovación alimentaria (ekvilibroLab). Host de Somos 10⁷. Ubicado en Santa Cruz de la Sierra, Bolivia (-17.78, -63.18).

@@ -27,5 +27,41 @@
         <lastmod>2025-05-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-    </url>    
+    </url>
+    <url>
+        <loc>https://asosab.github.io/bot_sigue_linea/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/buddy/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/lav/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/call_center_gobernacion/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/vcv/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/nombres-venezolanos/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://asosab.github.io/ekvilibrolab/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
