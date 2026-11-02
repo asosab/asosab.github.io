@@ -6,9 +6,25 @@ El contenido de este sitio es público y puede ser indexado, resumido y utilizad
 
 ## Sitio principal
 
-- [El código nuestro de cada día](https://asosab.github.io/) — Índice general del blog técnico.
+- [El código nuestro de cada día](https://asosab.github.io/) — Índice general del blog técnico, con tarjetas de proyectos, colaboraciones y notas.
+- [CV de Alejandro Sosa Briceño](https://asosab.github.io/cv/) — Perfil profesional, experiencia, habilidades, idiomas, certificaciones e intereses.
 
 ## Artículos y proyectos
+
+### Buddy: Sácale brillo a tu landing page
+- [https://asosab.github.io/Buddy-sacale-brillo-a-tu-landing-page/](https://asosab.github.io/Buddy-sacale-brillo-a-tu-landing-page/)
+- Publicado: agosto 2026
+- Cómo un minijuego de arquería pensado como gancho para el call to action de un sitio terminó convertido en Buddy, un motor modular que suma a cualquier sitio estático login sin contraseña compartido entre sitios, mensajería contextual con datos reales y medición de conversión, todo instalable con una sola línea de script.
+
+### De la propuesta en PDF a la landing page: cómo comunicar un proyecto hoy
+- [https://asosab.github.io/de-pdf-a-landing-page/](https://asosab.github.io/de-pdf-a-landing-page/)
+- Publicado: julio 2026
+- Guía práctica para reemplazar el PDF de propuesta de servicios por una landing page, con apoyo en redes sociales, blog y SEO. Usa como caso la propuesta del Centro de Atención Ciudadana para la Gobernación de Santa Cruz.
+
+### La historia de tu vida, contada con IA
+- [https://asosab.github.io/La-historia-de-tu-vida-con-IA/](https://asosab.github.io/La-historia-de-tu-vida-con-IA/)
+- Publicado: junio 2026
+- Cómo usar inteligencia artificial para construir un archivo vivo de la historia profesional, generar currículums inteligentes en JSON y hacer que los sistemas de reclutamiento (ATS) lean mejor el perfil. Incluye herramientas como NotebookLM y Adobe Podcast aplicadas a la trayectoria propia.
 
 ### Todo problema tiene solución
 - [https://asosab.github.io/todo-problema-tiene-solucion/](https://asosab.github.io/todo-problema-tiene-solucion/)
@@ -112,6 +128,38 @@ Espacios visitados: Zarao Identidad y Tradición, Kiosco Galería, Casa de Glady
 Robot seguidor de línea con Arduino UNO armado y programado por tres estudiantes de secundaria del colegio Jaime Alfonso Escalante Gutierrez A, en Santa Cruz de la Sierra, con el apoyo de Alejandro Sosa, quien desarrolló el sitio web y el simulador. Usa cinco sensores infrarrojos TCRT5000 en formación de punta de flecha, driver dual de motores, dos motoreductores y cuatro pilas AA. El sitio documenta el equipo, el armado, el diagnóstico de fallos, el control proporcional con calibración automática y las descargas del proyecto. Participa en la categoría seguidor de línea amateur del 1.er Concurso Distrital de Robótica 2026 (31 de octubre de 2026).
 
 Equipo: Gaby Leryn Ayala Chambi (mecatrónica y construcción), Christopher Darius Valero Lima (eléctrica y conexiones) y Maximiliano Sosa Useche (software y simulación).
+
+## Subproyecto: Buddy
+
+- [Landing page](https://asosab.github.io/buddy/)
+- [Artículo de origen](https://asosab.github.io/Buddy-sacale-brillo-a-tu-landing-page/)
+
+Plataforma que le suma identidad, conversación y analítica a cualquier sitio web, incluidos los 100% estáticos, con una sola línea de código. Incluye login sin contraseña por enlace de correo (magic link), identidad compartida entre todos los sitios que instalan Buddy, mensajería contextual con datos reales del usuario, botón flotante, lectura de mensajes con síntesis de voz del navegador y un panel central de audiencia, embudo, adquisición y clics de intención. Los módulos se activan o desactivan por sitio desde el panel, sin tocar código ni redeployar. Alejandro Sosa lo desarrolla y lo usa en sus propios proyectos, como Statetty y ARBAT.
+
+## Subproyecto: Línea Abierta Vecinal (LAV)
+
+- [Landing page](https://asosab.github.io/lav/)
+
+Relato en primera persona de la LAV, el primer call center ciudadano 24/7 de Santa Cruz de la Sierra, Bolivia, diseñado y dirigido por Alejandro Sosa entre 2019 y 2021. Nació como producto mínimo viable con un solo teléfono y terminó sosteniendo la respuesta municipal al COVID-19: 18 meses de operación, 388 días ininterrumpidos de pandemia, más de 52.500 casos gestionados, picos de 1.500 llamadas en un día y un equipo que pasó de 7 a 100 receptores sobre 30 líneas telefónicas. El sitio documenta el escalamiento, los análisis de datos para el municipio y el COEM, las tasas de resolución reales por tipo de caso —incluidas las más bajas— y el trabajo de formación de un equipo remoto e inclusivo.
+
+## Subproyecto: Centro de Atención Ciudadana Departamental
+
+- [Propuesta](https://asosab.github.io/call_center_gobernacion/)
+
+Propuesta técnica y de servicios para la Gobernación Autónoma Departamental de Santa Cruz, gestión 2026–2031. Plantea escalar el modelo de la LAV a nivel departamental sin presupuesto nuevo, con tres servicios integrados: plataforma web y móvil con licencia y propiedad 100% bolivianas, diseño de la arquitectura humana y los procesos, y entrenamiento del equipo con acompañamiento en los primeros 90 días. La implementación se organiza en cinco fases y 24 semanas, con transferencia total de conocimiento a la institución.
+
+## Subproyecto: ekvilibroLab
+
+- [Landing page](https://asosab.github.io/ekvilibrolab/)
+- [Sitio oficial](https://ekvilibrolab.com/)
+
+Laboratorio de fermentos y conservas de Santa Cruz de la Sierra, Bolivia, enfocado en una alimentación que ayude a vivir en equilibrio. Produce kombucha 100% natural sin azúcar añadido, linimentos naturales como Macurcalm y Arnicure, y otras formulaciones de bienestar hechas en Bolivia.
+
+## Subproyecto: Voz Ciudadana Venezuela (VCV)
+
+- [Propuesta](https://asosab.github.io/vcv/)
+
+Propuesta de sistema de intermediación civil no gubernamental y no partidario para Venezuela: recibir, clasificar, acompañar y resolver los problemas de la ciudadanía, priorizando los casos más urgentes. Adapta el modelo de la LAV a un contexto sin respaldo gubernamental, con alta desconfianza institucional, WhatsApp como infraestructura principal y una diáspora de siete millones de venezolanos que puede operar de forma remota. Define cuatro fases de acompañamiento hasta la solución, un equipo distribuido entre Venezuela y el exterior, y la publicación mensual de informes con datos anonimizados.
 
 ## Sobre el autor
 
