@@ -5,6 +5,19 @@ Personal Jekyll site hosted on GitHub Pages (`asosab.github.io`). In the
 metadata (STATE, PLAN, CHANGELOG, arquitectura) lives **outside** the repo at
 `desarrollo\opencode\asosab.github.io\`. The deploy branch is `master`.
 
+## Workflow
+
+For every change to the site, follow the full pipeline:
+
+**investigar → idear mejoras sobre la idea → planificar → editar → verificar →
+commit + push a `master` → prueba en vivo**
+
+Before editing, read `opencode/asosab.github.io/STATE.md` and
+`PLAN/_index.md` (workspace parent, outside the repo). Afterward, update the
+plan file and `CHANGELOG.md` there, and log the session in
+`docs/log/YYYY-MM-DD.md`. UI/design work must load the `design-taste-frontend`
+skill first and pass its gate. Prose in Spanish goes through `humanamente`.
+
 ## Stack at a glance
 
 - Static site, built directly by **GitHub Pages** — no `Gemfile`, no
