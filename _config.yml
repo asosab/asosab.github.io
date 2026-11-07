@@ -50,6 +50,9 @@ kramdown:
 
 permalink: /:title/
 
+exclude:
+  - docs
+
 webrick:
   headers:
     Strict-Transport-Security: max-age=2592000

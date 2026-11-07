@@ -1,9 +1,9 @@
 # AGENTS.md
 
-Personal Jekyll site hosted on GitHub Pages (`asosab.github.io`). Repo root is
-`C:\Users\asosa\Documents\workspace\asosab.github.io`; the working directory
-shown to OpenCode is often `somos10e7/`, so always rebase paths to the repo
-root before reading/editing.
+Personal Jekyll site hosted on GitHub Pages (`asosab.github.io`). In the
+`desarrollo` workspace the repo sits at `desarrollo\asosab.github.io`; opencode
+metadata (STATE, PLAN, CHANGELOG, arquitectura) lives **outside** the repo at
+`desarrollo\opencode\asosab.github.io\`. The deploy branch is `master`.
 
 ## Stack at a glance
 
@@ -25,10 +25,16 @@ root before reading/editing.
 - `data/` — JSON/TSV/CSV datasets referenced by posts (D3 charts, etc.).
 - Top-level project directories that are **NOT Jekyll posts** and are served
   as-is (no front matter, no layouts):
-  - `somos10e7/` — Somos 10⁷ podcast landing page
-  - `larga_noche_de_museos/` — Larga Noche de Museos 2026 landing page
-  - `vcv/`
+  - `buddy/` — Buddy platform landing
+  - `lav/` — Línea Abierta Vecinal story site
+  - `call_center_gobernacion/` — proposal for the Gobernación
+  - `vcv/` — Voz Ciudadana Venezuela proposal
   Treat them as static HTML; do not try to wire them into `_layouts/`.
+- Other project cards on the home (`/somos10e7/`, `/larga_noche_de_museos/`,
+  `/nombres-venezolanos/`, `/ekvilibrolab/`, `/bot_sigue_linea/`) are **not**
+  directories in this repo — each is its own GitHub repo served as a project
+  page under the same domain. See `docs/sitio/subproyectos.md`.
+- `docs/` — Obsidian vault (see below), excluded from the Jekyll build.
 
 ## Local preview
 
@@ -41,8 +47,9 @@ jekyll serve         # http://localhost:4000
 jekyll serve --drafts
 ```
 
-The `somos10e7/`, `larga_noche_de_museos/`, and `vcv/` subprojects are plain
-HTML and do not need a build — open `index.html` directly in a browser.
+The local subprojects (`buddy/`, `lav/`, `call_center_gobernacion/`, `vcv/`)
+are plain HTML and do not need a build — open `index.html` directly in a
+browser.
 
 ## Custom Liquid filter
 
@@ -52,11 +59,20 @@ It only runs for pages that go through that layout. The top-level
 subproject pages (`somos10e7/index.html`, etc.) are not processed by
 Jekyll templates, so the filter does **not** apply to them.
 
-## `somos10e7/` — self-contained AGENTS.md
+## `somos10e7` — separate repo
 
-`somos10e7/` now has its own `AGENTS.md` with all Somos 10⁷ specifics
-(locales, episode editing, Firebase, secrets). The root file delegates;
-edit the local file when working inside that subproject.
+Somos 10⁷ moved to its own GitHub repository (served at
+`asosab.github.io/somos10e7/`) with its own `AGENTS.md` covering locales,
+episode editing, Firebase and secrets. Work on it in that repo, not here.
+
+## Obsidian vault
+
+The repo root doubles as an Obsidian vault; `docs/` is the knowledge domain
+(excluded from the Jekyll build via `exclude` in `_config.yml`). Start at
+`docs/index.md` — atomic notes under `docs/sitio/`, session logs under
+`docs/log/YYYY-MM-DD.md`, templates under `docs/templates/`. `.obsidian/`
+shared config is committed; workspaces, plugins and themes are gitignored.
+After a work session, record what was done in the day's log file.
 
 ## `llms.txt`
 
