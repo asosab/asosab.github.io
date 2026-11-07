@@ -36,6 +36,14 @@ skill first and pass its gate. Prose in Spanish goes through `humanamente`.
 - `_layouts/`, `_includes/`, `assets/` — standard Jekyll.
 - `_site/` — generated, gitignored (`_site`, `.jekyll-metadata`). Never edit.
 - `data/` — JSON/TSV/CSV datasets referenced by posts (D3 charts, etc.).
+- `podcasts/` — podcast hub generated from RSS feeds (see below). The
+  `index.html` files under it are generated; hand-edit only
+  `podcasts.css` and `podcasts-app.js`.
+- `_scripts/build_podcasts.py` — regenerates `podcasts/` pages, the
+  `podcasts/podcasts.js` player config and `imagen/podcasts*` covers from
+  the Anchor RSS feeds (list at the top of the script). Run
+  `python _scripts/build_podcasts.py` to refresh episodes, then commit.
+  It wipes `podcasts/<show>/` dirs on each run.
 - Top-level project directories that are **NOT Jekyll posts** and are served
   as-is (no front matter, no layouts):
   - `buddy/` — Buddy platform landing

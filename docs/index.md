@@ -17,6 +17,7 @@ vault; `docs/` es el dominio de conocimiento. Jekyll no publica estas notas:
 - [[blog]] — posts, drafts, front matter y datasets
 - [[cv]] — página `/cv/` y sus fuentes de datos
 - [[subproyectos]] — landings locales y project pages de otros repos
+- [[podcasts]] — hub `/podcasts/` generado desde los RSS de Anchor
 - [[jekyll-build]] — stack, configuración y pipeline de publicación
 - [[seo-metadata]] — sitemap, feed, llms.txt y metadatos
 - [[deuda-tecnica]] — pendientes verificados y documentación desactualizada

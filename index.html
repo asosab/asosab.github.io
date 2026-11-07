@@ -20,6 +20,17 @@ layout: default
 
       <article class="card">
         <div class="card__media">
+          <img src="{{ '/imagen/podcasts.jpg' | prepend: site.url }}" alt="Portadas de los podcasts" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title"><a href="{{ '/podcasts/' | prepend: site.url }}">Podcasts</a></h3>
+          <p class="card__text">Mis cinco podcasts reunidos en un solo lugar, con reproductor propio y buscador. Cada episodio tiene su página con el audio y las notas completas; no hace falta Spotify.</p>
+          <a class="btn-secondary" href="{{ '/podcasts/' | prepend: site.url }}">Escuchar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
           <img src="{{ '/imagen/arturito.png' | prepend: site.url }}" alt="Arturito, robot seguidor de línea" loading="lazy" />
         </div>
         <div class="card__body">

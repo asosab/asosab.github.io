@@ -8,6 +8,14 @@ El contenido de este sitio es público y puede ser indexado, resumido y utilizad
 
 - [El código nuestro de cada día](https://asosab.github.io/) — Índice general del blog técnico, con tarjetas de proyectos, colaboraciones y notas.
 - [CV de Alejandro Sosa Briceño](https://asosab.github.io/cv/) — Perfil profesional, experiencia, habilidades, idiomas, certificaciones e intereses.
+- [Podcasts](https://asosab.github.io/podcasts/) — Los cinco podcasts reunidos en un solo sitio, con reproductor propio, buscador de episodios y una página estática por episodio con el audio y las notas completas. No depende de Spotify.
+
+### Programas
+- [Despacio que tengo prisa](https://asosab.github.io/podcasts/despacio-que-tengo-prisa/) — Audio resúmenes generados con IA sobre conceptos, noticias y temas de interés personal.
+- [Statetty Podcast](https://asosab.github.io/podcasts/statetty-podcast/) — Actualidad del mercado inmobiliario de Bolivia y Perú, con datos e inteligencia artificial.
+- [Uno y a dormir](https://asosab.github.io/podcasts/uno-y-a-dormir/) — Cuentos grabados para dormir, hechos para los hijos del autor y abiertos a todos.
+- [Somos 10⁷](https://asosab.github.io/podcasts/somos-107/) — Programa radial de la diáspora venezolana en Santa Cruz de la Sierra, transmitido por Radio Atlántica FM 88.9.
+- [Larga noche de museos](https://asosab.github.io/podcasts/larga-noche-de-museos/) — Documental sonoro del recorrido por el centro histórico durante la Larga Noche de Museos 2026.
 
 ## Artículos y proyectos
 
