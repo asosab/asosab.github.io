@@ -174,7 +174,7 @@ Propuesta de sistema de intermediación civil no gubernamental y no partidario p
 - [Landing](https://asosab.github.io/NSAC/)
 - [Diario del hackathon](https://asosab.github.io/NSAC/diario/)
 
-Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14–15 de noviembre): cuenta regresiva en vivo con un planeta Tierra 3D estilo plastilina (WebGL) donde un cohete aterriza al llegar a cero, los 14 retos oficiales explicados en español, y un diario del evento con videos de YouTube.
+Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14–15 de noviembre): cuenta regresiva en vivo, los 14 retos oficiales explicados en español y un diario del evento con videos de YouTube.
 
 ## Sobre el autor
 
