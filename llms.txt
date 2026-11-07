@@ -161,6 +161,13 @@ Laboratorio de fermentos y conservas de Santa Cruz de la Sierra, Bolivia, enfoca
 
 Propuesta de sistema de intermediación civil no gubernamental y no partidario para Venezuela: recibir, clasificar, acompañar y resolver los problemas de la ciudadanía, priorizando los casos más urgentes. Adapta el modelo de la LAV a un contexto sin respaldo gubernamental, con alta desconfianza institucional, WhatsApp como infraestructura principal y una diáspora de siete millones de venezolanos que puede operar de forma remota. Define cuatro fases de acompañamiento hasta la solución, un equipo distribuido entre Venezuela y el exterior, y la publicación mensual de informes con datos anonimizados.
 
+## Subproyecto: NSAC — NASA Space Apps Challenge 2026
+
+- [Landing](https://asosab.github.io/NSAC/)
+- [Diario del hackathon](https://asosab.github.io/NSAC/diario/)
+
+Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14–15 de noviembre): cuenta regresiva en vivo con un planeta Tierra 3D estilo plastilina (WebGL) donde un cohete aterriza al llegar a cero, los 14 retos oficiales explicados en español, y un diario del evento con videos de YouTube.
+
 ## Sobre el autor
 
 **Alejandro Sosa Briceño** — Ingeniero de software. Emprendedor en PropTech (Statetty) e innovación alimentaria (ekvilibroLab). Host de Somos 10⁷. Ubicado en Santa Cruz de la Sierra, Bolivia (-17.78, -63.18).
