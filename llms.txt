@@ -171,10 +171,17 @@ Propuesta de sistema de intermediación civil no gubernamental y no partidario p
 
 ## Subproyecto: NSAC — NASA Space Apps Challenge 2026
 
-- [Landing](https://asosab.github.io/NSAC/)
-- [Diario del hackathon](https://asosab.github.io/NSAC/diario/)
+- [Landing](https://asosab.github.io/NSAC/es/)
+- [Diario del hackathon](https://asosab.github.io/NSAC/es/diario/)
 
-Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14–15 de noviembre): cuenta regresiva en vivo, los 14 retos oficiales explicados en español y un diario del evento con videos de YouTube.
+Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14–15 de noviembre): los 14 retos oficiales y un diario del evento con fotos y videos. Sitio bilingüe, con la versión en inglés en la raíz.
+
+## Subproyecto: Field Shift
+
+- [Landing](https://asosab.github.io/fieldShift/es/)
+- [App](https://asosab.github.io/fieldShift/es/app/)
+
+App web abierta que recomienda qué sembrar y cuándo rotar en un predio: cruza el suelo medido (o SoilGrids si falta) con observación de la Tierra de la NASA — lluvia y temperatura POWER, NDVI MODIS, humedad SMAP — y devuelve una rotación rankeada, la ventana de siembra forrajera y el estado de cada potrero. Incluye importación de parcelas (KML, KMZ, SHP, GeoJSON, GeoPDF), informe PDF y bot de Telegram. Nació en el NASA Space Apps Challenge 2026 en Santa Cruz de la Sierra. Sitio bilingüe, con la versión en inglés en la raíz.
 
 ## Sobre el autor
 

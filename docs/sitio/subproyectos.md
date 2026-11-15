@@ -33,6 +33,8 @@ el home usan imágenes locales de `imagen/` de este repo.
 - `nombres-venezolanos` — gráfica interactiva de nombres
 - `ekvilibrolab` — laboratorio de fermentación
 - `bot_sigue_linea` — Arturito, robot seguidor de línea
+- `NSAC` — landing del NASA Space Apps Challenge 2026 (bilingüe, ES en `/es/`)
+- `fieldShift` — app de rotación de cultivos con datos NASA (bilingüe, ES en `/es/`)
 
 ## Discrepancia registrada
 
