@@ -183,6 +183,14 @@ Sitio de la participación de Alejandro en el NASA Space Apps Challenge 2026 (14
 
 App web abierta que recomienda qué sembrar y cuándo rotar en un predio: cruza el suelo medido (o SoilGrids si falta) con observación de la Tierra de la NASA — lluvia y temperatura POWER, NDVI MODIS, humedad SMAP — y devuelve una rotación rankeada, la ventana de siembra forrajera y el estado de cada potrero. Incluye importación de parcelas (KML, KMZ, SHP, GeoJSON, GeoPDF), informe PDF y bot de Telegram. Nació en el NASA Space Apps Challenge 2026 en Santa Cruz de la Sierra. Sitio bilingüe, con la versión en inglés en la raíz.
 
+## Subproyecto: Pulso Ciudadano (hackathon Tech Week SCZ)
+
+- [Sitio y diario](https://asosab.github.io/hackaton_SCZ/)
+- [Diario del proyecto](https://asosab.github.io/hackaton_SCZ/diario/)
+- [Demo del termómetro](https://asosab.github.io/hackaton_SCZ/termometro/)
+
+Monitor de temperatura social para la alcaldía de Santa Cruz de la Sierra, presentado en el hackathon del Tech Week 2026 (Plaza 24 de Septiembre, 3 de noviembre). Escucha lo que la gente reporta en redes y canales vecinales, agrupa las señales en incidentes, estima su veracidad por contraste de fuentes y deriva cada caso al cuerpo competente (policía, bomberos, defensa civil), ganando minutos sobre la primera llamada al 110. Incluye un termómetro de temas ciudadanos, despacho automático de urgencias verificadas y una base estadística que queda como memoria de la ciudad. Demo estático sin backend: los datos van horneados en JavaScript y funciona desde un pen-drive. Proyecto unipersonal, construido en unas 3 horas y 15 minutos; el proceso completo quedó contado en el diario público.
+
 ## Sobre el autor
 
 **Alejandro Sosa Briceño** — Ingeniero de software. Emprendedor en PropTech (Statetty) e innovación alimentaria (ekvilibroLab). Host de Somos 10⁷. Ubicado en Santa Cruz de la Sierra, Bolivia (-17.78, -63.18).

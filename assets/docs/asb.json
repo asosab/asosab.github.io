@@ -291,16 +291,30 @@
     {
       "company": "Pulso Ciudadano — Hackathon Tech Week Santa Cruz",
       "industry": "Civic Tech / GovTech",
-      "role": "Developer",
+      "role": "Solo Developer & Presenter",
       "location": "Plaza 24 de Septiembre, Santa Cruz de la Sierra, Bolivia",
       "start_date": "2026-11-03",
       "end_date": "2026-11-04",
       "current": false,
-      "context": "Proyecto presentado en el hackathon del Tech Week de Santa Cruz de la Sierra, corriendo el mismo día del evento. Sitio público del proyecto y bitácora en https://asosab.github.io/hackaton_SCZ",
+      "context": "Proyecto presentado en el hackathon del Tech Week de Santa Cruz de la Sierra, corriendo el mismo día del evento. Sitio público del proyecto y bitácora en https://asosab.github.io/hackaton_SCZ. Proyecto unipersonal: se había acordado una dupla en el momento, pero la otra persona no volvió a aparecer. El demo se construyó en unas 3 horas y 15 minutos (17:15 a 20:30 del 3 de noviembre) y se presentó en el pitch de las 20:30.",
       "project": {
         "name": "Pulso Ciudadano",
         "description": "Monitor de temperatura social para la alcaldía: escucha lo que la gente reporta en redes y canales vecinales, agrupa las señales en incidentes, estima su veracidad por contraste de fuentes y deriva cada caso al cuerpo competente (policía, bomberos, protección civil).",
-        "domains": ["civic tech", "social signal processing", "incident routing", "municipal services"]
+        "features": [
+          "Termómetro de temas de la ciudad: temas GAMSC (mercados, micros, inseguridad, lluvias, dengue, cables, bacheo) con etiquetas de dependencia y tono del reporte",
+          "Despacho automático de urgencias verificadas: contraste de fuentes hasta un piso de veracidad y convergencia de ubicaciones antes de derivar a la unidad competente, con acuse por derivación",
+          "Memoria estadística: cada señal archivada con tema, zona, tono y caso derivado, alimentando informes oficiales y análisis de percepción ciudadana"
+        ],
+        "demo": {
+          "tech_stack": ["Static site", "Vanilla JavaScript", "Pre-baked data files", "No backend, no scraping, no NLP — funciona desde un pen-drive sin wifi"],
+          "note": "El demo del pitch usa datos ilustrativos sobre relevamiento real; incluye botones de escenario (ataque armado, anegamiento) que reaccionan en vivo para el jurado. En producción el mecanismo completo sí existe en papel."
+        },
+        "domains": ["civic tech", "social signal processing", "incident routing", "municipal services"],
+        "urls": {
+          "site": "https://asosab.github.io/hackaton_SCZ/",
+          "diary": "https://asosab.github.io/hackaton_SCZ/diario/",
+          "demo": "https://asosab.github.io/hackaton_SCZ/termometro/"
+        }
       },
       "domains": ["hackathon", "civic technology", "rapid prototyping", "public sector innovation"]
     },
