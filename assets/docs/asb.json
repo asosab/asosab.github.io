@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.1",
-    "last_updated": "2026-06-04",
+    "version": "1.2",
+    "last_updated": "2026-11-19",
     "purpose": "Master professional and personal profile knowledge base for generating targeted CVs, bios and positioning narratives",
     "language": ["es", "en"]
   },
@@ -289,6 +289,92 @@
     },
 
     {
+      "company": "Pulso Ciudadano — Hackathon Tech Week Santa Cruz",
+      "industry": "Civic Tech / GovTech",
+      "role": "Developer",
+      "location": "Plaza 24 de Septiembre, Santa Cruz de la Sierra, Bolivia",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-04",
+      "current": false,
+      "context": "Proyecto presentado en el hackathon del Tech Week de Santa Cruz de la Sierra, corriendo el mismo día del evento. Sitio público del proyecto y bitácora en https://asosab.github.io/hackaton_SCZ",
+      "project": {
+        "name": "Pulso Ciudadano",
+        "description": "Monitor de temperatura social para la alcaldía: escucha lo que la gente reporta en redes y canales vecinales, agrupa las señales en incidentes, estima su veracidad por contraste de fuentes y deriva cada caso al cuerpo competente (policía, bomberos, protección civil).",
+        "domains": ["civic tech", "social signal processing", "incident routing", "municipal services"]
+      },
+      "domains": ["hackathon", "civic technology", "rapid prototyping", "public sector innovation"]
+    },
+
+    {
+      "company": "GrazePoint — NASA Space Apps Challenge 2026",
+      "industry": "AgTech / Open Source / Space Data",
+      "role": "Co-founder & Lead Developer",
+      "location": "Santa Cruz de la Sierra, Bolivia",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-15",
+      "current": true,
+      "context": "Equipo «elay puej» (dos integrantes: Alejandro Sosa y Leonardo) en el reto oficial «Adapting farms with NASA data». La app se construyó en unas 12 horas durante el hackathon y se presentó ante el jurado el 15 de noviembre. Código abierto; el backend corre en api.statetty.com.",
+      "award": {
+        "title": "App with the Greatest Local Impact",
+        "category": "Local Impact",
+        "event": "NASA Space Apps Challenge 2026",
+        "date": "2026-11-15",
+        "note": "Reconocimiento local entregado en podio durante las defensas del evento."
+      },
+      "project": {
+        "name": "GrazePoint",
+        "description": "App web abierta que recomienda qué sembrar y cuándo rotar en un predio ganadero: cruza el suelo medido (o SoilGrids si falta) con observación de la Tierra de la NASA — lluvia y temperatura POWER, NDVI MODIS cada 8 días, humedad de raíz SMAP — y devuelve una rotación rankeada, la ventana de siembra forrajera, el estado de cada potrero (listo / en punto / pasado) y el total de forraje estimado por aforos calibrados contra NDVI.",
+        "features": [
+          "Mapa satelital con dibujo de parcelas y predios",
+          "Importación de polígonos: KML, KMZ, SHP, GeoJSON, GPX, CSV, WKT y GeoPDF",
+          "Ficha de parcela: historial de siembras, mediciones de suelo, aforos",
+          "Análisis con climatología NASA POWER por coordenada",
+          "Reloj de rebrote por potrero con días efectivos ponderados por humedad y temperatura",
+          "Detección de pastoreos/cortes no anotados por caídas de NDVI",
+          "Informe PDF pensado para WhatsApp y alertas automáticas por bot de Telegram",
+          "Bilingüe ES/EN"
+        ],
+        "domain_partner": "Hacienda Patiño (Santa Cruz) — validación de campo con la directora Sueleen Peña Medina y su técnico",
+        "tech_stack": ["JavaScript", "Express", "MongoDB", "NASA POWER API", "MODIS NDVI", "SMAP", "SoilGrids", "Leaflet/Esri tiles", "Telegram Bot API", "PDF generation"],
+        "urls": {
+          "landing": "https://asosab.github.io/GrazePoint/es/",
+          "app": "https://asosab.github.io/GrazePoint/es/app/",
+          "event_site": "https://asosab.github.io/NSAC/es/"
+        }
+      },
+      "domains": ["hackathon", "agtech", "geospatial data", "NASA open data", "open source", "rapid prototyping", "full-stack development"]
+    },
+
+    {
+      "company": "Arturito — robot seguidor de línea",
+      "industry": "Robotics / Arduino / Education",
+      "role": "Mentor, Web Developer & Simulator Builder",
+      "location": "Santa Cruz de la Sierra, Bolivia",
+      "start_date": "2026-09",
+      "end_date": "2026-10",
+      "current": false,
+      "context": "Robot armado y programado por tres estudiantes de secundaria del Colegio Jaime Alfonso Escalante Gutierrez A, con el apoyo de Alejandro Sosa, quien desarrolló el sitio web público y el simulador del control. Participó en la categoría seguidor de línea amateur del 1.er Concurso Distrital de Robótica 2026 (31 de octubre de 2026). Sitio: https://asosab.github.io/bot_sigue_linea/",
+      "team": [
+        { "name": "Maximiliano Sosa Useche", "role": "Software y simulación" },
+        { "name": "Gaby Leryn Ayala Chambi", "role": "Mecatrónica y construcción" },
+        { "name": "Christopher Darius Valero Lima", "role": "Eléctrica y conexiones" }
+      ],
+      "hardware": {
+        "board": "Arduino UNO",
+        "sensors": "5× TCRT5000 infrarrojos en formación de punta de flecha",
+        "actuators": "Driver dual de motores, dos motoreductores",
+        "power": "4 pilas AA"
+      },
+      "firmware": [
+        "Control proporcional de seguimiento de línea",
+        "Calibración automática de sensores",
+        "Registro de corridas en EEPROM con traza por puerto serie",
+        "Diagnóstico de fallos documentado en el sitio"
+      ],
+      "domains": ["arduino", "embedded systems", "robotics", "mechatronics", "stem education", "firmware"]
+    },
+
+    {
       "company": "FUNDABIT",
       "industry": "GovTech / Ministerio de Educación (MPPE)",
       "role": "Technology Solutions Consultant & Lead Developer",
@@ -488,7 +574,28 @@
       "NoSQL",
       "AI-assisted development",
       "Systems implementation",
-      "Digital transformation"
+      "Digital transformation",
+      "Full-stack web apps",
+      "Bilingual product development (ES/EN)",
+      "Hackathon rapid prototyping"
+    ],
+    "hardware_and_robotics": [
+      "Arduino programming (C++)",
+      "Embedded systems & firmware",
+      "Sensor integration (IR, TCRT5000)",
+      "Motor control & PID-style line following",
+      "Serial communication & EEPROM logging",
+      "Mechatronics mentoring",
+      "STEM education"
+    ],
+    "geospatial_and_space_data": [
+      "Satellite Earth observation data",
+      "NASA POWER climatology API",
+      "MODIS NDVI time series",
+      "SMAP soil moisture",
+      "SoilGrids soil properties",
+      "Geospatial file formats (KML, KMZ, SHP, GeoJSON, GeoPDF)",
+      "Agricultural decision-support systems"
     ],
     "business": [
       "Product strategy",
@@ -972,7 +1079,18 @@
     ],
     "articles": [],
     "interviews": [],
-    "awards": [],
+    "awards": [
+      {
+        "title": "App with the Greatest Local Impact",
+        "category": "Local Impact",
+        "event": "NASA Space Apps Challenge 2026",
+        "date": "2026-11-15",
+        "location": "Santa Cruz de la Sierra, Bolivia",
+        "project": "GrazePoint",
+        "team": "elay puej",
+        "description": "GrazePoint, la app de rotación de cultivos con datos de observación de la Tierra de la NASA, ganó el galardón local a la app de mayor impacto local del NASA Space Apps Challenge 2026. El premio reconoce apps con impacto real en la comunidad local; fue entregado en podio durante las defensas del evento."
+      }
+    ],
     "community_mentions": []
   }
 }
